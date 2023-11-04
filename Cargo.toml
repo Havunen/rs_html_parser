@@ -1,0 +1,26 @@
+[workspace]
+members = [
+  "crates/rs_html_parser_tokens",
+  "crates/rs_html_parser_tokenizer",
+]
+resolver = "2"
+[profile.release]
+# lto = true
+
+# We use CARGO_PROFILE_RELEASE_LTO for production builds
+# lto = "fat"
+
+# debug = true
+# opt-level = 'z'
+
+[profile.bench]
+debug = true
+# lto = true
+
+# Without this, printing diff consumes more than a minute.
+
+[profile.dev.package.pretty_assertions]
+opt-level = 3
+
+[profile.test.package.pretty_assertions]
+opt-level = 3

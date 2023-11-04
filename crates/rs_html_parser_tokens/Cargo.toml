@@ -1,0 +1,12 @@
+[package]
+authors       = ["Sampo Kivistö, havunen"]
+description   = "Rs Html Parser Tokens"
+documentation = "https://github.com/Havunen/rsparser"
+edition       = "2021"
+license       = "MIT"
+name          = "rsparser_tokens"
+repository    = "https://github.com/Havunen/rsparser.git"
+version       = "0.0.1"
+
+[lib]
+bench = false
