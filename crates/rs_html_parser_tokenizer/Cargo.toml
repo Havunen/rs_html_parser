@@ -10,3 +10,6 @@ version       = "0.0.1"
 
 [lib]
 bench = false
+
+[dependencies]
+rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
