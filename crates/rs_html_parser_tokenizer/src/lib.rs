@@ -142,8 +142,8 @@ fn is_ascii_alpha(c: u8) -> bool {
     (c >= CharCodes::UPPER_A && c <= CharCodes::UPPER_Z);
 }
 
-impl Tokenizer  {
-    pub fn new(options: Options) -> Tokenizer {
+impl Tokenizer<'static>  {
+    pub fn new(options: Options) -> Tokenizer<'static> {
         Tokenizer {
             state: State::Text,
             buffer: vec![],
@@ -175,25 +175,25 @@ impl Tokenizer  {
     pub fn write(&mut self, chunk: String) {
         self.offset += self.buffer.len() as i32;
         self.buffer = chunk.into_bytes();
-        self.parse();
+        // self.parse();
     }
 
-    pub fn end(&mut self) {
-        if self.running {
-            self.finish();
-        }
-    }
+    // pub fn end(&mut self) {
+    //     if self.running {
+    //         self.finish();
+    //     }
+    // }
+    //
+    // pub fn pause(&mut self) {
+    //     self.running = false;
+    // }
 
-    pub fn pause(&mut self) {
-        self.running = false;
-    }
-
-    pub fn resume(&mut self) {
-        self.running = true;
-        if self.index < self.buffer.len() as i32 + self.offset {
-            self.parse();
-        }
-    }
+    // pub fn resume(&mut self) {
+    //     self.running = true;
+    //     if self.index < self.buffer.len() as i32 + self.offset {
+    //         self.parse();
+    //     }
+    // }
 
     fn fast_forward_to(&mut self, c: u8) -> bool {
         while self.index < self.buffer.len() as i32 + self.offset -1 {
@@ -741,100 +741,45 @@ impl Tokenizer  {
         return None;
     }
 
-    fn parse(&mut self) {
-        while self.index < self.buffer.len() as i32 + self.offset && self.running {
+    fn parse_next(&mut self) -> Option<Token> {
+        if self.index < self.buffer.len() as i32 + self.offset && self.running {
             let c = self.buffer[(self.index - self.offset) as usize];
 
             let next_token: Option<Token> = match self.state {
-                State::Text => {
-                    self.state_text(c);
-                }
-                State::SpecialStartSequence => {
-                    self.state_special_start_sequence(c);
-                }
-                State::InSpecialTag => {
-                    self.state_in_special_tag(c);
-                }
-                State::CDATASequence => {
-                    self.state_cdatasequence(c);
-                }
-                State::InAttributeValueDq => {
-                    self.state_in_attribute_value_double_quotes(c);
-                }
-                State::InAttributeName => {
-                    self.state_in_attribute_name(c);
-                }
-                State::InAttributeAfterDataSingleQuote => {
-                    self.state_in_attribute_after_data(QuoteType::Single);
-                }
-                State::InAttributeAfterDataDoubleQuote => {
-                    self.state_in_attribute_after_data(QuoteType::Double);
-                }
-                State::InCommentLike => {
-                    self.state_in_comment_like(c);
-                }
-                State::InSpecialComment => {
-                    self.state_in_special_comment(c);
-                }
-                State::BeforeAttributeName => {
-                    self.state_before_attribute_name(c);
-                }
-                State::InTagName => {
-                    self.state_in_tag_name(c);
-                }
-                State::InClosingTagName => {
-                    self.state_in_closing_tag_name(c);
-                }
-                State::BeforeTagName => {
-                    self.state_before_tag_name(c);
-                }
-                State::AfterAttributeName => {
-                    self.state_after_attribute_name(c);
-                }
-                State::InAttributeValueSq => {
-                    self.state_in_attribute_value_single_quotes(c);
-                }
-                State::BeforeAttributeValue => {
-                    self.state_before_attribute_value(c);
-                }
-                State::BeforeClosingTagName => {
-                    self.state_before_closing_tag_name(c);
-                }
-                State::AfterClosingTagName => {
-                    self.state_after_closing_tag_name(c);
-                }
-                State::BeforeSpecialS => {
-                    self.state_before_special_s(c);
-                }
-                State::InAttributeValueNq => {
-                    self.state_in_attribute_value_no_quotes(c);
-                }
-                State::AfterAttributeData => {
-                    self.state_after_attribute_data(c);
-                },
-                State::InSelfClosingTag => {
-                    self.state_in_self_closing_tag(c);
-                }
-                State::InDeclaration => {
-                    self.state_in_declaration(c);
-                }
-                State::BeforeDeclaration => {
-                    self.state_before_declaration(c);
-                }
-                State::BeforeComment => {
-                    self.state_before_comment(c);
-                }
-                State::InProcessingInstruction => {
-                    self.state_in_processing_instruction(c);
-                }
-                State::InEntity => {
-                    self.state_in_entity();
-                }
-                _ => None
+                State::Text => self.state_text(c),
+                State::SpecialStartSequence => self.state_special_start_sequence(c),
+                State::InSpecialTag => self.state_in_special_tag(c),
+                State::CDATASequence => self.state_cdatasequence(c),
+                State::InAttributeValueDq => self.state_in_attribute_value_double_quotes(c),
+                State::InAttributeName => self.state_in_attribute_name(c),
+                State::InAttributeAfterDataSingleQuote => self.state_in_attribute_after_data(QuoteType::Single),
+                State::InAttributeAfterDataDoubleQuote => self.state_in_attribute_after_data(QuoteType::Double),
+                State::InCommentLike => self.state_in_comment_like(c),
+                State::InSpecialComment => self.state_in_special_comment(c),
+                State::BeforeAttributeName => self.state_before_attribute_name(c),
+                State::InTagName => self.state_in_tag_name(c),
+                State::InClosingTagName => self.state_in_closing_tag_name(c),
+                State::BeforeTagName => self.state_before_tag_name(c),
+                State::AfterAttributeName => self.state_after_attribute_name(c),
+                State::InAttributeValueSq => self.state_in_attribute_value_single_quotes(c),
+                State::BeforeAttributeValue => self.state_before_attribute_value(c),
+                State::BeforeClosingTagName => self.state_before_closing_tag_name(c),
+                State::AfterClosingTagName => self.state_after_closing_tag_name(c),
+                State::BeforeSpecialS => self.state_before_special_s(c),
+                State::InAttributeValueNq => self.state_in_attribute_value_no_quotes(c),
+                State::AfterAttributeData => self.state_after_attribute_data(c),
+                State::InSelfClosingTag => self.state_in_self_closing_tag(c),
+                State::InDeclaration => self.state_in_declaration(c),
+                State::BeforeDeclaration => self.state_before_declaration(c),
+                State::BeforeComment => self.state_before_comment(c),
+                State::InProcessingInstruction => self.state_in_processing_instruction(c),
+                State::InEntity => self.state_in_entity(),
             };
 
             self.index += 1;
         }
+
+        return None;
     }
 
     fn finish(&mut self) {
@@ -873,7 +818,7 @@ impl Tokenizer  {
             //     (self.cbs.oncomment)(self.section_start, end_index, 0);
             // }
         } else {
-            match &self.state {
+            return match &self.state {
                 State::InTagName
                 | State::BeforeAttributeName
                 | State::BeforeAttributeValue
@@ -887,6 +832,7 @@ impl Tokenizer  {
                      * If we are currently in an opening or closing tag, us not calling the
                      * respective callback signals that the tag should be ignored.
                      */
+                    None
                 }
                 _ => Some(Token {
                     start: self.section_start,
@@ -899,8 +845,6 @@ impl Tokenizer  {
                     // (self.cbs.ontext)(self.section_start, end_index),
             }
         }
-
-        return None;
     }
 
     fn state_special_start_sequence(&mut self, c: u8) -> Option<Token> {
@@ -1035,11 +979,10 @@ impl Tokenizer  {
     }
 }
 
-
-impl Iterator for Tokenizer {
+impl Iterator for Tokenizer<'static> {
     type Item = Token;
 
     fn next(&mut self) -> Option<Self::Item> {
-        todo!()
+        self.parse_next()
     }
 }
