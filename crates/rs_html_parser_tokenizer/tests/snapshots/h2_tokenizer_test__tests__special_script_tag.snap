@@ -1,0 +1,46 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "tokenize(\"<script /><div></div>\")"
+---
+[
+    Token {
+        start: 1,
+        end: 7,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 9,
+        end: 9,
+        offset: 0,
+        location: SelfClosingTag,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 11,
+        end: 14,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 14,
+        end: 14,
+        offset: 0,
+        location: OpenTagEnd,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 17,
+        end: 20,
+        offset: 0,
+        location: CloseTag,
+        code: 0,
+        quote: NoValue,
+    },
+]

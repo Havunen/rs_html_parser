@@ -29,4 +29,19 @@ mod tests {
     fn basic_element_with_text() {
         insta::assert_debug_snapshot!(tokenize("<span>Hello World!</span>"))
     }
+
+    #[test]
+    fn special_script_tag() {
+        insta::assert_debug_snapshot!(tokenize("<script /><div></div>"))
+    }
+
+    #[test]
+    fn special_style_tag() {
+        insta::assert_debug_snapshot!(tokenize("<style /><div></div>"))
+    }
+
+    #[test]
+    fn special_title_tag() {
+        insta::assert_debug_snapshot!(tokenize("<style /><div></div>"))
+    }
 }
