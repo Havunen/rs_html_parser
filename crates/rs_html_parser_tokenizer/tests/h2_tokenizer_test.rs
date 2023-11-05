@@ -44,4 +44,24 @@ mod tests {
     fn special_title_tag() {
         insta::assert_debug_snapshot!(tokenize("<style /><div></div>"))
     }
+
+    #[test]
+    fn no_value_attribute() {
+        insta::assert_debug_snapshot!(tokenize("<div aaaaaaa >"))
+    }
+
+    #[test]
+    fn no_quote_attribute() {
+        insta::assert_debug_snapshot!(tokenize("<div aaa=aaa >"))
+    }
+
+    #[test]
+    fn single_quote_attribute() {
+        insta::assert_debug_snapshot!(tokenize("<div aaa='a' >"))
+    }
+
+    #[test]
+    fn double_quote_attribute() {
+        insta::assert_debug_snapshot!(tokenize("<div aaa=\"a\" >"))
+    }
 }

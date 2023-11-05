@@ -458,7 +458,7 @@ impl Tokenizer<'static> {
         } else if c == CharCodes::SLASH || c == CharCodes::GT {
             token = Some(Token {
                 start: self.section_start,
-                end: -1,
+                end: self.section_start,
                 offset: 0,
                 location: TokenLocation::AttrEnd,
                 code: 0,
@@ -471,7 +471,7 @@ impl Tokenizer<'static> {
         } else if !is_whitespace(c) {
             token = Some(Token {
                 start: self.section_start,
-                end: -1,
+                end: self.section_start,
                 offset: 0,
                 location: TokenLocation::AttrEnd,
                 code: 0,
@@ -898,7 +898,7 @@ impl Tokenizer<'static> {
     }
     fn state_after_attribute_data(&mut self) -> Option<Token> {
         let token = Some(Token {
-            start: 0,
+            start: self.index,
             end: self.index,
             offset: 0,
             location: TokenLocation::AttrEnd,

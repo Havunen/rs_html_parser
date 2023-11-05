@@ -1,0 +1,46 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "tokenize(\"<div aaa=aaa >\")"
+---
+[
+    Token {
+        start: 1,
+        end: 4,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 5,
+        end: 8,
+        offset: 0,
+        location: AttrName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 9,
+        end: 12,
+        offset: 0,
+        location: AttrData,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 13,
+        end: 13,
+        offset: 0,
+        location: AttrEnd,
+        code: 0,
+        quote: Unquoted,
+    },
+    Token {
+        start: 13,
+        end: 13,
+        offset: 0,
+        location: OpenTagEnd,
+        code: 0,
+        quote: NoValue,
+    },
+]
