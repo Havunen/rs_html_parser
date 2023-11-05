@@ -1,0 +1,38 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "tokenize(\"<span>Hello World!</span>\")"
+---
+[
+    Token {
+        start: 1,
+        end: 5,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 5,
+        end: 5,
+        offset: 0,
+        location: OpenTagEnd,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 6,
+        end: 18,
+        offset: 0,
+        location: Text,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 20,
+        end: 24,
+        offset: 0,
+        location: CloseTag,
+        code: 0,
+        quote: NoValue,
+    },
+]

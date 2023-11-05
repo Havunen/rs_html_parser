@@ -13,3 +13,7 @@ bench = false
 
 [dependencies]
 rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
+
+
+[dev-dependencies]
+insta = {version = "1.34.0"}

@@ -1,3 +1,4 @@
+#[derive(Debug)]
 pub enum QuoteType {
     NoValue = 0,
     Unquoted = 1,
@@ -5,6 +6,7 @@ pub enum QuoteType {
     Double = 3,
 }
 
+#[derive(Debug)]
 pub enum TokenLocation {
     AttrData = 1,
     AttrEntity,
@@ -23,13 +25,15 @@ pub enum TokenLocation {
     ProcessingInstruction,
     SelfClosingTag,
     Text,
-    TextEntity
+    TextEntity,
 }
+
+#[derive(Debug)]
 pub struct Token {
     pub start: i32,
     pub end: i32,
     pub offset: i32,
     pub location: TokenLocation,
     pub code: u8,
-    pub quote: QuoteType
+    pub quote: QuoteType,
 }
