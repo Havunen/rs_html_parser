@@ -1,11 +1,11 @@
 [package]
 authors       = ["Sampo Kivistö, havunen"]
 description   = "Rs Html Parser Tokenizer"
-documentation = "https://github.com/Havunen/rsparser"
+documentation = "https://github.com/Havunen/rs_html_parser"
 edition       = "2021"
 license       = "MIT"
-name          = "rsparser_tokenizer"
-repository    = "https://github.com/Havunen/rsparser.git"
+name          = "rs_html_parser_tokenizer"
+repository    = "https://github.com/Havunen/rs_html_parser.git"
 version       = "0.0.1"
 
 [lib]
