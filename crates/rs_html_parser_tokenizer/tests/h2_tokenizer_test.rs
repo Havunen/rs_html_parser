@@ -7,8 +7,8 @@ mod tests {
         let mut log: Vec<Token> = Vec::new();
 
         let options = Options {
-            xml_mode: false,
-            decode_entities: false,
+            xml_mode: Option::from(false),
+            decode_entities: Option::from(true),
         };
 
         let tokenizer = Tokenizer::new(data, options);
@@ -63,5 +63,10 @@ mod tests {
     #[test]
     fn double_quote_attribute() {
         insta::assert_debug_snapshot!(tokenize("<div aaa=\"a\" >"))
+    }
+
+    #[test]
+    fn for_normal_special_tag() {
+        insta::assert_debug_snapshot!(tokenize("<style>a{}</style>&apos;<br/>"))
     }
 }

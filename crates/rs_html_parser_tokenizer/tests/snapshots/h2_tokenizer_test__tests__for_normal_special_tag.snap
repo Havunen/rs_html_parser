@@ -1,0 +1,62 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "tokenize(\"<style>a{}</style>&apos;<br/>\")"
+---
+[
+    Token {
+        start: 1,
+        end: 6,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 6,
+        end: 6,
+        offset: 0,
+        location: OpenTagEnd,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 7,
+        end: 10,
+        offset: 0,
+        location: Text,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 12,
+        end: 17,
+        offset: 0,
+        location: CloseTag,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 18,
+        end: 24,
+        offset: 0,
+        location: TextEntity,
+        code: 39,
+        quote: NoValue,
+    },
+    Token {
+        start: 25,
+        end: 27,
+        offset: 0,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 28,
+        end: 28,
+        offset: 0,
+        location: SelfClosingTag,
+        code: 0,
+        quote: NoValue,
+    },
+]

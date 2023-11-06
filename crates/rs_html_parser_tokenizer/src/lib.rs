@@ -1,5 +1,8 @@
+use std::cmp::{min};
 use rs_html_parser_tokens::{QuoteType, Token, TokenLocation};
 use std::iter::Iterator;
+use std::ops::Range;
+use htmlentity::entity::{decode};
 
 struct CharCodes {}
 
@@ -10,7 +13,7 @@ impl CharCodes {
     const CARRIAGE_RETURN: u8 = 3; // "\r"
     const SPACE: u8 = 32; // " "
     const EXCLAMATION_MARK: u8 = 33; // "!"
-                                     // const HASH: u8 = 35; // "#"
+    const HASH: u8 = 35; // "#"
     const AMP: u8 = 38; // "&"
     const SINGLE_QUOTE: u8 = 39; // "'"
     const DOUBLE_QUOTE: u8 = 34; // '"'
@@ -18,7 +21,7 @@ impl CharCodes {
     const SLASH: u8 = 47; // "/"
                           // const ZERO: u8 = 48; // "0"
                           // const NINE: u8 = 57; // "9"
-                          // const SEMI: u8 = 59; // ";"
+    const SEMI: u8 = 59; // ";"
     const LT: u8 = 60; // "<"
     const EQ: u8 = 61; // "="
     const GT: u8 = 62; // ">"
@@ -113,8 +116,8 @@ pub struct Tokenizer<'a> {
 }
 
 pub struct Options {
-    pub xml_mode: bool,
-    pub decode_entities: bool,
+    pub xml_mode: Option<bool>,
+    pub decode_entities: Option<bool>,
 }
 
 fn is_whitespace(c: u8) -> bool {
@@ -151,8 +154,8 @@ impl Tokenizer<'static> {
             is_special: false,
             // running: false,
             offset: 0,
-            xml_mode: options.xml_mode,
-            decode_entities: options.decode_entities,
+            xml_mode: options.xml_mode.unwrap_or(false),
+            decode_entities: options.decode_entities.unwrap_or(true),
             current_sequence: Default::default(),
             sequence_index: 0,
         }
@@ -660,32 +663,82 @@ impl Tokenizer<'static> {
         self.base_state = self.state;
         self.state = State::InEntity;
         self.entity_start = self.index;
-        // self.entityDecoder.start_entity(
-        //     if self.xml_mode
-        //     { DecodingMode.Strict }
-        //         else {self.baseState == State::Text || self.baseState == State::InSpecialTag}
-        //         ? DecodingMode.Legacy
-        //         : DecodingMode.Attribute,
-        // );
+        self.index -= 1; // continue
+    }
+
+    fn find_end_of_html_entity(&mut self) -> i32 {
+        let start_pos = self.index - self.offset;
+        let loop_until = min(self.buffer.len() as i32 + self.offset - 1, start_pos + 8);
+        let mut count: i32 = start_pos;
+
+        while count < loop_until {
+            let char = self.buffer[count as usize];
+            count += 1;
+            // its number of letter, just continue
+            if (char > 96 && char < 123) || (char > 64 && char < 91) || char == CharCodes::HASH || char == CharCodes::AMP  {
+                continue;
+            }
+            // if char == CharCodes::SEMI {
+            //     break;
+            // }
+
+            break;
+        }
+
+        if count < loop_until {
+            return count;
+        }
+
+        return -1;
     }
 
     fn state_in_entity(&mut self) -> Option<Token> {
-        // let length = self.entityDecoder.write(
-        //     self.buffer,
-        //     self.index - self.offset,
-        // );
+        let index = self.find_end_of_html_entity();
 
-        let length = -1;
+        // let length = -1;
+        if index >= 0 {
+            let range: Range<usize> = Range {
+                start: (self.index - self.offset) as usize,
+                end: index as usize
+            };
 
-        // If `length` is positive, we are done with the entity.
-        if length >= 0 {
-            self.state = self.base_state;
+            let code = decode(&self.buffer[range]);
 
-            if length == 0 {
-                self.index = self.entity_start;
+            if code.is_ok() && code.entity_count() > 0 {
+                let token = if self.base_state != State::Text && self.base_state != State::InSpecialTag {
+                    Token {
+                        start: self.section_start,
+                        end: index,
+                        offset: 0,
+                        location: TokenLocation::AttrEntity,
+                        code: code.bytes()[0],
+                        quote: QuoteType::NoValue,
+                    }
+                }
+                else {
+                    Token {
+                        start: self.section_start,
+                        end: index,
+                        offset: 0,
+                        location: TokenLocation::TextEntity,
+                        code: code.bytes()[0],
+                        quote: QuoteType::NoValue,
+                    }
+                };
+
+                self.section_start = index;
+                self.index = self.section_start - 1;
+                self.state = self.base_state;
+
+                if index == 0 {
+                    self.index = self.entity_start;
+                }
+
+                return Some(token)
+            } else {
+                self.index = self.offset + self.buffer.len() as i32 - 1;
             }
         } else {
-            // Mark buffer as consumed.
             self.index = self.offset + self.buffer.len() as i32 - 1;
         }
 
@@ -845,12 +898,13 @@ impl Tokenizer<'static> {
         if self.sequence_index == self.current_sequence.len() {
             if c == CharCodes::GT || is_whitespace(c) {
                 let end_of_text = self.index - self.current_sequence.len() as i32;
+                let token: Option<Token>;
 
                 if self.section_start < end_of_text {
                     // Spoof the index so that reported locations match up.
                     let actual_index = self.index;
                     self.index = end_of_text;
-                    let token = Some(Token {
+                    token = Some(Token {
                         start: self.section_start,
                         end: end_of_text,
                         offset: 0,
@@ -859,15 +913,17 @@ impl Tokenizer<'static> {
                         quote: QuoteType::NoValue,
                     });
                     self.index = actual_index;
-
-                    return token;
+                } else {
+                    token = None;
                 }
 
                 self.is_special = false;
                 self.section_start = end_of_text + 2; // Skip over the `</`
-                self.state_in_closing_tag_name(c);
+                self.state = State::InClosingTagName;
+                self.index -= 1; // continue
+                // self.state_in_closing_tag_name(c);
 
-                return None; // We are done; skip the rest of the function.
+                return token; // We are done; skip the rest of the function.
             }
 
             self.sequence_index = 0;
@@ -884,6 +940,7 @@ impl Tokenizer<'static> {
             } else if self.fast_forward_to(CharCodes::LT) {
                 // Outside of <title> tags, we can fast-forward.
                 self.sequence_index = 1;
+                // self.index -= 1; // continue
             }
         } else {
             // If we see a `<`, set the sequence index to 1; useful for eg. `<</script>`.
