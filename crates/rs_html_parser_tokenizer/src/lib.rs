@@ -96,6 +96,8 @@ enum State {
     InSpecialTag,
 
     InEntity,
+    AfterReadEntityText,
+    AfterReadEntityAttr,
 }
 
 pub struct Tokenizer<'a> {
@@ -107,6 +109,7 @@ pub struct Tokenizer<'a> {
     base_state: State,
     is_special: bool,
     offset: i32,
+    code: u8,
 
     xml_mode: bool,
     decode_entities: bool,
@@ -149,6 +152,7 @@ impl Tokenizer<'static> {
             buffer,
             section_start: 0,
             index: 0,
+            code: 0,
             entity_start: 0,
             base_state: State::Text,
             is_special: false,
@@ -506,7 +510,6 @@ impl Tokenizer<'static> {
     }
     fn handle_in_attribute_value(&mut self, c: u8, quote: u8) -> Option<Token> {
         if c == quote || (!self.decode_entities && self.fast_forward_to(quote)) {
-            // (self.cbs.onattribdata)(self.section_start, self.index);
             self.state = if quote == CharCodes::DOUBLE_QUOTE {
                 State::InAttributeAfterDataDoubleQuote
             } else {
@@ -705,36 +708,57 @@ impl Tokenizer<'static> {
             let code = decode(&self.buffer[range]);
 
             if code.is_ok() && code.entity_count() > 0 {
-                let token = if self.base_state != State::Text && self.base_state != State::InSpecialTag {
-                    Token {
-                        start: self.section_start,
-                        end: index,
-                        offset: 0,
-                        location: TokenLocation::AttrEntity,
-                        code: code.bytes()[0],
-                        quote: QuoteType::NoValue,
+                self.code = code.bytes()[0];
+
+                let token: Option<Token>;
+
+                if self.base_state != State::Text && self.base_state != State::InSpecialTag {
+                    if self.section_start < self.entity_start {
+                        token = Some(Token {
+                            start: self.section_start,
+                            end: self.entity_start,
+                            offset: 0,
+                            location: TokenLocation::AttrData,
+                            code: 0,
+                            quote: QuoteType::NoValue,
+                        });
+                        self.section_start = self.index;
+                        self.index = index - 1;
+                    } else {
+                        self.index = index - 1;
+                        token = None;
                     }
+                    self.state = State::AfterReadEntityAttr;
                 }
                 else {
-                    Token {
-                        start: self.section_start,
-                        end: index,
-                        offset: 0,
-                        location: TokenLocation::TextEntity,
-                        code: code.bytes()[0],
-                        quote: QuoteType::NoValue,
+                    if self.section_start < self.entity_start {
+                        token = Some(Token {
+                            start: self.section_start,
+                            end: self.entity_start,
+                            offset: 0,
+                            location: TokenLocation::Text,
+                            code: 0,
+                            quote: QuoteType::NoValue,
+                        });
+                        self.section_start = self.index;
+                        self.index = index - 1;
+                    } else {
+                        self.index = index - 1;
+                        token = None;
                     }
-                };
 
-                self.section_start = index;
-                self.index = self.section_start - 1;
-                self.state = self.base_state;
-
-                if index == 0 {
-                    self.index = self.entity_start;
+                    // token = Token {
+                    //     start: self.section_start,
+                    //     end: index,
+                    //     offset: 0,
+                    //     location: TokenLocation::TextEntity,
+                    //     code: code.bytes()[0],
+                    //     quote: QuoteType::NoValue,
+                    // };
+                    self.state = State::AfterReadEntityText;
                 }
 
-                return Some(token)
+                return token;
             } else {
                 self.index = self.offset + self.buffer.len() as i32 - 1;
             }
@@ -782,6 +806,8 @@ impl Tokenizer<'static> {
                 State::BeforeComment => self.state_before_comment(c),
                 State::InProcessingInstruction => self.state_in_processing_instruction(c),
                 State::InEntity => self.state_in_entity(),
+                State::AfterReadEntityText => self.state_after_entity(TokenLocation::TextEntity),
+                State::AfterReadEntityAttr => self.state_after_entity(TokenLocation::AttrData)
             };
 
             self.index += 1;
@@ -980,6 +1006,23 @@ impl Tokenizer<'static> {
             code: 0,
             quote: quote_type,
         });
+    }
+    fn state_after_entity(&mut self, location: TokenLocation) -> Option<Token> {
+        self.state = self.base_state;
+
+        let token = Some(Token {
+            start: self.section_start,
+            end: self.index,
+            offset: 0,
+            location,
+            code: self.code,
+            quote: QuoteType::NoValue,
+        });
+
+        self.section_start = self.index;
+        self.index -= 1;
+
+        return token;
     }
 }
 

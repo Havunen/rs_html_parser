@@ -69,4 +69,9 @@ mod tests {
     fn for_normal_special_tag() {
         insta::assert_debug_snapshot!(tokenize("<style>a{}</style>&apos;<br/>"))
     }
+
+    #[test]
+    fn for_normal_special_tag2() {
+        insta::assert_debug_snapshot!(tokenize("<style>a{}</style>&apos; 1234&apos;dsa<br/>"))
+    }
 }
