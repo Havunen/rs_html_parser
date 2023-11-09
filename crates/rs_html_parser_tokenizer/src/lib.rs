@@ -1,8 +1,8 @@
-use std::cmp::{min};
 use rs_html_parser_tokens::{QuoteType, Token, TokenLocation};
 use std::iter::Iterator;
 use std::ops::Range;
-use htmlentity::entity::{decode};
+use htmlize;
+use htmlize::Context;
 
 struct CharCodes {}
 
@@ -35,13 +35,6 @@ impl CharCodes {
                              // const LOWER_X: u8 = 120; // "x"
     const OPENING_SQUARE_BRACKET: u8 = 91; // "["
 }
-
-/**
- * Sequences used to match longer strings.
- *
- * We don't have `Script`, `Style`, or `Title` here. Instead, we re-use the *End
- * sequences with an increased offset.
- */
 
 struct Sequences {}
 
@@ -268,12 +261,6 @@ impl Tokenizer<'static> {
         return None;
     }
 
-    /**
-     * HTML only allows ASCII alpha characters (a-z and A-Z) at the beginning of a tag name.
-     *
-     * XML allows a lot more characters here (@see https://www.w3.org/TR/REC-xml/#NT-NameStartChar).
-     * We allow anything that wouldn't end the tag.
-     */
     fn is_tag_start_char(&self, c: u8) -> bool {
         if self.xml_mode {
             return is_end_of_tag_section(c);
@@ -425,7 +412,7 @@ impl Tokenizer<'static> {
 
             self.state = State::Text;
             self.section_start = self.index + 1;
-            self.is_special = false; // Reset special state, in case of self-closing special tags
+            self.is_special = false;
 
             return token;
         } else if !is_whitespace(c) {
@@ -438,7 +425,6 @@ impl Tokenizer<'static> {
     fn state_in_attribute_name(&mut self, c: u8) -> Option<Token> {
         let token: Option<Token>;
         if c == CharCodes::EQ || is_end_of_tag_section(c) {
-            // (self.cbs.onattribname)(self.section_start, self.index);
             token = Some(Token {
                 start: self.section_start,
                 end: self.index,
@@ -503,7 +489,7 @@ impl Tokenizer<'static> {
             self.section_start = self.index;
             self.state = State::InAttributeValueNq;
 
-            return self.state_in_attribute_value_no_quotes(c); // Reconsume token
+            return self.state_in_attribute_value_no_quotes(c);
         }
 
         return None;
@@ -659,7 +645,8 @@ impl Tokenizer<'static> {
         }
 
         self.state = State::InTagName;
-        return self.state_in_tag_name(c); // Consume the token again
+
+        return self.state_in_tag_name(c);
     }
 
     fn start_entity(&mut self) {
@@ -671,25 +658,32 @@ impl Tokenizer<'static> {
 
     fn find_end_of_html_entity(&mut self) -> i32 {
         let start_pos = self.index - self.offset;
-        let loop_until = min(self.buffer.len() as i32 + self.offset - 1, start_pos + 8);
-        let mut count: i32 = start_pos;
+        let loop_until = self.buffer.len() as i32 + self.offset;
+        let mut count: i32 = start_pos + 1; // the first is always &
 
         while count < loop_until {
             let char = self.buffer[count as usize];
-            count += 1;
-            // its number of letter, just continue
-            if (char > 96 && char < 123) || (char > 64 && char < 91) || char == CharCodes::HASH || char == CharCodes::AMP  {
+
+            if  (char > 47 && char < 58) || // number
+                (char > 96 && char < 123) || // lower case letter
+                (char > 64 && char < 91) || // upper case letter
+                char == CharCodes::HASH  {
+                count += 1;
                 continue;
             }
-            // if char == CharCodes::SEMI {
-            //     break;
-            // }
+            if char == CharCodes::SEMI {
+                count += 1;
+                break;
+            }
 
             break;
         }
 
         if count < loop_until {
             return count;
+        }
+        if count == loop_until {
+            return loop_until;
         }
 
         return -1;
@@ -704,15 +698,18 @@ impl Tokenizer<'static> {
                 start: (self.index - self.offset) as usize,
                 end: index as usize
             };
+            let is_attr = self.base_state != State::Text && self.base_state != State::InSpecialTag;
+            let code = htmlize::unescape_bytes_in(
+                &self.buffer[range],
+                if is_attr {Context::Attribute} else {Context::General}
+            );
 
-            let code = decode(&self.buffer[range]);
-
-            if code.is_ok() && code.entity_count() > 0 {
-                self.code = code.bytes()[0];
+            if code.len() > 0 {
+                self.code = code[0];
 
                 let token: Option<Token>;
 
-                if self.base_state != State::Text && self.base_state != State::InSpecialTag {
+                if is_attr {
                     if self.section_start < self.entity_start {
                         token = Some(Token {
                             start: self.section_start,
@@ -747,14 +744,6 @@ impl Tokenizer<'static> {
                         token = None;
                     }
 
-                    // token = Token {
-                    //     start: self.section_start,
-                    //     end: index,
-                    //     offset: 0,
-                    //     location: TokenLocation::TextEntity,
-                    //     code: code.bytes()[0],
-                    //     quote: QuoteType::NoValue,
-                    // };
                     self.state = State::AfterReadEntityText;
                 }
 
@@ -825,11 +814,8 @@ impl Tokenizer<'static> {
         return self.handle_trailing_data();
     }
 
-    /** Handle any trailing data. */
     fn handle_trailing_data(&mut self) -> Option<Token> {
         let end_index = self.buffer.len() as i32 + self.offset;
-
-        // If there is no remaining data, we are done.
         if self.section_start >= end_index {
             return None;
         }
@@ -858,12 +844,10 @@ impl Tokenizer<'static> {
                 | State::InAttributeValueDq
                 | State::InAttributeValueNq
                 | State::InClosingTagName => {
-                    /*
-                     * If we are currently in an opening or closing tag, us not calling the
-                     * respective callback signals that the tag should be ignored.
-                     */
                     None
-                }
+                },
+                State::AfterReadEntityText => self.state_after_entity(TokenLocation::TextEntity),
+                State::AfterReadEntityAttr => self.state_after_entity(TokenLocation::AttrData),
                 _ => Some(Token {
                     start: self.section_start,
                     end: end_index,

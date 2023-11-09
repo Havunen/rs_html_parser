@@ -79,4 +79,9 @@ mod tests {
     fn for_normal_self_closing_special_tag() {
         insta::assert_debug_snapshot!((tokenize("<style />&apos;<br/>")))
     }
+
+    #[test]
+    fn entities_for_xml_entities() {
+        insta::assert_debug_snapshot!((tokenize("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101")))
+    }
 }

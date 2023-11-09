@@ -1,0 +1,86 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "(tokenize(\"&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101\"))"
+---
+[
+    Token {
+        start: 0,
+        end: 5,
+        offset: 0,
+        location: TextEntity,
+        code: 38,
+        quote: NoValue,
+    },
+    Token {
+        start: 5,
+        end: 9,
+        offset: 0,
+        location: TextEntity,
+        code: 62,
+        quote: NoValue,
+    },
+    Token {
+        start: 9,
+        end: 13,
+        offset: 0,
+        location: TextEntity,
+        code: 38,
+        quote: NoValue,
+    },
+    Token {
+        start: 13,
+        end: 17,
+        offset: 0,
+        location: TextEntity,
+        code: 60,
+        quote: NoValue,
+    },
+    Token {
+        start: 17,
+        end: 23,
+        offset: 0,
+        location: TextEntity,
+        code: 195,
+        quote: NoValue,
+    },
+    Token {
+        start: 23,
+        end: 29,
+        offset: 0,
+        location: TextEntity,
+        code: 97,
+        quote: NoValue,
+    },
+    Token {
+        start: 29,
+        end: 34,
+        offset: 0,
+        location: TextEntity,
+        code: 98,
+        quote: NoValue,
+    },
+    Token {
+        start: 34,
+        end: 39,
+        offset: 0,
+        location: TextEntity,
+        code: 99,
+        quote: NoValue,
+    },
+    Token {
+        start: 39,
+        end: 44,
+        offset: 0,
+        location: TextEntity,
+        code: 100,
+        quote: NoValue,
+    },
+    Token {
+        start: 44,
+        end: 49,
+        offset: 0,
+        location: TextEntity,
+        code: 101,
+        quote: NoValue,
+    },
+]
