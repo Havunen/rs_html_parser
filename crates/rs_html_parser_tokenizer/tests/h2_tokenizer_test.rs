@@ -99,4 +99,9 @@ mod tests {
     fn for_trailing_legacy_entity() {
         insta::assert_debug_snapshot!(tokenize("&timesbar;&timesbar"))
     }
+
+    #[test]
+    fn for_multi_byte_entities() {
+        insta::assert_debug_snapshot!(tokenize("&NotGreaterFullEqual;"))
+    }
 }
