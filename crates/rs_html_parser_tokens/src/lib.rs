@@ -34,6 +34,6 @@ pub struct Token {
     pub end: i32,
     pub offset: i32,
     pub location: TokenLocation,
-    pub code: u8,
+    pub code: u32,
     pub quote: QuoteType,
 }

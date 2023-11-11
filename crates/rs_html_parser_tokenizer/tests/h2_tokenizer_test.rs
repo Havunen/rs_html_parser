@@ -84,4 +84,14 @@ mod tests {
     fn entities_for_xml_entities() {
         insta::assert_debug_snapshot!((tokenize("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101")))
     }
+
+    #[test]
+    fn entities_for_xml_incorrect_after_valid() {
+        insta::assert_debug_snapshot!(tokenize("&amp;&gt;&amp&sometext;&uuml"))
+    }
+
+    #[test]
+    fn entities_for_attributes() {
+        insta::assert_debug_snapshot!(tokenize("<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"))
+    }
 }

@@ -1,0 +1,46 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
+expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
+---
+[
+    Token {
+        start: 0,
+        end: 5,
+        offset: 0,
+        location: TextEntity,
+        code: 38,
+        quote: NoValue,
+    },
+    Token {
+        start: 5,
+        end: 9,
+        offset: 0,
+        location: TextEntity,
+        code: 62,
+        quote: NoValue,
+    },
+    Token {
+        start: 9,
+        end: 13,
+        offset: 0,
+        location: TextEntity,
+        code: 38,
+        quote: NoValue,
+    },
+    Token {
+        start: 13,
+        end: 23,
+        offset: 0,
+        location: Text,
+        code: 0,
+        quote: NoValue,
+    },
+    Token {
+        start: 23,
+        end: 28,
+        offset: 0,
+        location: TextEntity,
+        code: 252,
+        quote: NoValue,
+    },
+]

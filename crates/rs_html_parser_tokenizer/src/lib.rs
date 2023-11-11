@@ -3,6 +3,8 @@ use std::iter::Iterator;
 use std::ops::Range;
 use htmlize;
 use htmlize::Context;
+use std::str;
+
 
 struct CharCodes {}
 
@@ -27,6 +29,7 @@ impl CharCodes {
     const GT: u8 = 62; // ">"
     const QUESTIONMARK: u8 = 63; // "?"
     const UPPER_A: u8 = 65; // "A"
+    const UNDERSCORE: u8 = 95; // "_"
     const LOWER_A: u8 = 97; // "a"
                             // const UPPER_F: u8 = 70; // "F"
                             // const LOWER_F: u8 = 102; // "f"
@@ -102,7 +105,7 @@ pub struct Tokenizer<'a> {
     base_state: State,
     is_special: bool,
     offset: i32,
-    code: u8,
+    code: u32,
 
     xml_mode: bool,
     decode_entities: bool,
@@ -135,6 +138,7 @@ fn is_ascii_alpha(c: u8) -> bool {
     return (c >= CharCodes::LOWER_A && c <= CharCodes::LOWER_Z)
         || (c >= CharCodes::UPPER_A && c <= CharCodes::UPPER_Z);
 }
+
 
 impl Tokenizer<'static> {
     pub fn new(html: &str, options: Options) -> Tokenizer<'static> {
@@ -664,10 +668,11 @@ impl Tokenizer<'static> {
         while count < loop_until {
             let char = self.buffer[count as usize];
 
-            if  (char > 47 && char < 58) || // number
+            if (char > 47 && char < 58) || // number
                 (char > 96 && char < 123) || // lower case letter
                 (char > 64 && char < 91) || // upper case letter
-                char == CharCodes::HASH  {
+                char == CharCodes::UNDERSCORE ||
+                char == CharCodes::HASH {
                 count += 1;
                 continue;
             }
@@ -692,7 +697,6 @@ impl Tokenizer<'static> {
     fn state_in_entity(&mut self) -> Option<Token> {
         let index = self.find_end_of_html_entity();
 
-        // let length = -1;
         if index >= 0 {
             let range: Range<usize> = Range {
                 start: (self.index - self.offset) as usize,
@@ -705,7 +709,21 @@ impl Tokenizer<'static> {
             );
 
             if code.len() > 0 {
-                self.code = code[0];
+                if code.len() > 1 && code[0] == CharCodes::AMP {
+                    self.state = self.base_state;
+                    return None;
+                }
+
+                let text = unsafe {
+                    str::from_utf8_unchecked(&code)
+                };
+
+                if let Some(character) = text.chars().next() {
+                    self.code = character as u32
+                } else {
+                    self.state = self.base_state;
+                    return None;
+                }
 
                 let token: Option<Token>;
 
@@ -796,7 +814,7 @@ impl Tokenizer<'static> {
                 State::InProcessingInstruction => self.state_in_processing_instruction(c),
                 State::InEntity => self.state_in_entity(),
                 State::AfterReadEntityText => self.state_after_entity(TokenLocation::TextEntity),
-                State::AfterReadEntityAttr => self.state_after_entity(TokenLocation::AttrData)
+                State::AfterReadEntityAttr => self.state_after_entity(TokenLocation::AttrEntity)
             };
 
             self.index += 1;
@@ -807,7 +825,6 @@ impl Tokenizer<'static> {
         }
 
         if self.state == State::InEntity {
-            // self.entityDecoder.end();
             self.state = self.base_state;
         }
 
@@ -1005,6 +1022,7 @@ impl Tokenizer<'static> {
 
         self.section_start = self.index;
         self.index -= 1;
+        self.code = 0;
 
         return token;
     }
