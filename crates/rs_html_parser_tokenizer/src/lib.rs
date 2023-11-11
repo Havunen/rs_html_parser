@@ -27,7 +27,7 @@ impl CharCodes {
     const LT: u8 = 60; // "<"
     const EQ: u8 = 61; // "="
     const GT: u8 = 62; // ">"
-    const QUESTIONMARK: u8 = 63; // "?"
+    const QUESTION_MARK: u8 = 63; // "?"
     const UPPER_A: u8 = 65; // "A"
     const UNDERSCORE: u8 = 95; // "_"
     const LOWER_A: u8 = 97; // "a"
@@ -284,7 +284,7 @@ impl Tokenizer<'static> {
         if c == CharCodes::EXCLAMATION_MARK {
             self.state = State::BeforeDeclaration;
             self.section_start = self.index + 1;
-        } else if c == CharCodes::QUESTIONMARK {
+        } else if c == CharCodes::QUESTION_MARK {
             self.state = State::InProcessingInstruction;
             self.section_start = self.index + 1;
         } else if self.is_tag_start_char(c) {
@@ -734,7 +734,7 @@ impl Tokenizer<'static> {
                 State::Text => self.state_text(c),
                 State::SpecialStartSequence => self.state_special_start_sequence(c),
                 State::InSpecialTag => self.state_in_special_tag(c),
-                State::CDATASequence => self.state_cdatasequence(c),
+                State::CDATASequence => self.state_cdata_sequence(c),
                 State::InAttributeValueDq => self.state_in_attribute_value_double_quotes(c),
                 State::InAttributeName => self.state_in_attribute_name(c),
                 State::InAttributeAfterDataSingleQuote => {
@@ -787,8 +787,8 @@ impl Tokenizer<'static> {
             return None;
         }
 
-        if self.state == State::InCommentLike {
-            return Some(Token {
+        return if self.state == State::InCommentLike {
+            Some(Token {
                 start: self.section_start,
                 end: end_index,
                 offset: 0,
@@ -799,7 +799,7 @@ impl Tokenizer<'static> {
                 },
                 code: 0,
                 quote: QuoteType::NoValue,
-            });
+            })
         } else {
             let token = match &self.state {
                 State::InTagName
@@ -827,7 +827,7 @@ impl Tokenizer<'static> {
 
             self.state = State::InClosingTagName;
 
-            return token;
+            token
         }
     }
 
@@ -854,8 +854,8 @@ impl Tokenizer<'static> {
 
         return self.state_in_tag_name(c);
     }
-    fn state_cdatasequence(&mut self, c: u8) -> Option<Token> {
-        if c == Sequences::CDATA[self.sequence_index] {
+    fn state_cdata_sequence(&mut self, c: u8) -> Option<Token> {
+        return if c == Sequences::CDATA[self.sequence_index] {
             self.sequence_index += 1;
             if self.sequence_index == Sequences::CDATA.len() {
                 self.state = State::InCommentLike;
@@ -863,12 +863,12 @@ impl Tokenizer<'static> {
                 self.sequence_index = 0;
                 self.section_start = self.index + 1;
             }
-            return None;
+            None
         } else {
             self.sequence_index = 0;
             self.state = State::InDeclaration;
 
-            return self.fast_get_until_gt(c, TokenLocation::Declaration); // Reconsume the character
+            self.fast_get_until_gt(c, TokenLocation::Declaration) // Reconsume the character
         }
     }
     fn state_in_special_tag(&mut self, c: u8) -> Option<Token> {
