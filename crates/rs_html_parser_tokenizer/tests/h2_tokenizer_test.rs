@@ -94,4 +94,9 @@ mod tests {
     fn entities_for_attributes() {
         insta::assert_debug_snapshot!(tokenize("<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"))
     }
+
+    #[test]
+    fn for_trailing_legacy_entity() {
+        insta::assert_debug_snapshot!(tokenize("&timesbar;&timesbar"))
+    }
 }
