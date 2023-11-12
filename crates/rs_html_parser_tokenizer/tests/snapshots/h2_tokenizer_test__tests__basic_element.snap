@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"<div></div>\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 1,
         end: 4,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"<div></div>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 4,
         end: 4,
         offset: 0,
@@ -19,7 +19,7 @@ expression: "tokenize(\"<div></div>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 7,
         end: 10,
         offset: 0,

@@ -1,4 +1,4 @@
-use rs_html_parser_tokens::AstNode;
+use rs_html_parser_tokens::Token;
 use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
 
 pub struct ParserOptions {
@@ -100,16 +100,16 @@ impl Parser<'static> {
         }
     }
 
-    fn parse_next(&mut self) -> Option<AstNode> {
+    fn parse_next(&mut self) -> Option<Token> {
         return None;
     }
 }
 
 
 impl Iterator for Parser<'static> {
-    type Item = AstNode;
+    type Item = Token;
 
-    fn next(&mut self) -> Option<AstNode> {
+    fn next(&mut self) -> Option<Token> {
         self.parse_next()
     }
 }

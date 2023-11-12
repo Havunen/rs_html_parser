@@ -1,20 +1,20 @@
 #[derive(Debug)]
-pub enum AstKind {
+pub enum TokenLocation {
 
 }
 
 #[derive(Debug)]
-pub struct AstAttrNode {
+pub struct AttrToken {
 
 }
 
 #[derive(Debug)]
-pub struct AstNode {
+pub struct Token {
     pub tag: Box<str>,
-    pub attrs: Option<Vec<AstAttrNode>>,
+    pub attrs: Option<Vec<AttrToken>>,
     pub start: i32,
     pub end: i32,
     pub offset: i32,
-    pub kind: AstKind,
+    pub location: TokenLocation,
     pub code: u32,
 }

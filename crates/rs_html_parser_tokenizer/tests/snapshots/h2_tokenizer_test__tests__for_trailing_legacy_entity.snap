@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"&timesbar;&timesbar\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 0,
         end: 10,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"&timesbar;&timesbar\")"
         code: 10801,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 10,
         end: 19,
         offset: 0,

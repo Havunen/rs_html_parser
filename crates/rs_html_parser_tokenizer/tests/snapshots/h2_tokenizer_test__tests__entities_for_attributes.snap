@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&image_uri=1&&image;=2&image=3\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 1,
         end: 4,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 5,
         end: 8,
         offset: 0,
@@ -19,7 +19,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 10,
         end: 23,
         offset: 0,
@@ -27,7 +27,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 23,
         end: 24,
         offset: 0,
@@ -35,7 +35,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 38,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 24,
         end: 31,
         offset: 0,
@@ -43,7 +43,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 8465,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 31,
         end: 41,
         offset: 0,
@@ -51,7 +51,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 42,
         end: 42,
         offset: 0,
@@ -59,7 +59,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: Double,
     },
-    Token {
+    TokenizerToken {
         start: 43,
         end: 43,
         offset: 0,
@@ -67,7 +67,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 44,
         end: 57,
         offset: 0,
@@ -75,7 +75,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 57,
         end: 58,
         offset: 0,
@@ -83,7 +83,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 38,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 58,
         end: 65,
         offset: 0,
@@ -91,7 +91,7 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 8465,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 65,
         end: 75,
         offset: 0,

@@ -7,7 +7,7 @@ pub enum QuoteType {
 }
 
 #[derive(Debug)]
-pub enum TokenLocation {
+pub enum TokenizerTokenLocation {
     AttrData = 1,
     AttrEntity,
     AttrEnd,
@@ -29,11 +29,11 @@ pub enum TokenLocation {
 }
 
 #[derive(Debug)]
-pub struct Token {
+pub struct TokenizerToken {
     pub start: i32,
     pub end: i32,
     pub offset: i32,
-    pub location: TokenLocation,
+    pub location: TokenizerTokenLocation,
     pub code: u32,
     pub quote: QuoteType,
 }

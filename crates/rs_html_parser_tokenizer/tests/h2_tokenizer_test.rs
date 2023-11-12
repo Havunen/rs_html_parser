@@ -1,10 +1,10 @@
 #[cfg(test)]
 mod tests {
     use rs_html_parser_tokenizer::{TokenizerOptions, Tokenizer};
-    use rs_html_parser_tokenizer_tokens::Token;
+    use rs_html_parser_tokenizer_tokens::TokenizerToken;
 
-    fn tokenize(data: &str) -> Vec<Token> {
-        let mut log: Vec<Token> = Vec::new();
+    fn tokenize(data: &str) -> Vec<TokenizerToken> {
+        let mut log: Vec<TokenizerToken> = Vec::new();
 
         let options = TokenizerOptions {
             xml_mode: Option::from(false),

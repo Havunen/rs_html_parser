@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 0,
         end: 5,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
         code: 38,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 5,
         end: 9,
         offset: 0,
@@ -19,7 +19,7 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
         code: 62,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 9,
         end: 13,
         offset: 0,
@@ -27,7 +27,7 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
         code: 38,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 13,
         end: 23,
         offset: 0,
@@ -35,7 +35,7 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 23,
         end: 28,
         offset: 0,

@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 1,
         end: 6,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 6,
         end: 6,
         offset: 0,
@@ -19,7 +19,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 7,
         end: 10,
         offset: 0,
@@ -27,7 +27,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 12,
         end: 17,
         offset: 0,
@@ -35,7 +35,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 18,
         end: 24,
         offset: 0,
@@ -43,7 +43,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 39,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 24,
         end: 29,
         offset: 0,
@@ -51,7 +51,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 29,
         end: 35,
         offset: 0,
@@ -59,7 +59,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 39,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 35,
         end: 38,
         offset: 0,
@@ -67,7 +67,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 39,
         end: 41,
         offset: 0,
@@ -75,7 +75,7 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 42,
         end: 42,
         offset: 0,

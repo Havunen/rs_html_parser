@@ -3,7 +3,7 @@ source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
 expression: "tokenize(\"<span>Hello World!</span>\")"
 ---
 [
-    Token {
+    TokenizerToken {
         start: 1,
         end: 5,
         offset: 0,
@@ -11,7 +11,7 @@ expression: "tokenize(\"<span>Hello World!</span>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 5,
         end: 5,
         offset: 0,
@@ -19,7 +19,7 @@ expression: "tokenize(\"<span>Hello World!</span>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 6,
         end: 18,
         offset: 0,
@@ -27,7 +27,7 @@ expression: "tokenize(\"<span>Hello World!</span>\")"
         code: 0,
         quote: NoValue,
     },
-    Token {
+    TokenizerToken {
         start: 20,
         end: 24,
         offset: 0,
