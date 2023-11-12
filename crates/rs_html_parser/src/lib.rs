@@ -89,7 +89,7 @@ pub struct Parser<'a> {
     tokenizer: Tokenizer<'a>
 }
 
-impl Parser {
+impl Parser<'static> {
     pub fn new(html: &str, options: ParserOptions) -> Parser  {
         Parser {
             startIndex: 0,
@@ -101,7 +101,7 @@ impl Parser {
     }
 
     fn parse_next(&mut self) -> Option<AstNode> {
-
+        return None;
     }
 }
 

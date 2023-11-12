@@ -10,7 +10,7 @@ pub struct AstAttrNode {
 
 #[derive(Debug)]
 pub struct AstNode {
-    pub tag: str,
+    pub tag: Box<str>,
     pub attrs: Option<Vec<AstAttrNode>>,
     pub start: i32,
     pub end: i32,
