@@ -1,4 +1,4 @@
-use rs_html_parser_tokens::{QuoteType, Token, TokenLocation};
+use rs_html_parser_tokenizer_tokens::{QuoteType, Token, TokenLocation};
 use std::iter::Iterator;
 use std::ops::Range;
 use htmlize;

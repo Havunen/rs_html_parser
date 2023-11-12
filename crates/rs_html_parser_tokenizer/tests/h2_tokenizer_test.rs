@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     use rs_html_parser_tokenizer::{TokenizerOptions, Tokenizer};
-    use rs_html_parser_tokens::Token;
+    use rs_html_parser_tokenizer_tokens::Token;
 
     fn tokenize(data: &str) -> Vec<Token> {
         let mut log: Vec<Token> = Vec::new();

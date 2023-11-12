@@ -12,7 +12,7 @@ version       = "0.0.1"
 bench = false
 
 [dependencies]
-rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
+rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
 htmlize = { version = "1.0.3", features = ["unescape_fast"] }
 
 [dev-dependencies]

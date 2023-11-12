@@ -1,4 +1,4 @@
-use rs_html_parser_nodes::AstNode;
+use rs_html_parser_tokens::AstNode;
 use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
 
 pub struct ParserOptions {

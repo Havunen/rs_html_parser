@@ -1,39 +1,20 @@
 #[derive(Debug)]
-pub enum QuoteType {
-    NoValue = 0,
-    Unquoted = 1,
-    Single = 2,
-    Double = 3,
+pub enum AstKind {
+
 }
 
 #[derive(Debug)]
-pub enum TokenLocation {
-    AttrData = 1,
-    AttrEntity,
-    AttrEnd,
-    AttrName,
+pub struct AstAttrNode {
 
-    CData,
-
-    CloseTag,
-    Comment,
-    Declaration,
-    End,
-    OpenTagEnd,
-    OpenTagName,
-
-    ProcessingInstruction,
-    SelfClosingTag,
-    Text,
-    TextEntity,
 }
 
 #[derive(Debug)]
-pub struct Token {
+pub struct AstNode {
+    pub tag: Box<str>,
+    pub attrs: Option<Vec<AstAttrNode>>,
     pub start: i32,
     pub end: i32,
     pub offset: i32,
-    pub location: TokenLocation,
+    pub kind: AstKind,
     pub code: u32,
-    pub quote: QuoteType,
 }
