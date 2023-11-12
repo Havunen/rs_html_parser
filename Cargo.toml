@@ -1,7 +1,9 @@
 [workspace]
 members = [
   "crates/rs_html_parser_tokens",
+  "crates/rs_html_parser_nodes",
   "crates/rs_html_parser_tokenizer",
+  "crates/rs_html_parser"
 ]
 resolver = "2"
 [profile.release]

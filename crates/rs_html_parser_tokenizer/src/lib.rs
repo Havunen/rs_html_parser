@@ -114,7 +114,7 @@ pub struct Tokenizer<'a> {
     sequence_index: usize,
 }
 
-pub struct Options {
+pub struct TokenizerOptions {
     pub xml_mode: Option<bool>,
     pub decode_entities: Option<bool>,
 }
@@ -141,7 +141,7 @@ fn is_ascii_alpha(c: u8) -> bool {
 
 
 impl Tokenizer<'static> {
-    pub fn new(html: &str, options: Options) -> Tokenizer<'static> {
+    pub fn new(html: &str, options: TokenizerOptions) -> Tokenizer<'static> {
         let buffer = html.as_bytes().to_vec();
 
         Tokenizer {
