@@ -42,6 +42,7 @@ impl CharCodes {
 struct Sequences {}
 
 impl Sequences {
+    const EMPTY: [u8; 0] = [];
     const CDATA: [u8; 6] = [0x43, 0x44, 0x41, 0x54, 0x41, 0x5b]; // CDATA[
     const CDATA_END: [u8; 3] = [0x5d, 0x5d, 0x3e]; // ]]>
     const COMMENT_END: [u8; 3] = [0x2d, 0x2d, 0x3e]; // `-->`
@@ -94,17 +95,19 @@ enum State {
     InEntity,
     AfterReadEntityText,
     AfterReadEntityAttr,
+
+    End
 }
 
 pub struct Tokenizer<'a> {
     state: State,
-    buffer: Vec<u8>,
-    section_start: i32,
-    index: i32,
-    entity_start: i32,
+    buffer: &'a [u8],
+    section_start: usize,
+    index: usize,
+    entity_start: usize,
     base_state: State,
     is_special: bool,
-    offset: i32,
+    offset: usize,
     code: u32,
 
     xml_mode: bool,
@@ -112,6 +115,7 @@ pub struct Tokenizer<'a> {
 
     current_sequence: &'a [u8],
     sequence_index: usize,
+    has_ended: bool
 }
 
 pub struct TokenizerOptions {
@@ -140,10 +144,8 @@ fn is_ascii_alpha(c: u8) -> bool {
 }
 
 
-impl Tokenizer<'static> {
-    pub fn new(html: &str, options: TokenizerOptions) -> Tokenizer<'static> {
-        let buffer = html.as_bytes().to_vec();
-
+impl Tokenizer<'_> {
+    pub fn new<'a>(buffer: &[u8], options: TokenizerOptions) -> Tokenizer {
         Tokenizer {
             state: State::Text,
             buffer,
@@ -159,12 +161,13 @@ impl Tokenizer<'static> {
             decode_entities: options.decode_entities.unwrap_or(true),
             current_sequence: Default::default(),
             sequence_index: 0,
+            has_ended: false,
         }
     }
 
     pub fn reset(&mut self) {
         self.state = State::Text;
-        self.buffer = vec![];
+        self.buffer = &Sequences::EMPTY;
         self.section_start = 0;
         self.index = 0;
         self.base_state = State::Text;
@@ -173,15 +176,15 @@ impl Tokenizer<'static> {
     }
 
     fn fast_forward_to(&mut self, c: u8) -> bool {
-        while self.index < self.buffer.len() as i32 + self.offset - 1 {
+        while self.index < (self.buffer.len() + self.offset - 1) {
             self.index += 1;
 
-            if self.buffer[(self.index - self.offset) as usize] == c {
+            if self.buffer[(self.index - self.offset)] == c {
                 return true;
             }
         }
 
-        self.index = self.buffer.len() as i32 + self.offset - 1;
+        self.index = self.buffer.len() + self.offset - 1;
 
         return false;
     }
@@ -320,7 +323,7 @@ impl Tokenizer<'static> {
                 quote: QuoteType::NoValue,
             });
 
-            self.section_start = -1;
+            self.section_start = 0;
             self.state = State::BeforeAttributeName;
             self.index -= 1; // continue
 
@@ -357,7 +360,7 @@ impl Tokenizer<'static> {
                 quote: QuoteType::NoValue,
             });
 
-            self.section_start = -1;
+            self.section_start = 0;
             self.state = State::AfterClosingTagName;
             self.state_after_closing_tag_name(c);
 
@@ -461,7 +464,7 @@ impl Tokenizer<'static> {
                 code: 0,
                 quote: QuoteType::NoValue,
             });
-            self.section_start = -1;
+            self.section_start = 0;
             self.state = State::BeforeAttributeName;
             self.index -= 1; // continue
                              // self.state_before_attribute_name(c);
@@ -542,7 +545,7 @@ impl Tokenizer<'static> {
             });
 
             self.state = State::AfterAttributeData;
-            self.section_start = -1;
+            self.section_start = 0;
 
             return token;
         } else if self.decode_entities && c == CharCodes::AMP {
@@ -625,13 +628,13 @@ impl Tokenizer<'static> {
         self.index -= 1; // continue
     }
 
-    fn find_end_of_html_entity(&mut self) -> i32 {
+    fn find_end_of_html_entity(&mut self) -> usize {
         let start_pos = self.index - self.offset;
-        let loop_until = self.buffer.len() as i32 + self.offset;
-        let mut count: i32 = start_pos + 1; // the first is always &
+        let loop_until = self.buffer.len() + self.offset;
+        let mut count: usize = start_pos + 1; // the first is always &
 
         while count < loop_until {
-            let char = self.buffer[count as usize];
+            let char = self.buffer[count];
 
             if (char > 47 && char < 58) || // number
                 (char > 96 && char < 123) || // lower case letter
@@ -649,23 +652,20 @@ impl Tokenizer<'static> {
             break;
         }
 
-        if count < loop_until {
+        if count <= loop_until {
             return count;
         }
-        if count == loop_until {
-            return loop_until;
-        }
 
-        return -1;
+        return 0;
     }
 
     fn state_in_entity(&mut self) -> Option<TokenizerToken> {
         let index = self.find_end_of_html_entity();
 
-        if index >= 0 {
+        if index > 0 {
             let range: Range<usize> = Range {
-                start: (self.index - self.offset) as usize,
-                end: index as usize
+                start: (self.index - self.offset),
+                end: index
             };
             let is_attr = self.base_state != State::Text && self.base_state != State::InSpecialTag;
             let code = htmlize::unescape_bytes_in(
@@ -717,17 +717,18 @@ impl Tokenizer<'static> {
 
                 return token;
             } else {
-                self.index = self.offset + self.buffer.len() as i32 - 1;
+                self.index = self.offset + self.buffer.len() - 1;
             }
         } else {
-            self.index = self.offset + self.buffer.len() as i32 - 1;
+            self.index = self.offset + self.buffer.len() - 1;
         }
 
         return None;
     }
 
     fn parse_next(&mut self) -> Option<TokenizerToken> {
-        while self.index < self.buffer.len() as i32 + self.offset {
+
+        while self.index < self.buffer.len() + self.offset {
             let c = self.buffer[(self.index - self.offset) as usize];
 
             let token_or_empty: Option<TokenizerToken> = match self.state {
@@ -764,7 +765,8 @@ impl Tokenizer<'static> {
                 State::InProcessingInstruction => self.fast_get_until_gt(c, TokenizerTokenLocation::ProcessingInstruction),
                 State::InEntity => self.state_in_entity(),
                 State::AfterReadEntityText => self.state_after_entity(TokenizerTokenLocation::TextEntity),
-                State::AfterReadEntityAttr => self.state_after_entity(TokenizerTokenLocation::AttrEntity)
+                State::AfterReadEntityAttr => self.state_after_entity(TokenizerTokenLocation::AttrEntity),
+                State::End => self.state_end(),
             };
 
             self.index += 1;
@@ -778,11 +780,41 @@ impl Tokenizer<'static> {
             self.state = self.base_state;
         }
 
-        return self.handle_trailing_data();
+        let option_trailing_token: Option<TokenizerToken> = self.handle_trailing_data();
+
+        if option_trailing_token.is_some()  {
+            return option_trailing_token;
+        }
+
+        return self.state_end()
+    }
+
+    fn state_end(&mut self) -> Option<TokenizerToken> {
+        if !self.has_ended {
+            self.has_ended = true;
+
+            let i = self.buffer.len() + self.offset;
+
+            Some(TokenizerToken {
+                start: i,
+                end: i,
+                offset: 0,
+                location: TokenizerTokenLocation::End,
+                code: 0,
+                quote: QuoteType::NoValue,
+            });
+        }
+
+        return None
     }
 
     fn handle_trailing_data(&mut self) -> Option<TokenizerToken> {
-        let end_index = self.buffer.len() as i32 + self.offset;
+        if self.state == State::End {
+            return None;
+        }
+        self.state = State::End;
+
+        let end_index = self.buffer.len() + self.offset;
         if self.section_start >= end_index {
             return None;
         }
@@ -874,7 +906,7 @@ impl Tokenizer<'static> {
     fn state_in_special_tag(&mut self, c: u8) -> Option<TokenizerToken> {
         if self.sequence_index == self.current_sequence.len() {
             if c == CharCodes::GT || is_whitespace(c) {
-                let end_of_text = self.index - self.current_sequence.len() as i32;
+                let end_of_text = self.index - self.current_sequence.len();
                 let token: Option<TokenizerToken>;
 
                 if self.section_start < end_of_text {
@@ -946,7 +978,7 @@ impl Tokenizer<'static> {
     }
 
     fn state_in_attribute_after_data(&mut self, quote_type: QuoteType) -> Option<TokenizerToken> {
-        self.section_start = -1;
+        self.section_start = 0;
         self.state = State::BeforeAttributeName;
 
         return Some(TokenizerToken {
@@ -978,7 +1010,7 @@ impl Tokenizer<'static> {
     }
 }
 
-impl Iterator for Tokenizer<'static> {
+impl Iterator for Tokenizer<'_> {
     type Item = TokenizerToken;
 
     fn next(&mut self) -> Option<TokenizerToken> {

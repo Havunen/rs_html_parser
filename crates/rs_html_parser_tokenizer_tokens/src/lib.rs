@@ -18,7 +18,6 @@ pub enum TokenizerTokenLocation {
     CloseTag,
     Comment,
     Declaration,
-    End,
     OpenTagEnd,
     OpenTagName,
 
@@ -26,13 +25,15 @@ pub enum TokenizerTokenLocation {
     SelfClosingTag,
     Text,
     TextEntity,
+
+    End,
 }
 
 #[derive(Debug)]
 pub struct TokenizerToken {
-    pub start: i32,
-    pub end: i32,
-    pub offset: i32,
+    pub start: usize,
+    pub end: usize,
+    pub offset: usize,
     pub location: TokenizerTokenLocation,
     pub code: u32,
     pub quote: QuoteType,

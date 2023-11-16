@@ -1,20 +1,23 @@
-#[derive(Debug)]
-pub enum TokenLocation {
+use std::collections::HashMap;
 
+#[derive(Debug)]
+pub enum TokenKind {
+    Text = 1,
+
+    OpenTag,
+    CloseTag,
+
+    ProcessingInstruction,
+
+    Comment,
+    CommentEnd
+    // Attribute,
 }
 
 #[derive(Debug)]
-pub struct AttrToken {
-
-}
-
-#[derive(Debug)]
-pub struct Token {
-    pub tag: Box<str>,
-    pub attrs: Option<Vec<AttrToken>>,
-    pub start: i32,
-    pub end: i32,
-    pub offset: i32,
-    pub location: TokenLocation,
-    pub code: u32,
+pub struct Token<'a> {
+    pub data: &'a str,
+    pub attrs: Option<&'a HashMap<&'a str, &'a str>>,
+    pub kind: TokenKind,
+    pub is_implied: bool
 }
