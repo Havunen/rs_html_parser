@@ -43,4 +43,12 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
         code: 252,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 28,
+        end: 28,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

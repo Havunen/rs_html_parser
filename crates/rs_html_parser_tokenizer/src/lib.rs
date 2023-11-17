@@ -103,7 +103,7 @@ pub struct Tokenizer<'a> {
     state: State,
     buffer: &'a [u8],
     section_start: usize,
-    index: usize,
+    index: i32,
     entity_start: usize,
     base_state: State,
     is_special: bool,
@@ -176,25 +176,25 @@ impl Tokenizer<'_> {
     }
 
     fn fast_forward_to(&mut self, c: u8) -> bool {
-        while self.index < (self.buffer.len() + self.offset - 1) {
+        while self.index < (self.buffer.len() + self.offset - 1) as i32 {
             self.index += 1;
 
-            if self.buffer[(self.index - self.offset)] == c {
+            if self.buffer[self.index as usize - self.offset] == c {
                 return true;
             }
         }
 
-        self.index = self.buffer.len() + self.offset - 1;
+        self.index = (self.buffer.len() + self.offset - 1) as i32;
 
         return false;
     }
 
     fn state_text(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::LT || (!self.decode_entities && self.fast_forward_to(CharCodes::LT)) {
-            let token = if self.index > self.section_start {
+            let token = if self.index > self.section_start as i32 {
                 Some(TokenizerToken {
                     start: self.section_start,
-                    end: self.index,
+                    end: self.index as usize,
                     offset: 0,
                     location: TokenizerTokenLocation::Text,
                     code: 0,
@@ -205,7 +205,7 @@ impl Tokenizer<'_> {
             };
 
             self.state = State::BeforeTagName;
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
 
             return token;
         }
@@ -232,7 +232,7 @@ impl Tokenizer<'_> {
                 let token = if self.current_sequence == &Sequences::CDATA_END {
                     TokenizerToken {
                         start: self.section_start,
-                        end: self.index,
+                        end: self.index as usize,
                         offset: 2,
                         location: TokenizerTokenLocation::CData,
                         code: 0,
@@ -241,7 +241,7 @@ impl Tokenizer<'_> {
                 } else {
                     TokenizerToken {
                         start: self.section_start,
-                        end: self.index,
+                        end: self.index as usize,
                         offset: 2,
                         location: TokenizerTokenLocation::Comment,
                         code: 0,
@@ -250,7 +250,7 @@ impl Tokenizer<'_> {
                 };
 
                 self.sequence_index = 0;
-                self.section_start = self.index + 1;
+                self.section_start = (self.index + 1) as usize;
                 self.state = State::Text;
 
                 return Some(token);
@@ -286,13 +286,13 @@ impl Tokenizer<'_> {
     fn state_before_tag_name(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::EXCLAMATION_MARK {
             self.state = State::BeforeDeclaration;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         } else if c == CharCodes::QUESTION_MARK {
             self.state = State::InProcessingInstruction;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         } else if self.is_tag_start_char(c) {
             let lower = c | 0x20;
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
             if !self.xml_mode && lower == Sequences::TITLE_END[2] {
                 self.start_special(&Sequences::TITLE_END, 3);
             } else {
@@ -316,7 +316,7 @@ impl Tokenizer<'_> {
         if is_end_of_tag_section(c) {
             let token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::OpenTagName,
                 code: 0,
@@ -344,7 +344,7 @@ impl Tokenizer<'_> {
                 State::InSpecialComment
             };
 
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
         }
 
         return None;
@@ -353,7 +353,7 @@ impl Tokenizer<'_> {
         if c == CharCodes::GT || is_whitespace(c) {
             let token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::CloseTag,
                 code: 0,
@@ -372,7 +372,7 @@ impl Tokenizer<'_> {
     fn state_after_closing_tag_name(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::GT || self.fast_forward_to(CharCodes::GT) {
             self.state = State::Text;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         }
 
         return None;
@@ -380,8 +380,8 @@ impl Tokenizer<'_> {
     fn state_before_attribute_name(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::GT {
             let token = Some(TokenizerToken {
-                start: self.index,
-                end: self.index,
+                start: self.index as usize,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::OpenTagEnd,
                 code: 0,
@@ -394,14 +394,14 @@ impl Tokenizer<'_> {
             } else {
                 self.state = State::Text;
             }
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
 
             return token;
         } else if c == CharCodes::SLASH {
             self.state = State::InSelfClosingTag;
         } else if !is_whitespace(c) {
             self.state = State::InAttributeName;
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
         }
 
         return None;
@@ -409,8 +409,8 @@ impl Tokenizer<'_> {
     fn state_in_self_closing_tag(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::GT {
             let token = Some(TokenizerToken {
-                start: self.index,
-                end: self.index,
+                start: self.index as usize,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::SelfClosingTag,
                 code: 0,
@@ -418,7 +418,7 @@ impl Tokenizer<'_> {
             });
 
             self.state = State::Text;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
             self.is_special = false;
 
             return token;
@@ -434,13 +434,13 @@ impl Tokenizer<'_> {
         if c == CharCodes::EQ || is_end_of_tag_section(c) {
             token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::AttrName,
                 code: 0,
                 quote: QuoteType::NoValue,
             });
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
             self.state = State::AfterAttributeName;
             self.index -= 1; // continue
         } else {
@@ -467,7 +467,6 @@ impl Tokenizer<'_> {
             self.section_start = 0;
             self.state = State::BeforeAttributeName;
             self.index -= 1; // continue
-                             // self.state_before_attribute_name(c);
         } else if !is_whitespace(c) {
             token = Some(TokenizerToken {
                 start: self.section_start,
@@ -478,7 +477,7 @@ impl Tokenizer<'_> {
                 quote: QuoteType::NoValue,
             });
             self.state = State::InAttributeName;
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
         } else {
             token = None;
         };
@@ -488,12 +487,12 @@ impl Tokenizer<'_> {
     fn state_before_attribute_value(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::DOUBLE_QUOTE {
             self.state = State::InAttributeValueDq;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         } else if c == CharCodes::SINGLE_QUOTE {
             self.state = State::InAttributeValueSq;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         } else if !is_whitespace(c) {
-            self.section_start = self.index;
+            self.section_start = self.index as usize;
             self.state = State::InAttributeValueNq;
 
             return self.state_in_attribute_value_no_quotes(c);
@@ -511,7 +510,7 @@ impl Tokenizer<'_> {
 
             let token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
@@ -537,7 +536,7 @@ impl Tokenizer<'_> {
         if is_whitespace(c) || c == CharCodes::GT {
             let token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
@@ -573,7 +572,7 @@ impl Tokenizer<'_> {
         if c == CharCodes::GT || self.fast_forward_to(CharCodes::GT) {
             let token = Some(TokenizerToken {
                 start: self.section_start,
-                end: self.index,
+                end: self.index as usize,
                 offset: 0,
                 location,
                 code: 0,
@@ -581,7 +580,7 @@ impl Tokenizer<'_> {
             });
 
             self.state = State::Text;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
 
             return token;
         }
@@ -595,7 +594,7 @@ impl Tokenizer<'_> {
             self.current_sequence = &Sequences::COMMENT_END;
             // Allow short comments (eg. <!-->)
             self.sequence_index = 2;
-            self.section_start = self.index + 1;
+            self.section_start = (self.index + 1) as usize;
         } else {
             self.state = State::InDeclaration;
         }
@@ -624,14 +623,14 @@ impl Tokenizer<'_> {
     fn start_entity(&mut self) {
         self.base_state = self.state;
         self.state = State::InEntity;
-        self.entity_start = self.index;
+        self.entity_start = self.index as usize;
         self.index -= 1; // continue
     }
 
-    fn find_end_of_html_entity(&mut self) -> usize {
-        let start_pos = self.index - self.offset;
+    fn find_end_of_html_entity(&mut self) -> i32 {
+        let start_pos = self.index as usize - self.offset;
         let loop_until = self.buffer.len() + self.offset;
-        let mut count: usize = start_pos + 1; // the first is always &
+        let mut count: usize = (start_pos + 1) as usize; // the first is always &
 
         while count < loop_until {
             let char = self.buffer[count];
@@ -653,19 +652,19 @@ impl Tokenizer<'_> {
         }
 
         if count <= loop_until {
-            return count;
+            return count as i32;
         }
 
-        return 0;
+        return -1;
     }
 
     fn state_in_entity(&mut self) -> Option<TokenizerToken> {
         let index = self.find_end_of_html_entity();
 
-        if index > 0 {
+        if index >= 0 {
             let range: Range<usize> = Range {
-                start: (self.index - self.offset),
-                end: index
+                start: (self.index as usize - self.offset),
+                end: index as usize
             };
             let is_attr = self.base_state != State::Text && self.base_state != State::InSpecialTag;
             let code = htmlize::unescape_bytes_in(
@@ -701,12 +700,12 @@ impl Tokenizer<'_> {
                         code: 0,
                         quote: QuoteType::NoValue,
                     });
-                    self.section_start = self.index;
+                    self.section_start = self.index as usize;
                 } else {
                     token = None;
                 }
 
-                self.index = index - 1;
+                self.index = (index - 1) as i32;
 
                 self.state = if is_attr {
                      State::AfterReadEntityAttr
@@ -717,10 +716,10 @@ impl Tokenizer<'_> {
 
                 return token;
             } else {
-                self.index = self.offset + self.buffer.len() - 1;
+                self.index = (self.offset + self.buffer.len() - 1) as i32;
             }
         } else {
-            self.index = self.offset + self.buffer.len() - 1;
+            self.index = (self.offset + self.buffer.len() - 1) as i32;
         }
 
         return None;
@@ -728,8 +727,8 @@ impl Tokenizer<'_> {
 
     fn parse_next(&mut self) -> Option<TokenizerToken> {
 
-        while self.index < self.buffer.len() + self.offset {
-            let c = self.buffer[(self.index - self.offset) as usize];
+        while self.index < (self.buffer.len() + self.offset) as i32 {
+            let c = self.buffer[self.index as usize - self.offset];
 
             let token_or_empty: Option<TokenizerToken> = match self.state {
                 State::Text => self.state_text(c),
@@ -795,7 +794,7 @@ impl Tokenizer<'_> {
 
             let i = self.buffer.len() + self.offset;
 
-            Some(TokenizerToken {
+            return Some(TokenizerToken {
                 start: i,
                 end: i,
                 offset: 0,
@@ -812,10 +811,11 @@ impl Tokenizer<'_> {
         if self.state == State::End {
             return None;
         }
-        self.state = State::End;
 
         let end_index = self.buffer.len() + self.offset;
         if self.section_start >= end_index {
+            self.state = State::End;
+
             return None;
         }
 
@@ -857,7 +857,7 @@ impl Tokenizer<'_> {
                 }),
             };
 
-            self.state = State::InClosingTagName;
+            self.state = State::End;
 
             token
         }
@@ -893,7 +893,7 @@ impl Tokenizer<'_> {
                 self.state = State::InCommentLike;
                 self.current_sequence = &Sequences::CDATA_END;
                 self.sequence_index = 0;
-                self.section_start = self.index + 1;
+                self.section_start = (self.index + 1) as usize;
             }
             None
         } else {
@@ -906,16 +906,16 @@ impl Tokenizer<'_> {
     fn state_in_special_tag(&mut self, c: u8) -> Option<TokenizerToken> {
         if self.sequence_index == self.current_sequence.len() {
             if c == CharCodes::GT || is_whitespace(c) {
-                let end_of_text = self.index - self.current_sequence.len();
+                let end_of_text = self.index - self.current_sequence.len() as i32;
                 let token: Option<TokenizerToken>;
 
-                if self.section_start < end_of_text {
+                if self.section_start < end_of_text as usize {
                     // Spoof the index so that reported locations match up.
                     let actual_index = self.index;
                     self.index = end_of_text;
                     token = Some(TokenizerToken {
                         start: self.section_start,
-                        end: end_of_text,
+                        end: end_of_text as usize,
                         offset: 0,
                         location: TokenizerTokenLocation::Text,
                         code: 0,
@@ -927,7 +927,7 @@ impl Tokenizer<'_> {
                 }
 
                 self.is_special = false;
-                self.section_start = end_of_text + 2; // Skip over the `</`
+                self.section_start = (end_of_text + 2) as usize; // Skip over the `</`
                 self.state = State::InClosingTagName;
                 self.index -= 1; // continue
                 // self.state_in_closing_tag_name(c);
@@ -964,8 +964,8 @@ impl Tokenizer<'_> {
     }
     fn state_after_attribute_data(&mut self) -> Option<TokenizerToken> {
         let token = Some(TokenizerToken {
-            start: self.index,
-            end: self.index,
+            start: self.index as usize,
+            end: self.index as usize,
             offset: 0,
             location: TokenizerTokenLocation::AttrEnd,
             code: 0,
@@ -982,8 +982,8 @@ impl Tokenizer<'_> {
         self.state = State::BeforeAttributeName;
 
         return Some(TokenizerToken {
-            start: self.index + 1,
-            end: self.index + 1,
+            start: (self.index + 1) as usize,
+            end: (self.index + 1) as usize,
             offset: 0,
             location: TokenizerTokenLocation::AttrEnd,
             code: 0,
@@ -995,14 +995,14 @@ impl Tokenizer<'_> {
 
         let token = Some(TokenizerToken {
             start: self.section_start,
-            end: self.index,
+            end: self.index as usize,
             offset: 0,
             location,
             code: self.code,
             quote: QuoteType::NoValue,
         });
 
-        self.section_start = self.index;
+        self.section_start = self.index as usize;
         self.index -= 1;
         self.code = 0;
 

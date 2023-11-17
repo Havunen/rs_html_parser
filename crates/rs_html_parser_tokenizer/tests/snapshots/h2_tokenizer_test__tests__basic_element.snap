@@ -27,4 +27,12 @@ expression: "tokenize(\"<div></div>\")"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 11,
+        end: 11,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

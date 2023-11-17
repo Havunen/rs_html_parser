@@ -15,9 +15,9 @@ pub enum TokenKind {
 }
 
 #[derive(Debug)]
-pub struct Token<'a> {
-    pub data: &'a str,
-    pub attrs: Option<&'a HashMap<&'a str, &'a str>>,
+pub struct Token {
+    pub data: String,
+    pub attrs: Option<HashMap<String, String>>,
     pub kind: TokenKind,
     pub is_implied: bool
 }

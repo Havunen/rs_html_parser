@@ -99,4 +99,12 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 75,
+        end: 75,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

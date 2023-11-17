@@ -83,4 +83,12 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 43,
+        end: 43,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

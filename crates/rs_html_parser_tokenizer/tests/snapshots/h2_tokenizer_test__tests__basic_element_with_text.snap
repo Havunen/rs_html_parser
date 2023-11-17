@@ -35,4 +35,12 @@ expression: "tokenize(\"<span>Hello World!</span>\")"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 25,
+        end: 25,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

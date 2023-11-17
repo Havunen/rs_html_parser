@@ -83,4 +83,12 @@ expression: "(tokenize(\"&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101\"))"
         code: 101,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 49,
+        end: 49,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

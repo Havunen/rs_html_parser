@@ -19,4 +19,12 @@ expression: "tokenize(\"&timesbar;&timesbar\")"
         code: 215,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 19,
+        end: 19,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

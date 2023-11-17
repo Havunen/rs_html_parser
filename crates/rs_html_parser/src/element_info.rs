@@ -1,4 +1,3 @@
-use std::collections::{HashMap, HashSet};
 use phf::{Map, phf_map, phf_set, Set};
 
 pub const FORM_TAGS: Set<&'static str> = phf_set! {

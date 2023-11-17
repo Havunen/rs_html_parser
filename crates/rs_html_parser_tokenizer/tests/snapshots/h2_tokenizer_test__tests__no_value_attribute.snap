@@ -35,4 +35,12 @@ expression: "tokenize(\"<div aaaaaaa >\")"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 14,
+        end: 14,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

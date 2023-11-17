@@ -43,4 +43,12 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 20,
+        end: 20,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

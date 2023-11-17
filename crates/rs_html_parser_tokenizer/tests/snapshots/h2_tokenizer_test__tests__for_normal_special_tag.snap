@@ -59,4 +59,12 @@ expression: "tokenize(\"<style>a{}</style>&apos;<br/>\")"
         code: 0,
         quote: NoValue,
     },
+    TokenizerToken {
+        start: 29,
+        end: 29,
+        offset: 0,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
 ]

@@ -1,7 +1,8 @@
 mod element_info;
 
 use std::str;
-use std::collections::{HashMap, HashSet, VecDeque};
+use std::collections::{HashMap, VecDeque};
+use lazy_static::lazy_static;
 use phf::Set;
 use rs_html_parser_tokens::{Token, TokenKind};
 use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
@@ -60,8 +61,9 @@ pub struct ParserOptions {
     tokenizer_options: TokenizerOptions,
 }
 
-const RE_NAME_END: Regex =  Regex::new(r"/\s|\//").unwrap();
-
+lazy_static! {
+    static ref RE_NAME_END: Regex =  Regex::new(r"/\s|\//").unwrap();
+}
 
 pub struct Parser<'a> {
     /** The start index of the last event. */
@@ -100,18 +102,18 @@ pub struct Parser<'a> {
 
     tokenizer_iterator: Tokenizer<'a>,
     openTagStart: usize,
-    tagname: &'a str,
-    next_nodes: VecDeque<Token<'a>>,
-    stack: VecDeque<&'a str>,
+    tagname: String,
+    next_nodes: VecDeque<Token>,
+    stack: VecDeque<String>,
     foreignContext: VecDeque<bool>,
-    attribs: HashMap<&'a str, &'a str>,
+    attribs: HashMap<String, String>,
     attribvalue: String,
     attribname: String,
 }
 
 impl Parser<'_> {
     pub fn new(html: &str, options: ParserOptions) -> Parser  {
-        let bytes = html.as_bytes().as_ref();
+        let bytes = html.as_bytes();
 
         Parser {
             buffer: bytes,
@@ -121,7 +123,7 @@ impl Parser<'_> {
             htmlMode: !options.xmlMode,
             tokenizer_iterator: Tokenizer::new(bytes, options.tokenizer_options).into_iter(),
             openTagStart: 0,
-            tagname: "",
+            tagname: "".to_string(),
             next_nodes: Default::default(),
             stack: Default::default(),
             foreignContext: Default::default(),
@@ -134,7 +136,7 @@ impl Parser<'_> {
     fn ontext(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(
         Token {
-            data: str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap(),
+            data: str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap().to_owned(),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -148,8 +150,10 @@ impl Parser<'_> {
     fn ontextentity(&mut self, tokenizer_token: TokenizerToken) {
         self.endIndex = (tokenizer_token.end - 1) as usize;
 
+        let data_string = char::from_u32(tokenizer_token.code).unwrap().to_string();
+
         self.next_nodes.push_back(Token {
-            data: &*char::from_u32(tokenizer_token.code).unwrap().to_string(),
+            data: data_string,
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -162,7 +166,7 @@ impl Parser<'_> {
      * Checks if the current tag is a void element. Override self if you want
      * to specify your own additional void elements.
      */
-    fn isVoidElement(&mut self, name: &str) -> bool {
+    fn is_void_element(&self, name: &str) -> bool {
         return self.htmlMode && VOID_ELEMENTS.contains(name);
     }
 
@@ -172,14 +176,15 @@ impl Parser<'_> {
 
         let name = str::from_utf8(&self.buffer[tokenizer_token.start .. tokenizer_token.end]).unwrap();
 
-        self.emitOpenTag(&name.to_lowercase());
+        self.emitOpenTag(name.to_lowercase());
     }
 
-    fn emitOpenTag(&mut self, name: &str) {
+    fn emitOpenTag(&mut self, name: String) {
         self.openTagStart = self.startIndex;
+        let name2 = name.clone();
         self.tagname = name;
 
-        let implies_close_option: Option<&Set<&'static str>> = OPEN_IMPLIES_CLOSE.get(name);
+        let implies_close_option: Option<&Set<&'static str>> = OPEN_IMPLIES_CLOSE.get(&*name2);
 
         if let Some(implies_closed) = implies_close_option {
             while self.stack.len() > 0 && implies_closed.contains(&self.stack[0]) {
@@ -193,20 +198,20 @@ impl Parser<'_> {
                 });
             }
         }
-        if !self.isVoidElement(name) {
-            self.stack.push_front(name);
+        if !self.is_void_element(&name2) {
+            self.stack.push_front(name2.clone());
 
             if self.htmlMode {
-                if FOREIGN_CONTEXT_ELEMENTS.contains(name) {
+                if FOREIGN_CONTEXT_ELEMENTS.contains(&name2) {
                     self.foreignContext.push_front(true);
-                } else if HTML_INTEGRATION_ELEMENTS.contains(name) {
+                } else if HTML_INTEGRATION_ELEMENTS.contains(&name2) {
                     self.foreignContext.push_front(false);
                 }
             }
         }
 
         self.next_nodes.push_back(Token {
-            data: name,
+            data: name2.clone(),
             attrs: None,
             kind: TokenKind::OpenTag,
             is_implied: false,
@@ -214,31 +219,33 @@ impl Parser<'_> {
     }
 
     fn endOpenTag(&mut self, isImplied: bool) {
+        let tag_name: &str = self.tagname.as_ref();
         self.startIndex = self.openTagStart;
 
         if !self.attribs.is_empty() {
             self.next_nodes.push_back(
                 Token {
-                    data: self.tagname,
-                    attrs: Some(&self.attribs),
+                    data: tag_name.to_string(),
+                    attrs: Some(self.attribs.to_owned()),
                     kind: TokenKind::OpenTag,
                     is_implied: isImplied,
                 }
             );
             self.attribs = Default::default();
         }
-        if self.isVoidElement(self.tagname) {
+
+        if self.is_void_element(tag_name) {
             self.next_nodes.push_back(
                 Token {
-                    data: self.tagname,
-                    attrs: Some(&self.attribs),
+                    data: tag_name.to_string(),
+                    attrs: Some(self.attribs.to_owned()),
                     kind: TokenKind::CloseTag,
                     is_implied: isImplied,
                 }
             );
         }
 
-        self.tagname = "";
+        self.tagname = "".into();
     }
 
     /** @internal */
@@ -260,8 +267,10 @@ impl Parser<'_> {
             self.foreignContext.pop_front();
         }
 
-        if !self.isVoidElement(name) {
-            let pos = self.stack.iter().position(|&n| n == name);
+        if !self.is_void_element(name) {
+            let pos = self.stack.iter().position(|n| {
+                n == name
+            });
             if let Some(index) = pos {
                 for i in 0..index {
                     let tag = self.stack.pop_front().unwrap();
@@ -274,19 +283,19 @@ impl Parser<'_> {
                 }
             } else if self.htmlMode && name == "p" {
                 // Implicit open before close
-                self.emitOpenTag("p");
+                self.emitOpenTag(String::from("p"));
                 self.closeCurrentTag(true);
             }
         } else if self.htmlMode && name == "br" {
             // We can't use `emitOpenTag` for implicit open, as `br` would be implicitly closed.
             self.next_nodes.push_back(Token {
-                data: "br",
+                data: "br".to_string(),
                 attrs: None,
                 kind: TokenKind::OpenTag,
                 is_implied: false,
             });
             self.next_nodes.push_back(Token {
-                data: "br",
+                data: "br".to_string(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: false,
@@ -312,14 +321,13 @@ impl Parser<'_> {
     }
 
     fn closeCurrentTag(&mut self, isOpenImplied: bool) {
-        let name = self.tagname;
         self.endOpenTag(isOpenImplied);
 
         // Self-closing tags will be on the top of the stack
-        if self.stack[0] == name {
+        if &self.stack[0] == &self.tagname {
             // If the opening tag isn't implied, the closing tag has to be implied.
             self.next_nodes.push_back(Token {
-                data: name,
+                data: self.tagname.to_owned(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: !isOpenImplied,
@@ -362,23 +370,23 @@ impl Parser<'_> {
         //         : null,
         // );
 
-        if !self.attribs.contains_key(&*self.attribname) {
-            self.attribs.insert(&*self.attribname, &*self.attribvalue);
+        if !self.attribs.contains_key(&self.attribname) {
+            self.attribs.insert(self.attribname.to_owned(), self.attribvalue.to_owned());
         }
         self.attribvalue = String::from("");
     }
 
-    fn getInstructionName(&mut self, value: &str) -> &str {
+    fn getInstructionName(&mut self, value: &str) -> String {
 
         // Use the regex search method to find the index
         if let Some(index) = RE_NAME_END.find(value) {
             // Extract the substring up to the match index
             let name = &value[..index.start()].to_string();
 
-            return &*name.to_lowercase();
+            return name.to_lowercase();
         }
 
-        return value
+        return value.to_string()
     }
 
     /** @internal */
@@ -389,9 +397,9 @@ impl Parser<'_> {
         let name: &str = &self.getInstructionName(value);
 
         self.next_nodes.push_back(Token {
-            data: "",
-            attrs: Some(&HashMap::from([
-                (&*format!("!${name}"), &*format!("!{value}"))
+            data: "".to_string(),
+            attrs: Some(HashMap::from([
+                (format!("!${name}"), format!("!{value}"))
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -404,14 +412,14 @@ impl Parser<'_> {
     /** @internal */
     fn onprocessinginstruction(&mut self, tokenizer_token: TokenizerToken) {
         self.endIndex = tokenizer_token.end as usize;
-        let value: &str = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+        let value = String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap();
 
-        let name: &str = &self.getInstructionName(value);
+        let name = self.getInstructionName(&value);
 
         self.next_nodes.push_back(Token {
-            data: "",
-            attrs: Some(&HashMap::from([
-                (&*format!("?${name}"), &*format!("?{value}"))
+            data: "".to_string(),
+            attrs: Some(HashMap::from([
+                (format!("?${name}"), format!("?{value}"))
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -426,13 +434,13 @@ impl Parser<'_> {
         self.endIndex = tokenizer_token.end as usize;
 
         self.next_nodes.push_back(Token {
-            data: &*str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset]).unwrap(),
+            data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset].to_owned()).unwrap(),
             attrs: None,
             kind: TokenKind::Comment,
             is_implied: false,
         });
         self.next_nodes.push_back(Token {
-            data: "",
+            data: "".into(),
             attrs: None,
             kind: TokenKind::CommentEnd,
             is_implied: false,
@@ -447,13 +455,13 @@ impl Parser<'_> {
         self.endIndex = tokenizer_token.end as usize;
 
         self.next_nodes.push_back(Token {
-            data: str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset]).unwrap(),
+            data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset].to_owned()).unwrap(),
             attrs: None,
             kind: TokenKind::Comment,
             is_implied: false,
         });
         self.next_nodes.push_back(Token {
-            data: "",
+            data: "".into(),
             attrs: None,
             kind: TokenKind::CommentEnd,
             is_implied: false,
@@ -471,12 +479,14 @@ impl Parser<'_> {
         let stack_iter = self.stack.iter();
         for item in stack_iter {
             self.next_nodes.push_back(Token {
-                data: item,
+                data: item.to_owned(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: true,
             })
         }
+
+        self.stack.clear();
     }
     fn parse_next(&mut self, tokenizer_token: TokenizerToken) -> Option<Token> {
         match tokenizer_token.location {
@@ -503,9 +513,9 @@ impl Parser<'_> {
 
 
 impl<'i> Iterator for Parser<'i> {
-    type Item = Token<'i>;
+    type Item = Token;
 
-    fn next(&mut self) -> Option<Token<'i>> {
+    fn next(&mut self) -> Option<Token> {
         if let Some(existing_node) = self.next_nodes.pop_front() {
             return Some(existing_node);
         }
