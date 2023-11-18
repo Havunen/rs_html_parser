@@ -1,42 +1,16 @@
+mod test_utils;
 
-#[cfg(test)]
 mod tests {
-    use rs_html_parser::{Parser, ParserOptions};
-    use rs_html_parser_tokenizer::TokenizerOptions;
-    use rs_html_parser_tokens::Token;
-
-    fn tokenize(data: &str) -> Vec<Token> {
-        let mut log: Vec<Token> = Vec::new();
-
-        let options = ParserOptions {
-            xml_mode: false,
-            decode_entities: false,
-            lower_case_tags: false,
-            lower_case_attribute_names: false,
-            recognize_cdata: false,
-            tokenizer_options: TokenizerOptions {
-                xml_mode: None,
-                decode_entities: None,
-            },
-        };
-
-        let tokenizer = Parser::new(&data, options);
-
-        for token in tokenizer {
-            log.push(token);
-        }
-
-        return log;
-    }
+    use crate::test_utils::*;
 
     #[test]
     fn basic_element() {
-        insta::assert_debug_snapshot!(tokenize("<div></div>"))
+        insta::assert_debug_snapshot!(parser_test("<div></div>"))
     }
 
     #[test]
     fn basic_element_with_text() {
-        insta::assert_debug_snapshot!(tokenize("<span>Hello World!</span>"))
+        insta::assert_debug_snapshot!(parser_test("<span>Hello World!</span>"))
     }
 
     #[test]
@@ -47,76 +21,77 @@ mod tests {
          * not a Data Description declaration.
          * -- this is why div is inside script tag
          */
-        insta::assert_debug_snapshot!(tokenize("<script /><div>1</div>"))
+        insta::assert_debug_snapshot!(parser_test("<script /><div>1</div>"))
     }
 
     #[test]
     fn special_style_tag() {
-        insta::assert_debug_snapshot!(tokenize("<style /><div></div>"))
+        insta::assert_debug_snapshot!(parser_test("<style /><div></div>"))
     }
 
     #[test]
     fn special_title_tag() {
-        insta::assert_debug_snapshot!(tokenize("<title /><div></div>"))
+        insta::assert_debug_snapshot!(parser_test("<title /><div></div>"))
     }
 
     #[test]
     fn no_value_attribute() {
-        insta::assert_debug_snapshot!(tokenize("<div aaaaaaa >"))
+        insta::assert_debug_snapshot!(parser_test("<div aaaaaaa >"))
     }
 
     #[test]
     fn no_quote_attribute() {
-        insta::assert_debug_snapshot!(tokenize("<div aaa=aaa >"))
+        insta::assert_debug_snapshot!(parser_test("<div aaa=aaa >"))
     }
 
     #[test]
     fn single_quote_attribute() {
-        insta::assert_debug_snapshot!(tokenize("<div aaa='a' >"))
+        insta::assert_debug_snapshot!(parser_test("<div aaa='a' >"))
     }
 
     #[test]
     fn double_quote_attribute() {
-        insta::assert_debug_snapshot!(tokenize("<div aaa=\"a\" >"))
+        insta::assert_debug_snapshot!(parser_test("<div aaa=\"a\" >"))
     }
 
     #[test]
     fn for_normal_special_tag() {
-        insta::assert_debug_snapshot!(tokenize("<style>a{}</style>&apos;<br/>"))
+        insta::assert_debug_snapshot!(parser_test("<style>a{}</style>&apos;<br/>"))
     }
 
     #[test]
     fn for_normal_special_tag2() {
-        insta::assert_debug_snapshot!(tokenize("<style>a{}</style>&apos; 1234&apos;dsa<br/>"))
+        insta::assert_debug_snapshot!(parser_test("<style>a{}</style>&apos; 1234&apos;dsa<br/>"))
     }
 
     #[test]
     fn for_normal_self_closing_special_tag() {
-        insta::assert_debug_snapshot!((tokenize("<style />&apos;<br/>")))
+        insta::assert_debug_snapshot!((parser_test("<style />&apos;<br/>")))
     }
 
     #[test]
     fn entities_for_xml_entities() {
-        insta::assert_debug_snapshot!((tokenize("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101")))
+        insta::assert_debug_snapshot!((parser_test("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101")))
     }
 
     #[test]
     fn entities_for_xml_incorrect_after_valid() {
-        insta::assert_debug_snapshot!(tokenize("&amp;&gt;&amp&sometext;&uuml"))
+        insta::assert_debug_snapshot!(parser_test("&amp;&gt;&amp&sometext;&uuml"))
     }
 
     #[test]
     fn entities_for_attributes() {
-        insta::assert_debug_snapshot!(tokenize("<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"))
+        insta::assert_debug_snapshot!(parser_test("<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"))
     }
 
     #[test]
     fn for_trailing_legacy_entity() {
-        insta::assert_debug_snapshot!(tokenize("&timesbar;&timesbar"))
+        insta::assert_debug_snapshot!(parser_test("&timesbar;&timesbar"))
     }
 
     #[test]
     fn for_multi_byte_entities() {
-        insta::assert_debug_snapshot!(tokenize("&NotGreaterFullEqual;"))
+        insta::assert_debug_snapshot!(parser_test("&NotGreaterFullEqual;"))
     }
+
 }
