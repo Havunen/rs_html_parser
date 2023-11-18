@@ -1,7 +1,7 @@
 mod element_info;
 
 use std::str;
-use std::collections::{HashMap, VecDeque};
+use std::collections::{BTreeMap, VecDeque};
 use lazy_static::lazy_static;
 use phf::Set;
 use rs_html_parser_tokens::{Token, TokenKind};
@@ -93,7 +93,7 @@ pub struct Parser<'a> {
     next_nodes: VecDeque<Token>,
     stack: VecDeque<String>,
     foreign_context: VecDeque<bool>,
-    attribs: HashMap<String, Option<(String, QuoteType)>>,
+    attribs: BTreeMap<String, Option<(String, QuoteType)>>,
     attrib_value: Option<String>,
     attrib_name: String,
 }
@@ -393,7 +393,7 @@ impl Parser<'_> {
 
         self.next_nodes.push_back(Token {
             data: "".to_string(),
-            attrs: Some(HashMap::from([
+            attrs: Some(BTreeMap::from([
                 (format!("!{name}"), None)
             ])),
             kind: TokenKind::ProcessingInstruction,
@@ -412,7 +412,7 @@ impl Parser<'_> {
 
         self.next_nodes.push_back(Token {
             data: "".to_string(),
-            attrs: Some(HashMap::from([
+            attrs: Some(BTreeMap::from([
                 (format!("?{name}"), None)
             ])),
             kind: TokenKind::ProcessingInstruction,

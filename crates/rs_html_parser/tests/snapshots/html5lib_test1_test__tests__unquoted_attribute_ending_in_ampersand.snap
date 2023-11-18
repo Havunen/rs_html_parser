@@ -7,13 +7,13 @@ expression: "parser_test(\"<s o=& t>\")"
         data: "s",
         attrs: Some(
             {
-                "t": None,
                 "o": Some(
                     (
                         "&",
                         Unquoted,
                     ),
                 ),
+                "t": None,
             },
         ),
         kind: OpenTag,

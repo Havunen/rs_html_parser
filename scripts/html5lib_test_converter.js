@@ -22,18 +22,21 @@ async function load() {
     for (const file of testFiles) {
         console.log("Generating " + file);
 
+        debugger
         const fileResponse = await fetch("https://raw.githubusercontent.com/html5lib/html5lib-tests/master/tokenizer/" + file);
-        const fileData = await fileResponse.json().filter(d => !d.initialStates);
+        const fileData = await fileResponse.json();
+        const tests = fileData.tests.filter(d => !d.initialStates);
 
         let rustTestFile =
 `mod test_utils;
 
 mod tests {
+    use insta::{assert_debug_snapshot, with_settings};
     use crate::test_utils::*;
 
 `;
-        const testsNoErrors = fileData.tests.filter(d => !d.errors);
-        const errorTests = fileData.tests.filter(d => d.errors);
+        const testsNoErrors = tests.filter(d => !d.errors);
+        const errorTests = tests.filter(d => d.errors);
 
         rustTestFile += `
 // Spec valid tests
@@ -44,9 +47,10 @@ mod tests {
             rustTestFile += `
     #[test]
     fn ${santizieTestName(testData.description)}() {
-        insta::assert_debug_snapshot!(parser_test("${testData.input}"));
+        with_settings!({sort_maps =>true}, {
+            assert_debug_snapshot!(parser_test("${testData.input}"));
+        });
     }
-
 `
         }
 
@@ -59,9 +63,10 @@ mod tests {
             rustTestFile += `
     #[test]
     fn ${santizieTestName(testData.description)}() {
-        insta::assert_debug_snapshot!(parser_test("${testData.input}"));
+        with_settings!({sort_maps =>true}, {
+            assert_debug_snapshot!(parser_test("${testData.input}"));
+        });
     }
-
 `
         }
 
@@ -76,6 +81,6 @@ console.log("Starting!")
 
 load().then(() => {
     console.log("Loading finished!")
-}).catch(() => {
-    console.log("Loading ERROR!")
+}).catch((ex) => {
+    console.log("Loading ERROR! " + ex)
 })

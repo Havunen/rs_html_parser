@@ -231,24 +231,19 @@ impl Tokenizer<'_> {
             self.sequence_index += 1;
 
             if self.sequence_index == self.current_sequence.len() {
-                let token = if self.current_sequence == &Sequences::CDATA_END {
-                    TokenizerToken {
-                        start: self.section_start,
-                        end: self.index as usize,
-                        offset: 2,
-                        location: TokenizerTokenLocation::CData,
-                        code: 0,
-                        quote: QuoteType::NoValue,
-                    }
+                let end_index = if self.index - 2 > self.buffer.len() as i32 {
+                    self.section_start
                 } else {
-                    TokenizerToken {
-                        start: self.section_start,
-                        end: self.index as usize,
-                        offset: 2,
-                        location: TokenizerTokenLocation::Comment,
-                        code: 0,
-                        quote: QuoteType::NoValue,
-                    }
+                    self.index as usize - 2
+                };
+
+                let token = TokenizerToken {
+                    start: self.section_start,
+                    end: if self.section_start > end_index { self.section_start } else { end_index },
+                    offset: 0,
+                    location: if self.current_sequence == &Sequences::CDATA_END { TokenizerTokenLocation::CData } else { TokenizerTokenLocation::Comment },
+                    code: 0,
+                    quote: QuoteType::NoValue,
                 };
 
                 self.sequence_index = 0;

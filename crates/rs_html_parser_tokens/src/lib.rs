@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{BTreeMap};
 use rs_html_parser_tokenizer_tokens::QuoteType;
 
 #[derive(Debug)]
@@ -18,7 +18,7 @@ pub enum TokenKind {
 #[derive(Debug)]
 pub struct Token {
     pub data: String,
-    pub attrs: Option<HashMap<String, Option<(String, QuoteType)>>>,
+    pub attrs: Option<BTreeMap<String, Option<(String, QuoteType)>>>,
     pub kind: TokenKind,
     pub is_implied: bool
 }

@@ -1,6 +1,7 @@
 
 #[cfg(test)]
 mod tests {
+    use insta::assert_debug_snapshot;
     use rs_html_parser_tokenizer::{TokenizerOptions, Tokenizer};
     use rs_html_parser_tokenizer_tokens::TokenizerToken;
 
@@ -23,6 +24,16 @@ mod tests {
 
     #[test]
     fn basic_element() {
-        insta::assert_debug_snapshot!(tokenize("<a a=a&>foo"))
+        assert_debug_snapshot!(tokenize("<a a=a&>foo"));
+    }
+
+    #[test]
+    fn short_comment() {
+        assert_debug_snapshot!(tokenize("<!--->"));
+    }
+
+    #[test]
+    fn dash_in_comment() {
+        assert_debug_snapshot!(tokenize("<!----->"));
     }
 }
