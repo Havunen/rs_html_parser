@@ -19,28 +19,28 @@ pub struct ParserOptions {
      *
      * @default false
      */
-    xmlMode: bool,
+    pub xmlMode: bool,
 
     /**
      * Decode entities within the document.
      *
      * @default true
      */
-    decodeEntities: bool,
+    pub decodeEntities: bool,
 
     /**
      * If set to true, all tags will be lowercased.
      *
      * @default !xmlMode
      */
-    lowerCaseTags: bool,
+    pub lowerCaseTags: bool,
 
     /**
      * If set to `true`, all attribute names will be lowercased. self has noticeable impact on speed.
      *
      * @default !xmlMode
      */
-    lowerCaseAttributeNames: bool,
+    pub lowerCaseAttributeNames: bool,
 
     /**
      * If set to true, CDATA sections will be recognized as text even if the xmlMode option is not enabled.
@@ -48,7 +48,7 @@ pub struct ParserOptions {
      *
      * @default xmlMode
      */
-    recognizeCDATA: bool,
+    pub recognizeCDATA: bool,
 
     /**
      * If set to `true`, self-closing tags will trigger the onclosetag event even if xmlMode is not set to `true`.
@@ -58,7 +58,7 @@ pub struct ParserOptions {
      */
     // recognizeSelfClosing: bool,
 
-    tokenizer_options: TokenizerOptions,
+    pub tokenizer_options: TokenizerOptions,
 }
 
 lazy_static! {
@@ -142,13 +142,13 @@ impl Parser<'_> {
             is_implied: false,
         });
 
-        self.endIndex = (tokenizer_token.end - 1) as usize;
-        self.startIndex = tokenizer_token.end as usize;
+        self.endIndex = (tokenizer_token.end - 1);
+        self.startIndex = tokenizer_token.end;
     }
 
     /** @internal */
     fn ontextentity(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = (tokenizer_token.end - 1) as usize;
+        self.endIndex = (tokenizer_token.end - 1);
 
         let data_string = char::from_u32(tokenizer_token.code).unwrap().to_string();
 
@@ -172,7 +172,7 @@ impl Parser<'_> {
 
     /** @internal */
     fn onopentagname(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
 
         let name = str::from_utf8(&self.buffer[tokenizer_token.start .. tokenizer_token.end]).unwrap();
 
@@ -240,7 +240,7 @@ impl Parser<'_> {
                     data: tag_name.to_string(),
                     attrs: Some(self.attribs.to_owned()),
                     kind: TokenKind::CloseTag,
-                    is_implied: isImplied,
+                    is_implied: true,
                 }
             );
         }
@@ -250,16 +250,16 @@ impl Parser<'_> {
 
     /** @internal */
     fn onopentagend(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
         self.endOpenTag(false);
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
     fn onclosetag(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
 
         let name = &*str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap().to_lowercase();
 
@@ -272,7 +272,8 @@ impl Parser<'_> {
                 n == name
             });
             if let Some(index) = pos {
-                for i in 0..index {
+                // FIX THIS ei iteroi
+                for i in 0..index + 1 {
                     let tag = self.stack.pop_front().unwrap();
                     self.next_nodes.push_back(Token {
                         data: tag,
@@ -303,17 +304,17 @@ impl Parser<'_> {
         }
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
     fn onselfclosingtag(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
         if self.foreignContext[0] {
             self.closeCurrentTag(false);
 
             // Set `startIndex` for next node
-            self.startIndex = (tokenizer_token.end + 1) as usize;
+            self.startIndex = (tokenizer_token.end + 1);
         } else {
             // Ignore the fact that the tag is self-closing.
             self.onopentagend(tokenizer_token);
@@ -338,7 +339,7 @@ impl Parser<'_> {
 
     /** @internal */
     fn onattribname(&mut self, tokenizer_token: TokenizerToken) {
-        self.startIndex = tokenizer_token.start as usize;
+        self.startIndex = tokenizer_token.start;
         let name = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         self.attribname = name.to_lowercase();
@@ -356,7 +357,7 @@ impl Parser<'_> {
 
     /** @internal */
     fn onattribend(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
 
         // self.cbs.onattribute?.(
         //     self.attribname,
@@ -391,7 +392,7 @@ impl Parser<'_> {
 
     /** @internal */
     fn ondeclaration(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
         let value: &str = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         let name: &str = &self.getInstructionName(value);
@@ -406,12 +407,12 @@ impl Parser<'_> {
         });
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
     fn onprocessinginstruction(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
         let value = String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap();
 
         let name = self.getInstructionName(&value);
@@ -426,12 +427,12 @@ impl Parser<'_> {
         });
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
     fn oncomment(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
 
         self.next_nodes.push_back(Token {
             data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset].to_owned()).unwrap(),
@@ -447,12 +448,12 @@ impl Parser<'_> {
         });
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
     fn oncdata(&mut self, tokenizer_token: TokenizerToken) {
-        self.endIndex = tokenizer_token.end as usize;
+        self.endIndex = tokenizer_token.end;
 
         self.next_nodes.push_back(Token {
             data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset].to_owned()).unwrap(),
@@ -468,7 +469,7 @@ impl Parser<'_> {
         });
 
         // Set `startIndex` for next node
-        self.startIndex = (tokenizer_token.end + 1) as usize;
+        self.startIndex = (tokenizer_token.end + 1);
     }
 
     /** @internal */
