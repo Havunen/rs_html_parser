@@ -9,11 +9,11 @@ mod tests {
         let mut log: Vec<Token> = Vec::new();
 
         let options = ParserOptions {
-            xmlMode: false,
-            decodeEntities: false,
-            lowerCaseTags: false,
-            lowerCaseAttributeNames: false,
-            recognizeCDATA: false,
+            xml_mode: false,
+            decode_entities: false,
+            lower_case_tags: false,
+            lower_case_attribute_names: false,
+            recognize_cdata: false,
             tokenizer_options: TokenizerOptions {
                 xml_mode: None,
                 decode_entities: None,
