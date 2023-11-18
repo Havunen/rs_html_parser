@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "tokenize(\"<span>Hello World!</span>\")"
+expression: "parser_test(\"<span>Hello World!</span>\")"
 ---
 [
     Token {

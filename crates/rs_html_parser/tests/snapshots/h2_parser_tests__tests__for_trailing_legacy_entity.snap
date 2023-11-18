@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "tokenize(\"&timesbar;&timesbar\")"
+expression: "parser_test(\"&timesbar;&timesbar\")"
 ---
 [
     Token {

@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "(tokenize(\"&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101\"))"
+expression: "(parser_test(\"&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101\"))"
 ---
 [
     Token {

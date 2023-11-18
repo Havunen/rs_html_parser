@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&image_uri=1&&image;=2&image=3\")"
+expression: "parser_test(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&image_uri=1&&image;=2&image=3\")"
 ---
 [
     Token {

@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
+expression: "parser_test(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
 ---
 [
     Token {

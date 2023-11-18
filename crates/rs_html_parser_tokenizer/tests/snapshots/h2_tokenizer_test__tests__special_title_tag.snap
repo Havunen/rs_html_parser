@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser_tokenizer/tests/h2_tokenizer_test.rs
-expression: "tokenize(\"<style /><div></div>\")"
+expression: "tokenize(\"<title /><div></div>\")"
 ---
 [
     TokenizerToken {

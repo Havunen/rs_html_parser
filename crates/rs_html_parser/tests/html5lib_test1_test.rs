@@ -85,21 +85,21 @@ mod tests {
     }
 
     #[test]
-    fn commentcomma__central_dash_no_space() {
+    fn commentcomma_central_dash_no_space() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!----->"));
         });
     }
 
     #[test]
-    fn commentcomma__two_central_dashes() {
+    fn commentcomma_two_central_dashes() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!-- --comment -->"));
         });
     }
 
     #[test]
-    fn commentcomma__central_less_than_bang() {
+    fn commentcomma_central_lesshyphen_than_bang() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!--<!-->"));
         });
@@ -113,28 +113,28 @@ mod tests {
     }
 
     #[test]
-    fn lt__in_comment() {
+    fn lt_in_comment() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!-- <test-->"));
         });
     }
 
     #[test]
-    fn lt_lt__in_comment() {
+    fn lt_lt_in_comment() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!--<<-->"));
         });
     }
 
     #[test]
-    fn lt_exclmark__in_comment() {
+    fn lt_excl_mark_in_comment() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!-- <!test-->"));
         });
     }
 
     #[test]
-    fn lt_exclmark___in_comment() {
+    fn lt_excl_mark_hyphen_in_comment() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<!-- <!-test-->"));
         });
@@ -169,14 +169,14 @@ mod tests {
     }
 
     #[test]
-    fn entity_with_trailing_semicolon__1_() {
+    fn entity_with_trailing_semicolon_1_() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("I'm &not;it"));
         });
     }
 
     #[test]
-    fn entity_with_trailing_semicolon__2_() {
+    fn entity_with_trailing_semicolon_2_() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("I'm &notin;"));
         });
@@ -190,7 +190,7 @@ mod tests {
     }
 
     #[test]
-    fn non_ascii_character_reference_name() {
+    fn nonhyphen_ascii_character_reference_name() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("&¬;"));
         });
@@ -246,7 +246,7 @@ mod tests {
     }
 
     #[test]
-    fn unquoted_attribute_at_end_of_tag_with_final_character_of_amp_comma__with_tag_followed_by_characters() {
+    fn unquoted_attribute_at_end_of_tag_with_final_character_of_amp_comma_with_tag_followed_by_characters() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("<a a=a&>foo"));
         });
@@ -360,7 +360,7 @@ mod tests {
     }
 
     #[test]
-    fn ampersandcomma__number_sign() {
+    fn ampersandcomma_number_sign() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("&#"));
         });
@@ -374,14 +374,14 @@ mod tests {
     }
 
     #[test]
-    fn entity_without_trailing_semicolon__1_() {
+    fn entity_without_trailing_semicolon_1_() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("I'm &notit"));
         });
     }
 
     #[test]
-    fn entity_without_trailing_semicolon__2_() {
+    fn entity_without_trailing_semicolon_2_() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test("I'm &notin"));
         });

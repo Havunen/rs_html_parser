@@ -428,7 +428,7 @@ impl Parser<'_> {
         self.end_index = tokenizer_token.end;
 
         self.next_nodes.push_back(Token {
-            data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end - tokenizer_token.offset].to_owned()).unwrap(),
+            data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap(),
             attrs: None,
             kind: TokenKind::Comment,
             is_implied: false,

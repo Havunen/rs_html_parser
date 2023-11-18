@@ -7,14 +7,12 @@ function santizieTestName(description) {
         .replaceAll('<', 'lt_')
         .replaceAll('>', 'gt_')
         .replaceAll('w//', 'with_')
-        .replaceAll('/', '_')
-        .replaceAll('-', '_')
-        .replaceAll('(', '_')
-        .replaceAll(')', '_')
+        .replaceAll('-', 'hyphen_')
         .replaceAll(',', 'comma_')
         .replaceAll('.', 'dot_')
         .replaceAll('&', 'amp_')
-        .replaceAll('!', 'exclmark_')
+        .replaceAll('!', 'excl_mark_')
+        .replace(/[<>\/(),.&!#_]+/g,'_')
         .toLowerCase();
 }
 

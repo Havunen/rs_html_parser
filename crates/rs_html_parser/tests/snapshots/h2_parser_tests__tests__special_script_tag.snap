@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/h2_parser_tests.rs
-expression: "tokenize(\"<script /><div>1</div>\")"
+expression: "parser_test(\"<script /><div>1</div>\")"
 ---
 [
     Token {
