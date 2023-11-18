@@ -1,22 +1,16 @@
 ---
 source: crates/rs_html_parser/tests/html5lib_test1_test.rs
-expression: "parser_test(\"<h a='b' c='d'>\")"
+expression: "parser_test(\"<a a=a&>foo\")"
 ---
 [
     Token {
-        data: "h",
+        data: "a",
         attrs: Some(
             {
-                "c": Some(
-                    (
-                        "d",
-                        Single,
-                    ),
-                ),
                 "a": Some(
                     (
-                        "b",
-                        Single,
+                        "a&",
+                        Unquoted,
                     ),
                 ),
             },
@@ -25,7 +19,13 @@ expression: "parser_test(\"<h a='b' c='d'>\")"
         is_implied: false,
     },
     Token {
-        data: "h",
+        data: "foo",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
         attrs: None,
         kind: CloseTag,
         is_implied: true,

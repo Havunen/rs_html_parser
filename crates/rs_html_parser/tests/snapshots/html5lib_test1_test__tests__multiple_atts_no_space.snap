@@ -7,15 +7,15 @@ expression: "parser_test(\"<h a='b'c='d'>\")"
         data: "h",
         attrs: Some(
             {
-                "a": Some(
-                    (
-                        "b",
-                        Single,
-                    ),
-                ),
                 "c": Some(
                     (
                         "d",
+                        Single,
+                    ),
+                ),
+                "a": Some(
+                    (
+                        "b",
                         Single,
                     ),
                 ),

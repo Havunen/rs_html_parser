@@ -109,6 +109,7 @@ pub struct Tokenizer<'a> {
     is_special: bool,
     offset: usize,
     code: u32,
+    prev_quote_type: QuoteType,
 
     xml_mode: bool,
     decode_entities: bool,
@@ -162,6 +163,7 @@ impl Tokenizer<'_> {
             current_sequence: Default::default(),
             sequence_index: 0,
             has_ended: false,
+            prev_quote_type: QuoteType::NoValue,
         }
     }
 
@@ -487,11 +489,14 @@ impl Tokenizer<'_> {
     fn state_before_attribute_value(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::DOUBLE_QUOTE {
             self.state = State::InAttributeValueDq;
+            self.prev_quote_type = QuoteType::Double;
             self.section_start = (self.index + 1) as usize;
         } else if c == CharCodes::SINGLE_QUOTE {
             self.state = State::InAttributeValueSq;
+            self.prev_quote_type = QuoteType::Single;
             self.section_start = (self.index + 1) as usize;
         } else if !is_whitespace(c) {
+            self.prev_quote_type = QuoteType::Unquoted;
             self.section_start = self.index as usize;
             self.state = State::InAttributeValueNq;
 
@@ -500,7 +505,7 @@ impl Tokenizer<'_> {
 
         return None;
     }
-    fn handle_in_attribute_value(&mut self, c: u8, quote: u8, quote_type: QuoteType) -> Option<TokenizerToken> {
+    fn handle_in_attribute_value(&mut self, c: u8, quote: u8) -> Option<TokenizerToken> {
         if c == quote || (!self.decode_entities && self.fast_forward_to(quote)) {
             self.state = if quote == CharCodes::DOUBLE_QUOTE {
                 State::InAttributeAfterDataDoubleQuote
@@ -514,7 +519,7 @@ impl Tokenizer<'_> {
                 offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
-                quote: quote_type,
+                quote: self.prev_quote_type,
             });
 
             self.index -= 1; // Continue
@@ -527,22 +532,25 @@ impl Tokenizer<'_> {
         return None;
     }
     fn state_in_attribute_value_double_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
-        return self.handle_in_attribute_value(c, CharCodes::DOUBLE_QUOTE, QuoteType::Double);
+        return self.handle_in_attribute_value(c, CharCodes::DOUBLE_QUOTE);
     }
     fn state_in_attribute_value_single_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
-        return self.handle_in_attribute_value(c, CharCodes::SINGLE_QUOTE, QuoteType::Single);
+        return self.handle_in_attribute_value(c, CharCodes::SINGLE_QUOTE);
     }
     fn state_in_attribute_value_no_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
         if is_whitespace(c) || c == CharCodes::GT {
-            let token = Some(TokenizerToken {
-                start: self.section_start,
-                end: self.index as usize,
-                offset: 0,
-                location: TokenizerTokenLocation::AttrData,
-                code: 0,
-                quote: QuoteType::Unquoted,
-            });
+            let token = if self.section_start < self.index as usize {
+                Some(TokenizerToken {
+                    start: self.section_start,
+                    end: self.index as usize,
+                    offset: 0,
+                    location: TokenizerTokenLocation::AttrData,
+                    code: 0,
+                    quote: QuoteType::Unquoted,
+                })
+            } else { None };
 
+            self.index -= 1; // continue
             self.state = State::AfterAttributeData;
             self.section_start = 0;
 
@@ -698,7 +706,7 @@ impl Tokenizer<'_> {
                         offset: 0,
                         location: if is_attr { TokenizerTokenLocation::AttrData } else { TokenizerTokenLocation::Text },
                         code: 0,
-                        quote: QuoteType::NoValue,
+                        quote: if is_attr { self.prev_quote_type } else { QuoteType::NoValue },
                     });
                     self.section_start = self.index as usize;
                 } else {
@@ -995,7 +1003,7 @@ impl Tokenizer<'_> {
             offset: 0,
             location,
             code: self.code,
-            quote: QuoteType::NoValue,
+            quote:  if location == TokenizerTokenLocation::AttrEntity { self.prev_quote_type } else { QuoteType::NoValue },
         });
 
         self.section_start = self.index as usize;
