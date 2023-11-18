@@ -7,9 +7,11 @@ expression: "tokenize(\"<div aaa='a' >\")"
         data: "div",
         attrs: Some(
             {
-                "aaa": (
-                    "a",
-                    Single,
+                "aaa": Some(
+                    (
+                        "a",
+                        Single,
+                    ),
                 ),
             },
         ),

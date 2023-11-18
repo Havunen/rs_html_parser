@@ -7,9 +7,11 @@ expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&imag
         data: "img",
         attrs: Some(
             {
-                "src": (
-                    "?&image_uri=1&ℑ=2&image=3",
-                    Double,
+                "src": Some(
+                    (
+                        "?&image_uri=1&ℑ=2&image=3",
+                        Double,
+                    ),
                 ),
             },
         ),
