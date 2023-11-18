@@ -6,7 +6,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 1,
         end: 6,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 8,
         end: 8,
-        offset: 0,
         location: SelfClosingTag,
         code: 0,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 9,
         end: 15,
-        offset: 0,
         location: TextEntity,
         code: 39,
         quote: NoValue,
@@ -30,7 +27,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 16,
         end: 18,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -38,7 +34,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 19,
         end: 19,
-        offset: 0,
         location: SelfClosingTag,
         code: 0,
         quote: NoValue,
@@ -46,7 +41,6 @@ expression: "(tokenize(\"<style />&apos;<br/>\"))"
     TokenizerToken {
         start: 20,
         end: 20,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,

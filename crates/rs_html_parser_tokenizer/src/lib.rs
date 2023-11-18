@@ -197,7 +197,6 @@ impl Tokenizer<'_> {
                 Some(TokenizerToken {
                     start: self.section_start,
                     end: self.index as usize,
-                    offset: 0,
                     location: TokenizerTokenLocation::Text,
                     code: 0,
                     quote: QuoteType::NoValue,
@@ -240,7 +239,6 @@ impl Tokenizer<'_> {
                 let token = TokenizerToken {
                     start: self.section_start,
                     end: if self.section_start > end_index { self.section_start } else { end_index },
-                    offset: 0,
                     location: if self.current_sequence == &Sequences::CDATA_END { TokenizerTokenLocation::CData } else { TokenizerTokenLocation::Comment },
                     code: 0,
                     quote: QuoteType::NoValue,
@@ -314,7 +312,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::OpenTagName,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -351,7 +348,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::CloseTag,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -379,7 +375,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.index as usize,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::OpenTagEnd,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -408,7 +403,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.index as usize,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::SelfClosingTag,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -432,7 +426,6 @@ impl Tokenizer<'_> {
             token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::AttrName,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -456,7 +449,6 @@ impl Tokenizer<'_> {
             token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.section_start,
-                offset: 0,
                 location: TokenizerTokenLocation::AttrEnd,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -468,7 +460,6 @@ impl Tokenizer<'_> {
             token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.section_start,
-                offset: 0,
                 location: TokenizerTokenLocation::AttrEnd,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -511,7 +502,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.index as usize,
-                offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
                 quote: self.prev_quote_type,
@@ -538,7 +528,6 @@ impl Tokenizer<'_> {
                 Some(TokenizerToken {
                     start: self.section_start,
                     end: self.index as usize,
-                    offset: 0,
                     location: TokenizerTokenLocation::AttrData,
                     code: 0,
                     quote: QuoteType::Unquoted,
@@ -576,7 +565,6 @@ impl Tokenizer<'_> {
             let token = Some(TokenizerToken {
                 start: self.section_start,
                 end: self.index as usize,
-                offset: 0,
                 location,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -633,7 +621,7 @@ impl Tokenizer<'_> {
     fn find_end_of_html_entity(&mut self) -> i32 {
         let start_pos = self.index as usize - self.offset;
         let loop_until = self.buffer.len() + self.offset;
-        let mut count: usize = (start_pos + 1) as usize; // the first is always &
+        let mut count: usize = start_pos + 1; // the first is always &
 
         while count < loop_until {
             let char = self.buffer[count];
@@ -698,7 +686,6 @@ impl Tokenizer<'_> {
                     token = Some(TokenizerToken {
                         start: self.section_start,
                         end: self.entity_start,
-                        offset: 0,
                         location: if is_attr { TokenizerTokenLocation::AttrData } else { TokenizerTokenLocation::Text },
                         code: 0,
                         quote: if is_attr { self.prev_quote_type } else { QuoteType::NoValue },
@@ -708,7 +695,7 @@ impl Tokenizer<'_> {
                     token = None;
                 }
 
-                self.index = (index - 1) as i32;
+                self.index = index - 1;
 
                 self.state = if is_attr {
                      State::AfterReadEntityAttr
@@ -800,7 +787,6 @@ impl Tokenizer<'_> {
             return Some(TokenizerToken {
                 start: i,
                 end: i,
-                offset: 0,
                 location: TokenizerTokenLocation::End,
                 code: 0,
                 quote: QuoteType::NoValue,
@@ -824,7 +810,6 @@ impl Tokenizer<'_> {
             Some(TokenizerToken {
                 start: self.section_start,
                 end: end_index,
-                offset: 0,
                 location: if self.current_sequence == &Sequences::CDATA_END {
                     TokenizerTokenLocation::CData
                 } else {
@@ -851,7 +836,6 @@ impl Tokenizer<'_> {
                 _ => Some(TokenizerToken {
                     start: self.section_start,
                     end: end_index,
-                    offset: 0,
                     location: TokenizerTokenLocation::Text,
                     code: 0,
                     quote: QuoteType::NoValue,
@@ -915,7 +899,6 @@ impl Tokenizer<'_> {
                     token = Some(TokenizerToken {
                         start: self.section_start,
                         end: end_of_text as usize,
-                        offset: 0,
                         location: TokenizerTokenLocation::Text,
                         code: 0,
                         quote: QuoteType::NoValue,
@@ -965,7 +948,6 @@ impl Tokenizer<'_> {
         let token = Some(TokenizerToken {
             start: self.index as usize,
             end: self.index as usize,
-            offset: 0,
             location: TokenizerTokenLocation::AttrEnd,
             code: 0,
             quote: QuoteType::Unquoted,
@@ -983,7 +965,6 @@ impl Tokenizer<'_> {
         return Some(TokenizerToken {
             start: (self.index + 1) as usize,
             end: (self.index + 1) as usize,
-            offset: 0,
             location: TokenizerTokenLocation::AttrEnd,
             code: 0,
             quote: quote_type,
@@ -995,7 +976,6 @@ impl Tokenizer<'_> {
         let token = Some(TokenizerToken {
             start: self.section_start,
             end: self.index as usize,
-            offset: 0,
             location,
             code: self.code,
             quote:  if location == TokenizerTokenLocation::AttrEntity { self.prev_quote_type } else { QuoteType::NoValue },

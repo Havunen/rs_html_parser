@@ -6,7 +6,6 @@ expression: "tokenize(\"<div></div>\")"
     TokenizerToken {
         start: 1,
         end: 4,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "tokenize(\"<div></div>\")"
     TokenizerToken {
         start: 4,
         end: 4,
-        offset: 0,
         location: OpenTagEnd,
         code: 0,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "tokenize(\"<div></div>\")"
     TokenizerToken {
         start: 7,
         end: 10,
-        offset: 0,
         location: CloseTag,
         code: 0,
         quote: NoValue,
@@ -30,7 +27,6 @@ expression: "tokenize(\"<div></div>\")"
     TokenizerToken {
         start: 11,
         end: 11,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,

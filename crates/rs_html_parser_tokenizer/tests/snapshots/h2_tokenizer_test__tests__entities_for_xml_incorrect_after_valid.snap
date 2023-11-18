@@ -6,7 +6,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 0,
         end: 5,
-        offset: 0,
         location: TextEntity,
         code: 38,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 5,
         end: 9,
-        offset: 0,
         location: TextEntity,
         code: 62,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 9,
         end: 13,
-        offset: 0,
         location: TextEntity,
         code: 38,
         quote: NoValue,
@@ -30,7 +27,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 13,
         end: 23,
-        offset: 0,
         location: Text,
         code: 0,
         quote: NoValue,
@@ -38,7 +34,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 23,
         end: 28,
-        offset: 0,
         location: TextEntity,
         code: 252,
         quote: NoValue,
@@ -46,7 +41,6 @@ expression: "tokenize(\"&amp;&gt;&amp&sometext;&uuml\")"
     TokenizerToken {
         start: 28,
         end: 28,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,

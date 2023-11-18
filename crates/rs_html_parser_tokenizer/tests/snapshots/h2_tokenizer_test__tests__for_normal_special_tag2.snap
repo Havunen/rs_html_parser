@@ -6,7 +6,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 1,
         end: 6,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 6,
         end: 6,
-        offset: 0,
         location: OpenTagEnd,
         code: 0,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 7,
         end: 10,
-        offset: 0,
         location: Text,
         code: 0,
         quote: NoValue,
@@ -30,7 +27,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 12,
         end: 17,
-        offset: 0,
         location: CloseTag,
         code: 0,
         quote: NoValue,
@@ -38,7 +34,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 18,
         end: 24,
-        offset: 0,
         location: TextEntity,
         code: 39,
         quote: NoValue,
@@ -46,7 +41,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 24,
         end: 29,
-        offset: 0,
         location: Text,
         code: 0,
         quote: NoValue,
@@ -54,7 +48,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 29,
         end: 35,
-        offset: 0,
         location: TextEntity,
         code: 39,
         quote: NoValue,
@@ -62,7 +55,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 35,
         end: 38,
-        offset: 0,
         location: Text,
         code: 0,
         quote: NoValue,
@@ -70,7 +62,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 39,
         end: 41,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -78,7 +69,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 42,
         end: 42,
-        offset: 0,
         location: SelfClosingTag,
         code: 0,
         quote: NoValue,
@@ -86,7 +76,6 @@ expression: "tokenize(\"<style>a{}</style>&apos; 1234&apos;dsa<br/>\")"
     TokenizerToken {
         start: 43,
         end: 43,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,

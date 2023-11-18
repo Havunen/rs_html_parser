@@ -33,7 +33,6 @@ pub enum TokenizerTokenLocation {
 pub struct TokenizerToken {
     pub start: usize,
     pub end: usize,
-    pub offset: usize,
     pub location: TokenizerTokenLocation,
     pub code: u32,
     pub quote: QuoteType,

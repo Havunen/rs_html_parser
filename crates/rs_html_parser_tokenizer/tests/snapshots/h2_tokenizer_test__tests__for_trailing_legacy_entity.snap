@@ -6,7 +6,6 @@ expression: "tokenize(\"&timesbar;&timesbar\")"
     TokenizerToken {
         start: 0,
         end: 10,
-        offset: 0,
         location: TextEntity,
         code: 10801,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "tokenize(\"&timesbar;&timesbar\")"
     TokenizerToken {
         start: 10,
         end: 19,
-        offset: 0,
         location: TextEntity,
         code: 215,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "tokenize(\"&timesbar;&timesbar\")"
     TokenizerToken {
         start: 19,
         end: 19,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,
