@@ -25,7 +25,7 @@ expression: "tokenize(\"<div aaa='a' >\")"
         offset: 0,
         location: AttrData,
         code: 0,
-        quote: NoValue,
+        quote: Single,
     },
     TokenizerToken {
         start: 12,

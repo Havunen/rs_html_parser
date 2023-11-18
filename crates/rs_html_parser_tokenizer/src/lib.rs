@@ -500,7 +500,7 @@ impl Tokenizer<'_> {
 
         return None;
     }
-    fn handle_in_attribute_value(&mut self, c: u8, quote: u8) -> Option<TokenizerToken> {
+    fn handle_in_attribute_value(&mut self, c: u8, quote: u8, quote_type: QuoteType) -> Option<TokenizerToken> {
         if c == quote || (!self.decode_entities && self.fast_forward_to(quote)) {
             self.state = if quote == CharCodes::DOUBLE_QUOTE {
                 State::InAttributeAfterDataDoubleQuote
@@ -514,7 +514,7 @@ impl Tokenizer<'_> {
                 offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
-                quote: QuoteType::NoValue,
+                quote: quote_type,
             });
 
             self.index -= 1; // Continue
@@ -527,10 +527,10 @@ impl Tokenizer<'_> {
         return None;
     }
     fn state_in_attribute_value_double_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
-        return self.handle_in_attribute_value(c, CharCodes::DOUBLE_QUOTE);
+        return self.handle_in_attribute_value(c, CharCodes::DOUBLE_QUOTE, QuoteType::Double);
     }
     fn state_in_attribute_value_single_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
-        return self.handle_in_attribute_value(c, CharCodes::SINGLE_QUOTE);
+        return self.handle_in_attribute_value(c, CharCodes::SINGLE_QUOTE, QuoteType::Single);
     }
     fn state_in_attribute_value_no_quotes(&mut self, c: u8) -> Option<TokenizerToken> {
         if is_whitespace(c) || c == CharCodes::GT {
@@ -540,7 +540,7 @@ impl Tokenizer<'_> {
                 offset: 0,
                 location: TokenizerTokenLocation::AttrData,
                 code: 0,
-                quote: QuoteType::NoValue,
+                quote: QuoteType::Unquoted,
             });
 
             self.state = State::AfterAttributeData;
