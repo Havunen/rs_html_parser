@@ -126,7 +126,7 @@ impl Parser<'_> {
             tagname: "".to_string(),
             next_nodes: Default::default(),
             stack: Default::default(),
-            foreignContext: Default::default(),
+            foreignContext: VecDeque::from([options.xmlMode]),
             attribs: Default::default(),
             attribvalue: "".to_string(),
             attribname: "".to_string(),

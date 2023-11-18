@@ -41,7 +41,13 @@ mod tests {
 
     #[test]
     fn special_script_tag() {
-        insta::assert_debug_snapshot!(tokenize("<script /><div></div>"))
+        /*
+         * However, a Script Element is never a void or a parametric Element,
+         * because script tag before anything else, is a Browser Instruction,
+         * not a Data Description declaration.
+         * -- this is why div is inside script tag
+         */
+        insta::assert_debug_snapshot!(tokenize("<script /><div>1</div>"))
     }
 
     #[test]
