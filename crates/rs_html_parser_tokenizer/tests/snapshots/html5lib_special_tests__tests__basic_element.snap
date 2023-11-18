@@ -6,7 +6,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 1,
         end: 2,
-        offset: 0,
         location: OpenTagName,
         code: 0,
         quote: NoValue,
@@ -14,7 +13,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 3,
         end: 4,
-        offset: 0,
         location: AttrName,
         code: 0,
         quote: NoValue,
@@ -22,7 +20,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 5,
         end: 6,
-        offset: 0,
         location: AttrData,
         code: 0,
         quote: Unquoted,
@@ -30,7 +27,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 6,
         end: 7,
-        offset: 0,
         location: AttrEntity,
         code: 38,
         quote: Unquoted,
@@ -38,7 +34,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 7,
         end: 7,
-        offset: 0,
         location: AttrEnd,
         code: 0,
         quote: Unquoted,
@@ -46,7 +41,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 7,
         end: 7,
-        offset: 0,
         location: OpenTagEnd,
         code: 0,
         quote: NoValue,
@@ -54,7 +48,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 8,
         end: 11,
-        offset: 0,
         location: Text,
         code: 0,
         quote: NoValue,
@@ -62,7 +55,6 @@ expression: "tokenize(\"<a a=a&>foo\")"
     TokenizerToken {
         start: 11,
         end: 11,
-        offset: 0,
         location: End,
         code: 0,
         quote: NoValue,
