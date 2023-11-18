@@ -780,7 +780,7 @@ impl Tokenizer<'_> {
         }
 
         let option_trailing_token: Option<TokenizerToken> = self.handle_trailing_data();
-
+        self.state = State::End;
         if option_trailing_token.is_some()  {
             return option_trailing_token;
         }
@@ -814,8 +814,6 @@ impl Tokenizer<'_> {
 
         let end_index = self.buffer.len() + self.offset;
         if self.section_start >= end_index {
-            self.state = State::End;
-
             return None;
         }
 
@@ -856,8 +854,6 @@ impl Tokenizer<'_> {
                     quote: QuoteType::NoValue,
                 }),
             };
-
-            self.state = State::End;
 
             token
         }

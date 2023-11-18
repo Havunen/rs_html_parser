@@ -389,13 +389,12 @@ impl Parser<'_> {
     fn ondeclaration(&mut self, tokenizer_token: TokenizerToken) {
         self.end_index = tokenizer_token.end;
         let value: &str = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
-
         let name: &str = &self.get_instruction_name(value);
 
         self.next_nodes.push_back(Token {
             data: "".to_string(),
             attrs: Some(HashMap::from([
-                (format!("!${name}"), Some((format!("!{value}"), tokenizer_token.quote)))
+                (format!("!{name}"), None)
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -409,13 +408,12 @@ impl Parser<'_> {
     fn onprocessinginstruction(&mut self, tokenizer_token: TokenizerToken) {
         self.end_index = tokenizer_token.end;
         let value = String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap();
-
         let name = self.get_instruction_name(&value);
 
         self.next_nodes.push_back(Token {
             data: "".to_string(),
             attrs: Some(HashMap::from([
-                (format!("?${name}"), Some((format!("?{value}"), tokenizer_token.quote)))
+                (format!("?{name}"), None)
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
