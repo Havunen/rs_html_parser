@@ -6,7 +6,7 @@ use lazy_static::lazy_static;
 use phf::Set;
 use rs_html_parser_tokens::{Token, TokenKind};
 use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
-use rs_html_parser_tokenizer_tokens::{TokenizerToken, TokenizerTokenLocation};
+use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use regex::Regex;
 use crate::element_info::{FOREIGN_CONTEXT_ELEMENTS, HTML_INTEGRATION_ELEMENTS, OPEN_IMPLIES_CLOSE, VOID_ELEMENTS};
 
@@ -106,8 +106,8 @@ pub struct Parser<'a> {
     next_nodes: VecDeque<Token>,
     stack: VecDeque<String>,
     foreignContext: VecDeque<bool>,
-    attribs: HashMap<String, String>,
-    attribvalue: String,
+    attribs: HashMap<String, Option<(String, QuoteType)>>,
+    attribvalue: Option<String>,
     attribname: String,
 }
 
@@ -128,7 +128,7 @@ impl Parser<'_> {
             stack: Default::default(),
             foreignContext: VecDeque::from([options.xmlMode]),
             attribs: Default::default(),
-            attribvalue: "".to_string(),
+            attribvalue: None,
             attribname: "".to_string(),
         }
     }
@@ -210,35 +210,33 @@ impl Parser<'_> {
             }
         }
 
-        self.next_nodes.push_back(Token {
-            data: name2.clone(),
-            attrs: None,
-            kind: TokenKind::OpenTag,
-            is_implied: false,
-        });
+        // self.next_nodes.push_back(Token {
+        //     data: name2.clone(),
+        //     attrs: None,
+        //     kind: TokenKind::OpenTag,
+        //     is_implied: false,
+        // });
     }
 
     fn endOpenTag(&mut self, isImplied: bool) {
         let tag_name: &str = self.tagname.as_ref();
         self.startIndex = self.openTagStart;
 
-        if !self.attribs.is_empty() {
-            self.next_nodes.push_back(
-                Token {
-                    data: tag_name.to_string(),
-                    attrs: Some(self.attribs.to_owned()),
-                    kind: TokenKind::OpenTag,
-                    is_implied: isImplied,
-                }
-            );
-            self.attribs = Default::default();
-        }
+        self.next_nodes.push_back(
+            Token {
+                data: tag_name.to_string(),
+                attrs: if self.attribs.is_empty() { None } else { Some(self.attribs.to_owned()) },
+                kind: TokenKind::OpenTag,
+                is_implied: isImplied,
+            }
+        );
+        self.attribs.clear();
 
         if self.is_void_element(tag_name) {
             self.next_nodes.push_back(
                 Token {
                     data: tag_name.to_string(),
-                    attrs: Some(self.attribs.to_owned()),
+                    attrs: None,
                     kind: TokenKind::CloseTag,
                     is_implied: true,
                 }
@@ -347,12 +345,26 @@ impl Parser<'_> {
 
     /** @internal */
     fn onattribdata(&mut self, tokenizer_token: TokenizerToken) {
-        self.attribvalue += str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+        let new_value = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+        if self.attribvalue.is_some() {
+            let mut existing_value = self.attribvalue.clone().unwrap();
+            existing_value += new_value;
+            self.attribvalue = Some(existing_value);
+        } else {
+            self.attribvalue = Some(new_value.to_string())
+        }
     }
 
     /** @internal */
     fn onattribentity(&mut self, tokenizer_token: TokenizerToken) {
-        self.attribvalue += &*char::from_u32(tokenizer_token.code).unwrap().to_string();
+        let new_value = &*char::from_u32(tokenizer_token.code).unwrap().to_string();
+        if self.attribvalue.is_some() {
+            let mut existing_value = self.attribvalue.clone().unwrap();
+            existing_value += new_value;
+            self.attribvalue = Some(existing_value);
+        } else {
+            self.attribvalue = Some(new_value.to_string())
+        }
     }
 
     /** @internal */
@@ -372,9 +384,18 @@ impl Parser<'_> {
         // );
 
         if !self.attribs.contains_key(&self.attribname) {
-            self.attribs.insert(self.attribname.to_owned(), self.attribvalue.to_owned());
+            let new_attribute: Option<(String, QuoteType)> = if let Some(mut attrib_value) = self.attribvalue.as_deref_mut() {
+                Some((attrib_value.to_owned(), tokenizer_token.quote))
+            } else {
+                None
+            };
+
+            self.attribs.insert(
+                self.attribname.to_owned(),
+                new_attribute
+            );
         }
-        self.attribvalue = String::from("");
+        self.attribvalue = None;
     }
 
     fn getInstructionName(&mut self, value: &str) -> String {
@@ -400,7 +421,7 @@ impl Parser<'_> {
         self.next_nodes.push_back(Token {
             data: "".to_string(),
             attrs: Some(HashMap::from([
-                (format!("!${name}"), format!("!{value}"))
+                (format!("!${name}"), Some((format!("!{value}"), tokenizer_token.quote)))
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -420,7 +441,7 @@ impl Parser<'_> {
         self.next_nodes.push_back(Token {
             data: "".to_string(),
             attrs: Some(HashMap::from([
-                (format!("?${name}"), format!("?{value}"))
+                (format!("?${name}"), Some((format!("?{value}"), tokenizer_token.quote)))
             ])),
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,

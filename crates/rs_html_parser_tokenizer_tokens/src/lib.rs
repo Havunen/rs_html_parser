@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum QuoteType {
     NoValue = 0,
     Unquoted = 1,
@@ -6,7 +6,7 @@ pub enum QuoteType {
     Double = 3,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub enum TokenizerTokenLocation {
     AttrData = 1,
     AttrEntity,

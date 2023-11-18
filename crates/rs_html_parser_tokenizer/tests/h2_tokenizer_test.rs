@@ -42,7 +42,7 @@ mod tests {
 
     #[test]
     fn special_title_tag() {
-        insta::assert_debug_snapshot!(tokenize("<style /><div></div>"))
+        insta::assert_debug_snapshot!(tokenize("<title /><div></div>"))
     }
 
     #[test]

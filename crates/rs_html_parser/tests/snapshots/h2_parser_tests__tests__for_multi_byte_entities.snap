@@ -1,0 +1,12 @@
+---
+source: crates/rs_html_parser/tests/h2_parser_tests.rs
+expression: "tokenize(\"&NotGreaterFullEqual;\")"
+---
+[
+    Token {
+        data: "≧",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

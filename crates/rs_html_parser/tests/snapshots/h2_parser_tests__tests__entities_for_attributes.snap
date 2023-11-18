@@ -1,0 +1,49 @@
+---
+source: crates/rs_html_parser/tests/h2_parser_tests.rs
+expression: "tokenize(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&image_uri=1&&image;=2&image=3\")"
+---
+[
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "src": (
+                    "?&image_uri=1&ℑ=2&image=3",
+                    Double,
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "?&image_uri=1",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "&",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ℑ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "=2&image=3",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

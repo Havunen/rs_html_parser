@@ -1,0 +1,25 @@
+---
+source: crates/rs_html_parser/tests/h2_parser_tests.rs
+expression: "tokenize(\"<div aaa='a' >\")"
+---
+[
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "aaa": (
+                    "a",
+                    Single,
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]
