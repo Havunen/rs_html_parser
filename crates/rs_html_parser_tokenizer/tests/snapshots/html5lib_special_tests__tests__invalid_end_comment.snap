@@ -1,6 +1,5 @@
 ---
 source: crates/rs_html_parser_tokenizer/tests/html5lib_special_tests.rs
-assertion_line: 42
 expression: "tokenize(\"</0\")"
 ---
 [
