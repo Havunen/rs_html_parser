@@ -36,4 +36,9 @@ mod tests {
     fn dash_in_comment() {
         assert_debug_snapshot!(tokenize("<!----->"));
     }
+
+    #[test]
+    fn invalid_end_comment() {
+        assert_debug_snapshot!(tokenize("</0"));
+    }
 }

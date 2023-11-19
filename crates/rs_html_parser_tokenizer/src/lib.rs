@@ -806,7 +806,7 @@ impl Tokenizer<'_> {
             return None;
         }
 
-        return if self.state == State::InCommentLike {
+        return if self.state == State::InCommentLike || self.state == State::InSpecialComment {
             Some(TokenizerToken {
                 start: self.section_start,
                 end: end_index,
