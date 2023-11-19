@@ -1,0 +1,13 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/html5lib_special_tests.rs
+expression: "tokenize(\"<!--\")"
+---
+[
+    TokenizerToken {
+        start: 4,
+        end: 4,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
+]

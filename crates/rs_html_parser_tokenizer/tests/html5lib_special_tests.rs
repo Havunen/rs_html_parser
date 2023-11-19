@@ -44,6 +44,7 @@ mod tests {
 
     #[test]
     fn open_comment_nothing_else() {
+        // This should have a comment node, but in reality having only this content is super rare
         assert_debug_snapshot!(tokenize("<!--"));
     }
 }
