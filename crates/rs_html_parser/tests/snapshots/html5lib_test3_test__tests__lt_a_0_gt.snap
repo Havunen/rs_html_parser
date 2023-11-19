@@ -1,0 +1,22 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test3_test.rs
+expression: "parser_test(r####\"<a 0>\"####)"
+---
+[
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "0": None,
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]
