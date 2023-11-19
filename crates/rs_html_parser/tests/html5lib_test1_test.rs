@@ -86,21 +86,21 @@ mod tests {
     }
 
     #[test]
-    fn commentcomma_central_dash_no_space() {
+    fn comment_comma_central_dash_no_space() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test(r#"<!----->"#));
         });
     }
 
     #[test]
-    fn commentcomma_two_central_dashes() {
+    fn comment_comma_two_central_dashes() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test(r#"<!-- --comment -->"#));
         });
     }
 
     #[test]
-    fn commentcomma_central_lesshyphen_than_bang() {
+    fn comment_comma_central_less_hyphen_than_bang() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test(r#"<!--<!-->"#));
         });
@@ -191,7 +191,7 @@ mod tests {
     }
 
     #[test]
-    fn nonhyphen_ascii_character_reference_name() {
+    fn non_hyphen_ascii_character_reference_name() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test(r#"&¬;"#));
         });
@@ -361,7 +361,7 @@ mod tests {
     }
 
     #[test]
-    fn ampersandcomma_number_sign() {
+    fn ampersand_comma_number_sign() {
         with_settings!({sort_maps =>true}, {
             assert_debug_snapshot!(parser_test(r#"&#"#));
         });

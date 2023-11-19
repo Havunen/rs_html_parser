@@ -1,0 +1,18 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test1_test.rs
+expression: "parser_test(r#\"<h></h>\"#)"
+---
+[
+    Token {
+        data: "h",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+]

@@ -1,0 +1,24 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test2_test.rs
+expression: "parser_test(r#\"a</></b>c\"#)"
+---
+[
+    Token {
+        data: "a",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "</>",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "c",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

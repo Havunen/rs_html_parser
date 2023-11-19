@@ -1,0 +1,36 @@
+---
+source: crates/rs_html_parser/tests/h2_parser_tests.rs
+expression: "parser_test(\"&amp;&gt;&amp&sometext;&uuml\")"
+---
+[
+    Token {
+        data: "&",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ">",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "&",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "&sometext;",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ü",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

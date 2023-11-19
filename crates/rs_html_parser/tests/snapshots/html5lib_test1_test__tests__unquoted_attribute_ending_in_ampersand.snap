@@ -1,0 +1,28 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test1_test.rs
+expression: "parser_test(r#\"<s o=& t>\"#)"
+---
+[
+    Token {
+        data: "s",
+        attrs: Some(
+            {
+                "o": Some(
+                    (
+                        "&",
+                        Unquoted,
+                    ),
+                ),
+                "t": None,
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "s",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]

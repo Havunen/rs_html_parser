@@ -1,0 +1,16 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test2_test.rs
+expression: "parser_test(r#\"<?namespace>\"#)"
+---
+[
+    Token {
+        data: "",
+        attrs: Some(
+            {
+                "?namespace": None,
+            },
+        ),
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+]

@@ -1,0 +1,18 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test1_test.rs
+expression: "parser_test(r#\"&¬;\"#)"
+---
+[
+    Token {
+        data: "&",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "¬;",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

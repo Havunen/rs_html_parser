@@ -1,0 +1,18 @@
+---
+source: crates/rs_html_parser/tests/h2_parser_tests.rs
+expression: "parser_test(\"&timesbar;&timesbar\")"
+---
+[
+    Token {
+        data: "⨱",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "×",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]
