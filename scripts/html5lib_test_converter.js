@@ -1,5 +1,5 @@
 import {writeFileSync} from 'node:fs';
-const testFiles = ["test1.test", "test2.test", "test3.test"];
+const testFiles = ["test1.test", "test2.test", "test3.test", "test4.test"];
 
 function sanitizeTestName(description, usedNames) {
     let testName = description
@@ -26,6 +26,10 @@ function sanitizeTestName(description, usedNames) {
         .replace(/_+$/,'')
         .replace(/^_+/, '')
         .toLowerCase();
+
+    if (testName.match(/^\d/)) {
+        testName = `num_${testName}`
+    }
 
     if (usedNames.has(testName)) {
         let num = usedNames.get(testName);
