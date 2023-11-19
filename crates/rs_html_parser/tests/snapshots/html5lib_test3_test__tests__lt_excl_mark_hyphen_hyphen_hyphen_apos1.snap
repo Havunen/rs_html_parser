@@ -1,0 +1,18 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test3_test.rs
+expression: "parser_test(r####\"<!-- -'\"####)"
+---
+[
+    Token {
+        data: " -'",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+]

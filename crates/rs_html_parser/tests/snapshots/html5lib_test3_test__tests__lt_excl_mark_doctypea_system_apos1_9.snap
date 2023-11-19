@@ -1,0 +1,12 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test3_test.rs
+expression: "parser_test(r####\"<!DOCTYPEa SYSTEM'9\"####)"
+---
+[
+    Token {
+        data: "DOCTYPEa SYSTEM'9",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

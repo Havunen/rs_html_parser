@@ -1,0 +1,12 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test3_test.rs
+expression: "parser_test(r####\"<!DOCTYPE a b\"####)"
+---
+[
+    Token {
+        data: "DOCTYPE a b",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

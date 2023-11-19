@@ -41,4 +41,9 @@ mod tests {
     fn invalid_end_comment() {
         assert_debug_snapshot!(tokenize("</0"));
     }
+
+    #[test]
+    fn open_comment_nothing_else() {
+        assert_debug_snapshot!(tokenize("<!--"));
+    }
 }

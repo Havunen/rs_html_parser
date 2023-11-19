@@ -1,0 +1,18 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test3_test.rs
+expression: "parser_test(r####\"<a\u001f>\"####)"
+---
+[
+    Token {
+        data: "a\u{1f}",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a\u{1f}",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]
