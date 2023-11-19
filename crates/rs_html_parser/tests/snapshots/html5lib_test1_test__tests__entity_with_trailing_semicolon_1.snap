@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/html5lib_test1_test.rs
-expression: "parser_test(\"I'm &notin\")"
+expression: "parser_test(r#\"I'm &not;it\"#)"
 ---
 [
     Token {
@@ -11,6 +11,12 @@ expression: "parser_test(\"I'm &notin\")"
     },
     Token {
         data: "¬",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "it",
         attrs: None,
         kind: Text,
         is_implied: false,

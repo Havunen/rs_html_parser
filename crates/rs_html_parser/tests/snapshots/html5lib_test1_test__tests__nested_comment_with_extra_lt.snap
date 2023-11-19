@@ -1,18 +1,18 @@
 ---
 source: crates/rs_html_parser/tests/html5lib_test1_test.rs
-expression: "parser_test(\"I'm &notit\")"
+expression: "parser_test(r#\"<!-- <<!--test-->\"#)"
 ---
 [
     Token {
-        data: "I'm ",
+        data: " <<!--test",
         attrs: None,
-        kind: Text,
+        kind: Comment,
         is_implied: false,
     },
     Token {
-        data: "¬",
+        data: "",
         attrs: None,
-        kind: Text,
+        kind: CommentEnd,
         is_implied: false,
     },
 ]

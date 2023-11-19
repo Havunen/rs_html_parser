@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/html5lib_test1_test.rs
-expression: "parser_test(\"<!DOCTYPE HtMl\")"
+expression: "parser_test(r#\"<!DOCTYPE HtMl\"#)"
 ---
 [
     Token {
