@@ -1,6 +1,6 @@
 ---
 source: crates/rs_html_parser/tests/html5lib_test2_test.rs
-expression: "parser_test(r#\"<h a='&'>\"#)"
+expression: "parser_test(r####\"<h a='&'>\"####)"
 ---
 [
     Token {

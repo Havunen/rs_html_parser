@@ -39,6 +39,11 @@ function sanitizeTestName(description, usedNames) {
     return testName;
 }
 
+function sanitizeTestInput(input) {
+    return input
+        .replaceAll('\r', '\r\n') // It would be nice to test only carriage returns but Rust does not allow it in the string
+}
+
 async function load() {
     for (const file of testFiles) {
         console.log("Generating " + file);
@@ -70,7 +75,7 @@ mod tests {
     #[test]
     fn ${sanitizeTestName(testData.description, usedNames)}() {
         with_settings!({sort_maps =>true}, {
-            assert_debug_snapshot!(parser_test(r#"${testData.input}"#));
+            assert_debug_snapshot!(parser_test(r####"${sanitizeTestInput(testData.input)}"####));
         });
     }
 `
@@ -86,7 +91,7 @@ mod tests {
     #[test]
     fn ${sanitizeTestName(testData.description, usedNames)}() {
         with_settings!({sort_maps =>true}, {
-            assert_debug_snapshot!(parser_test(r#"${testData.input}"#));
+            assert_debug_snapshot!(parser_test(r####"${sanitizeTestInput(testData.input)}"####));
         });
     }
 `
