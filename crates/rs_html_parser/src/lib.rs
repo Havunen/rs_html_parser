@@ -49,7 +49,7 @@ impl Parser<'_> {
         Parser {
             buffer: bytes,
             html_mode: !options.xml_mode,
-            tokenizer_iterator: Tokenizer::new(bytes, &options.tokenizer_options).into_iter(),
+            tokenizer_iterator: Tokenizer::new(bytes, &options.tokenizer_options),
             tag_name: "".to_string(),
             next_nodes: Default::default(),
             stack: Default::default(),
@@ -87,7 +87,7 @@ impl Parser<'_> {
      * to specify your own additional void elements.
      */
     fn is_void_element(&self, name: &str) -> bool {
-        return self.html_mode && is_void_elements(name);
+        self.html_mode && is_void_elements(name)
     }
 
     /** @internal */
@@ -104,7 +104,7 @@ impl Parser<'_> {
         let open_implies_close_option: Option<fn(tag_name: &str) -> bool>= open_implies_close(&name2);
 
         if let Some(open_implies_close_fn) = open_implies_close_option {
-            while self.stack.len() > 0 && open_implies_close_fn(&self.stack[0]) {
+            while !self.stack.is_empty() && open_implies_close_fn(&self.stack[0]) {
                 let element = self.stack.pop_front().unwrap();
 
                 self.next_nodes.push_back(Token {
@@ -218,7 +218,7 @@ impl Parser<'_> {
         self.end_open_tag(is_open_implied);
 
         // Self-closing tags will be on the top of the stack
-        if &self.stack[0] == &self.tag_name {
+        if self.stack[0] == self.tag_name {
             // If the opening tag isn't implied, the closing tag has to be implied.
             self.next_nodes.push_back(Token {
                 data: self.tag_name.to_owned(),
@@ -264,11 +264,9 @@ impl Parser<'_> {
     /** @internal */
     fn onattribend(&mut self, tokenizer_token: TokenizerToken) {
         if !self.attribs.contains_key(&self.attrib_name) {
-            let new_attribute: Option<(String, QuoteType)> = if let Some(attrib_value) = self.attrib_value.as_deref_mut() {
-                Some((attrib_value.to_owned(), tokenizer_token.quote))
-            } else {
-                None
-            };
+            let new_attribute: Option<(String, QuoteType)> = self.attrib_value.as_deref_mut().map(
+                |attrib_value| (attrib_value.to_owned(), tokenizer_token.quote)
+            );
 
             self.attribs.insert(
                 self.attrib_name.to_owned(),
@@ -287,7 +285,7 @@ impl Parser<'_> {
             return name.to_lowercase();
         }
 
-        return value.to_string()
+        value.to_string()
     }
 
     /** @internal */
@@ -386,7 +384,7 @@ impl<'i> Iterator for Parser<'i> {
         let possible_token = self.tokenizer_iterator.next();
 
         match possible_token {
-            None => return None,
+            None => None,
             Some(tokenizer_token) => {
                 self.parse_next(tokenizer_token)
             }

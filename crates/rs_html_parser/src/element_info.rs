@@ -1,14 +1,12 @@
 pub fn is_form_tag(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "input" |
         "option" |
         "optgroup" |
         "select" |
         "button" |
         "datalist" |
-        "textarea" => true,
-        _ => false
-    }
+        "textarea")
 }
 
 pub fn is_p_tag(tag_name: &str) -> bool {
@@ -16,31 +14,25 @@ pub fn is_p_tag(tag_name: &str) -> bool {
 }
 
 pub fn is_table_section_tags(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "thead" |
-        "tbody" => true,
-        _ => false
-    }
+        "tbody")
 }
 
 pub fn is_dd_dt_tags(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "dd" |
-        "dt" => true,
-        _ => false
-    }
+        "dt")
 }
 
 pub fn is_rtp_tags(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "rt" |
-        "rp" => true,
-        _ => false
-    }
+        "rp")
 }
 
 pub fn is_void_elements(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "area" |
         "base" |
         "basefont" |
@@ -59,18 +51,14 @@ pub fn is_void_elements(tag_name: &str) -> bool {
         "param" |
         "source" |
         "track" |
-        "wbr" => true,
-        _ => false
-    }
+        "wbr")
 }
 
 pub fn is_tr_th_td(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "tr" |
         "th" |
-        "td" => true,
-        _ => false
-    }
+        "td")
 }
 
 pub fn is_th(tag_name: &str) -> bool {
@@ -78,21 +66,17 @@ pub fn is_th(tag_name: &str) -> bool {
 }
 
 pub fn is_thead_th_td(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "thead" |
         "th" |
-        "td" => true,
-        _ => false
-    }
+        "td")
 }
 
 pub fn is_head_link_script(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "head" |
         "link" |
-        "script" => true,
-        _ => false
-    }
+        "script")
 }
 
 pub fn is_li(tag_name: &str) -> bool {
@@ -104,11 +88,9 @@ pub fn is_option(tag_name: &str) -> bool {
 }
 
 pub fn is_opt_group(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "optgroup" |
-        "option" => true,
-        _ => false
-    }
+        "option")
 }
 
 pub fn open_implies_close(tag_name: &str) -> Option<fn(tag_name: &str) -> bool> {
@@ -165,15 +147,13 @@ pub fn open_implies_close(tag_name: &str) -> Option<fn(tag_name: &str) -> bool> 
 }
 
 pub fn is_foreign_context_elements(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "math" |
-        "svg" => true,
-        _ => false
-    }
+        "svg")
 }
 
 pub fn is_html_integration_elements(tag_name: &str) -> bool {
-    match tag_name {
+    matches!(tag_name,
         "mi" |
         "mo" |
         "mn" |
@@ -182,7 +162,5 @@ pub fn is_html_integration_elements(tag_name: &str) -> bool {
         "annotation-xml" |
         "foreignobject" |
         "desc" |
-        "title" => true,
-        _ => false
-    }
+        "title")
 }

@@ -1,7 +1,6 @@
 use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use std::iter::Iterator;
 use std::ops::Range;
-use htmlize;
 use htmlize::Context;
 use std::str;
 
@@ -124,14 +123,12 @@ pub struct TokenizerOptions {
 }
 
 fn is_whitespace(c: u8) -> bool {
-    match c {
-        CharCodes::SPACE
+    matches!(c, CharCodes::SPACE
         | CharCodes::NEW_LINE
         | CharCodes::TAB
         | CharCodes::FORM_FEED
-        | CharCodes::CARRIAGE_RETURN => true,
-        _ => false,
-    }
+        | CharCodes::CARRIAGE_RETURN
+    )
 }
 
 fn is_end_of_tag_section(c: u8) -> bool {
@@ -466,7 +463,7 @@ impl Tokenizer<'_> {
             token = None;
         };
 
-        return token;
+        token
     }
     fn state_before_attribute_value(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::DOUBLE_QUOTE {
@@ -604,7 +601,7 @@ impl Tokenizer<'_> {
 
         self.state = State::InTagName;
 
-        return self.state_in_tag_name(c);
+        self.state_in_tag_name(c)
     }
 
     fn start_entity(&mut self) {
@@ -815,7 +812,7 @@ impl Tokenizer<'_> {
                 quote: QuoteType::NoValue,
             })
         } else {
-            let token = match &self.state {
+            match &self.state {
                 State::InTagName
                 | State::BeforeAttributeName
                 | State::BeforeAttributeValue
@@ -836,9 +833,7 @@ impl Tokenizer<'_> {
                     code: 0,
                     quote: QuoteType::NoValue,
                 }),
-            };
-
-            token
+            }
         }
     }
 
@@ -863,7 +858,7 @@ impl Tokenizer<'_> {
         self.sequence_index = 0;
         self.state = State::InTagName;
 
-        return self.state_in_tag_name(c);
+        self.state_in_tag_name(c)
     }
     fn state_cdata_sequence(&mut self, c: u8) -> Option<TokenizerToken> {
         return if c == Sequences::CDATA[self.sequence_index] {
@@ -919,7 +914,7 @@ impl Tokenizer<'_> {
         if (c | 0x20) == self.current_sequence[self.sequence_index] {
             self.sequence_index += 1;
         } else if self.sequence_index == 0 {
-            if self.current_sequence == &Sequences::TITLE_END {
+            if self.current_sequence == Sequences::TITLE_END {
                 // We have to parse entities in <title> tags.
                 if self.decode_entities && c == CharCodes::AMP {
                     self.start_entity();
@@ -938,7 +933,7 @@ impl Tokenizer<'_> {
             }
         }
 
-        return None;
+        None
     }
     fn state_after_attribute_data(&mut self) -> Option<TokenizerToken> {
         let token = Some(TokenizerToken {
@@ -951,20 +946,20 @@ impl Tokenizer<'_> {
         self.state = State::BeforeAttributeName;
         self.index -= 1; // continue
 
-        return token;
+        token
     }
 
     fn state_in_attribute_after_data(&mut self, quote_type: QuoteType) -> Option<TokenizerToken> {
         self.section_start = 0;
         self.state = State::BeforeAttributeName;
 
-        return Some(TokenizerToken {
+        Some(TokenizerToken {
             start: (self.index + 1) as usize,
             end: (self.index + 1) as usize,
             location: TokenizerTokenLocation::AttrEnd,
             code: 0,
             quote: quote_type,
-        });
+        })
     }
     fn state_after_entity(&mut self, location: TokenizerTokenLocation) -> Option<TokenizerToken> {
         self.state = self.base_state;
@@ -981,7 +976,7 @@ impl Tokenizer<'_> {
         self.index -= 1;
         self.code = 0;
 
-        return token;
+        token
     }
 }
 
