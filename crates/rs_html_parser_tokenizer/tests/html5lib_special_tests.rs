@@ -13,13 +13,13 @@ mod tests {
             decode_entities: Option::from(true),
         };
 
-        let tokenizer = Tokenizer::new(&data.as_bytes(), &options);
+        let tokenizer = Tokenizer::new(data.as_bytes(), &options);
 
         for token in tokenizer {
             log.push(token);
         }
 
-        return log;
+        log
     }
 
     #[test]
