@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DOCTYPE foo>\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!DOCTYPE foo": None,
-            },
-        ),
+        data: "DOCTYPE foo",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

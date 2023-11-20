@@ -1,5 +1,5 @@
 use std::{env, fs, io};
-use std::path::{Path, PathBuf};
+use std::path::{PathBuf};
 use rs_html_parser::{Parser, ParserOptions};
 use rs_html_parser_tokenizer::TokenizerOptions;
 
@@ -56,10 +56,6 @@ fn main() {
 
     let options = ParserOptions {
         xml_mode: false,
-        decode_entities: false,
-        lower_case_tags: false,
-        lower_case_attribute_names: false,
-        recognize_cdata: false,
         tokenizer_options: TokenizerOptions {
             xml_mode: None,
             decode_entities: None,

@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!dOcTyPe hTmL pUbLiC \"aBc\" \"xYz\">\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!dOcTyPe hTmL pUbLiC \"aBc\" \"xYz\"": None,
-            },
-        ),
+        data: "dOcTyPe hTmL pUbLiC \"aBc\" \"xYz\"",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!doc>\u0000\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!doc": None,
-            },
-        ),
+        data: "doc",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

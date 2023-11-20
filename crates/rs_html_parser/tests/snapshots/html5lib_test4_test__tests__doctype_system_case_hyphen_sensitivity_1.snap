@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DoCtYpE HtMl SyStEm \"XyZ\">\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!DoCtYpE HtMl SyStEm \"XyZ\"": None,
-            },
-        ),
+        data: "DoCtYpE HtMl SyStEm \"XyZ\"",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DOCTYPE HTML>\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!DOCTYPE HTML": None,
-            },
-        ),
+        data: "DOCTYPE HTML",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

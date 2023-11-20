@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<?namespace>\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "?namespace": None,
-            },
-        ),
+        data: "namespace",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

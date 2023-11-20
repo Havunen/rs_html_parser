@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DOCTYPE html PUBLIK \"AbC\" \"XyZ\">\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!DOCTYPE html PUBLIK \"AbC\" \"XyZ\"": None,
-            },
-        ),
+        data: "DOCTYPE html PUBLIK \"AbC\" \"XyZ\"",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

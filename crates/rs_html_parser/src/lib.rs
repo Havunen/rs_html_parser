@@ -20,35 +20,6 @@ pub struct ParserOptions {
      */
     pub xml_mode: bool,
 
-    /**
-     * Decode entities within the document.
-     *
-     * @default true
-     */
-    pub decode_entities: bool,
-
-    /**
-     * If set to true, all tags will be lowercased.
-     *
-     * @default !xml_mode
-     */
-    pub lower_case_tags: bool,
-
-    /**
-     * If set to `true`, all attribute names will be lowercased. self has noticeable impact on speed.
-     *
-     * @default !xml_mode
-     */
-    pub lower_case_attribute_names: bool,
-
-    /**
-     * If set to true, CDATA sections will be recognized as text even if the xml_mode option is not enabled.
-     * NOTE: If xml_mode is set to `true` then CDATA sections will always be recognized as text.
-     *
-     * @default xml_mode
-     */
-    pub recognize_cdata: bool,
-
     pub tokenizer_options: TokenizerOptions,
 }
 
@@ -185,7 +156,7 @@ impl Parser<'_> {
     }
 
     /** @internal */
-    fn onopentagend(&mut self, tokenizer_token: TokenizerToken) {
+    fn onopentagend(&mut self) {
         self.end_open_tag(false);
     }
 
@@ -234,12 +205,12 @@ impl Parser<'_> {
     }
 
     /** @internal */
-    fn onselfclosingtag(&mut self, tokenizer_token: TokenizerToken) {
+    fn onselfclosingtag(&mut self) {
         if self.foreign_context[0] {
             self.close_current_tag(false);
         } else {
             // Ignore the fact that the tag is self-closing.
-            self.onopentagend(tokenizer_token);
+            self.onopentagend();
         }
     }
 
@@ -308,7 +279,6 @@ impl Parser<'_> {
     }
 
     fn get_instruction_name(&mut self, value: &str) -> String {
-
         // Use the regex search method to find the index
         if let Some(index) = RE_NAME_END.find(value) {
             // Extract the substring up to the match index
@@ -323,13 +293,11 @@ impl Parser<'_> {
     /** @internal */
     fn ondeclaration(&mut self, tokenizer_token: TokenizerToken) {
         let value: &str = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
-        let name: &str = &self.get_instruction_name(value);
+        let name: String = self.get_instruction_name(value);
 
         self.next_nodes.push_back(Token {
-            data: "".to_string(),
-            attrs: Some(BTreeMap::from([
-                (format!("!{name}"), None)
-            ])),
+            data: name,
+            attrs: None,
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
         });
@@ -341,10 +309,8 @@ impl Parser<'_> {
         let name = self.get_instruction_name(&value);
 
         self.next_nodes.push_back(Token {
-            data: "".to_string(),
-            attrs: Some(BTreeMap::from([
-                (format!("?{name}"), None)
-            ])),
+            data: name,
+            attrs: None,
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
         });
@@ -396,10 +362,10 @@ impl Parser<'_> {
             TokenizerTokenLocation::CloseTag => self.onclosetag(tokenizer_token),
             TokenizerTokenLocation::Comment => self.oncomment(tokenizer_token),
             TokenizerTokenLocation::Declaration => self.ondeclaration(tokenizer_token),
-            TokenizerTokenLocation::OpenTagEnd => self.onopentagend(tokenizer_token),
+            TokenizerTokenLocation::OpenTagEnd => self.onopentagend(),
             TokenizerTokenLocation::OpenTagName => self.onopentagname(tokenizer_token),
             TokenizerTokenLocation::ProcessingInstruction => self.onprocessinginstruction(tokenizer_token),
-            TokenizerTokenLocation::SelfClosingTag => self.onselfclosingtag(tokenizer_token),
+            TokenizerTokenLocation::SelfClosingTag => self.onselfclosingtag(),
             TokenizerTokenLocation::Text => self.ontext(tokenizer_token),
             TokenizerTokenLocation::TextEntity => self.ontextentity(tokenizer_token),
             TokenizerTokenLocation::End => self.onend()

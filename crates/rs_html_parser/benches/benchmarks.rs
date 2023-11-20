@@ -15,10 +15,6 @@ fn benchmark_wiki_page(c: &mut Criterion) {
         b.iter(|| {
             let options = ParserOptions {
                 xml_mode: false,
-                decode_entities: false,
-                lower_case_tags: false,
-                lower_case_attribute_names: false,
-                recognize_cdata: false,
                 tokenizer_options: TokenizerOptions {
                     xml_mode: None,
                     decode_entities: None,

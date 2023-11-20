@@ -5,11 +5,7 @@ expression: "parser_test(r####\"<?>\"####)"
 [
     Token {
         data: "",
-        attrs: Some(
-            {
-                "?": None,
-            },
-        ),
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

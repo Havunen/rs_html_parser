@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML Transit
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!doctype html public \"-": None,
-            },
-        ),
+        data: "doctype html public \"-",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },

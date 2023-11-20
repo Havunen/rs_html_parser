@@ -4,12 +4,8 @@ expression: "parser_test(r####\"<!DOCTYPE a PUBLIC'>\"####)"
 ---
 [
     Token {
-        data: "",
-        attrs: Some(
-            {
-                "!DOCTYPE a PUBLIC'": None,
-            },
-        ),
+        data: "DOCTYPE a PUBLIC'",
+        attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,
     },
