@@ -17,7 +17,7 @@ pub fn parser_test(data: &str) -> Vec<Token> {
         },
     };
 
-    let tokenizer = Parser::new(&data, options);
+    let tokenizer = Parser::new(&data, &options);
 
     for token in tokenizer {
         log.push(token);

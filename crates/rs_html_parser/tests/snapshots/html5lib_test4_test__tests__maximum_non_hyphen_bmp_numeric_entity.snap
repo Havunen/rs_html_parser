@@ -1,0 +1,12 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"&#X10FFFF;\"####)"
+---
+[
+    Token {
+        data: "\u{10ffff}",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

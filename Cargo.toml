@@ -3,7 +3,7 @@ members = [
   "crates/rs_html_parser_tokenizer_tokens",
   "crates/rs_html_parser_tokens",
   "crates/rs_html_parser_tokenizer",
-  "crates/rs_html_parser"
+  "crates/rs_html_parser",
+  "crates/console_bench"
 ]
 resolver = "2"
-[profile.release]

@@ -1,0 +1,22 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<x@AZ[`az{ @AZ[`az{>\"####)"
+---
+[
+    Token {
+        data: "x@az[`az{",
+        attrs: Some(
+            {
+                "@az[`az{": None,
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "x@az[`az{",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]

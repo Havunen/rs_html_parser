@@ -146,7 +146,7 @@ fn is_ascii_alpha(c: u8) -> bool {
 
 
 impl Tokenizer<'_> {
-    pub fn new<'a>(buffer: &[u8], options: TokenizerOptions) -> Tokenizer {
+    pub fn new<'a>(buffer: &'a [u8], options: &'a TokenizerOptions) -> Tokenizer<'a> {
         Tokenizer {
             state: State::Text,
             buffer,

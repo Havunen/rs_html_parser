@@ -1,0 +1,22 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<!DOCTYPE html x>text\"####)"
+---
+[
+    Token {
+        data: "",
+        attrs: Some(
+            {
+                "!DOCTYPE html x": None,
+            },
+        ),
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+    Token {
+        data: "text",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

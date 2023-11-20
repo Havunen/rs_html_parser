@@ -1,0 +1,27 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<x x=1 x=2 X=3>\"####)"
+---
+[
+    Token {
+        data: "x",
+        attrs: Some(
+            {
+                "x": Some(
+                    (
+                        "1",
+                        Unquoted,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "x",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]

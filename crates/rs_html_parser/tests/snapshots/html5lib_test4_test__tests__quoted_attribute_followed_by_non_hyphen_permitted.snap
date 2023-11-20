@@ -1,0 +1,27 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<bar a='b'/>\"####)"
+---
+[
+    Token {
+        data: "bar",
+        attrs: Some(
+            {
+                "a": Some(
+                    (
+                        "b",
+                        Single,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "bar",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]

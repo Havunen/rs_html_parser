@@ -1,0 +1,12 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<!DOCTYPE html PUBLI\"####)"
+---
+[
+    Token {
+        data: "DOCTYPE html PUBLI",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

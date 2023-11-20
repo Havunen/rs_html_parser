@@ -1,0 +1,42 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"&#xD7FF;&#xD800;&#xD801;&#xDFFE;&#xDFFF;&#xE000;\"####)"
+---
+[
+    Token {
+        data: "\u{d7ff}",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "�",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "�",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "�",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "�",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "\u{e000}",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

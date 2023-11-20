@@ -99,7 +99,7 @@ pub struct Parser<'a> {
 }
 
 impl Parser<'_> {
-    pub fn new(html: &str, options: ParserOptions) -> Parser  {
+    pub fn new<'a>(html: &'a str, options: &'a ParserOptions) -> Parser<'a>  {
         let bytes = html.as_bytes();
 
         Parser {
@@ -107,7 +107,7 @@ impl Parser<'_> {
             start_index: 0,
             end_index: 0,
             html_mode: !options.xml_mode,
-            tokenizer_iterator: Tokenizer::new(bytes, options.tokenizer_options).into_iter(),
+            tokenizer_iterator: Tokenizer::new(bytes, &options.tokenizer_options).into_iter(),
             open_tag_start: 0,
             tag_name: "".to_string(),
             next_nodes: Default::default(),
@@ -195,13 +195,6 @@ impl Parser<'_> {
                 }
             }
         }
-
-        // self.next_nodes.push_back(Token {
-        //     data: name2.clone(),
-        //     attrs: None,
-        //     kind: TokenKind::OpenTag,
-        //     is_implied: false,
-        // });
     }
 
     fn end_open_tag(&mut self, is_implied: bool) {
@@ -256,7 +249,6 @@ impl Parser<'_> {
                 n == name
             });
             if let Some(index) = pos {
-                // FIX THIS ei iteroi
                 for i in 0..index + 1 {
                     let tag = self.stack.pop_front().unwrap();
                     self.next_nodes.push_back(Token {

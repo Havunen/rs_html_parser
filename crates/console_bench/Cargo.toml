@@ -1,30 +1,22 @@
 [package]
 authors       = ["Sampo Kivistö, havunen"]
-description   = "Rs Html Parser"
+description   = "Rs Html Parser console app"
 documentation = "https://github.com/Havunen/rs_html_parser"
 edition       = "2021"
 license       = "MIT"
-name          = "rs_html_parser"
+name          = "console_bench"
 repository    = "https://github.com/Havunen/rs_html_parser.git"
 version       = "0.0.1"
 
 [lib]
 bench = true
 
-[[bench]]
-name = "benchmarks"
-harness = false
-
 [dependencies]
+rs_html_parser = { path = "../rs_html_parser" }
 rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
 rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
 rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer" }
-regex = "1.10.2"
-phf = { version = "0.11", default-features = false, features = ["macros"] }
-phf_codegen = { version = "0.11.2", default-features = false }
-lazy_static = "1.4.0"
-criterion = "0.5.1"
 
-[dev-dependencies]
-insta = {version = "1.34.0"}
-
+[[bin]]
+name = "console_bench"
+path = "src/lib.rs"

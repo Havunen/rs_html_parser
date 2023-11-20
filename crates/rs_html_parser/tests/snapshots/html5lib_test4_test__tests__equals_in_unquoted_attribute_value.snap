@@ -1,0 +1,27 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<z z=z=z>\"####)"
+---
+[
+    Token {
+        data: "z",
+        attrs: Some(
+            {
+                "z": Some(
+                    (
+                        "z=z",
+                        Unquoted,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "z",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+]

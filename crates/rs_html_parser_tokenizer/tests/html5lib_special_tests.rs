@@ -13,7 +13,7 @@ mod tests {
             decode_entities: Option::from(true),
         };
 
-        let tokenizer = Tokenizer::new(&data.as_bytes(), options);
+        let tokenizer = Tokenizer::new(&data.as_bytes(), &options);
 
         for token in tokenizer {
             log.push(token);
@@ -46,5 +46,12 @@ mod tests {
     fn open_comment_nothing_else() {
         // This should have a comment node, but in reality having only this content is super rare
         assert_debug_snapshot!(tokenize("<!--"));
+    }
+
+    #[test]
+    fn orphan_end_tag() {
+        // This could change, there is open and then EOF
+        assert_debug_snapshot!(tokenize(r####"<z
+"####));
     }
 }

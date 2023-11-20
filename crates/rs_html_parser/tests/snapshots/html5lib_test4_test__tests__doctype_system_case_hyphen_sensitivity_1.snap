@@ -1,0 +1,16 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<!DoCtYpE HtMl SyStEm \"XyZ\">\"####)"
+---
+[
+    Token {
+        data: "",
+        attrs: Some(
+            {
+                "!DoCtYpE HtMl SyStEm \"XyZ\"": None,
+            },
+        ),
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+]

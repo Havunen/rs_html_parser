@@ -1,0 +1,20 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/html5lib_special_tests.rs
+expression: "tokenize(r####\"<z\n\"####)"
+---
+[
+    TokenizerToken {
+        start: 1,
+        end: 2,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 3,
+        end: 3,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
+]

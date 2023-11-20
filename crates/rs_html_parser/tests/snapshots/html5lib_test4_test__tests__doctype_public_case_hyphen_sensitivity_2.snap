@@ -1,0 +1,16 @@
+---
+source: crates/rs_html_parser/tests/html5lib_test4_test.rs
+expression: "parser_test(r####\"<!dOcTyPe hTmL pUbLiC \"aBc\" \"xYz\">\"####)"
+---
+[
+    Token {
+        data: "",
+        attrs: Some(
+            {
+                "!dOcTyPe hTmL pUbLiC \"aBc\" \"xYz\"": None,
+            },
+        ),
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+]
