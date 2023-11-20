@@ -136,11 +136,6 @@ fn is_end_of_tag_section(c: u8) -> bool {
     c == CharCodes::SLASH || c == CharCodes::GT || is_whitespace(c)
 }
 
-fn is_ascii_alpha(c: u8) -> bool {
-    (CharCodes::LOWER_A..=CharCodes::LOWER_Z).contains(&c)
-        || (CharCodes::UPPER_A..=CharCodes::UPPER_Z).contains(&c)
-}
-
 impl Tokenizer<'_> {
     pub fn new<'a>(buffer: &'a [u8], options: &'a TokenizerOptions) -> Tokenizer<'a> {
         Tokenizer {
@@ -269,7 +264,7 @@ impl Tokenizer<'_> {
             return is_end_of_tag_section(c);
         }
 
-        is_ascii_alpha(c)
+        c.is_ascii_alphabetic()
     }
 
     fn start_special(&mut self, sequence: &'static [u8], offset: i32) {
@@ -970,6 +965,8 @@ impl Tokenizer<'_> {
 
         None
     }
+
+    #[inline]
     fn state_after_attribute_data(&mut self) -> Option<TokenizerToken> {
         let token = Some(TokenizerToken {
             start: self.index as usize,
@@ -984,6 +981,7 @@ impl Tokenizer<'_> {
         token
     }
 
+    #[inline]
     fn state_in_attribute_after_data(&mut self, quote_type: QuoteType) -> Option<TokenizerToken> {
         self.section_start = 0;
         self.state = State::BeforeAttributeName;
@@ -996,6 +994,8 @@ impl Tokenizer<'_> {
             quote: quote_type,
         })
     }
+
+    #[inline]
     fn state_after_entity(&mut self, location: TokenizerTokenLocation) -> Option<TokenizerToken> {
         self.state = self.base_state;
 

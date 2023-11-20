@@ -34,7 +34,7 @@ pub struct Parser<'a> {
 
     buffer: &'a [u8],
 
-    tokenizer_iterator: Tokenizer<'a>,
+    tokenizer: Tokenizer<'a>,
     tag_name: String,
     next_nodes: VecDeque<Token>,
     stack: VecDeque<String>,
@@ -51,7 +51,7 @@ impl Parser<'_> {
         Parser {
             buffer: bytes,
             html_mode: !options.xml_mode,
-            tokenizer_iterator: Tokenizer::new(bytes, &options.tokenizer_options),
+            tokenizer: Tokenizer::new(bytes, &options.tokenizer_options),
             tag_name: "".to_string(),
             next_nodes: Default::default(),
             stack: Default::default(),
@@ -376,7 +376,8 @@ impl<'i> Iterator for Parser<'i> {
         if let Some(existing_node) = self.next_nodes.pop_front() {
             return Some(existing_node);
         }
-        let possible_token = self.tokenizer_iterator.next();
+
+        let possible_token = self.tokenizer.next();
 
         match possible_token {
             None => None,

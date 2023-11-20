@@ -12,7 +12,7 @@ fn get_files_in_folder(path: &str) -> io::Result<Vec<PathBuf>> {
 }
 
 fn main() {
-    println!("RS Console bench");
+    println!("RS Console bench!");
     println!("Current dir = {:?}", env::current_dir());
 
     let mut test_files: Vec<String> = Vec::new();

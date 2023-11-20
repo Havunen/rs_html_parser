@@ -10,3 +10,7 @@ version       = "0.0.1"
 
 [lib]
 bench = false
+
+[profile.release-with-debug]
+inherits = "release"
+debug = true
