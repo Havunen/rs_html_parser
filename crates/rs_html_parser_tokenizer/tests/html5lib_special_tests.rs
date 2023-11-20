@@ -1,8 +1,7 @@
-
 #[cfg(test)]
 mod tests {
     use insta::assert_debug_snapshot;
-    use rs_html_parser_tokenizer::{TokenizerOptions, Tokenizer};
+    use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
     use rs_html_parser_tokenizer_tokens::TokenizerToken;
 
     fn tokenize(data: &str) -> Vec<TokenizerToken> {
@@ -51,7 +50,9 @@ mod tests {
     #[test]
     fn orphan_end_tag() {
         // This could change, there is open and then EOF
-        assert_debug_snapshot!(tokenize(r####"<z
-"####));
+        assert_debug_snapshot!(tokenize(
+            r####"<z
+"####
+        ));
     }
 }

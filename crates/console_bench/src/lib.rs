@@ -1,7 +1,7 @@
-use std::{env, fs, io};
-use std::path::{PathBuf};
 use rs_html_parser::{Parser, ParserOptions};
 use rs_html_parser_tokenizer::TokenizerOptions;
+use std::path::PathBuf;
+use std::{env, fs, io};
 
 fn get_files_in_folder(path: &str) -> io::Result<Vec<PathBuf>> {
     let entries = fs::read_dir(path)?;
@@ -50,9 +50,7 @@ fn main() {
         test_data.push(fs::read_to_string(entry).unwrap())
     }
 
-
     println!("Files loaded");
-
 
     let options = ParserOptions {
         xml_mode: false,
@@ -70,11 +68,9 @@ fn main() {
         for test_data in &test_data {
             let tokenizer = Parser::new(test_data, &options);
 
-            for _token in tokenizer {
-            }
+            for _token in tokenizer {}
         }
     }
-
 
     println!("The end");
 }

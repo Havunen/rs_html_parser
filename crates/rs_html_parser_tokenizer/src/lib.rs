@@ -1,9 +1,8 @@
+use htmlize::Context;
 use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use std::iter::Iterator;
 use std::ops::Range;
-use htmlize::Context;
 use std::str;
-
 
 struct CharCodes {}
 
@@ -95,7 +94,7 @@ enum State {
     AfterReadEntityText,
     AfterReadEntityAttr,
 
-    End
+    End,
 }
 
 pub struct Tokenizer<'a> {
@@ -114,7 +113,7 @@ pub struct Tokenizer<'a> {
 
     current_sequence: &'a [u8],
     sequence_index: usize,
-    has_ended: bool
+    has_ended: bool,
 }
 
 pub struct TokenizerOptions {
@@ -123,11 +122,13 @@ pub struct TokenizerOptions {
 }
 
 fn is_whitespace(c: u8) -> bool {
-    matches!(c, CharCodes::SPACE
-        | CharCodes::NEW_LINE
-        | CharCodes::TAB
-        | CharCodes::FORM_FEED
-        | CharCodes::CARRIAGE_RETURN
+    matches!(
+        c,
+        CharCodes::SPACE
+            | CharCodes::NEW_LINE
+            | CharCodes::TAB
+            | CharCodes::FORM_FEED
+            | CharCodes::CARRIAGE_RETURN
     )
 }
 
@@ -139,7 +140,6 @@ fn is_ascii_alpha(c: u8) -> bool {
     (CharCodes::LOWER_A..=CharCodes::LOWER_Z).contains(&c)
         || (CharCodes::UPPER_A..=CharCodes::UPPER_Z).contains(&c)
 }
-
 
 impl Tokenizer<'_> {
     pub fn new<'a>(buffer: &'a [u8], options: &'a TokenizerOptions) -> Tokenizer<'a> {
@@ -231,8 +231,16 @@ impl Tokenizer<'_> {
 
                 let token = TokenizerToken {
                     start: self.section_start,
-                    end: if self.section_start > end_index { self.section_start } else { end_index },
-                    location: if self.current_sequence == Sequences::CDATA_END { TokenizerTokenLocation::CData } else { TokenizerTokenLocation::Comment },
+                    end: if self.section_start > end_index {
+                        self.section_start
+                    } else {
+                        end_index
+                    },
+                    location: if self.current_sequence == Sequences::CDATA_END {
+                        TokenizerTokenLocation::CData
+                    } else {
+                        TokenizerTokenLocation::Comment
+                    },
                     code: 0,
                     quote: QuoteType::NoValue,
                 };
@@ -525,7 +533,9 @@ impl Tokenizer<'_> {
                     code: 0,
                     quote: QuoteType::Unquoted,
                 })
-            } else { None };
+            } else {
+                None
+            };
 
             self.index -= 1; // continue
             self.state = State::AfterAttributeData;
@@ -553,7 +563,11 @@ impl Tokenizer<'_> {
         None
     }
 
-    fn fast_get_until_gt(&mut self, c: u8, location: TokenizerTokenLocation) -> Option<TokenizerToken> {
+    fn fast_get_until_gt(
+        &mut self,
+        c: u8,
+        location: TokenizerTokenLocation,
+    ) -> Option<TokenizerToken> {
         if c == CharCodes::GT || self.fast_forward_to(CharCodes::GT) {
             let token = Some(TokenizerToken {
                 start: self.section_start,
@@ -623,7 +637,8 @@ impl Tokenizer<'_> {
                 (char > 96 && char < 123) || // lower case letter
                 (char > 64 && char < 91) || // upper case letter
                 char == CharCodes::UNDERSCORE ||
-                char == CharCodes::HASH {
+                char == CharCodes::HASH
+            {
                 count += 1;
                 continue;
             }
@@ -648,12 +663,16 @@ impl Tokenizer<'_> {
         if index >= 0 {
             let range: Range<usize> = Range {
                 start: self.index as usize,
-                end: index as usize
+                end: index as usize,
             };
             let is_attr = self.base_state != State::Text && self.base_state != State::InSpecialTag;
             let code = htmlize::unescape_bytes_in(
                 &self.buffer[range],
-                if is_attr {Context::Attribute} else {Context::General}
+                if is_attr {
+                    Context::Attribute
+                } else {
+                    Context::General
+                },
             );
 
             if code.len() > 0 {
@@ -662,9 +681,7 @@ impl Tokenizer<'_> {
                     return None;
                 }
 
-                let text = unsafe {
-                    str::from_utf8_unchecked(&code)
-                };
+                let text = unsafe { str::from_utf8_unchecked(&code) };
 
                 if let Some(character) = text.chars().next() {
                     self.code = character as u32
@@ -679,9 +696,17 @@ impl Tokenizer<'_> {
                     token = Some(TokenizerToken {
                         start: self.section_start,
                         end: self.entity_start,
-                        location: if is_attr { TokenizerTokenLocation::AttrData } else { TokenizerTokenLocation::Text },
+                        location: if is_attr {
+                            TokenizerTokenLocation::AttrData
+                        } else {
+                            TokenizerTokenLocation::Text
+                        },
                         code: 0,
-                        quote: if is_attr { self.prev_quote_type } else { QuoteType::NoValue },
+                        quote: if is_attr {
+                            self.prev_quote_type
+                        } else {
+                            QuoteType::NoValue
+                        },
                     });
                     self.section_start = self.index as usize;
                 } else {
@@ -691,10 +716,9 @@ impl Tokenizer<'_> {
                 self.index = index - 1;
 
                 self.state = if is_attr {
-                     State::AfterReadEntityAttr
-                }
-                else {
-                     State::AfterReadEntityText
+                    State::AfterReadEntityAttr
+                } else {
+                    State::AfterReadEntityText
                 };
 
                 return token;
@@ -709,7 +733,6 @@ impl Tokenizer<'_> {
     }
 
     fn parse_next(&mut self) -> Option<TokenizerToken> {
-
         while self.index < self.buffer.len() as i32 {
             let c = self.buffer[self.index as usize];
 
@@ -727,7 +750,9 @@ impl Tokenizer<'_> {
                     self.state_in_attribute_after_data(QuoteType::Double)
                 }
                 State::InCommentLike => self.state_in_comment_like(c),
-                State::InSpecialComment => self.fast_get_until_gt(c, TokenizerTokenLocation::Comment),
+                State::InSpecialComment => {
+                    self.fast_get_until_gt(c, TokenizerTokenLocation::Comment)
+                }
                 State::BeforeAttributeName => self.state_before_attribute_name(c),
                 State::InTagName => self.state_in_tag_name(c),
                 State::InClosingTagName => self.state_in_closing_tag_name(c),
@@ -741,13 +766,21 @@ impl Tokenizer<'_> {
                 State::InAttributeValueNq => self.state_in_attribute_value_no_quotes(c),
                 State::AfterAttributeData => self.state_after_attribute_data(),
                 State::InSelfClosingTag => self.state_in_self_closing_tag(c),
-                State::InDeclaration => self.fast_get_until_gt(c, TokenizerTokenLocation::Declaration),
+                State::InDeclaration => {
+                    self.fast_get_until_gt(c, TokenizerTokenLocation::Declaration)
+                }
                 State::BeforeDeclaration => self.state_before_declaration(c),
                 State::BeforeComment => self.state_before_comment(c),
-                State::InProcessingInstruction => self.fast_get_until_gt(c, TokenizerTokenLocation::ProcessingInstruction),
+                State::InProcessingInstruction => {
+                    self.fast_get_until_gt(c, TokenizerTokenLocation::ProcessingInstruction)
+                }
                 State::InEntity => self.state_in_entity(),
-                State::AfterReadEntityText => self.state_after_entity(TokenizerTokenLocation::TextEntity),
-                State::AfterReadEntityAttr => self.state_after_entity(TokenizerTokenLocation::AttrEntity),
+                State::AfterReadEntityText => {
+                    self.state_after_entity(TokenizerTokenLocation::TextEntity)
+                }
+                State::AfterReadEntityAttr => {
+                    self.state_after_entity(TokenizerTokenLocation::AttrEntity)
+                }
                 State::End => self.state_end(),
             };
 
@@ -764,7 +797,7 @@ impl Tokenizer<'_> {
 
         let option_trailing_token: Option<TokenizerToken> = self.handle_trailing_data();
         self.state = State::End;
-        if option_trailing_token.is_some()  {
+        if option_trailing_token.is_some() {
             return option_trailing_token;
         }
 
@@ -821,11 +854,13 @@ impl Tokenizer<'_> {
                 | State::InAttributeValueSq
                 | State::InAttributeValueDq
                 | State::InAttributeValueNq
-                | State::InClosingTagName => {
-                    None
-                },
-                State::AfterReadEntityText => self.state_after_entity(TokenizerTokenLocation::TextEntity),
-                State::AfterReadEntityAttr => self.state_after_entity(TokenizerTokenLocation::AttrData),
+                | State::InClosingTagName => None,
+                State::AfterReadEntityText => {
+                    self.state_after_entity(TokenizerTokenLocation::TextEntity)
+                }
+                State::AfterReadEntityAttr => {
+                    self.state_after_entity(TokenizerTokenLocation::AttrData)
+                }
                 _ => Some(TokenizerToken {
                     start: self.section_start,
                     end: end_index,
@@ -903,7 +938,7 @@ impl Tokenizer<'_> {
                 self.section_start = (end_of_text + 2) as usize; // Skip over the `</`
                 self.state = State::InClosingTagName;
                 self.index -= 1; // continue
-                // self.state_in_closing_tag_name(c);
+                                 // self.state_in_closing_tag_name(c);
 
                 return token; // We are done; skip the rest of the function.
             }
@@ -969,7 +1004,11 @@ impl Tokenizer<'_> {
             end: self.index as usize,
             location,
             code: self.code,
-            quote:  if location == TokenizerTokenLocation::AttrEntity { self.prev_quote_type } else { QuoteType::NoValue },
+            quote: if location == TokenizerTokenLocation::AttrEntity {
+                self.prev_quote_type
+            } else {
+                QuoteType::NoValue
+            },
         });
 
         self.section_start = self.index as usize;

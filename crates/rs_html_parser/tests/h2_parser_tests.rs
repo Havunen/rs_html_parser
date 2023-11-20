@@ -71,7 +71,9 @@ mod tests {
 
     #[test]
     fn entities_for_xml_entities() {
-        insta::assert_debug_snapshot!((parser_test("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101")))
+        insta::assert_debug_snapshot!(
+            (parser_test("&amp;&gt;&amp&lt;&uuml;&#x61;&#x62&#99;&#100&#101"))
+        )
     }
 
     #[test]
@@ -81,7 +83,9 @@ mod tests {
 
     #[test]
     fn entities_for_attributes() {
-        insta::assert_debug_snapshot!(parser_test("<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"))
+        insta::assert_debug_snapshot!(parser_test(
+            "<img src=\"?&image_uri=1&&image;=2&image=3\"/>?&image_uri=1&&image;=2&image=3"
+        ))
     }
 
     #[test]
@@ -93,5 +97,4 @@ mod tests {
     fn for_multi_byte_entities() {
         insta::assert_debug_snapshot!(parser_test("&NotGreaterFullEqual;"))
     }
-
 }
