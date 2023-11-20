@@ -57,37 +57,11 @@ lazy_static! {
 }
 
 pub struct Parser<'a> {
-    /** The start index of the last event. */
-    start_index: usize,
-    /** The end index of the last event. */
-    end_index: usize,
-
-    // tagname = "";
-    // attribname = "";
-    // attribvalue = "";
-    // attribs: null | { [key: string]: string } = null;
-    // stack: string[] = [];
-    // /** Determines whether self-closing tags are recognized. */
-    // foreign_context: bool[];
-    // cbs: Partial<Handler>;
-    // lowerCaseTagNames: bool;
-    // lower_case_attribute_names: bool;
-    // recognizeSelfClosing: bool;
-    // /** We are parsing HTML. Inverse of the `xml_mode` option. */
     html_mode: bool,
-    // tokenizer: Tokenizer;
-    //
-    // buffers: string[] = [];
-    // bufferOffset = 0;
-    // /** The index of the last written buffer. Used when resuming after a `pause()`. */
-    // writeIndex = 0;
-    // /** Indicates whether the parser has finished running / `.end` has been called. */
-    // ended = false;
 
     buffer: &'a [u8],
 
     tokenizer_iterator: Tokenizer<'a>,
-    open_tag_start: usize,
     tag_name: String,
     next_nodes: VecDeque<Token>,
     stack: VecDeque<String>,
@@ -103,11 +77,8 @@ impl Parser<'_> {
 
         Parser {
             buffer: bytes,
-            start_index: 0,
-            end_index: 0,
             html_mode: !options.xml_mode,
             tokenizer_iterator: Tokenizer::new(bytes, &options.tokenizer_options).into_iter(),
-            open_tag_start: 0,
             tag_name: "".to_string(),
             next_nodes: Default::default(),
             stack: Default::default(),
@@ -126,15 +97,10 @@ impl Parser<'_> {
             kind: TokenKind::Text,
             is_implied: false,
         });
-
-        self.end_index = tokenizer_token.end - 1;
-        self.start_index = tokenizer_token.end;
     }
 
     /** @internal */
     fn ontextentity(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end - 1;
-
         let data_string = char::from_u32(tokenizer_token.code).unwrap().to_string();
 
         self.next_nodes.push_back(Token {
@@ -143,8 +109,6 @@ impl Parser<'_> {
             kind: TokenKind::Text,
             is_implied: false,
         });
-
-        self.start_index = tokenizer_token.end;
     }
 
     /**
@@ -157,15 +121,12 @@ impl Parser<'_> {
 
     /** @internal */
     fn onopentagname(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
-
         let name = str::from_utf8(&self.buffer[tokenizer_token.start .. tokenizer_token.end]).unwrap();
 
         self.emit_open_tag(name.to_lowercase());
     }
 
     fn emit_open_tag(&mut self, name: String) {
-        self.open_tag_start = self.start_index;
         let name2 = name.clone();
         self.tag_name = name;
 
@@ -198,7 +159,6 @@ impl Parser<'_> {
 
     fn end_open_tag(&mut self, is_implied: bool) {
         let tag_name: &str = self.tag_name.as_ref();
-        self.start_index = self.open_tag_start;
 
         self.next_nodes.push_back(
             Token {
@@ -226,17 +186,11 @@ impl Parser<'_> {
 
     /** @internal */
     fn onopentagend(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
         self.end_open_tag(false);
-
-        // Set `start_index` for next node
-        self.start_index = tokenizer_token.end + 1;
     }
 
     /** @internal */
     fn onclosetag(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
-
         let name = &*str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap().to_lowercase();
 
         if is_foreign_context_elements(name) || is_html_integration_elements(name) {
@@ -277,19 +231,12 @@ impl Parser<'_> {
                 is_implied: false,
             });
         }
-
-        // Set `start_index` for next node
-        self.start_index = tokenizer_token.end + 1;
     }
 
     /** @internal */
     fn onselfclosingtag(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
         if self.foreign_context[0] {
             self.close_current_tag(false);
-
-            // Set `start_index` for next node
-            self.start_index = tokenizer_token.end + 1;
         } else {
             // Ignore the fact that the tag is self-closing.
             self.onopentagend(tokenizer_token);
@@ -314,7 +261,6 @@ impl Parser<'_> {
 
     /** @internal */
     fn onattribname(&mut self, tokenizer_token: TokenizerToken) {
-        self.start_index = tokenizer_token.start;
         let name = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         self.attrib_name = name.to_lowercase();
@@ -346,8 +292,6 @@ impl Parser<'_> {
 
     /** @internal */
     fn onattribend(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
-
         if !self.attribs.contains_key(&self.attrib_name) {
             let new_attribute: Option<(String, QuoteType)> = if let Some(attrib_value) = self.attrib_value.as_deref_mut() {
                 Some((attrib_value.to_owned(), tokenizer_token.quote))
@@ -378,7 +322,6 @@ impl Parser<'_> {
 
     /** @internal */
     fn ondeclaration(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
         let value: &str = str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
         let name: &str = &self.get_instruction_name(value);
 
@@ -390,14 +333,10 @@ impl Parser<'_> {
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
         });
-
-        // Set `start_index` for next node
-        self.start_index = tokenizer_token.end + 1;
     }
 
     /** @internal */
     fn onprocessinginstruction(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
         let value = String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap();
         let name = self.get_instruction_name(&value);
 
@@ -409,15 +348,10 @@ impl Parser<'_> {
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
         });
-
-        // Set `start_index` for next node
-        self.start_index = tokenizer_token.end + 1;
     }
 
     /** @internal */
     fn oncomment(&mut self, tokenizer_token: TokenizerToken) {
-        self.end_index = tokenizer_token.end;
-
         self.next_nodes.push_back(Token {
             data: String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned()).unwrap(),
             attrs: None,
@@ -430,9 +364,6 @@ impl Parser<'_> {
             kind: TokenKind::CommentEnd,
             is_implied: false,
         });
-
-        // Set `start_index` for next node
-        self.start_index = tokenizer_token.end + 1;
     }
 
     /** @internal */
@@ -443,8 +374,6 @@ impl Parser<'_> {
     /** @internal */
     fn onend(&mut self) {
         // Set the end index for all remaining tags
-        self.end_index = self.start_index;
-
         let stack_iter = self.stack.iter();
         for item in stack_iter {
             self.next_nodes.push_back(Token {

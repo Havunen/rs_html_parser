@@ -156,7 +156,6 @@ impl Tokenizer<'_> {
             entity_start: 0,
             base_state: State::Text,
             is_special: false,
-            // running: false,
             offset: 0,
             xml_mode: options.xml_mode.unwrap_or(false),
             decode_entities: options.decode_entities.unwrap_or(true),
