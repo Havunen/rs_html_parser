@@ -62,7 +62,7 @@ impl Parser<'_> {
         }
     }
 
-    fn ontext(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_text(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
             data: str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end])
                 .unwrap()
@@ -73,8 +73,7 @@ impl Parser<'_> {
         });
     }
 
-    /** @internal */
-    fn ontextentity(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_text_entity(&mut self, tokenizer_token: TokenizerToken) {
         let data_string = char::from_u32(tokenizer_token.code).unwrap().to_string();
 
         self.next_nodes.push_back(Token {
@@ -85,16 +84,11 @@ impl Parser<'_> {
         });
     }
 
-    /**
-     * Checks if the current tag is a void element. Override self if you want
-     * to specify your own additional void elements.
-     */
     fn is_void_element(&self, name: &str) -> bool {
         self.html_mode && is_void_elements(name)
     }
 
-    /** @internal */
-    fn onopentagname(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
         let name =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
@@ -160,13 +154,11 @@ impl Parser<'_> {
         self.tag_name = "".into();
     }
 
-    /** @internal */
-    fn onopentagend(&mut self) {
+    fn on_open_tag_end(&mut self) {
         self.end_open_tag(false);
     }
 
-    /** @internal */
-    fn onclosetag(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_close_tag(&mut self, tokenizer_token: TokenizerToken) {
         let name = &*str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end])
             .unwrap()
             .to_lowercase();
@@ -209,13 +201,12 @@ impl Parser<'_> {
         }
     }
 
-    /** @internal */
-    fn onselfclosingtag(&mut self) {
+    fn on_self_closing_tag(&mut self) {
         if self.foreign_context[0] {
             self.close_current_tag(false);
         } else {
             // Ignore the fact that the tag is self-closing.
-            self.onopentagend();
+            self.on_open_tag_end();
         }
     }
 
@@ -235,16 +226,14 @@ impl Parser<'_> {
         }
     }
 
-    /** @internal */
-    fn onattribname(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_attrib_name(&mut self, tokenizer_token: TokenizerToken) {
         let name =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         self.attrib_name = name.to_lowercase();
     }
 
-    /** @internal */
-    fn onattribdata(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
         let new_value =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
         if self.attrib_value.is_some() {
@@ -256,8 +245,7 @@ impl Parser<'_> {
         }
     }
 
-    /** @internal */
-    fn onattribentity(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_attrib_entity(&mut self, tokenizer_token: TokenizerToken) {
         let new_value = &*char::from_u32(tokenizer_token.code).unwrap().to_string();
         if self.attrib_value.is_some() {
             let mut existing_value = self.attrib_value.clone().unwrap();
@@ -268,8 +256,7 @@ impl Parser<'_> {
         }
     }
 
-    /** @internal */
-    fn onattribend(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_attrib_end(&mut self, tokenizer_token: TokenizerToken) {
         if !self.attribs.contains_key(&self.attrib_name) {
             let new_attribute: Option<(String, QuoteType)> = self
                 .attrib_value
@@ -294,8 +281,7 @@ impl Parser<'_> {
         value.to_string()
     }
 
-    /** @internal */
-    fn ondeclaration(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_declaration(&mut self, tokenizer_token: TokenizerToken) {
         let value: &str =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
         let name: String = self.get_instruction_name(value);
@@ -308,8 +294,7 @@ impl Parser<'_> {
         });
     }
 
-    /** @internal */
-    fn onprocessinginstruction(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_processing_instruction(&mut self, tokenizer_token: TokenizerToken) {
         let value =
             String::from_utf8(self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned())
                 .unwrap();
@@ -323,8 +308,7 @@ impl Parser<'_> {
         });
     }
 
-    /** @internal */
-    fn oncomment(&mut self, tokenizer_token: TokenizerToken) {
+    fn on_comment(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
             data: String::from_utf8(
                 self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned(),
@@ -342,12 +326,10 @@ impl Parser<'_> {
         });
     }
 
-    /** @internal */
-    fn oncdata(&mut self, tokenizer_token: TokenizerToken) {
-        self.oncomment(tokenizer_token);
+    fn on_cdata(&mut self, tokenizer_token: TokenizerToken) {
+        self.on_comment(tokenizer_token);
     }
 
-    /** @internal */
     fn onend(&mut self) {
         // Set the end index for all remaining tags
         let stack_iter = self.stack.iter();
@@ -364,22 +346,22 @@ impl Parser<'_> {
     }
     fn parse_next(&mut self, tokenizer_token: TokenizerToken) -> Option<Token> {
         match tokenizer_token.location {
-            TokenizerTokenLocation::AttrData => self.onattribdata(tokenizer_token),
-            TokenizerTokenLocation::AttrEntity => self.onattribentity(tokenizer_token),
-            TokenizerTokenLocation::AttrEnd => self.onattribend(tokenizer_token),
-            TokenizerTokenLocation::AttrName => self.onattribname(tokenizer_token),
-            TokenizerTokenLocation::CData => self.oncdata(tokenizer_token),
-            TokenizerTokenLocation::CloseTag => self.onclosetag(tokenizer_token),
-            TokenizerTokenLocation::Comment => self.oncomment(tokenizer_token),
-            TokenizerTokenLocation::Declaration => self.ondeclaration(tokenizer_token),
-            TokenizerTokenLocation::OpenTagEnd => self.onopentagend(),
-            TokenizerTokenLocation::OpenTagName => self.onopentagname(tokenizer_token),
+            TokenizerTokenLocation::AttrData => self.on_attrib_data(tokenizer_token),
+            TokenizerTokenLocation::AttrEntity => self.on_attrib_entity(tokenizer_token),
+            TokenizerTokenLocation::AttrEnd => self.on_attrib_end(tokenizer_token),
+            TokenizerTokenLocation::AttrName => self.on_attrib_name(tokenizer_token),
+            TokenizerTokenLocation::CData => self.on_cdata(tokenizer_token),
+            TokenizerTokenLocation::CloseTag => self.on_close_tag(tokenizer_token),
+            TokenizerTokenLocation::Comment => self.on_comment(tokenizer_token),
+            TokenizerTokenLocation::Declaration => self.on_declaration(tokenizer_token),
+            TokenizerTokenLocation::OpenTagEnd => self.on_open_tag_end(),
+            TokenizerTokenLocation::OpenTagName => self.on_open_tag_name(tokenizer_token),
             TokenizerTokenLocation::ProcessingInstruction => {
-                self.onprocessinginstruction(tokenizer_token)
+                self.on_processing_instruction(tokenizer_token)
             }
-            TokenizerTokenLocation::SelfClosingTag => self.onselfclosingtag(),
-            TokenizerTokenLocation::Text => self.ontext(tokenizer_token),
-            TokenizerTokenLocation::TextEntity => self.ontextentity(tokenizer_token),
+            TokenizerTokenLocation::SelfClosingTag => self.on_self_closing_tag(),
+            TokenizerTokenLocation::Text => self.on_text(tokenizer_token),
+            TokenizerTokenLocation::TextEntity => self.on_text_entity(tokenizer_token),
             TokenizerTokenLocation::End => self.onend(),
         }
 
