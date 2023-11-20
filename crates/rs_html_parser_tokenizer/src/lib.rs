@@ -107,7 +107,6 @@ pub struct Tokenizer<'a> {
     entity_start: usize,
     base_state: State,
     is_special: bool,
-    offset: usize,
     code: u32,
     prev_quote_type: QuoteType,
 
@@ -156,7 +155,6 @@ impl Tokenizer<'_> {
             entity_start: 0,
             base_state: State::Text,
             is_special: false,
-            offset: 0,
             xml_mode: options.xml_mode.unwrap_or(false),
             decode_entities: options.decode_entities.unwrap_or(true),
             current_sequence: Default::default(),
@@ -173,19 +171,18 @@ impl Tokenizer<'_> {
         self.index = 0;
         self.base_state = State::Text;
         self.current_sequence = Default::default();
-        self.offset = 0;
     }
 
     fn fast_forward_to(&mut self, c: u8) -> bool {
-        while self.index < (self.buffer.len() + self.offset - 1) as i32 {
+        while self.index < (self.buffer.len() - 1) as i32 {
             self.index += 1;
 
-            if self.buffer[self.index as usize - self.offset] == c {
+            if self.buffer[self.index as usize] == c {
                 return true;
             }
         }
 
-        self.index = (self.buffer.len() + self.offset - 1) as i32;
+        self.index = (self.buffer.len() - 1) as i32;
 
         return false;
     }
@@ -618,8 +615,8 @@ impl Tokenizer<'_> {
     }
 
     fn find_end_of_html_entity(&mut self) -> i32 {
-        let start_pos = self.index as usize - self.offset;
-        let loop_until = self.buffer.len() + self.offset;
+        let start_pos = self.index as usize;
+        let loop_until = self.buffer.len();
         let mut count: usize = start_pos + 1; // the first is always &
 
         while count < loop_until {
@@ -653,7 +650,7 @@ impl Tokenizer<'_> {
 
         if index >= 0 {
             let range: Range<usize> = Range {
-                start: (self.index as usize - self.offset),
+                start: self.index as usize,
                 end: index as usize
             };
             let is_attr = self.base_state != State::Text && self.base_state != State::InSpecialTag;
@@ -705,10 +702,10 @@ impl Tokenizer<'_> {
 
                 return token;
             } else {
-                self.index = (self.offset + self.buffer.len() - 1) as i32;
+                self.index = (self.buffer.len() - 1) as i32;
             }
         } else {
-            self.index = (self.offset + self.buffer.len() - 1) as i32;
+            self.index = (self.buffer.len() - 1) as i32;
         }
 
         return None;
@@ -716,8 +713,8 @@ impl Tokenizer<'_> {
 
     fn parse_next(&mut self) -> Option<TokenizerToken> {
 
-        while self.index < (self.buffer.len() + self.offset) as i32 {
-            let c = self.buffer[self.index as usize - self.offset];
+        while self.index < self.buffer.len() as i32 {
+            let c = self.buffer[self.index as usize];
 
             let token_or_empty: Option<TokenizerToken> = match self.state {
                 State::Text => self.state_text(c),
@@ -781,7 +778,7 @@ impl Tokenizer<'_> {
         if !self.has_ended {
             self.has_ended = true;
 
-            let i = self.buffer.len() + self.offset;
+            let i = self.buffer.len();
 
             return Some(TokenizerToken {
                 start: i,
@@ -800,7 +797,7 @@ impl Tokenizer<'_> {
             return None;
         }
 
-        let end_index = self.buffer.len() + self.offset;
+        let end_index = self.buffer.len();
         if self.section_start >= end_index {
             return None;
         }
