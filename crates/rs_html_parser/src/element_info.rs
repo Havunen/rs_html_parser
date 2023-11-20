@@ -1,115 +1,188 @@
-use phf::{Map, phf_map, phf_set, Set};
+pub fn is_form_tag(tag_name: &str) -> bool {
+    match tag_name {
+        "input" |
+        "option" |
+        "optgroup" |
+        "select" |
+        "button" |
+        "datalist" |
+        "textarea" => true,
+        _ => false
+    }
+}
 
-pub const FORM_TAGS: Set<&'static str> = phf_set! {
-    "input",
-    "option",
-    "optgroup",
-    "select",
-    "button",
-    "datalist",
-    "textarea",
-};
+pub fn is_p_tag(tag_name: &str) -> bool {
+    tag_name == "p"
+}
 
-pub const P_TAG: Set<&'static str> = phf_set! {
-    "p"
-};
+pub fn is_table_section_tags(tag_name: &str) -> bool {
+    match tag_name {
+        "thead" |
+        "tbody" => true,
+        _ => false
+    }
+}
 
-pub const TABLE_SECTION_TAGS : Set<&'static str> = phf_set! {
-    "thead",
-    "tbody"
-};
+pub fn is_dd_dt_tags(tag_name: &str) -> bool {
+    match tag_name {
+        "dd" |
+        "dt" => true,
+        _ => false
+    }
+}
 
-pub const DD_DT_TAGS: Set<&'static str> = phf_set! {
-    "dd", "dt"
-};
+pub fn is_rtp_tags(tag_name: &str) -> bool {
+    match tag_name {
+        "rt" |
+        "rp" => true,
+        _ => false
+    }
+}
 
-pub const RTP_TAGS : Set<&'static str> = phf_set! {
-    "rt", "rp"
-};
+pub fn is_void_elements(tag_name: &str) -> bool {
+    match tag_name {
+        "area" |
+        "base" |
+        "basefont" |
+        "br" |
+        "col" |
+        "command" |
+        "embed" |
+        "frame" |
+        "hr" |
+        "img" |
+        "input" |
+        "isindex" |
+        "keygen" |
+        "link" |
+        "meta" |
+        "param" |
+        "source" |
+        "track" |
+        "wbr" => true,
+        _ => false
+    }
+}
 
+pub fn is_tr_th_td(tag_name: &str) -> bool {
+    match tag_name {
+        "tr" |
+        "th" |
+        "td" => true,
+        _ => false
+    }
+}
 
-pub const OPEN_IMPLIES_CLOSE : Map<&'static str, Set<&'static str>> = phf_map! {
-    "tr" => phf_set! {"tr", "th", "td" },
-    "th" => phf_set! {"th" },
-    "td" => phf_set! {"thead", "th", "td" },
-    "body" => phf_set! {"head", "link", "script" },
-    "li" => phf_set! {"li" },
-    "p" => P_TAG,
-    "h1" => P_TAG,
-    "h2" => P_TAG,
-    "h3" => P_TAG,
-    "h4" => P_TAG,
-    "h5" => P_TAG,
-    "h6" => P_TAG,
-    "select" => FORM_TAGS,
-    "input" => FORM_TAGS,
-    "output" => FORM_TAGS,
-    "button" => FORM_TAGS,
-    "datalist" => FORM_TAGS,
-    "textarea" => FORM_TAGS,
-    "option" => phf_set! { "option" },
-    "optgroup" => phf_set! {"optgroup", "option" },
-    "dd" => DD_DT_TAGS,
-    "dt" => DD_DT_TAGS,
-    "address" => P_TAG,
-    "article" => P_TAG,
-    "aside" => P_TAG,
-    "blockquote" => P_TAG,
-    "details" => P_TAG,
-    "div" => P_TAG,
-    "dl" => P_TAG,
-    "fieldset" => P_TAG,
-    "figcaption" => P_TAG,
-    "figure" => P_TAG,
-    "footer" => P_TAG,
-    "form" => P_TAG,
-    "header" => P_TAG,
-    "hr" => P_TAG,
-    "main" => P_TAG,
-    "nav" => P_TAG,
-    "ol" => P_TAG,
-    "pre" => P_TAG,
-    "section" => P_TAG,
-    "table" => P_TAG,
-    "ul" => P_TAG,
-    "rt" => RTP_TAGS,
-    "rp" => RTP_TAGS,
-    "tbody" => TABLE_SECTION_TAGS,
-    "tfoot" => TABLE_SECTION_TAGS,
-};
+pub fn is_th(tag_name: &str) -> bool {
+    tag_name == "th"
+}
 
-pub const VOID_ELEMENTS: Set<&'static str> = phf_set! {
-    "area",
-    "base",
-    "basefont",
-    "br",
-    "col",
-    "command",
-    "embed",
-    "frame",
-    "hr",
-    "img",
-    "input",
-    "isindex",
-    "keygen",
-    "link",
-    "meta",
-    "param",
-    "source",
-    "track",
-    "wbr",
-};
+pub fn is_thead_th_td(tag_name: &str) -> bool {
+    match tag_name {
+        "thead" |
+        "th" |
+        "td" => true,
+        _ => false
+    }
+}
 
-pub const FOREIGN_CONTEXT_ELEMENTS: Set<&'static str> = phf_set! {"math", "svg" };
+pub fn is_head_link_script(tag_name: &str) -> bool {
+    match tag_name {
+        "head" |
+        "link" |
+        "script" => true,
+        _ => false
+    }
+}
 
-pub const HTML_INTEGRATION_ELEMENTS: Set<&'static str> = phf_set! {
-    "mi",
-    "mo",
-    "mn",
-    "ms",
-    "mtext",
-    "annotation-xml",
-    "foreignobject",
-    "desc",
-    "title",
-};
+pub fn is_li(tag_name: &str) -> bool {
+    tag_name == "li"
+}
+
+pub fn is_option(tag_name: &str) -> bool {
+    tag_name == "option"
+}
+
+pub fn is_opt_group(tag_name: &str) -> bool {
+    match tag_name {
+        "optgroup" |
+        "option" => true,
+        _ => false
+    }
+}
+
+pub fn open_implies_close(tag_name: &str) -> Option<fn(tag_name: &str) -> bool> {
+    match tag_name {
+        "tr" => Some(is_tr_th_td),
+        "th" => Some(is_th),
+        "td" => Some(is_thead_th_td),
+        "body" => Some(is_head_link_script),
+        "li" => Some(is_li),
+        "p" => Some(is_p_tag),
+        "h1" => Some(is_p_tag),
+        "h2" => Some(is_p_tag),
+        "h3" => Some(is_p_tag),
+        "h4" => Some(is_p_tag),
+        "h5" => Some(is_p_tag),
+        "h6" => Some(is_p_tag),
+        "select" => Some(is_form_tag),
+        "input" => Some(is_form_tag),
+        "output" => Some(is_form_tag),
+        "button" => Some(is_form_tag),
+        "datalist" => Some(is_form_tag),
+        "textarea" => Some(is_form_tag),
+        "option" => Some(is_option),
+        "optgroup" => Some(is_opt_group),
+        "dd" => Some(is_dd_dt_tags),
+        "dt" => Some(is_dd_dt_tags),
+        "address" => Some(is_p_tag),
+        "article" => Some(is_p_tag),
+        "aside" => Some(is_p_tag),
+        "blockquote" => Some(is_p_tag),
+        "details" => Some(is_p_tag),
+        "div" => Some(is_p_tag),
+        "dl" => Some(is_p_tag),
+        "fieldset" => Some(is_p_tag),
+        "figcaption" => Some(is_p_tag),
+        "figure" => Some(is_p_tag),
+        "footer" => Some(is_p_tag),
+        "form" => Some(is_p_tag),
+        "header" => Some(is_p_tag),
+        "hr" => Some(is_p_tag),
+        "main" => Some(is_p_tag),
+        "nav" => Some(is_p_tag),
+        "ol" => Some(is_p_tag),
+        "pre" => Some(is_p_tag),
+        "section" => Some(is_p_tag),
+        "table" => Some(is_p_tag),
+        "ul" => Some(is_p_tag),
+        "rt" => Some(is_rtp_tags),
+        "rp" => Some(is_rtp_tags),
+        "tbody" => Some(is_table_section_tags),
+        "tfoot" => Some(is_table_section_tags),
+        _ => None
+    }
+}
+
+pub fn is_foreign_context_elements(tag_name: &str) -> bool {
+    match tag_name {
+        "math" |
+        "svg" => true,
+        _ => false
+    }
+}
+
+pub fn is_html_integration_elements(tag_name: &str) -> bool {
+    match tag_name {
+        "mi" |
+        "mo" |
+        "mn" |
+        "ms" |
+        "mtext" |
+        "annotation-xml" |
+        "foreignobject" |
+        "desc" |
+        "title" => true,
+        _ => false
+    }
+}

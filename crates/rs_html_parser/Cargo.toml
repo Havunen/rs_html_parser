@@ -20,8 +20,6 @@ rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
 rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
 rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer" }
 regex = "1.10.2"
-phf = { version = "0.11", default-features = false, features = ["macros"] }
-phf_codegen = { version = "0.11.2", default-features = false }
 lazy_static = "1.4.0"
 criterion = "0.5.1"
 

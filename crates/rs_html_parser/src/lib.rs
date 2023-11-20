@@ -3,12 +3,11 @@ mod element_info;
 use std::str;
 use std::collections::{BTreeMap, VecDeque};
 use lazy_static::lazy_static;
-use phf::Set;
 use rs_html_parser_tokens::{Token, TokenKind};
 use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
 use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use regex::Regex;
-use crate::element_info::{FOREIGN_CONTEXT_ELEMENTS, HTML_INTEGRATION_ELEMENTS, OPEN_IMPLIES_CLOSE, VOID_ELEMENTS};
+use crate::element_info::{is_foreign_context_elements, is_html_integration_elements, is_void_elements, open_implies_close};
 
 pub struct ParserOptions {
     /**
@@ -153,7 +152,7 @@ impl Parser<'_> {
      * to specify your own additional void elements.
      */
     fn is_void_element(&self, name: &str) -> bool {
-        return self.html_mode && VOID_ELEMENTS.contains(name);
+        return self.html_mode && is_void_elements(name);
     }
 
     /** @internal */
@@ -170,10 +169,10 @@ impl Parser<'_> {
         let name2 = name.clone();
         self.tag_name = name;
 
-        let implies_close_option: Option<&Set<&'static str>> = OPEN_IMPLIES_CLOSE.get(&*name2);
+        let open_implies_close_option: Option<fn(tag_name: &str) -> bool>= open_implies_close(&name2);
 
-        if let Some(implies_closed) = implies_close_option {
-            while self.stack.len() > 0 && implies_closed.contains(&self.stack[0]) {
+        if let Some(open_implies_close_fn) = open_implies_close_option {
+            while self.stack.len() > 0 && open_implies_close_fn(&self.stack[0]) {
                 let element = self.stack.pop_front().unwrap();
 
                 self.next_nodes.push_back(Token {
@@ -188,9 +187,9 @@ impl Parser<'_> {
             self.stack.push_front(name2.clone());
 
             if self.html_mode {
-                if FOREIGN_CONTEXT_ELEMENTS.contains(&name2) {
+                if is_foreign_context_elements(&name2) {
                     self.foreign_context.push_front(true);
-                } else if HTML_INTEGRATION_ELEMENTS.contains(&name2) {
+                } else if is_html_integration_elements(&name2) {
                     self.foreign_context.push_front(false);
                 }
             }
@@ -240,7 +239,7 @@ impl Parser<'_> {
 
         let name = &*str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap().to_lowercase();
 
-        if FOREIGN_CONTEXT_ELEMENTS.contains(name) || HTML_INTEGRATION_ELEMENTS.contains(name) {
+        if is_foreign_context_elements(name) || is_html_integration_elements(name) {
             self.foreign_context.pop_front();
         }
 
