@@ -9,6 +9,7 @@ use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
 use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use rs_html_parser_tokens::{Token, TokenKind};
 use std::collections::{BTreeMap, VecDeque};
+use std::mem::take;
 use std::str;
 
 pub struct ParserOptions {
@@ -128,30 +129,34 @@ impl Parser<'_> {
     }
 
     fn end_open_tag(&mut self, is_implied: bool) {
-        let tag_name: &str = self.tag_name.as_ref();
+        let tag_name: String = take(&mut self.tag_name);
+        let is_void = self.is_void_element(&tag_name);
 
-        self.next_nodes.push_back(Token {
-            data: tag_name.to_string(),
-            attrs: if self.attribs.is_empty() {
-                None
-            } else {
-                Some(self.attribs.to_owned())
-            },
-            kind: TokenKind::OpenTag,
-            is_implied,
-        });
-        self.attribs.clear();
-
-        if self.is_void_element(tag_name) {
-            self.next_nodes.push_back(Token {
+        let close_node_option = if is_void {
+            Some(Token {
                 data: tag_name.to_string(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: true,
-            });
-        }
+            })
+        } else {
+            None
+        };
 
-        self.tag_name = "".into();
+        self.next_nodes.push_back(Token {
+            data: tag_name,
+            attrs: if self.attribs.is_empty() {
+                None
+            } else {
+                Some(take(&mut self.attribs))
+            },
+            kind: TokenKind::OpenTag,
+            is_implied,
+        });
+
+        if let Some(close_node) = close_node_option {
+            self.next_nodes.push_back(close_node);
+        }
     }
 
     fn on_open_tag_end(&mut self) {
@@ -217,7 +222,7 @@ impl Parser<'_> {
         if self.stack[0] == self.tag_name {
             // If the opening tag isn't implied, the closing tag has to be implied.
             self.next_nodes.push_back(Token {
-                data: self.tag_name.to_owned(),
+                data: take(&mut self.tag_name),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: !is_open_implied,

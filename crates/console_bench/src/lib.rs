@@ -16,7 +16,7 @@ fn main() {
     println!("Current dir = {:?}", env::current_dir());
 
     let mut test_files: Vec<String> = Vec::new();
-    match get_files_in_folder("../../crates/console_bench/test_data/") {
+    match get_files_in_folder("./crates/console_bench/test_data/") {
         Ok(files) => {
             for file in files {
                 if file.is_dir() {
