@@ -344,28 +344,41 @@ impl Parser<'_> {
 
         self.stack.clear();
     }
-    fn parse_next(&mut self, tokenizer_token: TokenizerToken) -> Option<Token> {
-        match tokenizer_token.location {
-            TokenizerTokenLocation::AttrData => self.on_attrib_data(tokenizer_token),
-            TokenizerTokenLocation::AttrEntity => self.on_attrib_entity(tokenizer_token),
-            TokenizerTokenLocation::AttrEnd => self.on_attrib_end(tokenizer_token),
-            TokenizerTokenLocation::AttrName => self.on_attrib_name(tokenizer_token),
-            TokenizerTokenLocation::CData => self.on_cdata(tokenizer_token),
-            TokenizerTokenLocation::CloseTag => self.on_close_tag(tokenizer_token),
-            TokenizerTokenLocation::Comment => self.on_comment(tokenizer_token),
-            TokenizerTokenLocation::Declaration => self.on_declaration(tokenizer_token),
-            TokenizerTokenLocation::OpenTagEnd => self.on_open_tag_end(),
-            TokenizerTokenLocation::OpenTagName => self.on_open_tag_name(tokenizer_token),
-            TokenizerTokenLocation::ProcessingInstruction => {
-                self.on_processing_instruction(tokenizer_token)
+    fn parse_next(&mut self) -> Option<Token> {
+        loop {
+            if let Some(existing_node) = self.next_nodes.pop_front() {
+                return Some(existing_node);
             }
-            TokenizerTokenLocation::SelfClosingTag => self.on_self_closing_tag(),
-            TokenizerTokenLocation::Text => self.on_text(tokenizer_token),
-            TokenizerTokenLocation::TextEntity => self.on_text_entity(tokenizer_token),
-            TokenizerTokenLocation::End => self.onend(),
-        }
 
-        self.next()
+            let possible_token = self.tokenizer.next();
+
+            match possible_token {
+                None => {
+                    return None
+                },
+                Some(tokenizer_token) => {
+                    match tokenizer_token.location {
+                        TokenizerTokenLocation::AttrData => self.on_attrib_data(tokenizer_token),
+                        TokenizerTokenLocation::AttrEntity => self.on_attrib_entity(tokenizer_token),
+                        TokenizerTokenLocation::AttrEnd => self.on_attrib_end(tokenizer_token),
+                        TokenizerTokenLocation::AttrName => self.on_attrib_name(tokenizer_token),
+                        TokenizerTokenLocation::CData => self.on_cdata(tokenizer_token),
+                        TokenizerTokenLocation::CloseTag => self.on_close_tag(tokenizer_token),
+                        TokenizerTokenLocation::Comment => self.on_comment(tokenizer_token),
+                        TokenizerTokenLocation::Declaration => self.on_declaration(tokenizer_token),
+                        TokenizerTokenLocation::OpenTagEnd => self.on_open_tag_end(),
+                        TokenizerTokenLocation::OpenTagName => self.on_open_tag_name(tokenizer_token),
+                        TokenizerTokenLocation::ProcessingInstruction => {
+                            self.on_processing_instruction(tokenizer_token)
+                        }
+                        TokenizerTokenLocation::SelfClosingTag => self.on_self_closing_tag(),
+                        TokenizerTokenLocation::Text => self.on_text(tokenizer_token),
+                        TokenizerTokenLocation::TextEntity => self.on_text_entity(tokenizer_token),
+                        TokenizerTokenLocation::End => self.onend(),
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -373,15 +386,6 @@ impl<'i> Iterator for Parser<'i> {
     type Item = Token;
 
     fn next(&mut self) -> Option<Token> {
-        if let Some(existing_node) = self.next_nodes.pop_front() {
-            return Some(existing_node);
-        }
-
-        let possible_token = self.tokenizer.next();
-
-        match possible_token {
-            None => None,
-            Some(tokenizer_token) => self.parse_next(tokenizer_token),
-        }
+        self.parse_next()
     }
 }
