@@ -7,7 +7,7 @@ expression: "parser_test(r####\"<a aZ>\"####)"
         data: "a",
         attrs: Some(
             {
-                "az": None,
+                "aZ": None,
             },
         ),
         kind: OpenTag,

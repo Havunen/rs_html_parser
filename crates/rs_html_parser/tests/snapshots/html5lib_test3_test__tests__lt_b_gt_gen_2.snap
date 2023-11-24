@@ -4,13 +4,13 @@ expression: "parser_test(r####\"<B>\"####)"
 ---
 [
     Token {
-        data: "b",
+        data: "B",
         attrs: None,
         kind: OpenTag,
         is_implied: false,
     },
     Token {
-        data: "b",
+        data: "B",
         attrs: None,
         kind: CloseTag,
         is_implied: true,

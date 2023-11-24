@@ -13,7 +13,7 @@ expression: "parser_test(r####\"<a a=''B>\"####)"
                         Single,
                     ),
                 ),
-                "b": None,
+                "B": None,
             },
         ),
         kind: OpenTag,

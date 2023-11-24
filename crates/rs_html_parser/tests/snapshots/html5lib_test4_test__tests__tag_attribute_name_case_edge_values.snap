@@ -4,17 +4,17 @@ expression: "parser_test(r####\"<x@AZ[`az{ @AZ[`az{>\"####)"
 ---
 [
     Token {
-        data: "x@az[`az{",
+        data: "x@AZ[`az{",
         attrs: Some(
             {
-                "@az[`az{": None,
+                "@AZ[`az{": None,
             },
         ),
         kind: OpenTag,
         is_implied: false,
     },
     Token {
-        data: "x@az[`az{",
+        data: "x@AZ[`az{",
         attrs: None,
         kind: CloseTag,
         is_implied: true,

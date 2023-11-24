@@ -1,5 +1,7 @@
 use rs_html_parser_tokenizer_tokens::QuoteType;
+use std::borrow::Cow;
 use std::collections::BTreeMap;
+use unicase::UniCase;
 
 #[derive(Debug)]
 pub enum TokenKind {
@@ -15,9 +17,9 @@ pub enum TokenKind {
 }
 
 #[derive(Debug)]
-pub struct Token {
-    pub data: String,
-    pub attrs: Option<BTreeMap<String, Option<(String, QuoteType)>>>,
+pub struct Token<'a> {
+    pub data: Cow<'a, str>,
+    pub attrs: Option<BTreeMap<UniCase<&'a str>, Option<(String, QuoteType)>>>,
     pub kind: TokenKind,
     pub is_implied: bool,
 }

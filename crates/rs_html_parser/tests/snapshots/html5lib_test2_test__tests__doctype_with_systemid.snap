@@ -4,7 +4,7 @@ expression: "parser_test(r####\"<!DOCTYPE html SYSTEM \"-//W3C//DTD HTML Transit
 ---
 [
     Token {
-        data: "doctype html system \"-",
+        data: "DOCTYPE html SYSTEM \"-",
         attrs: None,
         kind: ProcessingInstruction,
         is_implied: false,

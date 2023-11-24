@@ -8,7 +8,7 @@ expression: "parser_test(r####\"<h a B=''>\"####)"
         attrs: Some(
             {
                 "a": None,
-                "b": Some(
+                "B": Some(
                     (
                         "",
                         Single,

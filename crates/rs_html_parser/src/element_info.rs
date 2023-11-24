@@ -1,77 +1,74 @@
+macro_rules! match_ignore_ascii_case {
+    ($input:expr, $($pattern:expr),* $(,)?) => {
+        {
+            let input_len = $input.len();
+            $(
+                if input_len == $pattern.len() && $input.eq_ignore_ascii_case($pattern) {
+                    // Return true if a match is found
+                    return true;
+                }
+            )*
+            // Return false if no match is found
+            false
+        }
+    };
+}
+
 pub fn is_form_tag(tag_name: &str) -> bool {
-    matches!(
-        tag_name,
-        "input" | "option" | "optgroup" | "select" | "button" | "datalist" | "textarea"
+    match_ignore_ascii_case!(
+        tag_name, "input", "option", "optgroup", "select", "button", "datalist", "textarea"
     )
 }
 
 pub fn is_p_tag(tag_name: &str) -> bool {
-    tag_name == "p"
+    "p".eq_ignore_ascii_case(tag_name)
 }
 
 pub fn is_table_section_tags(tag_name: &str) -> bool {
-    matches!(tag_name, "thead" | "tbody")
+    match_ignore_ascii_case!(tag_name, "thead", "tbody")
 }
 
 pub fn is_dd_dt_tags(tag_name: &str) -> bool {
-    matches!(tag_name, "dd" | "dt")
+    match_ignore_ascii_case!(tag_name, "dd", "dt")
 }
 
 pub fn is_rtp_tags(tag_name: &str) -> bool {
-    matches!(tag_name, "rt" | "rp")
+    match_ignore_ascii_case!(tag_name, "rt", "rp")
 }
 
 pub fn is_void_elements(tag_name: &str) -> bool {
-    matches!(
-        tag_name,
-        "area"
-            | "base"
-            | "basefont"
-            | "br"
-            | "col"
-            | "command"
-            | "embed"
-            | "frame"
-            | "hr"
-            | "img"
-            | "input"
-            | "isindex"
-            | "keygen"
-            | "link"
-            | "meta"
-            | "param"
-            | "source"
-            | "track"
-            | "wbr"
+    match_ignore_ascii_case!(
+        tag_name, "area", "base", "basefont", "br", "col", "command", "embed", "frame", "hr",
+        "img", "input", "isindex", "keygen", "link", "meta", "param", "source", "track", "wbr"
     )
 }
 
 pub fn is_tr_th_td(tag_name: &str) -> bool {
-    matches!(tag_name, "tr" | "th" | "td")
+    match_ignore_ascii_case!(tag_name, "tr", "th", "td")
 }
 
 pub fn is_th(tag_name: &str) -> bool {
-    tag_name == "th"
+    tag_name.eq_ignore_ascii_case("th")
 }
 
 pub fn is_thead_th_td(tag_name: &str) -> bool {
-    matches!(tag_name, "thead" | "th" | "td")
+    match_ignore_ascii_case!(tag_name, "thead", "th", "td")
 }
 
 pub fn is_head_link_script(tag_name: &str) -> bool {
-    matches!(tag_name, "head" | "link" | "script")
+    match_ignore_ascii_case!(tag_name, "head", "link", "script")
 }
 
 pub fn is_li(tag_name: &str) -> bool {
-    tag_name == "li"
+    tag_name.eq_ignore_ascii_case("li")
 }
 
 pub fn is_option(tag_name: &str) -> bool {
-    tag_name == "option"
+    tag_name.eq_ignore_ascii_case("option")
 }
 
 pub fn is_opt_group(tag_name: &str) -> bool {
-    matches!(tag_name, "optgroup" | "option")
+    match_ignore_ascii_case!(tag_name, "optgroup", "option")
 }
 
 pub fn open_implies_close(tag_name: &str) -> Option<fn(tag_name: &str) -> bool> {
@@ -128,12 +125,20 @@ pub fn open_implies_close(tag_name: &str) -> Option<fn(tag_name: &str) -> bool> 
 }
 
 pub fn is_foreign_context_elements(tag_name: &str) -> bool {
-    matches!(tag_name, "math" | "svg")
+    match_ignore_ascii_case!(tag_name, "math", "svg")
 }
 
 pub fn is_html_integration_elements(tag_name: &str) -> bool {
-    matches!(
+    match_ignore_ascii_case!(
         tag_name,
-        "mi" | "mo" | "mn" | "ms" | "mtext" | "annotation-xml" | "foreignobject" | "desc" | "title"
+        "mi",
+        "mo",
+        "mn",
+        "ms",
+        "mtext",
+        "annotation-xml",
+        "foreignobject",
+        "desc",
+        "title"
     )
 }

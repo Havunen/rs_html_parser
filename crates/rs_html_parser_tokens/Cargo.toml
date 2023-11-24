@@ -17,3 +17,4 @@ debug = true
 
 [dependencies]
 rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
+unicase = "2.7.0"
