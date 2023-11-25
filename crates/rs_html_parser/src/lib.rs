@@ -77,9 +77,9 @@ impl<'i> Parser<'i> {
         }
     }
 
-    fn on_text(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_text(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
+            data: Cow::from(str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end])),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -101,9 +101,9 @@ impl<'i> Parser<'i> {
         self.html_mode && is_void_elements(name)
     }
 
-    fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
         let name =
-            String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
+            Cow::from(str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]));
 
         self.emit_open_tag(name);
     }
@@ -173,9 +173,9 @@ impl<'i> Parser<'i> {
         self.end_open_tag(false);
     }
 
-    fn on_close_tag(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_close_tag(&mut self, tokenizer_token: TokenizerToken) {
         let name: &str =
-            str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+            str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
         if is_foreign_context_elements(name) || is_html_integration_elements(name) {
             self.foreign_context.pop_front();
@@ -240,24 +240,23 @@ impl<'i> Parser<'i> {
         }
     }
 
-    fn on_attrib_name(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_attrib_name(&mut self, tokenizer_token: TokenizerToken) {
         let name: &str =
-            str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+            str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
         self.attrib_name = UniCase::new(name);
     }
 
-    fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
         let new_attrib = match self.attrib_value.take() {
-            None => Some(String::from_utf8_lossy(
+            None => Some(Cow::from(str::from_utf8_unchecked(
                 &self.buffer[tokenizer_token.start..tokenizer_token.end],
-            )),
+            ))),
             Some(existing_value) => {
                 let mut modified_cow = existing_value.into_owned();
 
                 modified_cow.push_str(
-                    str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end])
-                        .unwrap(),
+                    str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
                 );
 
                 Some(Cow::Owned(modified_cow))
@@ -295,9 +294,9 @@ impl<'i> Parser<'i> {
         self.attrib_value = None;
     }
 
-    fn on_declaration<'a>(&'a mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_declaration<'a>(&'a mut self, tokenizer_token: TokenizerToken) {
         let value: &str =
-            str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+            str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
         let name = get_instruction_name(&value);
 
         self.next_nodes.push_back(Token {
@@ -308,9 +307,9 @@ impl<'i> Parser<'i> {
         });
     }
 
-    fn on_processing_instruction(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_processing_instruction(&mut self, tokenizer_token: TokenizerToken) {
         let value: &str =
-            str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+            str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
         let name = get_instruction_name(value);
 
         self.next_nodes.push_back(Token {
@@ -321,10 +320,10 @@ impl<'i> Parser<'i> {
         });
     }
 
-    fn on_comment(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_comment(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
             data: Cow::from(
-                str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap(),
+                str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
             ),
             attrs: None,
             kind: TokenKind::Comment,
@@ -338,7 +337,7 @@ impl<'i> Parser<'i> {
         });
     }
 
-    fn on_cdata(&mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_cdata(&mut self, tokenizer_token: TokenizerToken) {
         self.on_comment(tokenizer_token);
     }
 
@@ -356,7 +355,7 @@ impl<'i> Parser<'i> {
 
         self.stack.clear();
     }
-    fn parser_next(&mut self) -> Option<Token<'i>> {
+    unsafe fn parser_next(&mut self) -> Option<Token<'i>> {
         loop {
             if let Some(existing_node) = self.next_nodes.pop_front() {
                 return Some(existing_node);
@@ -394,6 +393,6 @@ impl<'i> Iterator for Parser<'i> {
     type Item = Token<'i>;
 
     fn next(&mut self) -> Option<Token<'i>> {
-        self.parser_next()
+        unsafe { self.parser_next() }
     }
 }

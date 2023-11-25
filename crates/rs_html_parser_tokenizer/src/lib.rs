@@ -294,12 +294,11 @@ impl Tokenizer<'_> {
                 self.section_start = (self.index + 1) as usize;
             }
             _ if self.is_tag_start_char(c) => {
-                let lower = c | 0x20;
                 self.section_start = self.index as usize;
-                if !self.xml_mode && lower == Sequences::TITLE_END[2] {
+                if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::TITLE_END[2]) {
                     self.start_special(&Sequences::TITLE_END, 3);
                 } else {
-                    self.state = if !self.xml_mode && lower == Sequences::SCRIPT_END[2] {
+                    self.state = if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::SCRIPT_END[2]) {
                         State::BeforeSpecialS
                     } else {
                         State::InTagName
@@ -610,13 +609,12 @@ impl Tokenizer<'_> {
     }
 
     fn state_before_special_s(&mut self, c: u8) -> Option<TokenizerToken> {
-        let lower = c | 0x20;
-        if lower == Sequences::SCRIPT_END[3] {
+        if c.eq_ignore_ascii_case(&Sequences::SCRIPT_END[3]) {
             self.start_special(&Sequences::SCRIPT_END, 4);
 
             return None;
         }
-        if lower == Sequences::STYLE_END[3] {
+        if c.eq_ignore_ascii_case(&Sequences::STYLE_END[3]) {
             self.start_special(&Sequences::STYLE_END, 4);
 
             return None;
@@ -888,7 +886,7 @@ impl Tokenizer<'_> {
             is_end_of_tag_section(c)
         } else {
             // Otherwise, do a case-insensitive comparison
-            (c | 0x20) == self.current_sequence[self.sequence_index]
+            c.eq_ignore_ascii_case(&self.current_sequence[self.sequence_index])
         };
 
         if !is_match {
@@ -947,15 +945,14 @@ impl Tokenizer<'_> {
                 self.section_start = (end_of_text + 2) as usize; // Skip over the `</`
                 self.state = State::InClosingTagName;
                 self.index -= 1; // continue
-                                 // self.state_in_closing_tag_name(c);
 
-                return token; // We are done; skip the rest of the function.
+                return token;
             }
 
             self.sequence_index = 0;
         }
 
-        if (c | 0x20) == self.current_sequence[self.sequence_index] {
+        if c.eq_ignore_ascii_case(&self.current_sequence[self.sequence_index]) {
             self.sequence_index += 1;
         } else if self.sequence_index == 0 {
             if self.current_sequence == Sequences::TITLE_END {
