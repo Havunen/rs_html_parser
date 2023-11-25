@@ -19,7 +19,7 @@ pub enum TokenKind {
 #[derive(Debug)]
 pub struct Token<'a> {
     pub data: Cow<'a, str>,
-    pub attrs: Option<BTreeMap<UniCase<&'a str>, Option<(String, QuoteType)>>>,
+    pub attrs: Option<BTreeMap<UniCase<&'a str>, Option<(Cow<'a, str>, QuoteType)>>>,
     pub kind: TokenKind,
     pub is_implied: bool,
 }

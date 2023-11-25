@@ -42,8 +42,8 @@ pub struct Parser<'a> {
     next_nodes: VecDeque<Token<'a>>,
     stack: VecDeque<Cow<'a, str>>,
     foreign_context: VecDeque<bool>,
-    attribs: BTreeMap<UniCase<&'a str>, Option<(String, QuoteType)>>,
-    attrib_value: Option<String>,
+    attribs: BTreeMap<UniCase<&'a str>, Option<(Cow<'a, str>, QuoteType)>>,
+    attrib_value: Option<Cow<'a, str>>,
     attrib_name: UniCase<&'a str>,
 }
 
@@ -102,7 +102,8 @@ impl<'i> Parser<'i> {
     }
 
     fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
-        let name = String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
+        let name =
+            String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
         self.emit_open_tag(name);
     }
@@ -247,29 +248,19 @@ impl<'i> Parser<'i> {
     }
 
     fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
-        // let new_value =
-        //     str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
-        // if self.attrib_value.is_some() {
-        //     let mut existing_value = self.attrib_value.unwrap();
-        //     existing_value += new_value;
-        //     self.attrib_value = Some(existing_value.to_owned());
-        // } else {
-        //     self.attrib_value = Some(new_value.parse().unwrap())
-        // }
+        let new_attrib = match self.attrib_value.take() {
+            None => Some(String::from_utf8_lossy(
+                &self.buffer[tokenizer_token.start..tokenizer_token.end],
+            )),
+            Some(existing_value) => {
+                let mut modified_cow = existing_value.into_owned();
 
-        let new_attrib = match self.attrib_value {
-            None => Some(
-                str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end])
-                    .unwrap()
-                    .to_string(),
-            ),
-            Some(ref mut existing_value) => {
-                existing_value.push_str(
+                modified_cow.push_str(
                     str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end])
                         .unwrap(),
                 );
 
-                Some(existing_value.to_string())
+                Some(Cow::Owned(modified_cow))
             }
         };
 
@@ -277,30 +268,27 @@ impl<'i> Parser<'i> {
     }
 
     fn on_attrib_entity(&mut self, tokenizer_token: TokenizerToken) {
-        let new_attrib = match self.attrib_value {
-            None => Some(char::from_u32(tokenizer_token.code).unwrap().to_string()),
-            Some(ref mut existing_value) => {
-                existing_value.push(char::from_u32(tokenizer_token.code).unwrap());
+        let new_attrib = match self.attrib_value.take() {
+            None => Some(Cow::Owned(
+                char::from_u32(tokenizer_token.code).unwrap().to_string(),
+            )),
+            Some(existing_value) => {
+                let mut owned_value = existing_value.into_owned();
+                owned_value.push(char::from_u32(tokenizer_token.code).unwrap());
 
-                Some(existing_value.to_string())
+                Some(Cow::Owned(owned_value))
             }
         };
 
         self.attrib_value = new_attrib;
-
-        // if self.attrib_value.is_some() {
-        //     self.attrib_value.unwrap() += new_value;
-        // } else {
-        //     self.attrib_value = Some(new_value.parse().unwrap())
-        // }
     }
 
     fn on_attrib_end(&mut self, tokenizer_token: TokenizerToken) {
         if !self.attribs.contains_key(&self.attrib_name) {
-            let new_attribute: Option<(String, QuoteType)> = self
+            let new_attribute: Option<(Cow<str>, QuoteType)> = self
                 .attrib_value
-                .as_ref()
-                .map(|attrib_value| (attrib_value.to_string(), tokenizer_token.quote));
+                .as_mut()
+                .map(|attrib_value| (attrib_value.to_owned(), tokenizer_token.quote));
 
             self.attribs.insert(self.attrib_name, new_attribute);
         }
