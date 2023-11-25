@@ -241,7 +241,7 @@ impl<'i> Parser<'i> {
     }
 
     fn on_attrib_name(&mut self, tokenizer_token: TokenizerToken) {
-        let name =
+        let name: &str =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         self.attrib_name = UniCase::new(name);
@@ -268,13 +268,13 @@ impl<'i> Parser<'i> {
     }
 
     fn on_attrib_entity(&mut self, tokenizer_token: TokenizerToken) {
+        let c = char::from_u32(tokenizer_token.code).unwrap();
+
         let new_attrib = match self.attrib_value.take() {
-            None => Some(Cow::Owned(
-                char::from_u32(tokenizer_token.code).unwrap().to_string(),
-            )),
+            None => Some(Cow::Owned(c.to_string())),
             Some(existing_value) => {
                 let mut owned_value = existing_value.into_owned();
-                owned_value.push(char::from_u32(tokenizer_token.code).unwrap());
+                owned_value.push(c);
 
                 Some(Cow::Owned(owned_value))
             }
