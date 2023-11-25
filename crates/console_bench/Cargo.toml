@@ -20,7 +20,3 @@ rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer" }
 [[bin]]
 name = "console_bench"
 path = "src/lib.rs"
-
-[profile.release-with-debug]
-inherits = "release"
-debug = true

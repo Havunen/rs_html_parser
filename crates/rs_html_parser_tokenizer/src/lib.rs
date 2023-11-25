@@ -26,13 +26,13 @@ impl CharCodes {
     const EQ: u8 = 61; // "="
     const GT: u8 = 62; // ">"
     const QUESTION_MARK: u8 = 63; // "?"
-    const UPPER_A: u8 = 65; // "A"
+    // const UPPER_A: u8 = 65; // "A"
     const UNDERSCORE: u8 = 95; // "_"
-    const LOWER_A: u8 = 97; // "a"
+    // const LOWER_A: u8 = 97; // "a"
                             // const UPPER_F: u8 = 70; // "F"
                             // const LOWER_F: u8 = 102; // "f"
-    const UPPER_Z: u8 = 90; // "Z"
-    const LOWER_Z: u8 = 122; // "z"
+    // const UPPER_Z: u8 = 90; // "Z"
+    // const LOWER_Z: u8 = 122; // "z"
                              // const LOWER_X: u8 = 120; // "x"
     const OPENING_SQUARE_BRACKET: u8 = 91; // "["
 }
@@ -727,7 +727,7 @@ impl Tokenizer<'_> {
         None
     }
 
-    fn parse_next(&mut self) -> Option<TokenizerToken> {
+    fn tokenizer_next(&mut self) -> Option<TokenizerToken> {
         while self.index < self.buffer.len() as i32 {
             let c = self.buffer[self.index as usize];
 
@@ -1023,6 +1023,6 @@ impl Iterator for Tokenizer<'_> {
     type Item = TokenizerToken;
 
     fn next(&mut self) -> Option<TokenizerToken> {
-        self.parse_next()
+        self.tokenizer_next()
     }
 }

@@ -1,2 +1,2 @@
-valgrind --tool=callgrind --callgrind-out-file=callgrind.out --collect-jumps=yes ./console_bench
+valgrind --tool=callgrind --callgrind-out-file=callgrind.out --dump-instr=yes --collect-jumps=yes ./target/release-with-debug/console_bench
 kcachegrind callgrind.out

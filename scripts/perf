@@ -1,2 +1,2 @@
-perf record --call-graph dwarf ./console_bench
+perf record --call-graph dwarf ./target/release-with-debug/console_bench
 hotspot perf.data

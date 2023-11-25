@@ -79,9 +79,7 @@ impl<'i> Parser<'i> {
 
     fn on_text(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: Cow::from(
-                str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap(),
-            ),
+            data: String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -104,14 +102,13 @@ impl<'i> Parser<'i> {
     }
 
     fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
-        let name =
-            str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
+        let name = String::from_utf8_lossy(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
         self.emit_open_tag(name);
     }
 
-    fn emit_open_tag(&mut self, name: &str) {
-        self.tag_name = Cow::Owned(name.to_string());
+    fn emit_open_tag(&mut self, name: Cow<'i, str>) {
+        self.tag_name = name;
 
         let open_implies_close_option: Option<fn(tag_name: &str) -> bool> =
             open_implies_close(&self.tag_name);
@@ -176,7 +173,7 @@ impl<'i> Parser<'i> {
     }
 
     fn on_close_tag(&mut self, tokenizer_token: TokenizerToken) {
-        let name =
+        let name: &str =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
 
         if is_foreign_context_elements(name) || is_html_integration_elements(name) {
@@ -197,19 +194,19 @@ impl<'i> Parser<'i> {
                 }
             } else if self.html_mode && name == "p" {
                 // Implicit open before close
-                self.emit_open_tag("p");
+                self.emit_open_tag(Cow::Borrowed("p"));
                 self.close_current_tag(true);
             }
         } else if self.html_mode && name == "br" {
             // We can't use `emit_open_tag` for implicit open, as `br` would be implicitly closed.
             self.next_nodes.push_back(Token {
-                data: Cow::from("br"),
+                data: Cow::Borrowed("br"),
                 attrs: None,
                 kind: TokenKind::OpenTag,
                 is_implied: false,
             });
             self.next_nodes.push_back(Token {
-                data: Cow::from("br"),
+                data: Cow::Borrowed("br"),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: false,
@@ -249,7 +246,7 @@ impl<'i> Parser<'i> {
         self.attrib_name = UniCase::new(name);
     }
 
-    fn on_attrib_data<'a>(&'a mut self, tokenizer_token: TokenizerToken) {
+    fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
         // let new_value =
         //     str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
         // if self.attrib_value.is_some() {
@@ -371,7 +368,7 @@ impl<'i> Parser<'i> {
 
         self.stack.clear();
     }
-    fn parse_next(&mut self) -> Option<Token<'i>> {
+    fn parser_next(&mut self) -> Option<Token<'i>> {
         loop {
             if let Some(existing_node) = self.next_nodes.pop_front() {
                 return Some(existing_node);
@@ -409,6 +406,6 @@ impl<'i> Iterator for Parser<'i> {
     type Item = Token<'i>;
 
     fn next(&mut self) -> Option<Token<'i>> {
-        self.parse_next()
+        self.parser_next()
     }
 }
