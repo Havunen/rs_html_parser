@@ -309,7 +309,7 @@ impl<'i> Parser<'i> {
     }
 
     fn on_processing_instruction(&mut self, tokenizer_token: TokenizerToken) {
-        let value =
+        let value: &str =
             str::from_utf8(&self.buffer[tokenizer_token.start..tokenizer_token.end]).unwrap();
         let name = get_instruction_name(value);
 

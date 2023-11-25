@@ -133,7 +133,16 @@ fn is_whitespace(c: u8) -> bool {
 }
 
 fn is_end_of_tag_section(c: u8) -> bool {
-    c == CharCodes::SLASH || c == CharCodes::GT || is_whitespace(c)
+    matches!(
+        c,
+        CharCodes::SLASH
+            | CharCodes::GT
+            | CharCodes::SPACE
+            | CharCodes::NEW_LINE
+            | CharCodes::TAB
+            | CharCodes::FORM_FEED
+            | CharCodes::CARRIAGE_RETURN
+    )
 }
 
 impl Tokenizer<'_> {
@@ -261,10 +270,10 @@ impl Tokenizer<'_> {
 
     fn is_tag_start_char(&self, c: u8) -> bool {
         if self.xml_mode {
-            return is_end_of_tag_section(c);
+            is_end_of_tag_section(c)
+        } else {
+            c.is_ascii_alphabetic()
         }
-
-        c.is_ascii_alphabetic()
     }
 
     fn start_special(&mut self, sequence: &'static [u8], offset: i32) {
@@ -275,30 +284,35 @@ impl Tokenizer<'_> {
     }
 
     fn state_before_tag_name(&mut self, c: u8) -> Option<TokenizerToken> {
-        if c == CharCodes::EXCLAMATION_MARK {
-            self.state = State::BeforeDeclaration;
-            self.section_start = (self.index + 1) as usize;
-        } else if c == CharCodes::QUESTION_MARK {
-            self.state = State::InProcessingInstruction;
-            self.section_start = (self.index + 1) as usize;
-        } else if self.is_tag_start_char(c) {
-            let lower = c | 0x20;
-            self.section_start = self.index as usize;
-            if !self.xml_mode && lower == Sequences::TITLE_END[2] {
-                self.start_special(&Sequences::TITLE_END, 3);
-            } else {
-                self.state = if !self.xml_mode && lower == Sequences::SCRIPT_END[2] {
-                    State::BeforeSpecialS
-                } else {
-                    State::InTagName
-                };
+        match c {
+            CharCodes::EXCLAMATION_MARK => {
+                self.state = State::BeforeDeclaration;
+                self.section_start = (self.index + 1) as usize;
             }
-        } else if c == CharCodes::SLASH {
-            self.state = State::BeforeClosingTagName;
-        } else {
-            self.state = State::Text;
-
-            return self.state_text(c);
+            CharCodes::QUESTION_MARK => {
+                self.state = State::InProcessingInstruction;
+                self.section_start = (self.index + 1) as usize;
+            }
+            _ if self.is_tag_start_char(c) => {
+                let lower = c | 0x20;
+                self.section_start = self.index as usize;
+                if !self.xml_mode && lower == Sequences::TITLE_END[2] {
+                    self.start_special(&Sequences::TITLE_END, 3);
+                } else {
+                    self.state = if !self.xml_mode && lower == Sequences::SCRIPT_END[2] {
+                        State::BeforeSpecialS
+                    } else {
+                        State::InTagName
+                    };
+                }
+            }
+            CharCodes::SLASH => {
+                self.state = State::BeforeClosingTagName;
+            }
+            _ => {
+                self.state = State::Text;
+                return self.state_text(c);
+            }
         }
 
         None
