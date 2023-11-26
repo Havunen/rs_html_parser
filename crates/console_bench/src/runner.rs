@@ -45,6 +45,8 @@ pub fn read_all_test_file_data(path: &str) -> Vec<String> {
 
     let mut test_data: Vec<String> = Vec::new();
 
+    test_files.sort();
+
     for entry in test_files {
         test_data.push(fs::read_to_string(entry).unwrap())
     }

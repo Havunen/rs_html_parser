@@ -131,7 +131,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "Tech stocks: Google, Microsoft to report earnings",
+        data: "Brooklyn Nets introduce Paul Pierce, Kevin Garnett",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -250,7 +250,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "It's time for a pair of tech heavyweights to report quarterly earnings after the markets close Thursday. Let's look at the technology stocks to watch. Google shares up slightly. With its stock price slowly",
+                        "NEW YORK (AP) — Paul Pierce and Kevin Garnett are ready to make the most of their new surroundings. Traded from Boston to Brooklyn, the duo was introduced along with Jason Terry on Thursday at a news",
                         Double,
                     ),
                 ),
@@ -283,7 +283,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "Steve Ballmer",
+                        "Paul Pierce,Mikhail Prokhorov,Boston,Los Angeles Clippers,Doc Rivers,Jason Kidd,Billy King,New York,Jason Terry,Kevin Garnett,Boston Celtics,Brooklyn,New Jersey Nets",
                         Double,
                     ),
                 ),
@@ -310,7 +310,7 @@ expression: result
             {
                 "href": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/18/tech-stocks-microsoft-google/2550599/",
+                        "http://www.usatoday.com/story/sports/nba/nets/2013/07/18/brooklyn-nets-kevin-garnett-paul-pierce-jason-terry-jason-kidd/2552547/",
                         Double,
                     ),
                 ),
@@ -391,7 +391,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "2013-07-18T08:31:08.0000000",
+                        "2013-07-18T14:28:36.0000000",
                         Double,
                     ),
                 ),
@@ -418,7 +418,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "2013-07-18T08:31:08.0000000",
+                        "2013-07-18T13:47:34.0000000",
                         Double,
                     ),
                 ),
@@ -445,7 +445,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "tech",
+                        "sports,nba,nets",
                         Double,
                     ),
                 ),
@@ -472,7 +472,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/06dd39c0375e8eafe911fffc93019d2ab5012086/r=x153&c=150x150/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_1_1.jpg",
+                        "http://www.gannett-cdn.com/-mm-/06dd39c0375e8eafe911fffc93019d2ab5012086/r=x153&c=150x150/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_1_1.jpg",
                         Double,
                     ),
                 ),
@@ -499,7 +499,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/fef8131c29b275565180e501a489e5973ad71e0c/r=x203&c=200x200/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_1_1.jpg",
+                        "http://www.gannett-cdn.com/-mm-/fef8131c29b275565180e501a489e5973ad71e0c/r=x203&c=200x200/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_1_1.jpg",
                         Double,
                     ),
                 ),
@@ -526,7 +526,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_4_3.jpg",
+                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_4_3.jpg",
                         Double,
                     ),
                 ),
@@ -607,7 +607,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "Tech stocks: Google, Microsoft to report earnings",
+                        "Brooklyn Nets introduce Paul Pierce, Kevin Garnett",
                         Double,
                     ),
                 ),
@@ -634,7 +634,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "It's time for a pair of tech heavyweights to report quarterly earnings after the markets close Thursday. Let's look at the technology stocks to watch. Google shares up slightly. With its stock price slowly",
+                        "NEW YORK (AP) — Paul Pierce and Kevin Garnett are ready to make the most of their new surroundings. Traded from Boston to Brooklyn, the duo was introduced along with Jason Terry on Thursday at a news",
                         Double,
                     ),
                 ),
@@ -661,7 +661,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/18/tech-stocks-microsoft-google/2550599/",
+                        "http://www.usatoday.com/story/sports/nba/nets/2013/07/18/brooklyn-nets-kevin-garnett-paul-pierce-jason-terry-jason-kidd/2552547/",
                         Double,
                     ),
                 ),
@@ -3725,7 +3725,7 @@ expression: result
                 ),
                 "data-assetid": Some(
                     (
-                        "2550599",
+                        "2552547",
                         Double,
                     ),
                 ),
@@ -3923,7 +3923,7 @@ expression: result
                 ),
                 "href": Some(
                     (
-                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LgEUi&text=Tech%20stocks:%20Google,%20Microsoft%20to%20report%20earnings&via=USATODAY",
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LUVvl&text=Brooklyn%20Nets%20introduce%20Paul%20Pierce,%20Kevin%20Garnett&via=USATODAY",
                         Double,
                     ),
                 ),
@@ -3954,7 +3954,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                            35\n                        ",
+        data: "\n                            15\n                        ",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -4319,7 +4319,7 @@ expression: result
                 ),
                 "href": Some(
                     (
-                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LgEUi&text=Tech%20stocks:%20Google,%20Microsoft%20to%20report%20earnings&via=USATODAY",
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LUVvl&text=Brooklyn%20Nets%20introduce%20Paul%20Pierce,%20Kevin%20Garnett&via=USATODAY",
                         Double,
                     ),
                 ),
@@ -4397,7 +4397,7 @@ expression: result
                 ),
                 "href": Some(
                     (
-                        "//plus.google.com/share?url=http://usat.ly/16LgEUi",
+                        "//plus.google.com/share?url=http://usat.ly/16LUVvl",
                         Double,
                     ),
                 ),
@@ -4475,7 +4475,7 @@ expression: result
                 ),
                 "href": Some(
                     (
-                        "http://www.linkedin.com/shareArticle?url=http://usat.ly/16LgEUi&mini=true",
+                        "http://www.linkedin.com/shareArticle?url=http://usat.ly/16LUVvl&mini=true",
                         Double,
                     ),
                 ),
@@ -4541,7 +4541,7 @@ expression: result
                 ),
                 "data-src": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/53fbeab86007730ea596ceb71abebd9ae4d780e6/r=x63&c=60x60/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_1_1.jpg",
+                        "http://www.gannett-cdn.com/-mm-/53fbeab86007730ea596ceb71abebd9ae4d780e6/r=x63&c=60x60/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_1_1.jpg",
                         Double,
                     ),
                 ),
@@ -4584,7 +4584,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "Tech stocks: Google, Microsoft to report earnings",
+        data: "Brooklyn Nets introduce Paul Pierce, Kevin Garnett",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -4611,7 +4611,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "It's time for a pair of tech heavyweights to report quarterly earnings after the markets close Thursday. Let's look at the technology stocks to watch. Google shares up slightly. With its stock price slowly",
+        data: "NEW YORK (AP) — Paul Pierce and Kevin Garnett are ready to make the most of their new surroundings. Traded from Boston to Brooklyn, the duo was introduced along with Jason Terry on Thursday at a news",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -4676,19 +4676,19 @@ expression: result
                 ),
                 "data-image": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_4_3.jpg",
+                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_4_3.jpg",
                         Double,
                     ),
                 ),
                 "data-link": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/18/tech-stocks-microsoft-google/2550599/",
+                        "http://www.usatoday.com/story/sports/nba/nets/2013/07/18/brooklyn-nets-kevin-garnett-paul-pierce-jason-terry-jason-kidd/2552547/",
                         Double,
                     ),
                 ),
                 "data-title": Some(
                     (
-                        "Tech stocks: Google, Microsoft to report earnings",
+                        "Brooklyn Nets introduce Paul Pierce, Kevin Garnett",
                         Double,
                     ),
                 ),
@@ -5085,7 +5085,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "Tech stocks: Google, Microsoft to report earnings on USAToday.com: http://usat.ly/16LgEUi",
+        data: "Brooklyn Nets introduce Paul Pierce, Kevin Garnett on USAToday.com: http://usat.ly/16LUVvl",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -6065,7 +6065,7 @@ expression: result
                 ),
                 "data-href": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/18/tech-stocks-microsoft-google/2550599/",
+                        "http://www.usatoday.com/story/sports/nba/nets/2013/07/18/brooklyn-nets-kevin-garnett-paul-pierce-jason-terry-jason-kidd/2552547/",
                         Double,
                     ),
                 ),
@@ -6306,7 +6306,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "Tech stocks: Google, Microsoft to report earnings",
+        data: "Brooklyn Nets introduce Paul Pierce, Kevin Garnett",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -6366,39 +6366,6 @@ expression: result
             {
                 "class": Some(
                     (
-                        "asset-metabar-author asset-metabar-item",
-                        Double,
-                    ),
-                ),
-                "itemprop": Some(
-                    (
-                        "name",
-                        Double,
-                    ),
-                ),
-            },
-        ),
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n        Brett Molina, USA TODAY\n    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "span",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "span",
-        attrs: Some(
-            {
-                "class": Some(
-                    (
                         "asset-metabar-time asset-metabar-item nobyline",
                         Double,
                     ),
@@ -6409,7 +6376,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "8:31 a.m. EDT July 18, 2013",
+        data: "2:28 p.m. EDT July 18, 2013",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -6523,7 +6490,7 @@ expression: result
             {
                 "alt": Some(
                     (
-                        "Google-HQ",
+                        "071813 brooklyn nets",
                         Double,
                     ),
                 ),
@@ -6541,7 +6508,7 @@ expression: result
                 ),
                 "src": Some(
                     (
-                        "http://www.gannett-cdn.com/-mm-/ac1394dbdcca6a36cbf486633b129cd813095ac3/r=x404&c=534x401/local/-/media/USATODAY/USATODAY/2013/05/16/1368717417000-GOOGLE-HQ-1306121753_4_3.jpg",
+                        "http://www.gannett-cdn.com/-mm-/ac1394dbdcca6a36cbf486633b129cd813095ac3/r=x404&c=534x401/local/-/media/USATODAY/test/2013/07/18/1374169569000-USP-NBA-Brooklyn-Nets-Press-Conference-1307181431_4_3.jpg",
                         Double,
                     ),
                 ),
@@ -6583,7 +6550,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "Google-HQ",
+                        "071813 brooklyn nets",
                         Double,
                     ),
                 ),
@@ -6641,7 +6608,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "A Google employee rides to work at Google in Mountain View, Calif.",
+        data: "From left coach Jason Kidd , Kevin Garnett , Paul Pearce and Jason Terry during the press conference to introduce the newest members of the Brooklyn Nets at Barclays Center.",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -6658,7 +6625,7 @@ expression: result
             {
                 "content": Some(
                     (
-                        "tin Sullivan, Getty Images",
+                        "by Wong-USA TODAY Sports",
                         Double,
                     ),
                 ),
@@ -6695,7 +6662,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "(Photo: Justin Sullivan, Getty Images)",
+        data: "(Photo: Debby Wong-USA TODAY Sports)",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -6731,6 +6698,228 @@ expression: result
             },
         ),
         kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "comp story-highlights ",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "min-height: 60px;",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h3",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hlts",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Story Highlights",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h3",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hlt",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hlt-item",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Brooklyn Nets introduced new players Kevin Garnett, Paul Pierce, Jason Terry in news conference",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hlt-item",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Pierce addressed legacy with Boston Celtics: ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "\"",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "'",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "m a Brooklyn Net, and that",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "'",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s what it is right now",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "\"",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hlt-item",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Pierce also said he felt ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "\"",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "the writing was on the wall",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "\"",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " when Celtics allowed Doc Rivers to leave",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: None,
+        kind: CloseTag,
         is_implied: false,
     },
     Token {
@@ -6898,7 +7087,7 @@ expression: result
                 ),
                 "href": Some(
                     (
-                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LgEUi&text=Tech%20stocks:%20Google,%20Microsoft%20to%20report%20earnings&via=USATODAY",
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LUVvl&text=Brooklyn%20Nets%20introduce%20Paul%20Pierce,%20Kevin%20Garnett&via=USATODAY",
                         Double,
                     ),
                 ),
@@ -6929,7 +7118,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            35\n        ",
+        data: "\n            15\n        ",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -7229,7 +7418,79 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "It's time for a pair of tech heavyweights to report quarterly earnings after the markets close Thursday. Let's look at the technology stocks to watch.",
+        data: "NEW YORK (AP) — Paul Pierce and Kevin Garnett are ready to make the most of their new surroundings.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Traded from the Boston Celtics to the Brooklyn Nets, the duo was introduced along with Jason Terry on Thursday at a news conference at Barclays Center, their new home.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Pierce said it was tough to leave Boston, where he played his entire career. He appeared dazed at times while listening to questions and answers, even having to ask for one to be repeated while trying to fight his way out of a fog.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\"You saw the trade and it's like, 'OK, there's a trade.' But for me to actually be here now, looking for a place to live, being in this arena, trying to get to know my way around the city, it's really starting to sink in now that it's become real,\" Pierce said.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\"I'm no longer a Boston Celtic. I'm a Brooklyn Net, and that's what it is right now. It's a business. At some point we all have to move on, and I'm here to try to create some kind of legacy here in Brooklyn.\"",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -7253,7 +7514,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "Google shares up slightly.",
+        data: "RIVALS: ",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -7262,102 +7523,6 @@ expression: result
         data: "b",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: " With its stock price slowly marching toward the $1,000 mark, the tech titan reports second-quarter earnings after the bell.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "Analysts expect Google to report an earnings per share of $10.78 with revenue of just over $14 billion.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "Shares of Google have surged in the past 12 months, adding more than $300 in value since hitting a 52-week low of $580.76 on this day a year ago.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "b",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "Microsoft to report earnings.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "b",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: " Shares of the Redmond, Wash., company are barely up in pre-market trading as the company reports quarterly earnings after unveiling a massive restructuring.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "Last week, Microsoft CEO Steve Ballmer ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -7366,13 +7531,13 @@ expression: result
             {
                 "href": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/11/microsoft-restructuring/2508175/",
+                        "http://www.usatoday.com/story/sports/nba/2013/07/16/metta-world-peace-new-york-knicks-brooklyn-nets/2521935/",
                         Double,
                     ),
                 ),
                 "title": Some(
                     (
-                        "http://www.usatoday.com/story/tech/2013/07/11/microsoft-restructuring/2508175/",
+                        "http://www.usatoday.com/story/sports/nba/2013/07/16/metta-world-peace-new-york-knicks-brooklyn-nets/2521935/",
                         Double,
                     ),
                 ),
@@ -7382,7 +7547,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "announced a major reorganization",
+        data: "Knicks raise heat on Nets with counter",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -7394,12 +7559,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " of the company he says will help them become more efficient.",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "p",
         attrs: None,
         kind: CloseTag,
@@ -7412,33 +7571,21 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "The company has also made news related to its product line. Last week, the company slashed prices on its Surface RT tablets by $150. In May, the company revealed the Xbox One, its video game console that will succeed the Xbox 360. However, reception to the console has been mixed, primarily due to restrictions to software that have since been removed.",
+        data: "b",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "GARNETT: ",
         attrs: None,
         kind: Text,
         is_implied: false,
     },
     Token {
-        data: "p",
+        data: "b",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "p",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "i",
-        attrs: None,
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "Follow Brett Molina on Twitter: ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -7447,13 +7594,13 @@ expression: result
             {
                 "href": Some(
                     (
-                        "http://twitter.com/bam923",
+                        "http://ftw.usatoday.com/2013/07/kevin-garnett-honors-late-teammate-malik-sealy-with-new-number/",
                         Double,
                     ),
                 ),
                 "title": Some(
                     (
-                        "http://twitter.com/bam923",
+                        "http://ftw.usatoday.com/2013/07/kevin-garnett-honors-late-teammate-malik-sealy-with-new-number/",
                         Double,
                     ),
                 ),
@@ -7463,7 +7610,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "@bam923",
+        data: "His cool tribute with jersey number",
         attrs: None,
         kind: Text,
         is_implied: false,
@@ -7475,13 +7622,661 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: ".",
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "b",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "CELTICS: ",
         attrs: None,
         kind: Text,
         is_implied: false,
     },
     Token {
-        data: "i",
+        data: "b",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://www.usatoday.com/story/sports/nba/celtics/2013/07/15/danny-ainge-boston-celtics-tanking-nba-draft-lottery-odds/2519415/",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "http://www.usatoday.com/story/sports/nba/celtics/2013/07/15/danny-ainge-boston-celtics-tanking-nba-draft-lottery-odds/2519415/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Ainge says they won't be tanking",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The crowd applauded, appearing more excited about having Pierce in Brooklyn than he was about being here. That's understandable given his history in Boston, where he is the Celtics' No. 2 career scorer and was the NBA Finals MVP when they won the last of their NBA-high 17 championships.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "But he said he thought \"the writing was on the wall\" in June when the Celtics negotiated a deal with the Los Angeles Clippers for coach Doc Rivers, and he realized change would be coming.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The Celtics and Nets agreed to the blockbuster trade on draft night and it became official last week. Garnett waved a no-trade clause to accept the deal, and while saying it was \"unfortunate\" they had to move on, he seemed to have a little easier time embracing it.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\"I don't know anyone that loves change, but change has to happen for things to better,\" he said.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The three newcomers were joined on the podium by general manager Billy King and first-year coach Jason Kidd, who at 40 is a longtime rival and just a few years older than his new players. And they got a visit at the end from owner Mikhail Prokhorov, who made a late decision to attend the news conference and meet the players whose salaries helped the Nets' payroll soar so high that they will pay about $80 million in luxury tax next season.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-tools asset-inline-share-tools",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-tools-label",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "SHARE",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-facebook",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareFacebookBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "CONNECT",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-twitter",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "550x450",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "twitter",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareTwitterLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LUVvl&text=Brooklyn%20Nets%20introduce%20Paul%20Pierce,%20Kevin%20Garnett&via=USATODAY",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-twitter",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n            15\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-twitter",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "TWEET",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-comments",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "comments",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareCommentsBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "COMMENT",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-email",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "email",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareEmailBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "EMAIL",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-more",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareMoreBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-more",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-more",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "MORE",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
         attrs: None,
         kind: CloseTag,
         is_implied: false,
@@ -8021,7 +8816,7 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n        {\n        \n            \"js_modules\": [{\"name\": \"expandable-photo\"}],\n        \n        \"assetid\": \"2550599\",\n        \"aws\": \"tech\",\n        \"aws_id\": \"tech\",\n        \"blogname\": \"\",\n        \n            \"byline\":\"Brett Molina\",\n         \n        \"contenttype\": \"story pages \",\n        \"seotitle\": \"Tech-stocks-microsoft-google\",\n        \"seotitletag\": \"Tech stocks: Google, Microsoft to report earnings\",\n        \"ssts\": \"tech\",\n        \n            \"taxonomykeywords\":\"Steve Ballmer\",\n        \n        \"templatename\": \"stories/default\",\n        \n            \"topic\":\"steve-ballmer\",\n        \n        \n        \"videoincluded\":\"no\",\n        \n        \n            \"basePageType\":\"story\"\n        \n        }\n    ",
+        data: "\n        {\n        \n            \"js_modules\": [{\"name\": \"expandable-photo\"}],\n        \n        \"assetid\": \"2552547\",\n        \"aws\": \"sports/basketball/nba\",\n        \"aws_id\": \"sports_basketball_nba\",\n        \"blogname\": \"\",\n        \n            \"byline\":\"\",\n         \n        \"contenttype\": \"story pages \",\n        \"seotitle\": \"Brooklyn-nets-kevin-garnett-paul-pierce-jason-terry-jason-kidd\",\n        \"seotitletag\": \"Brooklyn Nets introduce Paul Pierce, Kevin Garnett\",\n        \"ssts\": \"sports/nba/nets\",\n        \n            \"taxonomykeywords\":\"Paul Pierce,Mikhail Prokhorov,Boston,Los Angeles Clippers,Doc Rivers,Jason Kidd,Billy King,New York,Jason Terry,Kevin Garnett,Boston Celtics,Brooklyn,New Jersey Nets\",\n        \n        \"templatename\": \"stories/default\",\n        \n            \"topic\":\"paul-pierce,mikhail-prokhorov,boston,los-angeles-clippers,doc-rivers,jason-kidd,billy-king,new-york,jason-terry,kevin-garnett,boston-celtics,brooklyn,new-jersey-nets\",\n        \n        \n        \"videoincluded\":\"no\",\n        \n        \n            \"basePageType\":\"story\"\n        \n        }\n    ",
         attrs: None,
         kind: Text,
         is_implied: false,

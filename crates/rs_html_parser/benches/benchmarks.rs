@@ -47,6 +47,8 @@ pub fn read_all_test_file_data(path: &str) -> Vec<String> {
         Err(e) => println!("Error: {}", e),
     };
 
+    test_files.sort();
+
     let mut test_data: Vec<String> = Vec::new();
 
     for entry in test_files {
