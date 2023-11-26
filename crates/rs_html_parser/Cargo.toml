@@ -16,9 +16,9 @@ name = "benchmarks"
 harness = false
 
 [dependencies]
-rs_html_parser_tokens = { path = "../rs_html_parser_tokens" }
-rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
-rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer" }
+rs_html_parser_tokens = { path = "../rs_html_parser_tokens", version = "0.0.1" }
+rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens", version = "0.0.1" }
+rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer", version = "0.0.1" }
 regex = "1.10.2"
 lazy_static = "1.4.0"
 criterion = "0.5.1"
