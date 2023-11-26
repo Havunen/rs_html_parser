@@ -79,7 +79,9 @@ impl<'i> Parser<'i> {
 
     unsafe fn on_text(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: Cow::from(str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end])),
+            data: Cow::from(str::from_utf8_unchecked(
+                &self.buffer[tokenizer_token.start..tokenizer_token.end],
+            )),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -102,8 +104,9 @@ impl<'i> Parser<'i> {
     }
 
     unsafe fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
-        let name =
-            Cow::from(str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]));
+        let name = Cow::from(str::from_utf8_unchecked(
+            &self.buffer[tokenizer_token.start..tokenizer_token.end],
+        ));
 
         self.emit_open_tag(name);
     }
@@ -255,9 +258,9 @@ impl<'i> Parser<'i> {
             Some(existing_value) => {
                 let mut modified_cow = existing_value.into_owned();
 
-                modified_cow.push_str(
-                    str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
-                );
+                modified_cow.push_str(str::from_utf8_unchecked(
+                    &self.buffer[tokenizer_token.start..tokenizer_token.end],
+                ));
 
                 Some(Cow::Owned(modified_cow))
             }
@@ -322,9 +325,9 @@ impl<'i> Parser<'i> {
 
     unsafe fn on_comment(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: Cow::from(
-                str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]),
-            ),
+            data: Cow::from(str::from_utf8_unchecked(
+                &self.buffer[tokenizer_token.start..tokenizer_token.end],
+            )),
             attrs: None,
             kind: TokenKind::Comment,
             is_implied: false,

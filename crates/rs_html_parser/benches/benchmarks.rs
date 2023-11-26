@@ -1,9 +1,9 @@
 use criterion::{criterion_group, criterion_main, Criterion};
 use rs_html_parser::{Parser, ParserOptions};
 use rs_html_parser_tokenizer::TokenizerOptions;
-use std::{fs, io};
 use std::path::PathBuf;
 use std::time::Duration;
+use std::{fs, io};
 
 fn get_files_in_folder(path: &str) -> io::Result<Vec<PathBuf>> {
     let entries = fs::read_dir(path)?;

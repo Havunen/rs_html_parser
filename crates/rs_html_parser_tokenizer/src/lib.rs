@@ -298,11 +298,12 @@ impl Tokenizer<'_> {
                 if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::TITLE_END[2]) {
                     self.start_special(&Sequences::TITLE_END, 3);
                 } else {
-                    self.state = if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::SCRIPT_END[2]) {
-                        State::BeforeSpecialS
-                    } else {
-                        State::InTagName
-                    };
+                    self.state =
+                        if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::SCRIPT_END[2]) {
+                            State::BeforeSpecialS
+                        } else {
+                            State::InTagName
+                        };
                 }
             }
             CharCodes::SLASH => {

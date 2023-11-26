@@ -1,8 +1,8 @@
 #[cfg(test)]
 mod tests {
     use console_bench::runner::read_all_test_file_data;
-    use rs_html_parser_tokenizer::TokenizerOptions;
     use rs_html_parser::{Parser, ParserOptions};
+    use rs_html_parser_tokenizer::TokenizerOptions;
     use rs_html_parser_tokens::Token;
 
     fn parser<'a>(data: &'a str, options: &'a ParserOptions) -> Vec<Token<'a>> {
