@@ -55,4 +55,14 @@ mod tests {
 "####
         ));
     }
+
+    #[test]
+    fn full_comment_example() {
+        assert_debug_snapshot!(tokenize(r####"<!-- Write your comments here -->"####));
+    }
+
+    #[test]
+    fn short_comment_text() {
+        assert_debug_snapshot!(tokenize(r####"<!---->test"####));
+    }
 }

@@ -1,0 +1,27 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/html5lib_special_tests.rs
+expression: "tokenize(r####\"<!---->test\"####)"
+---
+[
+    TokenizerToken {
+        start: 4,
+        end: 4,
+        location: Comment,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 7,
+        end: 11,
+        location: Text,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 11,
+        end: 11,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
+]
