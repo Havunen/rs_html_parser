@@ -6,13 +6,13 @@ edition       = "2021"
 license       = "MIT"
 name          = "rs_html_parser_tokenizer"
 repository    = "https://github.com/Havunen/rs_html_parser.git"
-version       = "0.0.2"
+version       = "0.0.5"
 
 [lib]
 bench = false
 
 [dependencies]
-rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens" }
+rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens", version = "0.0.5" }
 htmlize = { version = "1.0.3", features = ["unescape_fast"] }
 
 [dev-dependencies]
