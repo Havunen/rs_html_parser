@@ -7,6 +7,7 @@ license = "MIT"
 name = "console_bench"
 repository = "https://github.com/Havunen/rs_html_parser.git"
 version = "0.0.2"
+private = true
 
 [[bin]]
 name = "console_bench"
