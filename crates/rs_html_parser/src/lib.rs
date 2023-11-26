@@ -333,7 +333,7 @@ impl<'i> Parser<'i> {
             is_implied: false,
         });
         self.next_nodes.push_back(Token {
-            data: "".into(),
+            data: Cow::Borrowed(""),
             attrs: None,
             kind: TokenKind::CommentEnd,
             is_implied: false,
