@@ -3,7 +3,7 @@ use std::borrow::Cow;
 use std::collections::BTreeMap;
 use unicase::UniCase;
 
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq)]
 pub enum TokenKind {
     Text = 1,
 

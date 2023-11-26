@@ -2,7 +2,7 @@ use rs_html_parser::{Parser, ParserOptions};
 use rs_html_parser_tokenizer::TokenizerOptions;
 use rs_html_parser_tokens::Token;
 
-static options: ParserOptions = ParserOptions {
+static OPTIONS: ParserOptions = ParserOptions {
     xml_mode: false,
     tokenizer_options: TokenizerOptions {
         xml_mode: None,
@@ -13,7 +13,7 @@ static options: ParserOptions = ParserOptions {
 pub fn parser_test<'a>(data: &'a str) -> Vec<Token<'a>> {
     let mut log: Vec<Token<'a>> = Vec::new();
 
-    let tokenizer = Parser::new(data, &options);
+    let tokenizer = Parser::new(data, &OPTIONS);
 
     for token in tokenizer {
         log.push(token);
