@@ -175,17 +175,17 @@ impl Tokenizer<'_> {
     }
 
     fn fast_forward_to(&mut self, c: u8) -> bool {
-        while self.index < (self.buffer.len() - 1) as i32 {
-            self.index += 1;
+        for n in self.index..self.buffer.len() as i32 {
+            if self.buffer[n as usize] == c {
+                self.index = n;
 
-            if self.buffer[self.index as usize] == c {
                 return true;
             }
         }
 
         self.index = (self.buffer.len() - 1) as i32;
 
-        false
+        return false;
     }
 
     fn state_text(&mut self, c: u8) -> Option<TokenizerToken> {
