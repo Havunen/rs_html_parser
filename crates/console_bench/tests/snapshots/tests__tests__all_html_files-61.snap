@@ -1,0 +1,8176 @@
+---
+source: crates/console_bench/tests/tests.rs
+expression: result
+---
+[
+    Token {
+        data: "doctype html",
+        attrs: None,
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+    Token {
+        data: "[if IE 7]><html class=\"no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8\" lang=\"en\"><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "[if IE 8]><html class=\"no-js lt-ie11 lt-ie10 lt-ie9\" lang=\"en\"><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "[if IE 9]><html class=\"no-js lt-ie11 lt-ie10\" lang=\"en\"><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "[if IE 10]><html class=\"no-js lt-ie11\" lang=\"en\"><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "[if gt IE 10]><!",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "html",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "no-js",
+                        Double,
+                    ),
+                ),
+                "itemscope": None,
+                "itemtype": Some(
+                    (
+                        "http://schema.org/NewsArticle",
+                        Double,
+                    ),
+                ),
+                "lang": Some(
+                    (
+                        "en",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "<![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "head",
+        attrs: Some(
+            {
+                "prefix": Some(
+                    (
+                        "og: http://ogp.me/ns#",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "title",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Nokia Q2 sales fall 24%, misses expectations",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "title",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "IE=Edge,chrome=1",
+                        Double,
+                    ),
+                ),
+                "http-equiv": Some(
+                    (
+                        "X-UA-Compatible",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "charset": Some(
+                    (
+                        "utf-8",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "notranslate",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "google",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "en",
+                        Double,
+                    ),
+                ),
+                "http-equiv": Some(
+                    (
+                        "Content-Language",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "HELSINKI (AP) — Nokia Corp. says its net loss narrowed in the second quarter to 227 million euros ($298. million) compared to a net loss of 1.41 billion euros a year earlier. The struggling Finnish cellphone",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "description",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Helsinki",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "keywords",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://www.usatoday.com/story/tech/2013/07/18/nokia-q2-sales-fall-by-24-pct-misses-expectations/2550571/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "canonical",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "NOODP, NOYDIR",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "ROBOTS",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "215046668549694",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "fb:app_id",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "2013-07-18T08:04:30.0000000",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "dateModified",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "2013-07-18T08:04:30.0000000",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "datePublished",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tech",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "articleSection",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/06dd39c0375e8eafe911fffc93019d2ab5012086/r=x153&c=150x150/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_1_1.jpg",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "thumbnailUrl",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/fef8131c29b275565180e501a489e5973ad71e0c/r=x203&c=200x200/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_1_1.jpg",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "image",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_4_3.jpg",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:image",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "400",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:image:width",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "400",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:image:height",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Nokia Q2 sales fall 24%, misses expectations",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "HELSINKI (AP) — Nokia Corp. says its net loss narrowed in the second quarter to 227 million euros ($298. million) compared to a net loss of 1.41 billion euros a year earlier. The struggling Finnish cellphone",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://www.usatoday.com/story/tech/2013/07/18/nokia-q2-sales-fall-by-24-pct-misses-expectations/2550571/",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:url",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "article",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:type",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "width=1024",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "viewport",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/images/favicon.png",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "shortcut icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "[if gt IE 8]><!",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "data-identifier": Some(
+                    (
+                        "main",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/css/bundles/main.min.css?v=7.3.12",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "stylesheet",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "[endif]--",
+        attrs: None,
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+    Token {
+        data: "[if lt IE 9]><link data-identifier=\"main\" rel=\"stylesheet\" href=\"/static/django-relux-static-7.3.12/css/bundles/main.min.css?v=7.3.12\"><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/css/print.css?v=7.3.12",
+                        Double,
+                    ),
+                ),
+                "media": Some(
+                    (
+                        "print",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "stylesheet",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "style",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "style",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "[if lt IE 9]><script src=\"http://www.gannett-cdn.com/static/django-relux-static-7.3.12/js/libs/respond/respond.min.js\"></script><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        window.js_debug_chance = 0;\n        window.site_config = {\"ADS\": {\"SHOW\": true, \"PREROLL\": {\"startTimeout\": 10000, \"loadTimeout\": 7000}, \"THRESHOLDS\": {\"COVERVIEW\": 4, \"TRANSITION\": [2, 5], \"TRANSITION_SNAPSHOT\": [3, 3], \"TRANSITION_INTERACTIVE\": [2, 5], \"TRANSITION_GALLERY\": [3, 4], \"TRANSITION_REFERRER\": [1, 1]}, \"DFP\": {\"ACCOUNTID\": \"7103\", \"CMSID\": 12768, \"ENV\": \"prod\", \"ACCOUNTNAME\": \"usatoday\"}, \"SLIDER\": {\"REFRESHTIME\": 900000, \"CLOSETIME\": 8000}, \"PROVIDER\": \"DFP\", \"GALLERY\": {\"REFRESH\": true}}, \"JS\": {\"CONFIG\": [\"siteconfig.json\", \"siteconfig/apps/book-reviews-siteconfig.json\", \"siteconfig/apps/sports-siteconfig.json\"]}, \"AUTH\": {\"GOOGLEPLUS\": {\"APPPACKAGENAME\": \"com.usatoday.android.news\", \"TURNON\": true, \"COOKIEPOLICY\": \"none\", \"JSLIBURL\": \"https://apis.google.com/js/client:plusone.js\", \"CLIENTID\": \"383230156302.apps.googleusercontent.com\"}, \"FACEBOOK\": {\"APPID\": \"215046668549694\", \"ENABLED\": true, \"PERMISSIONS\": \"email,user_about_me\"}}, \"SMARTPLAYER\": true, \"HEADER\": {\"EXPANDED_HEIGHT\": 80, \"HEIGHT\": 40}, \"UTILITY_BAR_MODULES\": [{\"name\": \"utility-bar-module-share\", \"options\": {\"submodules\": [{\"name\": \"share-facebook\"}, {\"name\": \"share-email\"}]}}, {\"name\": \"utility-bar-module-comments\"}, {\"name\": \"utility-bar-module-print\"}, {\"name\": \"utility-bar-module-feedback\"}]};\n        window.site_static_url = 'http://www.gannett-cdn.com/static/django-relux-static-7.3.12/';\n        window.site_static_path = '/static/django-relux-static-7.3.12/';\n        window.site_static_version = '7.3.12';\n        window.use_minified_css = true;\n        window.isAdDebug = false;\n    \n    \n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "defer": None,
+                "src": Some(
+                    (
+                        "//tealium.hs.llnwd.net/o43/utag/gci/usat/prod/utag.js?asof=20130719",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/js/libs/modernizr/modernizr.js",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "head",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "body",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "story ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "header",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "header",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "fixed-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clearfix",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "masthead",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "logo ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "data-ht": Some(
+                    (
+                        "Headerusatoday",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "logo-link",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "USA Today",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "header-search-form-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: Some(
+            {
+                "action": Some(
+                    (
+                        "/search/",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "header-search-form ui-ajax-form",
+                        Double,
+                    ),
+                ),
+                "data-mapping": Some(
+                    (
+                        "<%= q %>/",
+                        Double,
+                    ),
+                ),
+                "method": Some(
+                    (
+                        "get",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-form-field-container header-search-input-container",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "autocomplete": Some(
+                    (
+                        "off",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "ui-text-input header-search-form-input",
+                        Double,
+                    ),
+                ),
+                "data-clearable": Some(
+                    (
+                        "true",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "q",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "submit header-search-btn",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "submit",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "Search",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "form",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-dark ui-btn header-search-close-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "X",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "nav",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "nav",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "navbar",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "news text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "news",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headernews",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/news/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "news-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "News",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "sports text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "sports",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headersports",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/sports/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "sports-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sports",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "life text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "life",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headerlife",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/life/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "life-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Life",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "money text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "money",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headermoney",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/money/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "money-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Money",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tech text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "tech",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headertech",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/tech/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tech-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Tech",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "travel text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "travel",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headertravel",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/travel/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "travel-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Travel",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "opinion text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "opinion",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "Headeropinion",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/opinion/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "opinion-span nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Opinion",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather icon text",
+                        Double,
+                    ),
+                ),
+                "data-section": Some(
+                    (
+                        "weather",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "HeaderWeather",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/weather/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "wbtn-wrap nav-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "btn-temp wbtn-wrap-wicon",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "temperature",
+                        Double,
+                    ),
+                ),
+                "data-weather-suffix": Some(
+                    (
+                        "°",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "btn-label",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Weather",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-panel-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-conditions-panel",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-location-name",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-time",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "observationtime",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-wicon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Icon",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-temp",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "temperature",
+                        Double,
+                    ),
+                ),
+                "data-weather-suffix": Some(
+                    (
+                        "°",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-conditions-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-humidity",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Humidity",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-value",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "humidity",
+                        Double,
+                    ),
+                ),
+                "data-weather-suffix": Some(
+                    (
+                        " %",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-precip",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Precip.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-value",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "precip",
+                        Double,
+                    ),
+                ),
+                "data-weather-suffix": Some(
+                    (
+                        " in",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-wind",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Winds",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-condition-value",
+                        Double,
+                    ),
+                ),
+                "data-weather": Some(
+                    (
+                        "windspeed",
+                        Double,
+                    ),
+                ),
+                "data-weather-suffix": Some(
+                    (
+                        " mph",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-settings-open-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Open settings",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-settings-panel",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-settings-header",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Settings",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-location-form",
+                        Double,
+                    ),
+                ),
+                "method": Some(
+                    (
+                        "get",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "label",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-location-input-label",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Enter City, State or Zip",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "label",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-form-field-container weather-nav-location-input-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-text-input weather-nav-location-input",
+                        Double,
+                    ),
+                ),
+                "data-autocomplete-url": Some(
+                    (
+                        "/services/cities/v2/search.json?q=",
+                        Double,
+                    ),
+                ),
+                "data-clearable": Some(
+                    (
+                        "true",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-location-error",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-btn header-nav-dropdown-dark-btn weather-nav-location-cancel-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Cancel",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-btn header-nav-dropdown-light-btn weather-nav-location-set-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Set",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-dropdown-settings-close-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Close settings",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "weather-nav-full-forecast-btn",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/weather/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Full Forecast",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "media icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-anchor",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "HeaderMedia",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/media/latest/news/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Media",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "cover icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-anchor big-page-link",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "headerthebigpage",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/big-page/",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "The Big Page",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The Big Page",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "<li class=\"sbs icon\"><a href=\"#\" data-ht=\"HeaderStateByState\"><span>State by State</span></a></li>",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "<li class=\"timeline icon\"><a href=\"#\" data-ht=\"HeaderTimeline\"><span>Timeline</span></a></li>",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "<li class=\"ugc icon\"><a href=\"#\" data-ht=\"HeaderUGC\"><span>You Report</span></a></li>",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "user icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "auth icon-anchor",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "#",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "userbtn-wrap icon-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "user-avatar",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "ua-avatar",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "user-icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "dropdown ua-dropdown",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "login-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-btn header-nav-dropdown-dark-btn fb login-btn",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "HeaderUserAuthLogin",
+                        Double,
+                    ),
+                ),
+                "data-provider": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sign in with Facebook",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-btn header-nav-dropdown-dark-btn gp login-btn",
+                        Double,
+                    ),
+                ),
+                "data-provider": Some(
+                    (
+                        "googleplus",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "gp-login-btn-ph",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sign in with Google",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "sign-in-faq-link",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/conversation-guidelines/index.html#signinfaq",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sign In FAQ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "logout-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ua-drop-text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "You are logged in as ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ua-display-name",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-btn header-nav-dropdown-dark-btn icon logout-btn",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "HeaderUserAuthLogout",
+                        Double,
+                    ),
+                ),
+                "data-provider": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Log out",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "sign-in-faq-link",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/conversation-guidelines/index.html#signinfaq",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sign In FAQ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "search icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-anchor",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/search/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "icon-span",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Search",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "nav",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "data-lastupdate": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "data-type": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "breaking",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "breaking-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "strong",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "strong",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "close-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Close",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "header-shadow",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "header",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "overlay",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "transition-wrap ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "article",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "asset story clearfix",
+                        Double,
+                    ),
+                ),
+                "data-assetid": Some(
+                    (
+                        "2550571",
+                        Double,
+                    ),
+                ),
+                "data-texttype": Some(
+                    (
+                        "story",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "close-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "close close-overlay",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "modalclose",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "#",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "utility-bar-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "utility-bar",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-primary-modules",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-module util-bar-module-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-facebook util-bar-btn-share",
+                        Double,
+                    ),
+                ),
+                "data-module-name": Some(
+                    (
+                        "utility-bar-module-share",
+                        Double,
+                    ),
+                ),
+                "data-module-section": Some(
+                    (
+                        "share",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFacebookBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-twitter",
+                        Double,
+                    ),
+                ),
+                "data-module-name": Some(
+                    (
+                        "share-twitter",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "550x450",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarTwitterLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LeP9V&text=Nokia%20Q2%20sales%20fall%2024%,%20misses%20expectations&via=USATODAY",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-count util-bar-share-count-twitter",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            40\n                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-email",
+                        Double,
+                    ),
+                ),
+                "data-module-name": Some(
+                    (
+                        "utility-bar-module-share",
+                        Double,
+                    ),
+                ),
+                "data-module-section": Some(
+                    (
+                        "email",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarEmailBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout util-bar-flyout-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-pane util-bar-flyout-pane-share scrollable-content",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-heading util-bar-flyout-heading-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-title util-bar-flyout-title-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Share This Story!",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-subtitle util-bar-flyout-subtitle-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Let friends in your social network know what you are reading about",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav util-bar-flyout-nav-share",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn util-bar-flyout-nav-btn-facebook active",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFlyoutFacebookBtn",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "#",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Facebook",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn util-bar-flyout-nav-btn-email",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "email",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFlyoutEmailBtn",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "#",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Email",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn util-bar-flyout-nav-btn-twitter",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "550x450",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "twitter",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFlyoutTwitterLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LeP9V&text=Nokia%20Q2%20sales%20fall%2024%,%20misses%20expectations&via=USATODAY",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Twitter",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn util-bar-flyout-nav-btn-googleplus",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "500x500",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "googleplus",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFlyoutGooglePlusLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "//plus.google.com/share?url=http://usat.ly/16LeP9V",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Google+",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-nav-btn util-bar-flyout-nav-btn-linkedin",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "1000x455",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "linkedin",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFlyoutLinkedInLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://www.linkedin.com/shareArticle?url=http://usat.ly/16LeP9V&mini=true",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "LinkedIn",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-summary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-summary-image",
+                        Double,
+                    ),
+                ),
+                "data-src": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/53fbeab86007730ea596ceb71abebd9ae4d780e6/r=x63&c=60x60/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_1_1.jpg",
+                        Double,
+                    ),
+                ),
+                "height": Some(
+                    (
+                        "60",
+                        Double,
+                    ),
+                ),
+                "width": Some(
+                    (
+                        "60",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "h4",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-summary-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Nokia Q2 sales fall 24%, misses expectations",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h4",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-summary-description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "HELSINKI (AP) — Nokia Corp. says its net loss narrowed in the second quarter to 227 million euros ($298. million) compared to a net loss of 1.41 billion euros a year earlier. The struggling Finnish cellphone",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-section util-bar-flyout-section-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-form-facebook",
+                        Double,
+                    ),
+                ),
+                "method": Some(
+                    (
+                        "post",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "textarea",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-message-facebook",
+                        Double,
+                    ),
+                ),
+                "data-image": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/52b638de8ef9ae84b094c81ce546b6d6fef638d6/r=x117&c=155x114/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_4_3.jpg",
+                        Double,
+                    ),
+                ),
+                "data-link": Some(
+                    (
+                        "http://www.usatoday.com/story/tech/2013/07/18/nokia-q2-sales-fall-by-24-pct-misses-expectations/2550571/",
+                        Double,
+                    ),
+                ),
+                "data-title": Some(
+                    (
+                        "Nokia Q2 sales fall 24%, misses expectations",
+                        Double,
+                    ),
+                ),
+                "placeholder": Some(
+                    (
+                        "Message (optional)",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "textarea",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-submit-wrap-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-form-status-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-loading-facebook",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12//images/indicators/facebook-loading.gif",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-status-text-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-share-submit-btn-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Post to Facebook",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-section util-bar-flyout-section-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Single,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                        var RecaptchaOptions = {\n                                            theme : 'custom',\n                                            custom_theme_widget: 'recaptcha_widget'\n                                        };\n                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: Some(
+            {
+                "action": Some(
+                    (
+                        "/services/mail/v3/send/",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "util-bar-share-form-email",
+                        Double,
+                    ),
+                ),
+                "method": Some(
+                    (
+                        "post",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-input",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "email_type",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "hidden",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "share_email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "email-to required util-bar-flyout-input ui-text-input",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "from",
+                        Double,
+                    ),
+                ),
+                "placeholder": Some(
+                    (
+                        "Your Email",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "email-from required util-bar-flyout-input ui-text-input",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "to",
+                        Double,
+                    ),
+                ),
+                "placeholder": Some(
+                    (
+                        "Your Friend's Email",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "accept_terms util-bar-flyout-input util-bar-flyout-input-accept-terms",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "accept_terms",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "checkbox",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "textarea",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "email-message util-bar-flyout-textarea ui-textarea",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "message",
+                        Double,
+                    ),
+                ),
+                "placeholder": Some(
+                    (
+                        "Message (optional)",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Nokia Q2 sales fall 24%, misses expectations on USAToday.com: http://usat.ly/16LeP9V",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "textarea",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "recaptcha_widget",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_image",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "recaptcha_image",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_only_if_incorrect_sol",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                Incorrect please try again\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-input ui-text-input",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "recaptcha_response_field",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "recaptcha_response_field",
+                        Double,
+                    ),
+                ),
+                "placeholder": Some(
+                    (
+                        "Enter the words above",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option",
+                        Double,
+                    ),
+                ),
+                "data-option": Some(
+                    (
+                        "reload",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option_sprite recaptcha_new",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " Try Another\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option recaptcha_only_if_image",
+                        Double,
+                    ),
+                ),
+                "data-option": Some(
+                    (
+                        "audio",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option_sprite recaptcha_audio",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " Audio Captcha\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option recaptcha_only_if_audio",
+                        Double,
+                    ),
+                ),
+                "data-option": Some(
+                    (
+                        "image",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option_sprite recaptcha_audio",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " Image CAPTCHA\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option",
+                        Double,
+                    ),
+                ),
+                "data-option": Some(
+                    (
+                        "help",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "recaptcha_option_sprite recaptcha_help",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " Help\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                {# ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: Some(
+            {
+                "frameborder": Some(
+                    (
+                        "0",
+                        Double,
+                    ),
+                ),
+                "height": Some(
+                    (
+                        "300",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://api.recaptcha.net/noscript?k=6Lf7fuESAAAAAJ3_KMIDbkQySsEE0vMkLXUkq4eY",
+                        Double,
+                    ),
+                ),
+                "width": Some(
+                    (
+                        "500",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " #}\n                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "textarea",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "required",
+                        Double,
+                    ),
+                ),
+                "cols": Some(
+                    (
+                        "40",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "recaptcha_challenge_field",
+                        Double,
+                    ),
+                ),
+                "rows": Some(
+                    (
+                        "3",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "textarea",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "name": Some(
+                    (
+                        "recaptcha_response_field",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "hidden",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "manual_challenge",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "cta bottom-buttons util-bar-flyout-share-email-cta",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-chunky-btn secondary icon cancel util-bar-email-cancel-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Cancel",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-chunky-btn icon send util-bar-email-send-btn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Send",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-pane util-bar-flyout-pane-success util-bar-flyout-pane-success-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h4",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-success-title util-bar-success-title-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Posted!",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h4",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-success-description util-bar-success-description-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "A link has been posted to your Facebook feed. ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-pane util-bar-flyout-pane-success util-bar-flyout-pane-email-success",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h4",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-success-title util-bar-success-title-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sent!",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h4",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-success-description util-bar-success-description-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "A link has been sent to your friend's email address.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-close-ribbon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-module util-bar-module-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-comments",
+                        Double,
+                    ),
+                ),
+                "data-module-name": Some(
+                    (
+                        "utility-bar-module-comments",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarCommentsBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout util-bar-flyout-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-heading util-bar-flyout-heading-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-title util-bar-flyout-title-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Join the Nation's Conversation",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-subtitle util-bar-flyout-subtitle-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "To find out more about Facebook commenting please read the ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "/conversation-guidelines/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Conversation Guidelines and FAQs",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-comments-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-scroll-wrap util-bar-scroll-wrap-comments  ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "facebook-comments-plugin-wrap scrollable-content",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "fb-comments",
+                        Double,
+                    ),
+                ),
+                "data-href": Some(
+                    (
+                        "http://www.usatoday.com/story/tech/2013/07/18/nokia-q2-sales-fall-by-24-pct-misses-expectations/2550571/",
+                        Double,
+                    ),
+                ),
+                "data-posts": Some(
+                    (
+                        "20",
+                        Double,
+                    ),
+                ),
+                "data-width": Some(
+                    (
+                        "400",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-flyout-close-ribbon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-secondary-modules",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-module util-bar-module-print",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-print",
+                        Double,
+                    ),
+                ),
+                "data-module-name": Some(
+                    (
+                        "utility-bar-module-print",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarPrintBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-module util-bar-module-feedback",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "util-bar-btn util-bar-btn-feedback",
+                        Double,
+                    ),
+                ),
+                "data-popup-callback": Some(
+                    (
+                        "utilityBarPopupFeedback",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "UtilityBarFeedbackBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h1",
+        attrs: Some(
+            {
+                "itemprop": Some(
+                    (
+                        "headline",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Nokia Q2 sales fall 24%, misses expectations",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h1",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "asset-metabar-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "asset-metabar",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "author",
+                        Double,
+                    ),
+                ),
+                "itemscope": None,
+                "itemtype": Some(
+                    (
+                        "http://schema.org/Person",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "asset-metabar-time asset-metabar-item nobyline",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "8:04 a.m. EDT July 18, 2013",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "asset-double-wide double-wide",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "articleBody",
+                        Double,
+                    ),
+                ),
+                "role": Some(
+                    (
+                        "main",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "article-metadata-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "single-photo expandable-collapsed",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "associatedMedia",
+                        Double,
+                    ),
+                ),
+                "itemscope": None,
+                "itemtype": Some(
+                    (
+                        "http://schema.org/ImageObject",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "image-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "nokia lumia 1020",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "expand-img-horiz",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "url",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/ac1394dbdcca6a36cbf486633b129cd813095ac3/r=x404&c=534x401/local/-/media/USATODAY/USATODAY/2013/07/11/1373564381000-AFP-521284773-1307111340_4_3.jpg",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "toggle",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "nokia lumia 1020",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "name",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "image-credit-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "cutline",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "A employee demonstrates the photo capabilities of the Nokia Lumia 1020, a Windows Phone with a 41-megapixel camera .",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "OTHY CLARY AFP/Getty Images",
+                        Double,
+                    ),
+                ),
+                "itemprop": Some(
+                    (
+                        "copyrightHolder",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "credit",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "(Photo: TIMOTHY CLARY AFP/Getty Images)",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "article-metadata",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-tools asset-inline-share-tools",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-tools-label",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "SHARE",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-facebook",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareFacebookBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-facebook",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "CONNECT",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-twitter",
+                        Double,
+                    ),
+                ),
+                "data-popup-size": Some(
+                    (
+                        "550x450",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "twitter",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareTwitterLink",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "https://twitter.com/intent/tweet?url=http://usat.ly/16LeP9V&text=Nokia%20Q2%20sales%20fall%2024%,%20misses%20expectations&via=USATODAY",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-twitter",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n            40\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-twitter",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "TWEET",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-comments",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "comments",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareCommentsBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-comments",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "COMMENT",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-email",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "email",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareEmailBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-email",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "EMAIL",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn inline-share-btn-more",
+                        Double,
+                    ),
+                ),
+                "data-share-method": Some(
+                    (
+                        "facebook",
+                        Double,
+                    ),
+                ),
+                "data-uotrack": Some(
+                    (
+                        "InlineShareMoreBtn",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-count inline-share-count-more",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "inline-share-btn-label inline-share-btn-label-more",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "MORE",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "HELSINKI (AP) — Nokia Corp. says its net loss narrowed in the second quarter to 227 million euros ($298. million) compared to a net loss of 1.41 billion euros a year earlier.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The struggling Finnish cellphone maker said sales fell by 24% to 5.7 billion euros from 7.5 billion in the second quarter last year.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Sales of the company's flagship Lumia phones increased by 32% compared to the first quarter to 7.4 million handsets.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The results, however, were weaker than analysts had expected. The company's share price fell 3 percent to 2.99 euros at the Helsinki Stock Exchange.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "On the Nasdaq, shares of Nokia were down 3.47% in pre-market trading.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Copyright 2013 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "right partner-placement partner-asset-right-ad",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "right",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "taboola-div-text-links-vertical",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "right",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "comp ribbon-module",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\nUSA NOW\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h6",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "light-shade",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "usanow-vid-container",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "media-list-link",
+                        Double,
+                    ),
+                ),
+                "data-ht": Some(
+                    (
+                        "usanowstoryrecirculation",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "/media/cinematic/video/2524841/what-do-charles-manson-and-the-boston-bomber-have-in-common-usa-now-video/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "thumbnail",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "thumb-img",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://www.gannett-cdn.com/-mm-/9eef7679603c8ad07f8d41160a412115caf9e5b5/r=x159&c=280x156/local/-/media/USATODAY/USATODAY/2013/07/17/1374074310000-Rolling-Stones-Cover.jpg",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "play-btn-l usanow-vid-play",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h5",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "usanow-vid-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "What do Charles Manson and the Boston bomber have in common? | USA NOW video",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h5",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h5",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "usanow-vid-date",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Jul 17, 2013",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h5",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "aside",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "more more-stories-wrap",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "more-stories-content",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h3",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "more-stories",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "More Stories:",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h3",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "taboola-div-grid-2x4",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "taboola-div-verticalx8",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "outbrain-more-stories",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "outbrain-more-stories-template",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/template",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "<% _.each(data.widget, function(item) { %><div class=\"OUTBRAIN\" data-src=\"<%= data.url %>\" data-widget-id=\"<%= item %>\" data-ob-template=\"usatoday\"></div><% }); %>",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clearfix",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "pageinfo data hidden",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        {\n        \n            \"js_modules\": [{\"name\": \"expandable-photo\"}],\n        \n        \"assetid\": \"2550571\",\n        \"aws\": \"tech\",\n        \"aws_id\": \"tech\",\n        \"blogname\": \"\",\n        \n            \"byline\":\"\",\n         \n        \"contenttype\": \"story pages \",\n        \"seotitle\": \"Nokia-q2-sales-fall-by-24-pct-misses-expectations\",\n        \"seotitletag\": \"Nokia Q2 sales fall 24%, misses expectations\",\n        \"ssts\": \"tech\",\n        \n            \"taxonomykeywords\":\"Helsinki\",\n        \n        \"templatename\": \"stories/default\",\n        \n            \"topic\":\"helsinki\",\n        \n        \n        \"videoincluded\":\"no\",\n        \n        \n            \"basePageType\":\"story\"\n        \n        }\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "article",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "arrows overlay-arrows",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "overlay-arrow-wrap",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/template",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "<% if (disabled) { %><a class=\"overlay-content-arrows overlay-arrows-<%= dir %>-wrap <%= disabled %>\" data-ht=\"articlearrow<%= dir %>\"></a><% }else{ %><a class=\"overlay-content-arrows overlay-content-arrows-<%= dir %>-wrap <%= disabled %>\" href=\"<%= links %>\" data-ht=\"articlearrow<%= dir %>\"><div class=\"<%= dir %> overlay-arrows-anchor\"><div class=\"overlay-arrows-<%= dir %>-anchor-image\"></div><div class=\"<%= dir %>-story-content-holder\"><% if ((typeof image !== 'undefined') && image.length > 0) { %><img class=\"arrow-story-<%= dir %>-img\" src=\"<%= image %>\"><% } %><p class=\"next-previous-label\"><% if ((typeof section !== 'undefined') && section.length > 0) { %><%= section %><% } %></p><p class=\"overlay-arrows-preview-title\"><% if ((typeof headline !== 'undefined') && headline.length > 0) { %><%= headline %><% } %></p></div></div></a><% } %>",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "partner-overlay",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "partner-placement",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "partner-close partner-overlay-close",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "#",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-film show",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "//www.googletagservices.com/tag/js/gpt.js",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n            var requirejs = { urlArgs: 'v=7.3.12' };\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "data-main": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/jsb/main",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://www.gannett-cdn.com/static/django-relux-static-7.3.12/js/libs/require/require.js?v=2.1.2",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "ui-film show",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "ad-staging",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "fb-root",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "body",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "html",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

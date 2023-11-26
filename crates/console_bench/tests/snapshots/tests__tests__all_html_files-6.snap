@@ -1,0 +1,7728 @@
+---
+source: crates/console_bench/tests/tests.rs
+expression: result
+---
+[
+    Token {
+        data: "DOCTYPE html",
+        attrs: None,
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "var __pbpa = true;",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "var translated_warning_string = 'Warning: Never enter your Tumblr password unless \\u201chttps://www.tumblr.com/login\\u201d\\x0ais the address in your web browser.\\x0a\\x0aYou should also see a green \\u201cTumblr, Inc.\\u201d identification in the address bar.\\x0a\\x0aSpammers and other bad guys use fake forms to steal passwords.\\x0a\\x0aTumblr will never ask you to log in from a user\\u2019s blog.\\x0a\\x0aAre you absolutely sure you want to continue?';",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "language": Some(
+                    (
+                        "javascript",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=289ca146962d7f79251f9df647c84ce1",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "DOCTYPE html",
+        attrs: None,
+        kind: ProcessingInstruction,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "html",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "showlines",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "head",
+        attrs: Some(
+            {
+                "prefix": Some(
+                    (
+                        "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://static.izs.me/css/style.css",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "stylesheet",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/css",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: ";(function () {\r\n    if (+\"'49797044559'\" === 8811997887) { // && location.hash === \"#rev\") {\r\n      var l = document.createElement(\"link\")\r\n      l.rel = \"stylesheet\"\r\n      l.type = \"text/css\"\r\n      l.href = \"http://static.izs.me/css/reverse.css\"\r\n      document.head.appendChild(l)\r\n    }\r\n  })()",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "title",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "blog.izs.me: Curiosity and The Practice",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "title",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Curiosity and The Practice All too often, people do good things for the wrong reasons, and find it’s not sustainable. Compare the differences between these statements: “ I want to develop software. I...",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "text/html; charset=UTF-8",
+                        Double,
+                    ),
+                ),
+                "http-equiv": Some(
+                    (
+                        "content-type",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://blog.izs.me/rss",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "alternate",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "application/rss+xml",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://static.izs.me/img/pavatar.png",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "pavatar",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://static.izs.me/favicon.ico",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "shortcut icon",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " Read more: http://ogp.me/ ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "48119224995",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "fb:app_id",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Curiosity and The Practice",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://blog.izs.me/post/49797044559/curiosity-and-the-practice",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:url",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "All too often, people do good things for the wrong reasons, and find it’s not sustainable. Compare the differences between these statements:\n“ I want to develop software.\nI want to be a software...",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tumblr-feed:entry",
+                        Double,
+                    ),
+                ),
+                "property": Some(
+                    (
+                        "og:type",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " END TUMBLR FACEBOOK OPENGRAPH TAGS ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " TWITTER TAGS ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "charset": Some(
+                    (
+                        "utf-8",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "summary",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:card",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "All too often, people do good things for the wrong reasons, and find it&#8217;s not sustainable.  Compare the differences between these statements:\n\n\n  I want to develop software. \n  I want to be a software developer.\n  \n  I want to write a novel. \n  I want to be a novelist.\n  \n  I want to do yoga. \n  I want to be a yogi.\n\n\n The first statement is &#8220;I want to do a thing&#8221;, and the second is &#8220;I want to be a person who has done a thing&#8221;.\n\n Once you&#8217;ve written your first story, or software program, or done to your first yoga session, that box is checked, and you&#8217;re done.  Where is the motivation to continue The Practice?\n\n There is no way to maintain velocity without lightness, and there is no way to maintain lightness without curiosity.\n\n Curiosity is not a state of &#8220;wanting to be curious&#8221;, but rather a state of &#8220;wanting to find out&#8221;. There is a tremendous difference!  &#8220;Wanting to be&#8221; is attainment of status, whereas &#8220;wanting to do&#8221; is desire and motion.\n\n These days, I try to catch myself saying &#8220;I want to be XYZ&#8221;, and instead translate that into what it really means.  Sometimes, I find that it quickly disabuses me of a mistaken desire.\n\n If you want to be a writer, write.  That&#8217;s all that it takes, but it takes that forever, so if you don&#8217;t want to write, perhaps reevaluate your desire to be a writer.\n\n If you want to be a programmer, program.  That&#8217;s all that it takes, but it takes that forever, so if you don&#8217;t want to program, perhaps reevaluate your desire to be a programmer.\n\n If you want to be a yogi, do yoga.  That&#8217;s all that it takes, but it takes that forever, so if you don&#8217;t want to do yoga, perhaps reevaluate your desire to be a yogi.\n\n Often, when we say, &#8220;I want to be XYZ&#8221;, what we actually mean is not &#8220;I want to do the thing that XYZ does&#8221;, but rather, &#8220;I want the respect and self-esteem that comes with the skills that come from doing what XYZ does.&#8221;  I want people to read something, and admire it, and then admire me because of it.  I want people to use software, and recognize that I create it, and think I&#8217;m smart.  I want people to think I&#8217;m spiritual and wise, and admire my healthy body and calmness.\n\n I want other people to wish they could be me.\n\n They all find the frightening reality that there is no end to be attained.  You will never finish writing all the software, or all the words, or find that you&#8217;ve learned all that yoga practice can teach you.  If your goal is at the end, you will find only discouragement and disappointment, and no amount of duty or discipline will keep you on the path.\n\n So the writer buys a beret, and a moleskine, and sits in cafes sipping espresso.  The programmer wears an appropriately nerdy T-shirt, and plays video games, and says snarky things on Hacker News.  The yogi puts on stretchy pants and carries a rubber mat around.  If any of them do attain some shred of the respect they crave, they know in their heart that it is empty, and it never satisfies the longing.\n\n On the other hand, if your goal is the continual curious fire of &#8220;Oh, neat!  What&#8217;s next!?&#8221;, then each challenge along the path only makes you hungrier for more, and every step is light.  The challenge becomes not &#8220;How do I stay motivated?&#8221; but rather, &#8220;How do I keep my motivation in check, so that it does not consume me entirely?&#8221;\n\n Even, upon reading this, if you find yourself thinking &#8220;I want to be curious&#8221;, stop and unpack that!  Don&#8217;t just be a person who was curious once, and got the merit badge!  Be actively curious right now, in the present, and let that fire keep you going!\n\n So, what is it you&#8217;d like to learn?",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Curiosity and The Practice",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "http://blog.izs.me/post/49797044559/curiosity-and-the-practice",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:url",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tumblr",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:site",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Tumblr",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:name:iphone",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Tumblr",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:name:ipad",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "Tumblr",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:name:googleplay",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "305343404",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:id:iphone",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "305343404",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:id:ipad",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "com.tumblr",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:id:googleplay",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tumblr://x-callback-url/blog?blogName=izs&postID=49797044559&referrer=twitter-cards",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:url:iphone",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tumblr://x-callback-url/blog?blogName=izs&postID=49797044559&referrer=twitter-cards",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:url:ipad",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "tumblr://x-callback-url/blog?blogName=izs&postID=49797044559&referrer=twitter-cards",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "twitter:app:url:googleplay",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n    \n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=5e66f09b4ee7ff8930714f37392186ee",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            {
+                "content": Some(
+                    (
+                        "off",
+                        Double,
+                    ),
+                ),
+                "http-equiv": Some(
+                    (
+                        "x-dns-prefetch-control",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "head",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "body",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hfeed",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "wrapper",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "header",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h1",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "blog-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "home",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "blog.izs.me",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h1",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "blog-description",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Writing from Isaac Z. Schlueter",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "container",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "content",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n      \r\n\r\n      \r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "navigation",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "nav-above",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        \r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-previous",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://blog.izs.me/post/48281998870",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Older",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        \r\n        \r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "nav-next",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://blog.izs.me/post/51599977551",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Newer",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        \r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n      \r\n\r\n      \r\n\r\n      \r\n\r\n      \r\n\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "hentry ",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "post-49797044559",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        \r\n\r\n        \r\n\r\n        \r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h2",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "entry-title text-title",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Curiosity and The Practice",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h2",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "entry-content",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "All too often, people do good things for the wrong reasons, and find it",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s not sustainable.  Compare the differences between these statements:",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "blockquote",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to develop software.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n  I want to be a software developer.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n  \n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to write a novel.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n  I want to be a novelist.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n  \n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to do yoga.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "br",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\n  I want to be a yogi.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "blockquote",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "The first statement is ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to do a thing",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", and the second is ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to be a person ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "who has done",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "em",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " a thing",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ".",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Once you",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ve written your first story, or software program, or done to your first yoga session, that box is checked, and you",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "re done.  Where is the motivation to continue The Practice?",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "There is no way to maintain velocity without lightness, and there is no way to maintain lightness without curiosity.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Curiosity is not a state of ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "wanting to be curious",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", but rather a state of ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "wanting to find out",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ". There is a tremendous difference!  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "Wanting to be",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " is attainment of status, whereas ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "wanting to do",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " is desire and motion.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "These days, I try to catch myself saying ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to be XYZ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", and instead translate that into what it really means.  Sometimes, I find that it quickly disabuses me of a mistaken desire.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "If you want to be a writer, write.  That",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s all that it takes, but it takes that forever, so if you don",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "t want to write, perhaps reevaluate your desire to be a writer.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "If you want to be a programmer, program.  That",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s all that it takes, but it takes that forever, so if you don",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "t want to program, perhaps reevaluate your desire to be a programmer.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "If you want to be a yogi, do yoga.  That",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s all that it takes, but it takes that forever, so if you don",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "t want to do yoga, perhaps reevaluate your desire to be a yogi.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Often, when we say, ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to be XYZ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", what we actually mean is not ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to do the thing that XYZ does",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", but rather, ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want the respect and self-esteem that comes with the skills that come from doing what XYZ does.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "  I want people to read something, and admire it, and then admire me because of it.  I want people to use software, and recognize that I create it, and think I",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "m smart.  I want people to think I",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "m spiritual and wise, and admire my healthy body and calmness.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "I want other people to wish they could be me.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "They all find the frightening reality that there is no end to be attained.  You will never finish writing all the software, or all the words, or find that you",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ve learned all that yoga practice can teach you.  If your goal is at the end, you will find only discouragement and disappointment, and no amount of duty or discipline will keep you on the path.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "So the writer buys a beret, and a moleskine, and sits in cafes sipping espresso.  The programmer wears an appropriately nerdy T-shirt, and plays video games, and says snarky things on Hacker News.  The yogi puts on stretchy pants and carries a rubber mat around.  If any of them do attain some shred of the respect they crave, they know in their heart that it is empty, and it never satisfies the longing.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "On the other hand, if your goal is the continual curious fire of ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "Oh, neat!  What",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s next!?",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", then each challenge along the path only makes you hungrier for more, and every step is light.  The challenge becomes not ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "How do I stay motivated?",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " but rather, ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "How do I keep my motivation in check, so that it does not consume me entirely?",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Even, upon reading this, if you find yourself thinking ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "“",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "I want to be curious",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "”",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: ", stop and unpack that!  Don",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "t just be a person who was curious once, and got the merit badge!  Be actively curious right now, in the present, and let that fire keep you going!",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "So, what is it you",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "d like to learn?",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        \r\n\r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "entry-meta",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "published",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://blog.izs.me/post/49797044559/curiosity-and-the-practice",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "bookmark",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n              Mon\r\n              2013-05-06\r\n              13:44:00\r\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " |\r\n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " <span class=\"comments-link\">\r\n                        <a href=\"http://blog.izs.me/post/49797044559/curiosity-and-the-practice#comments\">Comment</a>\r\n                    </span> | ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "notes-link",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://blog.izs.me/post/49797044559/curiosity-and-the-practice#notes",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "12 notes",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          \r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n      \r\n\r\n      \r\n\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " \r\n      <div id=\"nav-below\" class=\"navigation\">\r\n        \r\n        <div class=\"nav-previous\"><a href=\"http://blog.izs.me/post/48281998870\">Older</a></div>\r\n        \r\n        \r\n        <div class=\"nav-next\"><a href=\"http://blog.izs.me/post/51599977551\">Newer</a></div>\r\n        \r\n      </div>\r\n       ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n      \r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "notes",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    \n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ol",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "notes",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " START NOTES ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_rooftopsparrow without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://rooftopsparrow.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Jonathan Nicholson ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_163a7937ce7b_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://rooftopsparrow.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Jonathan Nicholson",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "rooftopsparrow",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note reblog tumblelog_monoclemike without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n                \n                                                                                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://michaelmcneil.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "console.blog()",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_ad96bd3bca6f_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+                "data-post-url": Some(
+                    (
+                        "http://michaelmcneil.com/post/50732924157",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                    \n                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://michaelmcneil.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "console.blog()",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "monoclemike",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " reblogged this from ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "source_tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://blog.izs.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "blog.izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "izs",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                    \n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_monoclemike without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://michaelmcneil.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "console.blog() ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_ad96bd3bca6f_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://michaelmcneil.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "console.blog()",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "monoclemike",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_traumaturg without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://traumaturg.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Untitled ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/images/default_avatar/cube_closed_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://traumaturg.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Untitled",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "traumaturg",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note reblog tumblelog_diariodeunmono without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n                \n                                                                                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://diariodeunmono.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Diario de un mono",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_d4ec6beee365_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+                "data-post-url": Some(
+                    (
+                        "http://diariodeunmono.com/post/49996235726",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                    \n                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://diariodeunmono.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Diario de un mono",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "diariodeunmono",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " reblogged this from ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "source_tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://blog.izs.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "blog.izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "izs",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                    \n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_thesweetfix without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://thesweetfix.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "The Sweet Fix ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_4d7cb3fb0edd_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://thesweetfix.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "The Sweet Fix",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "thesweetfix",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_elijahwright without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://elijahwright.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Elijah Wright's tumblr splat... ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/images/default_avatar_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://elijahwright.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Elijah Wright's tumblr splat...",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "elijahwright",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note reblog tumblelog_greelgorke with_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n                \n                                                                                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://greelgorke.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "[life,coding,social]@greelgorke",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_84803b23500e_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+                "data-post-url": Some(
+                    (
+                        "http://greelgorke.tumblr.com/post/49841676500",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                    \n                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://greelgorke.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "[life,coding,social]@greelgorke",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "greelgorke",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " reblogged this from ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "source_tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://blog.izs.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "blog.izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "izs",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " and added:                                                                                                                                                                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "blockquote",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://greelgorke.tumblr.com/post/49841676500",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "View post",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                it",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "’",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "s about doing things instead of being or becoming a thing, a title or some kind of notion. A nice post.                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "blockquote",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                    \n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_ddemaree without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://log.demaree.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "David Demaree ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://24.media.tumblr.com/avatar_7f7597c57fb7_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://log.demaree.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "David Demaree",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "ddemaree",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_iamaboutus without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://tumblr.iamabout.us/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "P EQUALS NO PROBLEM ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://24.media.tumblr.com/avatar_80dd68ec198d_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://tumblr.iamabout.us/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "P EQUALS NO PROBLEM",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "iamaboutus",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_misframe without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://misfra.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Misframe ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_8a33e1bfc4da_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://misfra.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Misframe",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "misframe",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_bcobb without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://bcobb.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "bcobb ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://24.media.tumblr.com/avatar_4b3c77a7d7ba_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://bcobb.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "bcobb",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "bcobb",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note like tumblelog_gkya without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                                                                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://gkya.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Göktuğ Kayaalp ",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_95e7d43bc77d_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                \n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://gkya.tumblr.com/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "Göktuğ Kayaalp",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "gkya",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " likes this                                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                            \n                                                        \n        \n        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "note reblog tumblelog_izs without_commentary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                        \n                \n                                                                                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "avatar_frame",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://blog.izs.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "target": Some(
+                    (
+                        "_blank",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "blog.izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+                "class": Some(
+                    (
+                        "avatar ",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://25.media.tumblr.com/avatar_31f3070b41df_16.png",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    \n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "action",
+                        Double,
+                    ),
+                ),
+                "data-post-url": Some(
+                    (
+                        "http://blog.izs.me/post/49797044559",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                                                    \n                                                            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "tumblelog",
+                        Double,
+                    ),
+                ),
+                "href": Some(
+                    (
+                        "http://blog.izs.me/",
+                        Double,
+                    ),
+                ),
+                "rel": Some(
+                    (
+                        "nofollow",
+                        Double,
+                    ),
+                ),
+                "title": Some(
+                    (
+                        "blog.izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "izs",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " posted this                                                                        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "span",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n                    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "clear",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n                                    \n                        \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    \n    \n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " END NOTES ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ol",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n      \r\n\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " #content ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " #container ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "sidebars",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "sidebar",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "secondary",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "xoxo",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "search",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "h2",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "label",
+        attrs: Some(
+            {
+                "for": Some(
+                    (
+                        "s",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Search",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "label",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "h2",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: Some(
+            {
+                "action": Some(
+                    (
+                        "/search",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "searchform",
+                        Double,
+                    ),
+                ),
+                "method": Some(
+                    (
+                        "get",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n              ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "s",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "q",
+                        Double,
+                    ),
+                ),
+                "size": Some(
+                    (
+                        "10",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "text",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n              ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "searchsubmit",
+                        Double,
+                    ),
+                ),
+                "name": Some(
+                    (
+                        "searchsubmit",
+                        Double,
+                    ),
+                ),
+                "type": Some(
+                    (
+                        "submit",
+                        Double,
+                    ),
+                ),
+                "value": Some(
+                    (
+                        "Find",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "input",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n            ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n          ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "form",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "li",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n      ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "ul",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: Some(
+            {
+                "id": Some(
+                    (
+                        "respond",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Talk to me.  I use ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "mailto:i@izs.me",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "email",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\nand ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "https://plus.google.com/108970487578797743871",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "google+",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\nand ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://twitter.com/izs",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "twitter",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: ".",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "p",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "class": Some(
+                    (
+                        "small",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "footer",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "© Isaac Z. Schlueter. ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: Some(
+            {
+                "href": Some(
+                    (
+                        "http://foohack.com/about/",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "Several rights reserved.",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "a",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "http://www.google-analytics.com/ga.js",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "_gat._getTracker(\"UA-148455-3\")._trackPageview();",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " #footer ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: " #wrapper .hfeed ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n  ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: ";(function () {\r\n    if (+\"'49797044559'\" === 8811997887) { // && location.hash === \"#rev\") {\r\n      document.body.scrollTop = document.body.scrollHeight\r\n    }\r\n  })()",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "maybe something awesome",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://lorempixel.com/500/1000/",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "margin:0 auto;display:block",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " BEGIN TUMBLR CODE ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        \n    \n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: Some(
+            {
+                "height": Some(
+                    (
+                        "25",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "tumblr_controls",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/assets/html/iframe.html?src=http%3A%2F%2Fblog.izs.me%2Fpost%2F49797044559%2Fcuriosity-and-the-practice&pid=49797044559&rk=iOiE24Qs&lang=en_US&name=izs&avatar=http%3A%2F%2F24.media.tumblr.com%2Favatar_31f3070b41df_64.png&title=blog.izs.me&url=http%3A%2F%2Fblog.izs.me%2F&_v=dcf1c0a578dbfd6678efa6e9b3e760bc",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "position:absolute; z-index:2147483647; top:0; right:0; border:0; background-color:transparent; overflow:hidden; ",
+                        Double,
+                    ),
+                ),
+                "width": Some(
+                    (
+                        "330",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "        \n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "[if IE]><script type=\"text/javascript\">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    \n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: " END TUMBLR CODE ",
+        attrs: None,
+        kind: Comment,
+        is_implied: false,
+    },
+    Token {
+        data: "",
+        attrs: None,
+        kind: CommentEnd,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: Some(
+            {
+                "frameborder": Some(
+                    (
+                        "0",
+                        Double,
+                    ),
+                ),
+                "height": Some(
+                    (
+                        "1",
+                        Double,
+                    ),
+                ),
+                "id": Some(
+                    (
+                        "ga_target",
+                        Double,
+                    ),
+                ),
+                "scrolling": Some(
+                    (
+                        "no",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "http://assets.tumblr.com/analytics.html?4344dcb6da7e8742c4c5ab1d76ffafae",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "background-color:transparent; overflow:hidden; position:absolute; top:0; left:0 z-index:9999;",
+                        Double,
+                    ),
+                ),
+                "width": Some(
+                    (
+                        "1",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "iframe",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        var COMSCORE = true;\n        window.setTimeout(function() {\n            var analytics_frame = document.getElementById('ga_target');\n            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);\n        }, 1000);\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n\n\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n      var _qevents = _qevents || [];\n\n      (function() {\n       var elem = document.createElement('script');\n\n       elem.src = (document.location.protocol == \"https:\" ? \"https://secure\" : \"http://edge\") + \".quantserve.com/quant.js\";\n       elem.async = true;\n       elem.type = \"text/javascript\";\n       var scpt = document.getElementsByTagName('script')[0];\n       scpt.parentNode.insertBefore(elem, scpt);\n      })();\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n        ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "div",
+        attrs: Some(
+            {
+                "style": Some(
+                    (
+                        "display: none;",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "alt": Some(
+                    (
+                        "Quantcast",
+                        Double,
+                    ),
+                ),
+                "height": Some(
+                    (
+                        "1",
+                        Double,
+                    ),
+                ),
+                "src": Some(
+                    (
+                        "//pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif",
+                        Double,
+                    ),
+                ),
+                "width": Some(
+                    (
+                        "1",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "div",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\n\n\n    ",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "var s=new Image(1,1);s.src=((r='http://www.tumblr.com/impixu?T=1370452750&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5penMubWVcL3Bvc3RcLzQ5Nzk3MDQ0NTU5XC9jdXJpb3NpdHktYW5kLXRoZS1wcmFjdGljZSIsInJlcXR5cGUiOjB9&U=NDLJAOKGKE&K=bacc9c25800549cf7d4b160b52b7636bd00e7ba4e7b365b105a3233229991e43&R='.replace(/&R=[^&$]*/,'')) + ('&R='+escape(document.referrer)).substr(0, 2000-r.length).replace(/%.?.?$/,''));",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "http://www.tumblr.com/impixu?T=1370452750&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvYmxvZy5penMubWVcL3Bvc3RcLzQ5Nzk3MDQ0NTU5XC9jdXJpb3NpdHktYW5kLXRoZS1wcmFjdGljZSIsInJlcXR5cGUiOjAsIm5vc2NyaXB0IjoxfQ==&U=NDLJAOKGKE&K=b3327e408d78b14639aa2a4e4058f6d38bcdc22adc9beca08257caa646c5e2cd&R=",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: Some(
+            {
+                "type": Some(
+                    (
+                        "text/javascript",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "var s=new Image(1,1);s.src=((r='http://www.tumblr.com/impixu?T=1370452750&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuaXpzLm1lXC9wb3N0XC80OTc5NzA0NDU1OVwvY3VyaW9zaXR5LWFuZC10aGUtcHJhY3RpY2UiLCJyZXF0eXBlIjowLCJwb3N0cyI6W3sicG9zdGlkIjoiNDk3OTcwNDQ1NTkiLCJibG9naWQiOiIxMzE2MDg1Iiwic291cmNlIjozM31dfQ==&U=EKHLOAKJLC&K=7b65fb5e35a19bb61a9ec57bb9078c669d30b3f20d1df7a5fa435881f8140db1&R='.replace(/&R=[^&$]*/,'')) + ('&R='+escape(document.referrer)).substr(0, 2000-r.length).replace(/%.?.?$/,''));",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "script",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: Some(
+            {
+                "src": Some(
+                    (
+                        "http://www.tumblr.com/impixu?T=1370452750&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL2Jsb2cuaXpzLm1lXC9wb3N0XC80OTc5NzA0NDU1OVwvY3VyaW9zaXR5LWFuZC10aGUtcHJhY3RpY2UiLCJyZXF0eXBlIjowLCJwb3N0cyI6W3sicG9zdGlkIjoiNDk3OTcwNDQ1NTkiLCJibG9naWQiOiIxMzE2MDg1Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=EKHLOAKJLC&K=8f1b9b22f1eec7d07607df96a6853e82c7136fc2a81b255bbbba567e72f82f12&R=",
+                        Double,
+                    ),
+                ),
+                "style": Some(
+                    (
+                        "position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;",
+                        Double,
+                    ),
+                ),
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "img",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "noscript",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "body",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "html",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: false,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+]

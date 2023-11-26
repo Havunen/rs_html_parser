@@ -1,5 +1,3 @@
-mod tests;
-
 use std::path::PathBuf;
 use std::{fs, io};
 
