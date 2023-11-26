@@ -185,7 +185,7 @@ impl<'i> Parser<'i> {
         }
 
         if !self.is_void_element(name) {
-            let pos = self.stack.iter().position(|n| n == &name);
+            let pos = self.stack.iter().position(|n| n == name);
             if let Some(index) = pos {
                 for i in 0..index + 1 {
                     let tag = self.stack.pop_front().unwrap();

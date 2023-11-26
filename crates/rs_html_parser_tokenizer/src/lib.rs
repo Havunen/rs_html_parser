@@ -185,7 +185,7 @@ impl Tokenizer<'_> {
 
         self.index = (self.buffer.len() - 1) as i32;
 
-        return false;
+        false
     }
 
     fn state_text(&mut self, c: u8) -> Option<TokenizerToken> {
@@ -924,19 +924,17 @@ impl Tokenizer<'_> {
         if self.sequence_index == self.current_sequence.len() {
             if c == CharCodes::GT || is_whitespace(c) {
                 let end_of_text = self.index - self.current_sequence.len() as i32;
-                let token: Option<TokenizerToken>;
-
-                if self.section_start < end_of_text as usize {
-                    token = Some(TokenizerToken {
+                let token: Option<TokenizerToken> = if self.section_start < end_of_text as usize {
+                    Some(TokenizerToken {
                         start: self.section_start,
                         end: end_of_text as usize,
                         location: TokenizerTokenLocation::Text,
                         code: 0,
                         quote: QuoteType::NoValue,
-                    });
+                    })
                 } else {
-                    token = None;
-                }
+                    None
+                };
 
                 self.is_special = false;
                 self.section_start = (end_of_text + 2) as usize; // Skip over the `</`
