@@ -927,9 +927,6 @@ impl Tokenizer<'_> {
                 let token: Option<TokenizerToken>;
 
                 if self.section_start < end_of_text as usize {
-                    // Spoof the index so that reported locations match up.
-                    let actual_index = self.index;
-                    self.index = end_of_text;
                     token = Some(TokenizerToken {
                         start: self.section_start,
                         end: end_of_text as usize,
@@ -937,7 +934,6 @@ impl Tokenizer<'_> {
                         code: 0,
                         quote: QuoteType::NoValue,
                     });
-                    self.index = actual_index;
                 } else {
                     token = None;
                 }

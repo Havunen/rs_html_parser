@@ -21,7 +21,7 @@ fn main() {
 
     println!("Running");
 
-    for i in 0..100 {
+    for i in 0..10 {
         println!("{}", i);
 
         for test_data in &test_data {
