@@ -10,8 +10,8 @@ static OPTIONS: ParserOptions = ParserOptions {
     },
 };
 
-pub fn parser_test<'a>(data: &'a str) -> Vec<Token<'a>> {
-    let mut log: Vec<Token<'a>> = Vec::new();
+pub fn parser_test(data: &str) -> Vec<Token> {
+    let mut log: Vec<Token> = Vec::new();
 
     let tokenizer = Parser::new(data, &OPTIONS);
 

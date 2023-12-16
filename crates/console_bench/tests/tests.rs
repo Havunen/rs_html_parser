@@ -5,8 +5,8 @@ mod tests {
     use rs_html_parser_tokenizer::TokenizerOptions;
     use rs_html_parser_tokens::Token;
 
-    fn parser<'a>(data: &'a str, options: &'a ParserOptions) -> Vec<Token<'a>> {
-        let mut log: Vec<Token<'a>> = Vec::new();
+    fn parser<'a>(data: &'a str, options: &'a ParserOptions) -> Vec<Token> {
+        let mut log: Vec<Token> = Vec::new();
 
         let tokenizer = Parser::new(data, options);
 
