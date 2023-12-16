@@ -9,10 +9,10 @@ use rs_html_parser_tokenizer::{Tokenizer, TokenizerOptions};
 use rs_html_parser_tokenizer_tokens::{QuoteType, TokenizerToken, TokenizerTokenLocation};
 use rs_html_parser_tokens::{Token, TokenKind};
 use std::borrow::Cow;
-use std::collections::{BTreeMap, VecDeque};
+use std::collections::VecDeque;
 use std::mem::take;
 use std::str;
-use unicase::UniCase;
+use unicase_collections::unicase_btree_map::UniCaseBTreeMap;
 
 pub struct ParserOptions {
     /**
@@ -42,9 +42,9 @@ pub struct Parser<'a> {
     next_nodes: VecDeque<Token>,
     stack: VecDeque<Box<str>>,
     foreign_context: VecDeque<bool>,
-    attribs: BTreeMap<UniCase<Box<str>>, Option<(Box<str>, QuoteType)>>,
+    attribs: UniCaseBTreeMap<Option<(Box<str>, QuoteType)>>,
     attrib_value: Option<String>,
-    attrib_name: UniCase<Box<str>>,
+    attrib_name: &'a str,
 }
 
 fn get_instruction_name(value: &str) -> Cow<str> {
@@ -247,7 +247,7 @@ impl<'i> Parser<'i> {
         let name: &str =
             str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
-        self.attrib_name = UniCase::new(name.to_string().into_boxed_str());
+        self.attrib_name = name;
     }
 
     unsafe fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
@@ -286,7 +286,7 @@ impl<'i> Parser<'i> {
     }
 
     fn on_attrib_end(&mut self, tokenizer_token: TokenizerToken) {
-        if !self.attribs.contains_key(&self.attrib_name) {
+        if !self.attribs.contains_key(self.attrib_name) {
             let new_attribute: Option<(Box<str>, QuoteType)> = self
                 .attrib_value
                 .as_mut()
@@ -297,7 +297,7 @@ impl<'i> Parser<'i> {
         self.attrib_value = None;
     }
 
-    unsafe fn on_declaration<'a>(&'a mut self, tokenizer_token: TokenizerToken) {
+    unsafe fn on_declaration(&mut self, tokenizer_token: TokenizerToken) {
         let value: &str =
             str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
         let name = get_instruction_name(&value);
