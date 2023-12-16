@@ -14,3 +14,4 @@ bench = false
 [dependencies]
 rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens", version = "0.0.6" }
 unicase = "2.7.0"
+unicase_collections = "0.1.1"

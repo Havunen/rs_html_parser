@@ -38,13 +38,13 @@ pub struct Parser<'a> {
     buffer: &'a [u8],
 
     tokenizer: Tokenizer<'a>,
-    tag_name: Cow<'a, str>,
-    next_nodes: VecDeque<Token<'a>>,
-    stack: VecDeque<Cow<'a, str>>,
+    tag_name: &'a str,
+    next_nodes: VecDeque<Token>,
+    stack: VecDeque<Box<str>>,
     foreign_context: VecDeque<bool>,
-    attribs: BTreeMap<UniCase<&'a str>, Option<(Cow<'a, str>, QuoteType)>>,
-    attrib_value: Option<Cow<'a, str>>,
-    attrib_name: UniCase<&'a str>,
+    attribs: BTreeMap<UniCase<Box<str>>, Option<(Box<str>, QuoteType)>>,
+    attrib_value: Option<String>,
+    attrib_name: UniCase<Box<str>>,
 }
 
 fn get_instruction_name(value: &str) -> Cow<str> {
@@ -66,22 +66,22 @@ impl<'i> Parser<'i> {
         Parser {
             buffer: bytes,
             html_mode: !options.xml_mode,
-            tokenizer: Tokenizer::new(bytes, &options.tokenizer_options),
-            tag_name: Cow::from(""),
+            tokenizer: Tokenizer::new(&bytes, &options.tokenizer_options),
+            tag_name: "".into(),
             next_nodes: Default::default(),
             stack: Default::default(),
             foreign_context: VecDeque::from([options.xml_mode]),
             attribs: Default::default(),
             attrib_value: None,
-            attrib_name: "".into(),
+            attrib_name: Default::default(),
         }
     }
 
     unsafe fn on_text(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: Cow::from(str::from_utf8_unchecked(
-                &self.buffer[tokenizer_token.start..tokenizer_token.end],
-            )),
+            data: String::from_utf8_unchecked(
+                self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned(),
+            ).into_boxed_str(),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -92,7 +92,7 @@ impl<'i> Parser<'i> {
         let data_string = char::from_u32(tokenizer_token.code).unwrap();
 
         self.next_nodes.push_back(Token {
-            data: Cow::from(data_string.to_string()),
+            data: data_string.to_string().into_boxed_str(),
             attrs: None,
             kind: TokenKind::Text,
             is_implied: false,
@@ -104,14 +104,14 @@ impl<'i> Parser<'i> {
     }
 
     unsafe fn on_open_tag_name(&mut self, tokenizer_token: TokenizerToken) {
-        let name = Cow::from(str::from_utf8_unchecked(
+        let name = str::from_utf8_unchecked(
             &self.buffer[tokenizer_token.start..tokenizer_token.end],
-        ));
+        );
 
         self.emit_open_tag(name);
     }
 
-    fn emit_open_tag(&mut self, name: Cow<'i, str>) {
+    fn emit_open_tag(&mut self, name: &'i str) {
         self.tag_name = name;
 
         let open_implies_close_option: Option<fn(tag_name: &str) -> bool> =
@@ -130,7 +130,7 @@ impl<'i> Parser<'i> {
             }
         }
         if !self.is_void_element(&self.tag_name) {
-            self.stack.push_front(self.tag_name.to_owned());
+            self.stack.push_front(self.tag_name.to_string().into_boxed_str());
 
             if self.html_mode {
                 if is_foreign_context_elements(&self.tag_name) {
@@ -147,7 +147,7 @@ impl<'i> Parser<'i> {
 
         let close_node_option = if is_void {
             Some(Token {
-                data: self.tag_name.to_owned(),
+                data: self.tag_name.to_string().into_boxed_str(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: true,
@@ -157,7 +157,7 @@ impl<'i> Parser<'i> {
         };
 
         self.next_nodes.push_back(Token {
-            data: self.tag_name.to_owned(),
+            data: self.tag_name.to_string().into_boxed_str(),
             attrs: if self.attribs.is_empty() {
                 None
             } else {
@@ -185,7 +185,7 @@ impl<'i> Parser<'i> {
         }
 
         if !self.is_void_element(name) {
-            let pos = self.stack.iter().position(|n| n == name);
+            let pos = self.stack.iter().position(|n| &**n == name);
             if let Some(index) = pos {
                 for i in 0..index + 1 {
                     let tag = self.stack.pop_front().unwrap();
@@ -198,19 +198,19 @@ impl<'i> Parser<'i> {
                 }
             } else if self.html_mode && name == "p" {
                 // Implicit open before close
-                self.emit_open_tag(Cow::Borrowed("p"));
+                self.emit_open_tag("p");
                 self.close_current_tag(true);
             }
         } else if self.html_mode && name == "br" {
             // We can't use `emit_open_tag` for implicit open, as `br` would be implicitly closed.
             self.next_nodes.push_back(Token {
-                data: Cow::Borrowed("br"),
+                data: "br".to_string().into_boxed_str(),
                 attrs: None,
                 kind: TokenKind::OpenTag,
                 is_implied: false,
             });
             self.next_nodes.push_back(Token {
-                data: Cow::Borrowed("br"),
+                data: "br".to_string().into_boxed_str(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: false,
@@ -231,10 +231,10 @@ impl<'i> Parser<'i> {
         self.end_open_tag(is_open_implied);
 
         // Self-closing tags will be on the top of the stack
-        if self.stack[0] == self.tag_name {
+        if &*self.stack[0] == self.tag_name {
             // If the opening tag isn't implied, the closing tag has to be implied.
             self.next_nodes.push_back(Token {
-                data: take(&mut self.tag_name),
+                data: self.tag_name.to_string().into_boxed_str(),
                 attrs: None,
                 kind: TokenKind::CloseTag,
                 is_implied: !is_open_implied,
@@ -247,22 +247,22 @@ impl<'i> Parser<'i> {
         let name: &str =
             str::from_utf8_unchecked(&self.buffer[tokenizer_token.start..tokenizer_token.end]);
 
-        self.attrib_name = UniCase::new(name);
+        self.attrib_name = UniCase::new(name.to_string().into_boxed_str());
     }
 
     unsafe fn on_attrib_data(&mut self, tokenizer_token: TokenizerToken) {
         let new_attrib = match self.attrib_value.take() {
-            None => Some(Cow::from(str::from_utf8_unchecked(
-                &self.buffer[tokenizer_token.start..tokenizer_token.end],
-            ))),
+            None => Some(String::from_utf8_unchecked(
+                self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned(),
+            )),
             Some(existing_value) => {
-                let mut modified_cow = existing_value.into_owned();
+                let mut modified_cow = existing_value;
 
                 modified_cow.push_str(str::from_utf8_unchecked(
                     &self.buffer[tokenizer_token.start..tokenizer_token.end],
                 ));
 
-                Some(Cow::Owned(modified_cow))
+                Some(modified_cow)
             }
         };
 
@@ -273,12 +273,12 @@ impl<'i> Parser<'i> {
         let c = char::from_u32(tokenizer_token.code).unwrap();
 
         let new_attrib = match self.attrib_value.take() {
-            None => Some(Cow::Owned(c.to_string())),
+            None => Some(c.to_string()),
             Some(existing_value) => {
-                let mut owned_value = existing_value.into_owned();
+                let mut owned_value = existing_value;
                 owned_value.push(c);
 
-                Some(Cow::Owned(owned_value))
+                Some(owned_value)
             }
         };
 
@@ -287,12 +287,12 @@ impl<'i> Parser<'i> {
 
     fn on_attrib_end(&mut self, tokenizer_token: TokenizerToken) {
         if !self.attribs.contains_key(&self.attrib_name) {
-            let new_attribute: Option<(Cow<str>, QuoteType)> = self
+            let new_attribute: Option<(Box<str>, QuoteType)> = self
                 .attrib_value
                 .as_mut()
-                .map(|attrib_value| (attrib_value.to_owned(), tokenizer_token.quote));
+                .map(|attrib_value| (attrib_value.clone().into_boxed_str(), tokenizer_token.quote));
 
-            self.attribs.insert(self.attrib_name, new_attribute);
+            self.attribs.insert(self.attrib_name.to_owned(), new_attribute);
         }
         self.attrib_value = None;
     }
@@ -303,7 +303,7 @@ impl<'i> Parser<'i> {
         let name = get_instruction_name(&value);
 
         self.next_nodes.push_back(Token {
-            data: name.to_owned(),
+            data: name.to_string().into_boxed_str(),
             attrs: None,
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -316,7 +316,7 @@ impl<'i> Parser<'i> {
         let name = get_instruction_name(value);
 
         self.next_nodes.push_back(Token {
-            data: name,
+            data: name.to_string().into_boxed_str(),
             attrs: None,
             kind: TokenKind::ProcessingInstruction,
             is_implied: false,
@@ -325,15 +325,15 @@ impl<'i> Parser<'i> {
 
     unsafe fn on_comment(&mut self, tokenizer_token: TokenizerToken) {
         self.next_nodes.push_back(Token {
-            data: Cow::from(str::from_utf8_unchecked(
-                &self.buffer[tokenizer_token.start..tokenizer_token.end],
-            )),
+            data: String::from_utf8_unchecked(
+                self.buffer[tokenizer_token.start..tokenizer_token.end].to_owned(),
+            ).into_boxed_str(),
             attrs: None,
             kind: TokenKind::Comment,
             is_implied: false,
         });
         self.next_nodes.push_back(Token {
-            data: Cow::Borrowed(""),
+            data: "".into(),
             attrs: None,
             kind: TokenKind::CommentEnd,
             is_implied: false,
@@ -358,7 +358,7 @@ impl<'i> Parser<'i> {
 
         self.stack.clear();
     }
-    unsafe fn parser_next(&mut self) -> Option<Token<'i>> {
+    unsafe fn parser_next(&mut self) -> Option<Token> {
         loop {
             if let Some(existing_node) = self.next_nodes.pop_front() {
                 return Some(existing_node);
@@ -392,10 +392,10 @@ impl<'i> Parser<'i> {
     }
 }
 
-impl<'i> Iterator for Parser<'i> {
-    type Item = Token<'i>;
+impl <'a> Iterator for Parser<'a> {
+    type Item = Token;
 
-    fn next(&mut self) -> Option<Token<'i>> {
+    fn next(&mut self) -> Option<Token> {
         unsafe { self.parser_next() }
     }
 }
