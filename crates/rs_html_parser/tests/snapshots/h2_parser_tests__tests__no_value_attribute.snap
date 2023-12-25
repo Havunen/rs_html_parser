@@ -6,8 +6,10 @@ expression: "parser_test(\"<div aaaaaaa >\")"
     Token {
         data: "div",
         attrs: Some(
-            {
-                "aaaaaaa": None,
+            UniCaseBTreeMap {
+                inner: {
+                    "aaaaaaa": None,
+                },
             },
         ),
         kind: OpenTag,

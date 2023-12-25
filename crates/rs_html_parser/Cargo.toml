@@ -23,7 +23,7 @@ regex = "1.10.2"
 lazy_static = "1.4.0"
 criterion = "0.5.1"
 unicase = "2.7.0"
-unicase_collections = "0.2.0"
+unicase_collections = "0.2.1"
 
 [dev-dependencies]
 insta = {version = "1.34.0"}

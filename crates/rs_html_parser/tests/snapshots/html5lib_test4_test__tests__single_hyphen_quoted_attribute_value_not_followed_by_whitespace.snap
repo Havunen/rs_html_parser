@@ -6,14 +6,16 @@ expression: "parser_test(r####\"<foo a='b'c>\"####)"
     Token {
         data: "foo",
         attrs: Some(
-            {
-                "a": Some(
-                    (
-                        "b",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "a": Some(
+                        (
+                            "b",
+                            Single,
+                        ),
                     ),
-                ),
-                "c": None,
+                    "c": None,
+                },
             },
         ),
         kind: OpenTag,

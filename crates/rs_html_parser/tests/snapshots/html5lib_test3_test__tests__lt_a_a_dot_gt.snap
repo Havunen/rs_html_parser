@@ -6,9 +6,11 @@ expression: "parser_test(r####\"<a a .>\"####)"
     Token {
         data: "a",
         attrs: Some(
-            {
-                ".": None,
-                "a": None,
+            UniCaseBTreeMap {
+                inner: {
+                    ".": None,
+                    "a": None,
+                },
             },
         ),
         kind: OpenTag,

@@ -6,8 +6,10 @@ expression: "parser_test(r####\"<a ay>\"####)"
     Token {
         data: "a",
         attrs: Some(
-            {
-                "ay": None,
+            UniCaseBTreeMap {
+                inner: {
+                    "ay": None,
+                },
             },
         ),
         kind: OpenTag,

@@ -6,13 +6,15 @@ expression: "parser_test(\"<img src=\\\"?&image_uri=1&&image;=2&image=3\\\"/>?&i
     Token {
         data: "img",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "?&image_uri=1&ℑ=2&image=3",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "?&image_uri=1&ℑ=2&image=3",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

@@ -30,13 +30,15 @@ expression: result
     Token {
         data: "head",
         attrs: Some(
-            {
-                "prefix": Some(
-                    (
-                        "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "prefix": Some(
+                        (
+                            "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -51,13 +53,15 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "charset": Some(
-                    (
-                        "utf-8",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "charset": Some(
+                        (
+                            "utf-8",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -78,19 +82,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "IE=edge",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "IE=edge",
+                            Double,
+                        ),
                     ),
-                ),
-                "http-equiv": Some(
-                    (
-                        "X-UA-Compatible",
-                        Double,
+                    "http-equiv": Some(
+                        (
+                            "X-UA-Compatible",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -135,31 +141,33 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/opensearch.xml",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/opensearch.xml",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "search",
-                        Double,
+                    "rel": Some(
+                        (
+                            "search",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "GitHub",
-                        Double,
+                    "title": Some(
+                        (
+                            "GitHub",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "application/opensearchdescription+xml",
-                        Double,
+                    "type": Some(
+                        (
+                            "application/opensearchdescription+xml",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -180,25 +188,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://github.com/fluidicon.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://github.com/fluidicon.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "fluid-icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "fluid-icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "GitHub",
-                        Double,
+                    "title": Some(
+                        (
+                            "GitHub",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -219,25 +229,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/apple-touch-icon-114.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/apple-touch-icon-114.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "apple-touch-icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "apple-touch-icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "sizes": Some(
-                    (
-                        "57x57",
-                        Double,
+                    "sizes": Some(
+                        (
+                            "57x57",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -258,25 +270,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/apple-touch-icon-114.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/apple-touch-icon-114.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "apple-touch-icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "apple-touch-icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "sizes": Some(
-                    (
-                        "114x114",
-                        Double,
+                    "sizes": Some(
+                        (
+                            "114x114",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -297,25 +311,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/apple-touch-icon-144.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/apple-touch-icon-144.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "apple-touch-icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "apple-touch-icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "sizes": Some(
-                    (
-                        "72x72",
-                        Double,
+                    "sizes": Some(
+                        (
+                            "72x72",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -336,25 +352,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/apple-touch-icon-144.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/apple-touch-icon-144.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "apple-touch-icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "apple-touch-icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "sizes": Some(
-                    (
-                        "144x144",
-                        Double,
+                    "sizes": Some(
+                        (
+                            "144x144",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -375,25 +393,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://github-media-downloads.s3.amazonaws.com/github-logo.svg",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://github-media-downloads.s3.amazonaws.com/github-logo.svg",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "logo",
-                        Double,
+                    "rel": Some(
+                        (
+                            "logo",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "image/svg",
-                        Double,
+                    "type": Some(
+                        (
+                            "image/svg",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -414,19 +434,21 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "assets",
-                        Double,
+                    "rel": Some(
+                        (
+                            "assets",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -447,19 +469,21 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/_sockets",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/_sockets",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "xhr-socket",
-                        Double,
+                    "rel": Some(
+                        (
+                            "xhr-socket",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -480,19 +504,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "/windows-tile.png",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "/windows-tile.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "msapplication-TileImage",
-                        Double,
+                    "name": Some(
+                        (
+                            "msapplication-TileImage",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -513,19 +539,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "#ffffff",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "#ffffff",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "msapplication-TileColor",
-                        Double,
+                    "name": Some(
+                        (
+                            "msapplication-TileColor",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -546,20 +574,22 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "data-pjax-transient": None,
-                "name": Some(
-                    (
-                        "selected-link",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "data-pjax-transient": None,
+                    "name": Some(
+                        (
+                            "selected-link",
+                            Double,
+                        ),
                     ),
-                ),
-                "value": Some(
-                    (
-                        "watercooler",
-                        Double,
+                    "value": Some(
+                        (
+                            "watercooler",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -580,19 +610,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "collector.githubapp.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "collector.githubapp.com",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "octolytics-host",
-                        Double,
+                    "name": Some(
+                        (
+                            "octolytics-host",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -607,19 +639,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "github",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "github",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "octolytics-app-id",
-                        Double,
+                    "name": Some(
+                        (
+                            "octolytics-app-id",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -640,25 +674,27 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/favicon.ico",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/favicon.ico",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "icon",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "image/x-icon",
-                        Double,
+                    "type": Some(
+                        (
+                            "image/x-icon",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -679,19 +715,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "authenticity_token",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "authenticity_token",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "csrf-param",
-                        Double,
+                    "name": Some(
+                        (
+                            "csrf-param",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -712,19 +750,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "yJc/28QZv50YaISSk+ieEKJ1HQNJZLXEr2XKl5K8U3A=",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "yJc/28QZv50YaISSk+ieEKJ1HQNJZLXEr2XKl5K8U3A=",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "csrf-token",
-                        Double,
+                    "name": Some(
+                        (
+                            "csrf-token",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -745,31 +785,33 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/assets/github-a4c524f2138ecc4dd5bf9b8a6b1517bf38aa7b65.css",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/assets/github-a4c524f2138ecc4dd5bf9b8a6b1517bf38aa7b65.css",
+                            Double,
+                        ),
                     ),
-                ),
-                "media": Some(
-                    (
-                        "all",
-                        Double,
+                    "media": Some(
+                        (
+                            "all",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "stylesheet",
-                        Double,
+                    "rel": Some(
+                        (
+                            "stylesheet",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/css",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/css",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -790,31 +832,33 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/assets/github2-d2a693e8a6a75b6cde3420333a9e70bd2a2e20a4.css",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/assets/github2-d2a693e8a6a75b6cde3420333a9e70bd2a2e20a4.css",
+                            Double,
+                        ),
                     ),
-                ),
-                "media": Some(
-                    (
-                        "all",
-                        Double,
+                    "media": Some(
+                        (
+                            "all",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "stylesheet",
-                        Double,
+                    "rel": Some(
+                        (
+                            "stylesheet",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/css",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/css",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -835,19 +879,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/assets/frameworks-5c60c478b1e0f90d149f11ed15aa52edd2996882.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/assets/frameworks-5c60c478b1e0f90d149f11ed15aa52edd2996882.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -868,19 +914,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/assets/github-dca362d39ce6c15fd1d471169cd12026ca7ff8cc.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/assets/github-dca362d39ce6c15fd1d471169cd12026ca7ff8cc.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -901,19 +949,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "4f7f9c630bd61e5b628d7029fe05b824",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "4f7f9c630bd61e5b628d7029fe05b824",
+                            Double,
+                        ),
                     ),
-                ),
-                "http-equiv": Some(
-                    (
-                        "x-pjax-version",
-                        Double,
+                    "http-equiv": Some(
+                        (
+                            "x-pjax-version",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -934,19 +984,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "Build software better, together.",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "Build software better, together.",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "description",
-                        Double,
+                    "name": Some(
+                        (
+                            "description",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -979,13 +1031,15 @@ expression: result
     Token {
         data: "body",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "logged_out    env-production  ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "logged_out    env-production  ",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1000,13 +1054,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "wrapper",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "wrapper",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1021,13 +1077,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "header header-logged-out",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "header header-logged-out",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1042,13 +1100,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "container clearfix",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "container clearfix",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1063,19 +1123,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "header-logo-wordmark",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "header-logo-wordmark",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "https://github.com/",
-                        Double,
+                    "href": Some(
+                        (
+                            "https://github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1102,13 +1164,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "header-actions",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "header-actions",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1123,19 +1187,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "button primary",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "button primary",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/signup",
-                        Double,
+                    "href": Some(
+                        (
+                            "/signup",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1162,19 +1228,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "button",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "button",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/login?return_to=%2Fblog%2F1499-the-revolution-will-be-forked",
-                        Double,
+                    "href": Some(
+                        (
+                            "/login?return_to=%2Fblog%2F1499-the-revolution-will-be-forked",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1213,13 +1281,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "command-bar js-command-bar  ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "command-bar js-command-bar  ",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1234,13 +1304,15 @@ expression: result
     Token {
         data: "ul",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "top-nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "top-nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1255,13 +1327,15 @@ expression: result
     Token {
         data: "li",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "explore",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "explore",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1270,13 +1344,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/explore",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/explore",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1309,13 +1385,15 @@ expression: result
     Token {
         data: "li",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "features",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "features",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1324,13 +1402,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/features",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/features",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1363,13 +1443,15 @@ expression: result
     Token {
         data: "li",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "enterprise",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "enterprise",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1378,13 +1460,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://enterprise.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://enterprise.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1417,13 +1501,15 @@ expression: result
     Token {
         data: "li",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1432,13 +1518,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/blog",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/blog",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1483,37 +1571,39 @@ expression: result
     Token {
         data: "form",
         attrs: Some(
-            {
-                "accept-charset": Some(
-                    (
-                        "UTF-8",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "accept-charset": Some(
+                        (
+                            "UTF-8",
+                            Double,
+                        ),
                     ),
-                ),
-                "action": Some(
-                    (
-                        "/search",
-                        Double,
+                    "action": Some(
+                        (
+                            "/search",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "command-bar-form",
-                        Double,
+                    "class": Some(
+                        (
+                            "command-bar-form",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "top_search_form",
-                        Double,
+                    "id": Some(
+                        (
+                            "top_search_form",
+                            Double,
+                        ),
                     ),
-                ),
-                "method": Some(
-                    (
-                        "get",
-                        Double,
+                    "method": Some(
+                        (
+                            "get",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1528,31 +1618,33 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "advanced-search-icon tooltipped downwards command-bar-search",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "advanced-search-icon tooltipped downwards command-bar-search",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/search/advanced",
-                        Double,
+                    "href": Some(
+                        (
+                            "/search/advanced",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "advanced_search",
-                        Double,
+                    "id": Some(
+                        (
+                            "advanced_search",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "Advanced search",
-                        Double,
+                    "title": Some(
+                        (
+                            "Advanced search",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1561,13 +1653,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-gear ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-gear ",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1594,49 +1688,51 @@ expression: result
     Token {
         data: "input",
         attrs: Some(
-            {
-                "autocapitalize": Some(
-                    (
-                        "off",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "autocapitalize": Some(
+                        (
+                            "off",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-hotkey": Some(
-                    (
-                        "/ s",
-                        Double,
+                    "data-hotkey": Some(
+                        (
+                            "/ s",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "js-command-bar-field",
-                        Double,
+                    "id": Some(
+                        (
+                            "js-command-bar-field",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "q",
-                        Double,
+                    "name": Some(
+                        (
+                            "q",
+                            Double,
+                        ),
                     ),
-                ),
-                "placeholder": Some(
-                    (
-                        "Search or type a command",
-                        Double,
+                    "placeholder": Some(
+                        (
+                            "Search or type a command",
+                            Double,
+                        ),
                     ),
-                ),
-                "tabindex": Some(
-                    (
-                        "1",
-                        Double,
+                    "tabindex": Some(
+                        (
+                            "1",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text",
-                        Double,
+                    "type": Some(
+                        (
+                            "text",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1657,19 +1753,21 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon help tooltipped downwards",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon help tooltipped downwards",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "Show command bar help",
-                        Double,
+                    "title": Some(
+                        (
+                            "Show command bar help",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1684,13 +1782,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-question",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-question",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1723,25 +1823,27 @@ expression: result
     Token {
         data: "input",
         attrs: Some(
-            {
-                "name": Some(
-                    (
-                        "ref",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "name": Some(
+                        (
+                            "ref",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "hidden",
-                        Double,
+                    "type": Some(
+                        (
+                            "hidden",
+                            Double,
+                        ),
                     ),
-                ),
-                "value": Some(
-                    (
-                        "cmdform",
-                        Double,
+                    "value": Some(
+                        (
+                            "cmdform",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1762,13 +1864,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "divider-vertical",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "divider-vertical",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1837,13 +1941,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "site clearfix",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "site clearfix",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1858,20 +1964,22 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "context-loader-container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "context-loader-container",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-pjax-container": None,
-                "id": Some(
-                    (
-                        "site-container",
-                        Double,
+                    "data-pjax-container": None,
+                    "id": Some(
+                        (
+                            "site-container",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1886,14 +1994,16 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "data-pjax-container": None,
-                "id": Some(
-                    (
-                        "blog-main",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "data-pjax-container": None,
+                    "id": Some(
+                        (
+                            "blog-main",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1908,13 +2018,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "pagehead separation",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "pagehead separation",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1929,13 +2041,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "container",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1950,20 +2064,22 @@ expression: result
     Token {
         data: "form",
         attrs: Some(
-            {
-                "action": Some(
-                    (
-                        "/blog/search",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "action": Some(
+                        (
+                            "/blog/search",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "blog-search",
-                        Double,
+                    "class": Some(
+                        (
+                            "blog-search",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-pjax": None,
+                    "data-pjax": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -1978,13 +2094,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-search",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-search",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2005,43 +2123,45 @@ expression: result
     Token {
         data: "input",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-search-input",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-search-input",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "blog-search",
-                        Double,
+                    "id": Some(
+                        (
+                            "blog-search",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "q",
-                        Double,
+                    "name": Some(
+                        (
+                            "q",
+                            Double,
+                        ),
                     ),
-                ),
-                "tabindex": Some(
-                    (
-                        "2",
-                        Double,
+                    "tabindex": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text",
-                        Double,
+                    "type": Some(
+                        (
+                            "text",
+                            Double,
+                        ),
                     ),
-                ),
-                "value": Some(
-                    (
-                        "",
-                        Double,
+                    "value": Some(
+                        (
+                            "",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2086,19 +2206,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/blog",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/blog",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "blog-home",
-                        Double,
+                    "id": Some(
+                        (
+                            "blog-home",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2107,13 +2229,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-home",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-home",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2134,13 +2258,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/blog/1499-the-revolution-will-be-forked",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/blog/1499-the-revolution-will-be-forked",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2215,19 +2341,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "container",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "blog-main",
-                        Double,
+                    "id": Some(
+                        (
+                            "blog-main",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2242,13 +2370,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-aside",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-aside",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2263,14 +2393,16 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "menu-container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "menu-container",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-pjax": None,
+                    "data-pjax": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -2285,13 +2417,15 @@ expression: result
     Token {
         data: "ul",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "menu",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "menu",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2312,25 +2446,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item ",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        " /blog",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            " /blog",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2369,25 +2505,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item ",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        "ship /blog/category/ship",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            "ship /blog/category/ship",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog/category/ship",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog/category/ship",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2426,25 +2564,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item ",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        "engineering /blog/category/engineering",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            "engineering /blog/category/engineering",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog/category/engineering",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog/category/engineering",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2483,25 +2623,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item ",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        "enterprise /blog/category/enterprise",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            "enterprise /blog/category/enterprise",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog/category/enterprise",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog/category/enterprise",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2540,25 +2682,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item ",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item ",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        "drinkup /blog/category/drinkup",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            "drinkup /blog/category/drinkup",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog/category/drinkup",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog/category/drinkup",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2597,25 +2741,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-selected-navigation-item selected",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-selected-navigation-item selected",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-selected-links": Some(
-                    (
-                        "watercooler /blog/category/watercooler",
-                        Double,
+                    "data-selected-links": Some(
+                        (
+                            "watercooler /blog/category/watercooler",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/blog/category/watercooler",
-                        Double,
+                    "href": Some(
+                        (
+                            "/blog/category/watercooler",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2672,20 +2818,22 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "rss",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "rss",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-pjax": None,
-                "href": Some(
-                    (
-                        "/blog/subscribe",
-                        Double,
+                    "data-pjax": None,
+                    "href": Some(
+                        (
+                            "/blog/subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2700,13 +2848,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-rss",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-rss",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2751,13 +2901,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-content",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-content",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2772,13 +2924,15 @@ expression: result
     Token {
         data: "ul",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-post-meta",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-post-meta",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2805,13 +2959,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-calendar",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-calendar",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2844,13 +3000,15 @@ expression: result
     Token {
         data: "li",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "vcard fn",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "vcard fn",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2865,31 +3023,33 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "author-avatar",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "author-avatar",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "18",
-                        Double,
+                    "height": Some(
+                        (
+                            "18",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "https://secure.gravatar.com/avatar/ea353bd28baa1aefaefae736a19fcf2a?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
-                        Double,
+                    "src": Some(
+                        (
+                            "https://secure.gravatar.com/avatar/ea353bd28baa1aefaefae736a19fcf2a?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "18",
-                        Double,
+                    "width": Some(
+                        (
+                            "18",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2910,13 +3070,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/benbalter",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/benbalter",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2967,13 +3129,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-file-directory",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-file-directory",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2994,13 +3158,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/blog/category/watercooler",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/blog/category/watercooler",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3051,13 +3217,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-post-body markdown-body",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-post-body markdown-body",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3108,13 +3276,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://project-open-data.github.io",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://project-open-data.github.io",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3141,13 +3311,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://project-open-data.github.io/policy-memo/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://project-open-data.github.io/policy-memo/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3174,13 +3346,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://github.com/project-open-data",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://github.com/project-open-data",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3255,13 +3429,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://pages.github.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://pages.github.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3312,13 +3488,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://github.com/unitedstates/congress-legislators/blob/master/executive.yaml",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://github.com/unitedstates/congress-legislators/blob/master/executive.yaml",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3345,13 +3523,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://github.com/Chicago/osd-bike-routes",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://github.com/Chicago/osd-bike-routes",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3378,49 +3558,51 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "absmiddle",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "absmiddle",
+                            Double,
+                        ),
                     ),
-                ),
-                "alt": Some(
-                    (
-                        ":+1:",
-                        Double,
+                    "alt": Some(
+                        (
+                            ":+1:",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "emoji",
-                        Double,
+                    "class": Some(
+                        (
+                            "emoji",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "20",
-                        Double,
+                    "height": Some(
+                        (
+                            "20",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "https://a248.e.akamai.net/assets.github.com/images/icons/emoji/+1.png",
-                        Double,
+                    "src": Some(
+                        (
+                            "https://a248.e.akamai.net/assets.github.com/images/icons/emoji/+1.png",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        ":+1:",
-                        Double,
+                    "title": Some(
+                        (
+                            ":+1:",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "20",
-                        Double,
+                    "width": Some(
+                        (
+                            "20",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3459,19 +3641,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://f.cloud.github.com/assets/282759/483644/98b3c7d6-b8c3-11e2-882e-cb3a11a3de6e.jpeg",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://f.cloud.github.com/assets/282759/483644/98b3c7d6-b8c3-11e2-882e-cb3a11a3de6e.jpeg",
+                            Double,
+                        ),
                     ),
-                ),
-                "target": Some(
-                    (
-                        "_blank",
-                        Double,
+                    "target": Some(
+                        (
+                            "_blank",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3480,25 +3664,27 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "687474703a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f62617261636b746f6361742e6a7067",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "687474703a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f62617261636b746f6361742e6a7067",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "https://f.cloud.github.com/assets/282759/483644/98b3c7d6-b8c3-11e2-882e-cb3a11a3de6e.jpeg",
-                        Double,
+                    "src": Some(
+                        (
+                            "https://f.cloud.github.com/assets/282759/483644/98b3c7d6-b8c3-11e2-882e-cb3a11a3de6e.jpeg",
+                            Double,
+                        ),
                     ),
-                ),
-                "style": Some(
-                    (
-                        "max-width:100%;",
-                        Double,
+                    "style": Some(
+                        (
+                            "max-width:100%;",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3543,13 +3729,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-feedback",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-feedback",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3564,13 +3752,15 @@ expression: result
     Token {
         data: "h2",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-feedback-header",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-feedback-header",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3585,19 +3775,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://twitter.com/intent/tweet?text=@github%20&related=github&url=https://github.com/blog/1499-the-revolution-will-be-forked",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://twitter.com/intent/tweet?text=@github%20&related=github&url=https://github.com/blog/1499-the-revolution-will-be-forked",
+                            Double,
+                        ),
                     ),
-                ),
-                "target": Some(
-                    (
-                        "blank",
-                        Double,
+                    "target": Some(
+                        (
+                            "blank",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3636,13 +3828,15 @@ expression: result
     Token {
         data: "p",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "blog-feedback-description",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "blog-feedback-description",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3657,13 +3851,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "mailto:support@github.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "mailto:support@github.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3762,13 +3958,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "modal-backdrop",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "modal-backdrop",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3801,13 +3999,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "footer-push",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "footer-push",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3882,13 +4082,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "footer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3903,13 +4105,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "container clearfix",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "container clearfix",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3924,13 +4128,15 @@ expression: result
     Token {
         data: "dl",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer_nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer_nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3975,13 +4181,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/about",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/about",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4020,13 +4228,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/blog",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/blog",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4065,13 +4275,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/contact",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/contact",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4122,13 +4334,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://enterprise.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://enterprise.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4167,13 +4381,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://status.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://status.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4218,13 +4434,15 @@ expression: result
     Token {
         data: "dl",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer_nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer_nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4269,13 +4487,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://mac.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://mac.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4314,13 +4534,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://windows.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://windows.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4359,13 +4581,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://eclipse.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://eclipse.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4404,13 +4628,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://mobile.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://mobile.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4455,13 +4681,15 @@ expression: result
     Token {
         data: "dl",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer_nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer_nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4506,13 +4734,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://get.gaug.es/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://get.gaug.es/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4551,13 +4781,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://speakerdeck.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://speakerdeck.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4596,13 +4828,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://gist.github.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://gist.github.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4641,13 +4875,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://jobs.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://jobs.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4692,13 +4928,15 @@ expression: result
     Token {
         data: "dl",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer_nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer_nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4743,13 +4981,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://help.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://help.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4788,13 +5028,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://developer.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://developer.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4833,13 +5075,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://github.github.com/github-flavored-markdown/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://github.github.com/github-flavored-markdown/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4878,13 +5122,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://pages.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://pages.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4929,13 +5175,15 @@ expression: result
     Token {
         data: "dl",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer_nav",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer_nav",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4980,13 +5228,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://training.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://training.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5025,13 +5275,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/edu",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/edu",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5082,13 +5334,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://shop.github.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://shop.github.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5127,13 +5381,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/plans",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/plans",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5184,13 +5440,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://octodex.github.com/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://octodex.github.com/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5235,13 +5493,15 @@ expression: result
     Token {
         data: "hr",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer-divider",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer-divider",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5262,13 +5522,15 @@ expression: result
     Token {
         data: "p",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "right",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "right",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5289,13 +5551,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "title": Some(
-                    (
-                        "0.01789s from fe1.rs.github.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "title": Some(
+                        (
+                            "0.01789s from fe1.rs.github.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5334,19 +5598,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "/",
-                        Double,
+                    "href": Some(
+                        (
+                            "/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5361,13 +5627,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "mega-octicon octicon-mark-github",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "mega-octicon octicon-mark-github",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5400,13 +5668,15 @@ expression: result
     Token {
         data: "ul",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "legal",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "legal",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5427,13 +5697,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/site/terms",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/site/terms",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5472,13 +5744,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/site/privacy",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/site/privacy",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5517,13 +5791,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/security",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/security",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5616,19 +5892,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "fullscreen-overlay js-fullscreen-overlay",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "fullscreen-overlay js-fullscreen-overlay",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "fullscreen_overlay",
-                        Double,
+                    "id": Some(
+                        (
+                            "fullscreen_overlay",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5643,13 +5921,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "fullscreen-container js-fullscreen-container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "fullscreen-container js-fullscreen-container",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5664,13 +5944,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "textarea-wrap",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "textarea-wrap",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5685,37 +5967,39 @@ expression: result
     Token {
         data: "textarea",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "js-fullscreen-contents",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "js-fullscreen-contents",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-suggester": Some(
-                    (
-                        "fullscreen_suggester",
-                        Double,
+                    "data-suggester": Some(
+                        (
+                            "fullscreen_suggester",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "fullscreen-contents",
-                        Double,
+                    "id": Some(
+                        (
+                            "fullscreen-contents",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "fullscreen-contents",
-                        Double,
+                    "name": Some(
+                        (
+                            "fullscreen-contents",
+                            Double,
+                        ),
                     ),
-                ),
-                "placeholder": Some(
-                    (
-                        "",
-                        Double,
+                    "placeholder": Some(
+                        (
+                            "",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5760,13 +6044,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "fullscreen-sidebar",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "fullscreen-sidebar",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5781,25 +6067,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "exit-fullscreen js-exit-fullscreen tooltipped leftwards",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "exit-fullscreen js-exit-fullscreen tooltipped leftwards",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "#",
-                        Double,
+                    "href": Some(
+                        (
+                            "#",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "Exit Zen Mode",
-                        Double,
+                    "title": Some(
+                        (
+                            "Exit Zen Mode",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5814,13 +6102,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "mega-octicon octicon-screen-normal",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "mega-octicon octicon-screen-normal",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5853,25 +6143,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "theme-switcher js-theme-switcher tooltipped leftwards",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "theme-switcher js-theme-switcher tooltipped leftwards",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "#",
-                        Double,
+                    "href": Some(
+                        (
+                            "#",
+                            Double,
+                        ),
                     ),
-                ),
-                "title": Some(
-                    (
-                        "Switch themes",
-                        Double,
+                    "title": Some(
+                        (
+                            "Switch themes",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5886,13 +6178,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-color-mode",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-color-mode",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5949,19 +6243,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "flash flash-error",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "flash flash-error",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "ajax-error-message",
-                        Double,
+                    "id": Some(
+                        (
+                            "ajax-error-message",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5976,13 +6272,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-alert",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-alert",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6003,19 +6301,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "octicon octicon-remove-close ajax-error-dismiss",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "octicon octicon-remove-close ajax-error-dismiss",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "#",
-                        Double,
+                    "href": Some(
+                        (
+                            "#",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6048,25 +6348,27 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "data-host": Some(
-                    (
-                        "fe1",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "data-host": Some(
+                        (
+                            "fe1",
+                            Single,
+                        ),
                     ),
-                ),
-                "data-time": Some(
-                    (
-                        "0.01820",
-                        Single,
+                    "data-time": Some(
+                        (
+                            "0.01820",
+                            Single,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "server_response_time",
-                        Single,
+                    "id": Some(
+                        (
+                            "server_response_time",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

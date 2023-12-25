@@ -18,19 +18,21 @@ expression: result
     Token {
         data: "html",
         attrs: Some(
-            {
-                "lang": Some(
-                    (
-                        "en-US",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "lang": Some(
+                        (
+                            "en-US",
+                            Double,
+                        ),
                     ),
-                ),
-                "xmlns": Some(
-                    (
-                        "http://www.w3.org/1999/xhtml",
-                        Double,
+                    "xmlns": Some(
+                        (
+                            "http://www.w3.org/1999/xhtml",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -45,13 +47,15 @@ expression: result
     Token {
         data: "head",
         attrs: Some(
-            {
-                "profile": Some(
-                    (
-                        "http://gmpg.org/xfn/11",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "profile": Some(
+                        (
+                            "http://gmpg.org/xfn/11",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -66,19 +70,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "text/html; charset=UTF-8",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "text/html; charset=UTF-8",
+                            Double,
+                        ),
                     ),
-                ),
-                "http-equiv": Some(
-                    (
-                        "Content-Type",
-                        Double,
+                    "http-equiv": Some(
+                        (
+                            "Content-Type",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -123,19 +129,21 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/images/main_images/favicon.ico",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/images/main_images/favicon.ico",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "shortcut icon",
-                        Double,
+                    "rel": Some(
+                        (
+                            "shortcut icon",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -156,19 +164,21 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
+                            Single,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "canonical",
-                        Single,
+                    "rel": Some(
+                        (
+                            "canonical",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -189,13 +199,15 @@ expression: result
     Token {
         data: "style",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/css",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/css",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -222,19 +234,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "Young star suggests our sun was a feisty toddler, astronomers say",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "Young star suggests our sun was a feisty toddler, astronomers say",
+                            Double,
+                        ),
                     ),
-                ),
-                "property": Some(
-                    (
-                        "og:title",
-                        Double,
+                    "property": Some(
+                        (
+                            "og:title",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -255,19 +269,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
+                            Double,
+                        ),
                     ),
-                ),
-                "property": Some(
-                    (
-                        "og:url",
-                        Double,
+                    "property": Some(
+                        (
+                            "og:url",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -288,85 +304,21 @@ expression: result
     Token {
         data: "meta",
         attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/young-star.jpg",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/young-star.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "property": Some(
-                    (
-                        "og:image",
-                        Double,
+                    "property": Some(
+                        (
+                            "og:image",
+                            Double,
+                        ),
                     ),
-                ),
-            },
-        ),
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "meta",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: true,
-    },
-    Token {
-        data: "\r\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "link",
-        attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/xmlrpc.php",
-                        Double,
-                    ),
-                ),
-                "rel": Some(
-                    (
-                        "pingback",
-                        Double,
-                    ),
-                ),
-            },
-        ),
-        kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "link",
-        attrs: None,
-        kind: CloseTag,
-        is_implied: true,
-    },
-    Token {
-        data: "\r\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
-        data: "meta",
-        attrs: Some(
-            {
-                "content": Some(
-                    (
-                        "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
-                        Double,
-                    ),
-                ),
-                "name": Some(
-                    (
-                        "syndication-source",
-                        Double,
-                    ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -387,25 +339,97 @@ expression: result
     Token {
         data: "link",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/css/single.css",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/xmlrpc.php",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "stylesheet",
-                        Double,
+                    "rel": Some(
+                        (
+                            "pingback",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/css",
-                        Double,
+                },
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: Some(
+            UniCaseBTreeMap {
+                inner: {
+                    "content": Some(
+                        (
+                            "http://thespacereporter.com/2013/06/young-star-suggests-our-sun-was-a-feisty-toddler-astronomers-say/",
+                            Double,
+                        ),
                     ),
-                ),
+                    "name": Some(
+                        (
+                            "syndication-source",
+                            Double,
+                        ),
+                    ),
+                },
+            },
+        ),
+        kind: OpenTag,
+        is_implied: false,
+    },
+    Token {
+        data: "meta",
+        attrs: None,
+        kind: CloseTag,
+        is_implied: true,
+    },
+    Token {
+        data: "\r\n",
+        attrs: None,
+        kind: Text,
+        is_implied: false,
+    },
+    Token {
+        data: "link",
+        attrs: Some(
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/css/single.css",
+                            Double,
+                        ),
+                    ),
+                    "rel": Some(
+                        (
+                            "stylesheet",
+                            Double,
+                        ),
+                    ),
+                    "type": Some(
+                        (
+                            "text/css",
+                            Double,
+                        ),
+                    ),
+                },
             },
         ),
         kind: OpenTag,
@@ -426,19 +450,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2",
+                            Single,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Single,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -459,13 +485,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -504,13 +532,15 @@ expression: result
     Token {
         data: "body",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "twoColFixRtHdr",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "twoColFixRtHdr",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -525,13 +555,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "header",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "header",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -546,13 +578,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "header_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "header_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -567,19 +601,21 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -606,19 +642,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "right",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "right",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "footer",
-                        Double,
+                    "class": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -627,13 +665,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "https://thespacereporter.com/subscribe/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "https://thespacereporter.com/subscribe/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -660,13 +700,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/login/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/login/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -747,13 +789,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "header",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "header",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -768,13 +812,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "topster",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "topster",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -789,13 +835,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "top_L",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "top_L",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -810,13 +858,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -843,19 +893,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -888,13 +940,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "top_R",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "top_R",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -915,13 +969,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -954,13 +1010,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "header_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "header_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -975,13 +1033,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -990,31 +1050,33 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "44",
-                        Double,
+                    "height": Some(
+                        (
+                            "44",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "/images/title.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "/images/title.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "450",
-                        Double,
+                    "width": Some(
+                        (
+                            "450",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1059,13 +1121,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "navigation",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "navigation",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1080,13 +1144,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "navigation_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "navigation_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1101,13 +1167,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "navigation_left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "navigation_left",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1122,19 +1190,21 @@ expression: result
     Token {
         data: "ul",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "MenuBarHorizontal",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "MenuBarHorizontal",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "MenuBar1",
-                        Double,
+                    "id": Some(
+                        (
+                            "MenuBar1",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1155,13 +1225,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/astronomy/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/astronomy/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1200,13 +1272,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/nasa/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/nasa/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1251,13 +1325,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/moon/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/moon/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1296,13 +1372,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/sun/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/sun/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1341,13 +1419,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/solar-system/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/solar-system/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1386,13 +1466,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/planets/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/planets/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1431,13 +1513,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/mars/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/mars/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1476,13 +1560,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/galaxies/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/galaxies/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1527,13 +1613,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1566,13 +1654,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1611,13 +1701,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "container",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "container",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1632,13 +1724,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "floating-box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "floating-box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1653,13 +1747,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1674,13 +1770,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1695,25 +1793,27 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "1",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "1",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1740,19 +1840,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "redster",
-                        Double,
+                    "class": Some(
+                        (
+                            "redster",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1803,13 +1905,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1818,43 +1922,45 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "fb-like",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "fb-like",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-href": Some(
-                    (
-                        "https://www.facebook.com/pages/The-Space-Reporter/490306127676926",
-                        Double,
+                    "data-href": Some(
+                        (
+                            "https://www.facebook.com/pages/The-Space-Reporter/490306127676926",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-layout": Some(
-                    (
-                        "box_count",
-                        Double,
+                    "data-layout": Some(
+                        (
+                            "box_count",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-send": Some(
-                    (
-                        "false",
-                        Double,
+                    "data-send": Some(
+                        (
+                            "false",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-show-faces": Some(
-                    (
-                        "true",
-                        Double,
+                    "data-show-faces": Some(
+                        (
+                            "true",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-width": Some(
-                    (
-                        "90",
-                        Double,
+                    "data-width": Some(
+                        (
+                            "90",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1905,13 +2011,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1920,31 +2028,33 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "twitter-share-button",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "twitter-share-button",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-count": Some(
-                    (
-                        "vertical",
-                        Double,
+                    "data-count": Some(
+                        (
+                            "vertical",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-via": Some(
-                    (
-                        "SpaceReporter",
-                        Double,
+                    "data-via": Some(
+                        (
+                            "SpaceReporter",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "http://twitter.com/share",
-                        Double,
+                    "href": Some(
+                        (
+                            "http://twitter.com/share",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -1965,19 +2075,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://platform.twitter.com/widgets.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://platform.twitter.com/widgets.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2034,13 +2146,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2049,25 +2163,27 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://www.facebook.com/sharer.php",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://www.facebook.com/sharer.php",
+                            Double,
+                        ),
                     ),
-                ),
-                "name": Some(
-                    (
-                        "fb_share",
-                        Double,
+                    "name": Some(
+                        (
+                            "fb_share",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "box_count",
-                        Double,
+                    "type": Some(
+                        (
+                            "box_count",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2094,19 +2210,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://static.ak.fbcdn.net/connect.php/js/FB.Share",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://static.ak.fbcdn.net/connect.php/js/FB.Share",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2157,13 +2275,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2172,13 +2292,15 @@ expression: result
     Token {
         data: "g:plusone",
         attrs: Some(
-            {
-                "size": Some(
-                    (
-                        "tall",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "size": Some(
+                        (
+                            "tall",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2199,13 +2321,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2262,13 +2386,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2277,19 +2403,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://www.reddit.com/static/button/button2.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://www.reddit.com/static/button/button2.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2394,13 +2522,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "fb-root",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "fb-root",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2445,13 +2575,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "content",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "content",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2466,13 +2598,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "left_side",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "left_side",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2505,13 +2639,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "title",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "title",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2550,13 +2686,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "title",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "title",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2625,13 +2763,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "date",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "date",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2640,13 +2780,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "maintext_alternative",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "maintext_alternative",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2703,13 +2845,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "date",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "date",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2760,37 +2904,39 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "Young star suggests our sun was a feisty toddler, astronomers say",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "Young star suggests our sun was a feisty toddler, astronomers say",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "257",
-                        Double,
+                    "height": Some(
+                        (
+                            "257",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/young-star.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/young-star.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "493",
-                        Double,
+                    "width": Some(
+                        (
+                            "493",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2823,19 +2969,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "article_text",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "article_text",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "article",
-                        Double,
+                    "id": Some(
+                        (
+                            "article",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2850,13 +2998,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "adsense",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "adsense",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2871,25 +3021,27 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "0",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2916,13 +3068,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "height": Some(
-                    (
-                        "25",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "height": Some(
+                        (
+                            "25",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2931,13 +3085,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -2964,20 +3120,22 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "\r": None,
-                "src": Some(
-                    (
-                        "http://pagead2.googlesyndication.com/pagead/show_ads.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "\r": None,
+                    "src": Some(
+                        (
+                            "http://pagead2.googlesyndication.com/pagead/show_ads.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3034,13 +3192,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "height": Some(
-                    (
-                        "25",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "height": Some(
+                        (
+                            "25",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3049,13 +3209,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3082,20 +3244,22 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "\r": None,
-                "src": Some(
-                    (
-                        "http://pagead2.googlesyndication.com/pagead/show_ads.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "\r": None,
+                    "src": Some(
+                        (
+                            "http://pagead2.googlesyndication.com/pagead/show_ads.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3194,19 +3358,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://www.eurekalert.org/pub_releases/2013-06/hcfa-yss060313.php",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://www.eurekalert.org/pub_releases/2013-06/hcfa-yss060313.php",
+                            Double,
+                        ),
                     ),
-                ),
-                "target": Some(
-                    (
-                        "_blank",
-                        Double,
+                    "target": Some(
+                        (
+                            "_blank",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3743,13 +3909,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/contact/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/contact/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3776,13 +3944,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "mailto:info@thespacereporter.com",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "mailto:info@thespacereporter.com",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3845,13 +4015,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3884,13 +4056,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "adblade",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "adblade",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3905,13 +4079,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3938,19 +4114,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://web.adblade.com/js/ads/show.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://web.adblade.com/js/ads/show.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -3983,19 +4161,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "article_text",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "article_text",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "blog_comment",
-                        Double,
+                    "id": Some(
+                        (
+                            "blog_comment",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4010,13 +4190,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "disqus_thread",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "disqus_thread",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4037,13 +4219,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4082,13 +4266,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "adblade",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "adblade",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4103,31 +4289,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "0",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "0",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4160,13 +4348,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4193,19 +4383,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://js.casalemedia.com/casaleJTag.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://js.casalemedia.com/casaleJTag.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4244,13 +4436,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4277,19 +4471,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://js.casalemedia.com/casaleJTag.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://js.casalemedia.com/casaleJTag.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4370,13 +4566,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "right",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "right",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4391,13 +4589,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4412,13 +4612,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4445,20 +4647,22 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "\r": None,
-                "src": Some(
-                    (
-                        "http://pagead2.googlesyndication.com/pagead/show_ads.js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "\r": None,
+                    "src": Some(
+                        (
+                            "http://pagead2.googlesyndication.com/pagead/show_ads.js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4497,13 +4701,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4518,19 +4724,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "section_red",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "section_red",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "title",
-                        Double,
+                    "id": Some(
+                        (
+                            "title",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4557,31 +4765,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4608,19 +4818,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4629,13 +4841,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4644,13 +4858,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=BLACK_HOLES_SPACE",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=BLACK_HOLES_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4659,37 +4875,39 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "157",
-                        Double,
+                    "height": Some(
+                        (
+                            "157",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/black_holes_1.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/black_holes_1.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "310",
-                        Double,
+                    "width": Some(
+                        (
+                            "310",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4752,13 +4970,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4767,13 +4987,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "select",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "select",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4782,19 +5004,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "free_trial",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "free_trial",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=BLACK_HOLES_SPACE",
-                        Double,
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=BLACK_HOLES_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4857,31 +5081,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4908,19 +5134,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4929,13 +5157,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4944,13 +5174,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?pageNum_show_selected_gallery=0&selected_gall=8&WhichGallery=NASA_all_time",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?pageNum_show_selected_gallery=0&selected_gall=8&WhichGallery=NASA_all_time",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -4959,37 +5191,39 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "157",
-                        Double,
+                    "height": Some(
+                        (
+                            "157",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/footprint.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/footprint.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "310",
-                        Double,
+                    "width": Some(
+                        (
+                            "310",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5052,13 +5286,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5067,13 +5303,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "select",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "select",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5082,19 +5320,21 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "free_trial",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "free_trial",
+                            Double,
+                        ),
                     ),
-                ),
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?pageNum_show_selected_gallery=0&selected_gall=8&WhichGallery=NASA_all_time",
-                        Double,
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?pageNum_show_selected_gallery=0&selected_gall=8&WhichGallery=NASA_all_time",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5157,31 +5397,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5208,19 +5450,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5229,13 +5473,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=MOON_SPACE",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=MOON_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5244,37 +5490,39 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "157",
-                        Double,
+                    "height": Some(
+                        (
+                            "157",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/Moon_2.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/Moon_2.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "310",
-                        Double,
+                    "width": Some(
+                        (
+                            "310",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5331,13 +5579,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5346,13 +5596,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "select",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "select",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5361,13 +5613,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=MOON_SPACE",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=MOON_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5430,31 +5684,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5481,19 +5737,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5502,13 +5760,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=JUPITER_SPACE",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=JUPITER_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5517,37 +5777,39 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "157",
-                        Double,
+                    "height": Some(
+                        (
+                            "157",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/red_spot.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/red_spot.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "310",
-                        Double,
+                    "width": Some(
+                        (
+                            "310",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5604,13 +5866,15 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5619,13 +5883,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "select",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "select",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5634,13 +5900,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/gallery/?WhichGallery=JUPITER_SPACE",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/gallery/?WhichGallery=JUPITER_SPACE",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5715,13 +5983,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5736,13 +6006,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5769,19 +6041,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5814,13 +6088,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5835,19 +6111,21 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "section_red",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "section_red",
+                            Double,
+                        ),
                     ),
-                ),
-                "id": Some(
-                    (
-                        "title",
-                        Double,
+                    "id": Some(
+                        (
+                            "title",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5874,13 +6152,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5895,31 +6175,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5946,19 +6228,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "rowspan": Some(
-                    (
-                        "2",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "rowspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "34%",
-                        Double,
+                    "width": Some(
+                        (
+                            "34%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5973,13 +6257,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/scientists-solve-a-3-5-billion-year-old-mystery-of-life-it-may-been-boosted-by-meteorites/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/scientists-solve-a-3-5-billion-year-old-mystery-of-life-it-may-been-boosted-by-meteorites/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -5988,43 +6274,45 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "Scientists solve 3.5 billion-year-old mystery of life and its link to meteorites",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "Scientists solve 3.5 billion-year-old mystery of life and its link to meteorites",
+                            Double,
+                        ),
                     ),
-                ),
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "62",
-                        Double,
+                    "height": Some(
+                        (
+                            "62",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/early_earth-321x174.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/early_earth-321x174.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "97",
-                        Double,
+                    "width": Some(
+                        (
+                            "97",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6063,19 +6351,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6084,13 +6374,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6099,13 +6391,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/scientists-solve-a-3-5-billion-year-old-mystery-of-life-it-may-been-boosted-by-meteorites/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/scientists-solve-a-3-5-billion-year-old-mystery-of-life-it-may-been-boosted-by-meteorites/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6180,13 +6474,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6201,31 +6497,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6252,19 +6550,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "rowspan": Some(
-                    (
-                        "2",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "rowspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "34%",
-                        Double,
+                    "width": Some(
+                        (
+                            "34%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6279,13 +6579,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nasa-moons-strange-gravitational-field-is-the-result-of-massive-asteroid-impacts/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nasa-moons-strange-gravitational-field-is-the-result-of-massive-asteroid-impacts/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6294,43 +6596,45 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "NASA: Moon's strange gravitational field is the result of massive asteroid impacts",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "NASA: Moon's strange gravitational field is the result of massive asteroid impacts",
+                            Double,
+                        ),
                     ),
-                ),
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "62",
-                        Double,
+                    "height": Some(
+                        (
+                            "62",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/moon_gravity-321x174.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/moon_gravity-321x174.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "97",
-                        Double,
+                    "width": Some(
+                        (
+                            "97",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6369,19 +6673,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6390,13 +6696,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6405,13 +6713,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nasa-moons-strange-gravitational-field-is-the-result-of-massive-asteroid-impacts/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nasa-moons-strange-gravitational-field-is-the-result-of-massive-asteroid-impacts/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6486,13 +6796,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6507,31 +6819,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6558,19 +6872,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "rowspan": Some(
-                    (
-                        "2",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "rowspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "34%",
-                        Double,
+                    "width": Some(
+                        (
+                            "34%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6585,13 +6901,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nuking-asteroids-to-protect-earth-may-be-best-option-according-to-expert/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nuking-asteroids-to-protect-earth-may-be-best-option-according-to-expert/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6600,43 +6918,45 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "Nuking asteroids to protect Earth may be best option, according to expert",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "Nuking asteroids to protect Earth may be best option, according to expert",
+                            Double,
+                        ),
                     ),
-                ),
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "62",
-                        Double,
+                    "height": Some(
+                        (
+                            "62",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/nuclear-321x174.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/nuclear-321x174.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "97",
-                        Double,
+                    "width": Some(
+                        (
+                            "97",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6675,19 +6995,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6696,13 +7018,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6711,13 +7035,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nuking-asteroids-to-protect-earth-may-be-best-option-according-to-expert/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nuking-asteroids-to-protect-earth-may-be-best-option-according-to-expert/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6792,13 +7118,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6813,31 +7141,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6864,19 +7194,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "rowspan": Some(
-                    (
-                        "2",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "rowspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "34%",
-                        Double,
+                    "width": Some(
+                        (
+                            "34%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6891,13 +7223,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/400-year-little-ice-age-zombie-plant-may-someday-help-to-colonize-mars/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/400-year-little-ice-age-zombie-plant-may-someday-help-to-colonize-mars/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6906,43 +7240,45 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "400-year-old Little Ice Age zombie plant may someday help in colonizing Mars",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "400-year-old Little Ice Age zombie plant may someday help in colonizing Mars",
+                            Double,
+                        ),
                     ),
-                ),
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "62",
-                        Double,
+                    "height": Some(
+                        (
+                            "62",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/mars_colony-321x174.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/mars_colony-321x174.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "97",
-                        Double,
+                    "width": Some(
+                        (
+                            "97",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -6981,19 +7317,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7002,13 +7340,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7017,13 +7357,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/400-year-little-ice-age-zombie-plant-may-someday-help-to-colonize-mars/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/400-year-little-ice-age-zombie-plant-may-someday-help-to-colonize-mars/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7098,13 +7440,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7119,31 +7463,33 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellspacing": Some(
-                    (
-                        "2",
-                        Double,
+                    "cellspacing": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7170,19 +7516,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "rowspan": Some(
-                    (
-                        "2",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "rowspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "34%",
-                        Double,
+                    "width": Some(
+                        (
+                            "34%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7197,13 +7545,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nasa-announces-plans-to-feed-astronauts-using-3-d-printer/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nasa-announces-plans-to-feed-astronauts-using-3-d-printer/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7212,43 +7562,45 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "alt": Some(
-                    (
-                        "NASA announces plans to feed astronauts using a 3-D printer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "alt": Some(
+                        (
+                            "NASA announces plans to feed astronauts using a 3-D printer",
+                            Double,
+                        ),
                     ),
-                ),
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "class": Some(
-                    (
-                        "image_wrap",
-                        Double,
+                    "class": Some(
+                        (
+                            "image_wrap",
+                            Double,
+                        ),
                     ),
-                ),
-                "height": Some(
-                    (
-                        "62",
-                        Double,
+                    "height": Some(
+                        (
+                            "62",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://thespacereporter.com/news/wp-content/uploads/nasa_41-321x174.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://thespacereporter.com/news/wp-content/uploads/nasa_41-321x174.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "97",
-                        Double,
+                    "width": Some(
+                        (
+                            "97",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7287,19 +7639,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "left",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "left",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "66%",
-                        Double,
+                    "width": Some(
+                        (
+                            "66%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7308,13 +7662,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "subscribe",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "subscribe",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7323,13 +7679,15 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "http://thespacereporter.com/news/nasa-announces-plans-to-feed-astronauts-using-3-d-printer/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "http://thespacereporter.com/news/nasa-announces-plans-to-feed-astronauts-using-3-d-printer/",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7416,13 +7774,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7437,13 +7797,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144207",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144207",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7476,13 +7838,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7497,43 +7861,45 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "fb-recommendations",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "fb-recommendations",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-colorscheme": Some(
-                    (
-                        "light",
-                        Double,
+                    "data-colorscheme": Some(
+                        (
+                            "light",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-header": Some(
-                    (
-                        "false",
-                        Double,
+                    "data-header": Some(
+                        (
+                            "false",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-height": Some(
-                    (
-                        "300",
-                        Double,
+                    "data-height": Some(
+                        (
+                            "300",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-linktarget": Some(
-                    (
-                        "_blank",
-                        Double,
+                    "data-linktarget": Some(
+                        (
+                            "_blank",
+                            Double,
+                        ),
                     ),
-                ),
-                "data-width": Some(
-                    (
-                        "300",
-                        Double,
+                    "data-width": Some(
+                        (
+                            "300",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7566,13 +7932,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "side_box",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "side_box",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7587,13 +7955,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7608,13 +7978,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144208",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144208",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7647,13 +8019,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7668,13 +8042,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144206",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144206",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7707,13 +8083,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "twitter",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "twitter",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7728,19 +8106,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "charset": Some(
-                    (
-                        "utf-8",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "charset": Some(
+                        (
+                            "utf-8",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://widgets.twimg.com/j/2/widget.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://widgets.twimg.com/j/2/widget.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7809,13 +8189,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7830,13 +8212,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144209",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=525426&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=144209",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7881,13 +8265,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7908,13 +8294,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad_wrap",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad_wrap",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7929,13 +8317,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ads_bottom",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ads_bottom",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7950,13 +8340,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -7983,19 +8375,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8028,13 +8422,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ads_bottom",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ads_bottom",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8049,13 +8445,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8082,19 +8480,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8127,13 +8527,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ads_bottom",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ads_bottom",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8148,13 +8550,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8181,19 +8585,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8226,13 +8632,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8283,13 +8691,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "bottom_ad",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "bottom_ad",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8304,13 +8714,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=525426&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=144217",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=525426&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=144217",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8343,13 +8755,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "ad_wrap",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "ad_wrap",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8364,13 +8778,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "clear",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "clear",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8451,13 +8867,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "footer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8472,13 +8890,15 @@ expression: result
     Token {
         data: "div",
         attrs: Some(
-            {
-                "id": Some(
-                    (
-                        "footer_inner",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "id": Some(
+                        (
+                            "footer_inner",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8493,25 +8913,27 @@ expression: result
     Token {
         data: "table",
         attrs: Some(
-            {
-                "border": Some(
-                    (
-                        "0",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "border": Some(
+                        (
+                            "0",
+                            Double,
+                        ),
                     ),
-                ),
-                "cellpadding": Some(
-                    (
-                        "4",
-                        Double,
+                    "cellpadding": Some(
+                        (
+                            "4",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8538,25 +8960,27 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
-                "colspan": Some(
-                    (
-                        "2",
-                        Double,
+                    "colspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "100%",
-                        Double,
+                    "width": Some(
+                        (
+                            "100%",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8565,25 +8989,27 @@ expression: result
     Token {
         data: "img",
         attrs: Some(
-            {
-                "height": Some(
-                    (
-                        "30",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "height": Some(
+                        (
+                            "30",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "/images/title.jpg",
-                        Double,
+                    "src": Some(
+                        (
+                            "/images/title.jpg",
+                            Double,
+                        ),
                     ),
-                ),
-                "width": Some(
-                    (
-                        "313",
-                        Double,
+                    "width": Some(
+                        (
+                            "313",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8634,19 +9060,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
-                "colspan": Some(
-                    (
-                        "2",
-                        Double,
+                    "colspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8655,13 +9083,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8730,19 +9160,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
-                "colspan": Some(
-                    (
-                        "2",
-                        Double,
+                    "colspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8751,13 +9183,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8844,19 +9278,21 @@ expression: result
     Token {
         data: "td",
         attrs: Some(
-            {
-                "align": Some(
-                    (
-                        "center",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "align": Some(
+                        (
+                            "center",
+                            Double,
+                        ),
                     ),
-                ),
-                "colspan": Some(
-                    (
-                        "2",
-                        Double,
+                    "colspan": Some(
+                        (
+                            "2",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8865,13 +9301,15 @@ expression: result
     Token {
         data: "span",
         attrs: Some(
-            {
-                "class": Some(
-                    (
-                        "footer",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "class": Some(
+                        (
+                            "footer",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -8880,21 +9318,23 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/contact/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/contact/",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "nofollow",
-                        Double,
+                    "rel": Some(
+                        (
+                            "nofollow",
+                            Double,
+                        ),
                     ),
-                ),
-                "title\"contact": None,
-                "us\"": None,
+                    "title\"contact": None,
+                    "us\"": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -8951,21 +9391,23 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/about/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/about/",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "nofollow",
-                        Double,
+                    "rel": Some(
+                        (
+                            "nofollow",
+                            Double,
+                        ),
                     ),
-                ),
-                "title\"contact": None,
-                "us\"": None,
+                    "title\"contact": None,
+                    "us\"": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -9004,21 +9446,23 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/tos/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/tos/",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "nofollow",
-                        Double,
+                    "rel": Some(
+                        (
+                            "nofollow",
+                            Double,
+                        ),
                     ),
-                ),
-                "title\"contact": None,
-                "us\"": None,
+                    "title\"contact": None,
+                    "us\"": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -9081,21 +9525,23 @@ expression: result
     Token {
         data: "a",
         attrs: Some(
-            {
-                "href": Some(
-                    (
-                        "/privacy/",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "href": Some(
+                        (
+                            "/privacy/",
+                            Double,
+                        ),
                     ),
-                ),
-                "rel": Some(
-                    (
-                        "nofollow",
-                        Double,
+                    "rel": Some(
+                        (
+                            "nofollow",
+                            Double,
+                        ),
                     ),
-                ),
-                "title\"contact": None,
-                "us\"": None,
+                    "title\"contact": None,
+                    "us\"": None,
+                },
             },
         ),
         kind: OpenTag,
@@ -9194,13 +9640,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -9227,13 +9675,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -9260,19 +9710,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "language": Some(
-                    (
-                        "JavaScript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "language": Some(
+                        (
+                            "JavaScript",
+                            Double,
+                        ),
                     ),
-                ),
-                "src": Some(
-                    (
-                        "http://c5.zedo.com/jsc/c5/fo.js",
-                        Double,
+                    "src": Some(
+                        (
+                            "http://c5.zedo.com/jsc/c5/fo.js",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -9293,19 +9745,21 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "src": Some(
-                    (
-                        "//static.getclicky.com/js",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "src": Some(
+                        (
+                            "//static.getclicky.com/js",
+                            Double,
+                        ),
                     ),
-                ),
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
@@ -9326,13 +9780,15 @@ expression: result
     Token {
         data: "script",
         attrs: Some(
-            {
-                "type": Some(
-                    (
-                        "text/javascript",
-                        Double,
+            UniCaseBTreeMap {
+                inner: {
+                    "type": Some(
+                        (
+                            "text/javascript",
+                            Double,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

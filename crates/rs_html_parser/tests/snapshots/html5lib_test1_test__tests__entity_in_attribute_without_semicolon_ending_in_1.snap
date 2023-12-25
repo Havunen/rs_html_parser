@@ -6,13 +6,15 @@ expression: "parser_test(r####\"<h a='&not1'>\"####)"
     Token {
         data: "h",
         attrs: Some(
-            {
-                "a": Some(
-                    (
-                        "&not1",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "a": Some(
+                        (
+                            "&not1",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

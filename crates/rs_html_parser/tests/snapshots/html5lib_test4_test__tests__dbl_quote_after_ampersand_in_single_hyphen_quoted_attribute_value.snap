@@ -6,13 +6,15 @@ expression: "parser_test(r####\"<z z='&\"'>\"####)"
     Token {
         data: "z",
         attrs: Some(
-            {
-                "z": Some(
-                    (
-                        "&\"",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "z": Some(
+                        (
+                            "&\"",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

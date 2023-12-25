@@ -6,13 +6,15 @@ expression: "parser_test(\"<div aaa=aaa >\")"
     Token {
         data: "div",
         attrs: Some(
-            {
-                "aaa": Some(
-                    (
-                        "aaa",
-                        Unquoted,
+            UniCaseBTreeMap {
+                inner: {
+                    "aaa": Some(
+                        (
+                            "aaa",
+                            Unquoted,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,

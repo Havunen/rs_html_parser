@@ -6,13 +6,15 @@ expression: "parser_test(r####\"<z z='&xlink_xmlns;'>bar<z>\"####)"
     Token {
         data: "z",
         attrs: Some(
-            {
-                "z": Some(
-                    (
-                        "&xlink_xmlns;",
-                        Single,
+            UniCaseBTreeMap {
+                inner: {
+                    "z": Some(
+                        (
+                            "&xlink_xmlns;",
+                            Single,
+                        ),
                     ),
-                ),
+                },
             },
         ),
         kind: OpenTag,
