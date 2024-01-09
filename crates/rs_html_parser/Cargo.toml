@@ -6,7 +6,7 @@ edition       = "2021"
 license       = "MIT"
 name          = "rs_html_parser"
 repository    = "https://github.com/Havunen/rs_html_parser.git"
-version       = "0.0.9"
+version       = "0.0.10"
 
 [lib]
 bench = true
@@ -18,7 +18,7 @@ harness = false
 [dependencies]
 rs_html_parser_tokens = { path = "../rs_html_parser_tokens", version = "0.0.8" }
 rs_html_parser_tokenizer_tokens = { path = "../rs_html_parser_tokenizer_tokens", version = "0.0.6" }
-rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer", version = "0.0.9" }
+rs_html_parser_tokenizer = { path = "../rs_html_parser_tokenizer", version = "0.0.10" }
 regex = "1.10.2"
 lazy_static = "1.4.0"
 criterion = "0.5.1"
