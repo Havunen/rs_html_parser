@@ -67,6 +67,7 @@ fn benchmark_test_data(c: &mut Criterion) {
                 tokenizer_options: TokenizerOptions {
                     xml_mode: None,
                     decode_entities: None,
+                    ignore_whitespace_between_tags: Some(true),
                 },
             };
 

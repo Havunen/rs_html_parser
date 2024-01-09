@@ -110,6 +110,8 @@ pub struct Tokenizer<'a> {
     code: u32,
     prev_quote_type: QuoteType,
 
+    ignore_whitespace_between_tags: bool,
+    seen_non_whitespace_text: bool,
     xml_mode: bool,
     decode_entities: bool,
 
@@ -118,9 +120,11 @@ pub struct Tokenizer<'a> {
     has_ended: bool,
 }
 
+#[derive(Default)]
 pub struct TokenizerOptions {
     pub xml_mode: Option<bool>,
     pub decode_entities: Option<bool>,
+    pub ignore_whitespace_between_tags: Option<bool>,
 }
 
 fn is_whitespace(c: u8) -> bool {
@@ -149,6 +153,8 @@ fn is_end_of_tag_section(c: u8) -> bool {
 
 impl Tokenizer<'_> {
     pub fn new<'a>(buffer: &'a [u8], options: &'a TokenizerOptions) -> Tokenizer<'a> {
+        let ignore_whitespace = options.ignore_whitespace_between_tags.unwrap_or(true);
+
         Tokenizer {
             state: State::Text,
             buffer,
@@ -164,6 +170,8 @@ impl Tokenizer<'_> {
             sequence_index: 0,
             has_ended: false,
             prev_quote_type: QuoteType::NoValue,
+            ignore_whitespace_between_tags: ignore_whitespace,
+            seen_non_whitespace_text: !ignore_whitespace,
         }
     }
 
@@ -192,7 +200,11 @@ impl Tokenizer<'_> {
 
     fn state_text(&mut self, c: u8) -> Option<TokenizerToken> {
         if c == CharCodes::LT || (!self.decode_entities && self.fast_forward_to(CharCodes::LT)) {
-            let token = if self.index > self.section_start as i32 {
+            let token = if self.seen_non_whitespace_text && self.index > self.section_start as i32 {
+                if self.ignore_whitespace_between_tags {
+                    self.seen_non_whitespace_text = false;
+                }
+
                 Some(TokenizerToken {
                     start: self.section_start,
                     end: self.index as usize,
@@ -201,6 +213,10 @@ impl Tokenizer<'_> {
                     quote: QuoteType::NoValue,
                 })
             } else {
+                if self.ignore_whitespace_between_tags {
+                    self.seen_non_whitespace_text = true;
+                }
+
                 None
             };
 
@@ -208,6 +224,9 @@ impl Tokenizer<'_> {
             self.section_start = self.index as usize;
 
             return token;
+        }
+        if self.ignore_whitespace_between_tags && !is_whitespace(c) {
+            self.seen_non_whitespace_text = true;
         }
         if self.decode_entities && c == CharCodes::AMP {
             self.start_entity();
@@ -310,9 +329,11 @@ impl Tokenizer<'_> {
             }
             CharCodes::SLASH => {
                 self.state = State::BeforeClosingTagName;
+                self.seen_non_whitespace_text = true;
             }
             _ => {
                 self.state = State::Text;
+                self.seen_non_whitespace_text = true;
                 return self.state_text(c);
             }
         }

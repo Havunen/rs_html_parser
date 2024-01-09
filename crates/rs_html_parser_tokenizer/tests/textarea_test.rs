@@ -10,6 +10,7 @@ mod tests {
         let options = TokenizerOptions {
             xml_mode: Option::from(false),
             decode_entities: Option::from(true),
+            ignore_whitespace_between_tags: Some(true)
         };
 
         let tokenizer = Tokenizer::new(data.as_bytes(), &options);

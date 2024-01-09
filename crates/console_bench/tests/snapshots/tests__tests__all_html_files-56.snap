@@ -21294,12 +21294,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "p",
         attrs: Some(
             UniCaseBTreeMap {

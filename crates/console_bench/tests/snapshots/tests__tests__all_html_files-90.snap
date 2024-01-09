@@ -39,12 +39,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "head",
         attrs: None,
         kind: OpenTag,
@@ -83,12 +77,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -156,12 +144,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "title",
         attrs: None,
         kind: OpenTag,
@@ -213,12 +195,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: " \n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "style",
@@ -297,12 +273,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "link",
         attrs: Some(
             UniCaseBTreeMap {
@@ -373,12 +343,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n   \n   \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " BEGIN Krux Control Tag for Computerworld ",
         attrs: None,
         kind: Comment,
@@ -444,12 +408,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " END Krux Controltag ",
         attrs: None,
         kind: Comment,
@@ -494,12 +452,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n    \n    \t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -553,12 +505,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n        \n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -626,12 +572,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -693,12 +633,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n    \n\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -766,12 +700,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -836,12 +764,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -892,12 +814,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -971,12 +887,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1039,12 +949,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1111,12 +1015,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1179,12 +1077,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1251,12 +1143,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1319,12 +1205,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1391,12 +1271,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1459,12 +1333,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1531,12 +1399,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: " \n\t\t\t\t\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " facebook specific meta info ",
         attrs: None,
         kind: Comment,
@@ -1582,12 +1444,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1654,12 +1510,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "link",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1722,12 +1572,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: " \n        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -1794,12 +1638,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1864,12 +1702,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "    \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -1931,12 +1763,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\n\n\t\t\n\t\t\t\n\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2004,12 +1830,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "meta",
         attrs: Some(
             UniCaseBTreeMap {
@@ -2072,12 +1892,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "meta",
@@ -2144,12 +1958,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n\t\t\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "Visual Revenue Reader Response Tracking Script (v6) ",
         attrs: None,
         kind: Comment,
@@ -2197,12 +2005,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " End of VR RR Tracking Script - All rights reserved ",
         attrs: None,
         kind: Comment,
@@ -2247,12 +2049,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2321,12 +2117,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " \n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -2388,12 +2178,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: " \n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2461,12 +2245,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -2531,12 +2309,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -2586,12 +2358,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2682,12 +2448,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -2731,12 +2491,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n    \t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2790,12 +2544,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2905,12 +2653,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\t\n\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " BEGIN interstitial tag  (tile=5) ",
         attrs: None,
         kind: Comment,
@@ -2938,12 +2680,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\t\n\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -2997,12 +2733,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3153,12 +2883,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n    \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "center",
         attrs: None,
         kind: CloseTag,
@@ -3192,12 +2916,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3241,12 +2959,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            \n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " start header ",
         attrs: None,
         kind: Comment,
@@ -3274,12 +2986,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t            \n   \t       \n\t\t            \t\n\t            \t\n\t\t\t    \t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3330,12 +3036,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\n\t\t\t\t\t\n        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -3379,12 +3079,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n            \n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3476,12 +3170,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "ul",
         attrs: Some(
             UniCaseBTreeMap {
@@ -3519,12 +3207,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3595,12 +3277,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -3756,12 +3432,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: OpenTag,
@@ -3812,12 +3482,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -4535,12 +4199,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: OpenTag,
@@ -4790,12 +4448,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -4890,12 +4542,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -4917,12 +4563,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                   \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -4994,12 +4634,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -5263,12 +4897,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: Some(
             UniCaseBTreeMap {
@@ -5386,12 +5014,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -5477,12 +5099,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -5580,12 +5196,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -5674,12 +5284,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -5763,12 +5367,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n          ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -5812,12 +5410,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -5895,12 +5487,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "input",
@@ -6003,12 +5589,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "form",
         attrs: None,
         kind: CloseTag,
@@ -6050,12 +5630,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -6077,12 +5651,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                \n                \n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -6129,12 +5697,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -6194,12 +5756,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -6969,12 +6525,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -6996,12 +6546,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -7098,12 +6642,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -7171,12 +6709,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -7256,12 +6788,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -7318,12 +6844,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\t                        \t\t\t\t\t\t\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -7934,12 +7454,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -7961,12 +7475,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -8063,12 +7571,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -8136,12 +7638,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -8221,12 +7717,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: OpenTag,
@@ -8266,12 +7756,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -8670,12 +8154,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -8697,12 +8175,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -8774,12 +8246,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -8966,12 +8432,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "li",
         attrs: None,
         kind: CloseTag,
@@ -8993,12 +8453,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                \n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9026,12 +8480,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        \n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -9053,12 +8501,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "  \n            \n        \t\n            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9089,12 +8531,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\n\t\t            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9141,12 +8577,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t                \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9200,12 +8630,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t            \t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9445,12 +8869,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t        \t        \t        ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -9472,12 +8890,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9513,12 +8925,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n            \n\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9727,12 +9133,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\t\t\t\t            \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -9791,12 +9191,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "noscript",
         attrs: None,
         kind: OpenTag,
@@ -9829,12 +9223,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -9933,12 +9321,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -10003,12 +9385,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "\n\n",
         attrs: None,
         kind: Text,
@@ -10024,12 +9400,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10086,12 +9456,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " begin boomerang ad tag ",
         attrs: None,
         kind: Comment,
@@ -10124,12 +9488,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10177,12 +9535,6 @@ expression: result
         data: "noscript",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10275,12 +9627,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -10328,12 +9674,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -10372,12 +9712,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10428,12 +9762,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "style",
         attrs: None,
         kind: OpenTag,
@@ -10472,12 +9800,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \n         \t          \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10641,12 +9963,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \t\n                \t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -10873,12 +10189,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -10955,12 +10265,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " div class=\"tech_briefcase\"><a href=\"javascript:(function(e,a,g,h,f,c,b,d){if(!(f=e.jQuery)||g>f.fn.jquery||h(f)){c=a.createElement('script');c.type='text/javascript';c.src='http://ajax.googleapis.com/ajax/libs/jquery/'+g+'/jquery.min.js';c.onload=c.onreadystatechange=function(){if(!b&&(!(d=this.readyState)||d=='loaded'||d=='complete')){h((f=e.jQuery).noConflict(1),b=1);f(c).remove()}};a.documentElement.childNodes[0].appendChild(c)}})(window,document,'1.3.2',function($,L){var%20content_script%20=%20$('<script></script>').attr('src','http://www.technologybriefcase.com/js/bookmarklet_content.js').attr('type','text/javascript').attr('language','Javascript');$('head').append(content_script);});\" name=\"&lpos=Bookmarklet button\" class=\"tb_btn\"><span class=\"tb_btn_text\"> . </span></a></div ",
         attrs: None,
         kind: Comment,
@@ -11003,12 +10307,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                \n    \n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "style",
         attrs: None,
         kind: OpenTag,
@@ -11047,12 +10345,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n  \n         ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -11100,12 +10392,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n  ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -11223,12 +10509,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -11520,12 +10800,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n              \n              ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " start article body ",
         attrs: None,
         kind: Comment,
@@ -11558,12 +10832,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \n              \n                                        \t\n\n\t                  \t\t          \t\t              \n              \n              \n              \t              \t                                      \n                                    \t                  \t                 \t\t\n                 \t                 \t\n                \t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12028,12 +11296,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                                            \n\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " keep class=\"inset\" on this for backwards compatibility with code snippets! ",
         attrs: None,
         kind: Comment,
@@ -12078,12 +11340,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\n\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12139,12 +11395,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t \t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -12182,12 +11432,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12247,12 +11491,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\n\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12628,12 +11866,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "ul",
         attrs: None,
         kind: CloseTag,
@@ -12672,12 +11904,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12839,12 +12065,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -12866,12 +12086,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\n                                                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -12907,12 +12121,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t          \t\t\t\t          \t\t\t\t            \t\t\t\t            \t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13015,12 +12223,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t            \t\t\t\t\t\t            \t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -13091,12 +12293,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t            \t\t\t\t\t\t            \t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -13164,12 +12360,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t            \t\t\t\t\t            \t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13246,12 +12436,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "  \n                                    \n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13420,12 +12604,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n              \n              \n              \n              ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -13464,12 +12642,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\n                  ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13701,12 +12873,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                                    \n                  \n                    \n                                      \n                                                         \n                                      \t\t\t\t\t\t\t\t  \n                  \n                  ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " for new dart ad placement ",
         attrs: None,
         kind: Comment,
@@ -13745,12 +12911,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13798,12 +12958,6 @@ expression: result
         data: "noscript",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n      ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -13931,12 +13085,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\n  ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -13986,12 +13134,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -14109,12 +13251,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -14411,12 +13547,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -14473,12 +13603,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \n              ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -14634,12 +13758,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n              \t\t\t  \n            \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                \n                \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -14683,12 +13801,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: " \n                  \n                                        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -14741,12 +13853,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                                                                                                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -14849,12 +13955,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -14922,12 +14022,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -15001,12 +14095,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -15074,12 +14162,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -15153,12 +14235,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -15226,12 +14302,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\t\n ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -15318,12 +14388,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                  \n                                         ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "style",
         attrs: Some(
             UniCaseBTreeMap {
@@ -15373,12 +14437,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -15519,12 +14577,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n    \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16124,12 +15176,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -16185,12 +15231,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16284,12 +15324,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16545,12 +15579,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n              ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -16572,12 +15600,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \n              \n\n\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16692,12 +15714,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t\t\t\t\n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -16724,12 +15740,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n              \n                            \n             \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16791,12 +15801,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "noscript",
         attrs: None,
         kind: OpenTag,
@@ -16829,12 +15833,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -16924,12 +15922,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t              \n          \t\t\t\t\t\t\n \n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -17064,12 +16056,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n        \n        ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -17316,12 +16302,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n \t\t\t\t\n \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -17412,12 +16392,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n \t\t\t\t\t\n\t\t\t\t\t                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -17544,12 +16518,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    \n\t                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t                   \t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -17650,12 +16618,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    \n\t                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t                   \t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "a",
         attrs: Some(
             UniCaseBTreeMap {
@@ -17753,12 +16715,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n\t                \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t                   \t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -17871,12 +16827,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                  \n                  \t \n\t\n\t\t\n\t\n \t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18000,12 +16950,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n\t                   \t\t             \t\t\t\n\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18222,12 +17166,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\t\n\t\t\t\t\t\t\t\t\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -18249,12 +17187,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\n\n\n\n\n              \n              \t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18313,12 +17245,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "     \n\n\t    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18492,12 +17418,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\t\t\n\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -18542,12 +17462,6 @@ expression: result
         data: "noscript",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18680,12 +17594,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n  ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "style",
         attrs: Some(
             UniCaseBTreeMap {
@@ -18747,12 +17655,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n  ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -18855,12 +17757,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -18887,12 +17783,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: " \n    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19041,12 +17931,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n    \n    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "form",
         attrs: Some(
             UniCaseBTreeMap {
@@ -19097,12 +17981,6 @@ expression: result
         data: "nobr",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n      ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19230,12 +18108,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\n      ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "button",
         attrs: Some(
             UniCaseBTreeMap {
@@ -19315,12 +18187,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n      ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19553,12 +18419,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            \n            \n            \n\n\n\t \n\t\t\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -19580,12 +18440,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                \n\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19653,12 +18507,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "noscript",
         attrs: None,
         kind: OpenTag,
@@ -19691,12 +18539,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19795,12 +18637,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -19856,12 +18692,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -19990,12 +18820,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -20720,12 +19544,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -21476,12 +20294,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -21503,12 +20315,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                \n          \n\n                                        \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -21558,12 +20364,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                        \n  \n   \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -21608,12 +20408,6 @@ expression: result
         data: "noscript",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n      ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -21747,12 +20541,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    \n                    \n                    \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -21849,12 +20637,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\t                    \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -23414,12 +22196,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "ul",
         attrs: Some(
             UniCaseBTreeMap {
@@ -24923,12 +23699,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -24950,12 +23720,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                    \n                    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -25008,12 +23772,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -25078,12 +23836,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                            \n                            ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -25288,12 +24040,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n                \n                ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -25315,12 +24061,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n            \n                ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -25424,12 +24164,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " \n            \n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -25473,12 +24207,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n            \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -25828,12 +24556,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\n            \t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: "li",
@@ -26189,12 +24911,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            \n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: Some(
             UniCaseBTreeMap {
@@ -26245,12 +24961,6 @@ expression: result
         data: "ul",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n                \t",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -27461,12 +26171,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n            \n            ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "p",
         attrs: Some(
             UniCaseBTreeMap {
@@ -27526,12 +26230,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " COPYRIGHT 2010 Nielsen Online ",
         attrs: None,
         kind: Comment,
@@ -27579,12 +26277,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "noscript",
         attrs: None,
         kind: OpenTag,
@@ -27600,12 +26292,6 @@ expression: result
         data: "div",
         attrs: None,
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\t\t\t    ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -27692,12 +26378,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\t\t\n\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " PIYTEST ",
         attrs: None,
         kind: Comment,
@@ -27763,12 +26443,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " \n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "noscript",
         attrs: None,
         kind: OpenTag,
@@ -27801,12 +26475,6 @@ expression: result
             },
         ),
         kind: OpenTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n   ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -27899,12 +26567,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "div",
         attrs: None,
         kind: CloseTag,
@@ -27955,12 +26617,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n  ",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -28028,12 +26684,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " \n  ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -28098,12 +26748,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\t\n\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " Chart beat ",
         attrs: None,
         kind: Comment,
@@ -28148,12 +26792,6 @@ expression: result
         data: "script",
         attrs: None,
         kind: CloseTag,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {
@@ -28257,12 +26895,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: "\n\n",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "script",
         attrs: Some(
             UniCaseBTreeMap {
@@ -28307,12 +26939,6 @@ expression: result
         data: "",
         attrs: None,
         kind: CommentEnd,
-        is_implied: false,
-    },
-    Token {
-        data: "\n\n\n\n",
-        attrs: None,
-        kind: Text,
         is_implied: false,
     },
     Token {

@@ -9253,12 +9253,6 @@ expression: result
         is_implied: false,
     },
     Token {
-        data: " ",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: "strong",
         attrs: None,
         kind: OpenTag,

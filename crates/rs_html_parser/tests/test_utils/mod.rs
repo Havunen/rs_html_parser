@@ -7,6 +7,7 @@ static OPTIONS: ParserOptions = ParserOptions {
     tokenizer_options: TokenizerOptions {
         xml_mode: None,
         decode_entities: None,
+        ignore_whitespace_between_tags: Some(true),
     },
 };
 

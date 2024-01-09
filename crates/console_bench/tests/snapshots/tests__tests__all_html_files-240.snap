@@ -15502,12 +15502,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT and changed to OFF when live ",
         attrs: None,
         kind: Comment,
@@ -15559,12 +15553,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT and changed to ON when live ",
@@ -15802,12 +15790,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT for all new order forms ",
         attrs: None,
         kind: Comment,
@@ -15859,12 +15841,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be set to 4-digit publication code ",
@@ -15920,12 +15896,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be set to \"2\" for all auto-renewals ",
         attrs: None,
         kind: Comment,
@@ -15977,12 +15947,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT for all online orders ",
@@ -16109,12 +16073,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT and given a value IF \r\n\r\ndigital offer is DELETED ",
         attrs: None,
         kind: Comment,
@@ -16166,12 +16124,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must CHANGE per publication ",
@@ -16227,12 +16179,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must CHANGE per publication ",
         attrs: None,
         kind: Comment,
@@ -16286,12 +16232,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must CHANGE per publication ",
         attrs: None,
         kind: Comment,
@@ -16343,12 +16283,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT and given a value IF digital offer is \r\n\r\nDELETED ",
@@ -16522,12 +16456,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT / blank requires \r\n\r\n\"digital_to_print_format.js\" ",
         attrs: None,
         kind: Comment,
@@ -16581,12 +16509,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT for email permissions ",
         attrs: None,
         kind: Comment,
@@ -16638,12 +16560,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT for email permissions ",
@@ -24952,12 +24868,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT and changed to OFF when live ",
         attrs: None,
         kind: Comment,
@@ -25009,12 +24919,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT and changed to ON when live ",
@@ -25252,12 +25156,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT for all new order forms ",
         attrs: None,
         kind: Comment,
@@ -25309,12 +25207,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be set to 4-digit publication code ",
@@ -25370,12 +25262,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be set to \"2\" for all auto-renewals ",
         attrs: None,
         kind: Comment,
@@ -25427,12 +25313,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT for all online orders ",
@@ -25541,12 +25421,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT and given a value IF digital offer is DELETED ",
         attrs: None,
         kind: Comment,
@@ -25598,12 +25472,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must CHANGE per publication ",
@@ -25659,12 +25527,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must CHANGE per publication ",
         attrs: None,
         kind: Comment,
@@ -25718,12 +25580,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must CHANGE per publication ",
         attrs: None,
         kind: Comment,
@@ -25775,12 +25631,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT and given a value IF digital offer is DELETED ",
@@ -25954,12 +25804,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT / blank requires \"digital_to_print_format.js\" ",
         attrs: None,
         kind: Comment,
@@ -26013,12 +25857,6 @@ expression: result
         is_implied: true,
     },
     Token {
-        data: "\t\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
-    },
-    Token {
         data: " must be KEPT for email permissions ",
         attrs: None,
         kind: Comment,
@@ -26070,12 +25908,6 @@ expression: result
         attrs: None,
         kind: CloseTag,
         is_implied: true,
-    },
-    Token {
-        data: "\t\t\t\t\t",
-        attrs: None,
-        kind: Text,
-        is_implied: false,
     },
     Token {
         data: " must be KEPT for email permissions ",
