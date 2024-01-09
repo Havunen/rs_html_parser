@@ -16,7 +16,7 @@ use unicase_collections::unicase_btree_map::UniCaseBTreeMap;
 
 pub struct ParserOptions {
     /**
-     * Indicates whether special tags (`<script>`, `<style>`, and `<title>`) should get special treatment
+     * Indicates whether special tags (`<script>`, `<style>`, `<textarea>` and `<title>`) should get special treatment
      * and if "empty" tags (eg. `<br>`) can have children.  If `false`, the content of special tags
      * will be text only. For feeds and other XML content (documents that don't consist of HTML),
      * set self to `true`.

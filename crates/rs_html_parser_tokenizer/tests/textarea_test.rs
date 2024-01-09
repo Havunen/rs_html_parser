@@ -25,4 +25,9 @@ mod tests {
     fn textarea_only_text() {
         assert_debug_snapshot!(tokenize("<textarea>asd</textarea>"))
     }
+
+    #[test]
+    fn textarea_tags_should_be_text() {
+        assert_debug_snapshot!(tokenize("<textarea><div>asd</div><p>1</p></textarea>"))
+    }
 }

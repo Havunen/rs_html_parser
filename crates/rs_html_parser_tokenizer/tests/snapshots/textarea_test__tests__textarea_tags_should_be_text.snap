@@ -1,0 +1,41 @@
+---
+source: crates/rs_html_parser_tokenizer/tests/textarea_test.rs
+expression: "tokenize(\"<textarea><div>asd</div><p>1</p></textarea>\")"
+---
+[
+    TokenizerToken {
+        start: 1,
+        end: 9,
+        location: OpenTagName,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 9,
+        end: 9,
+        location: OpenTagEnd,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 10,
+        end: 32,
+        location: Text,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 34,
+        end: 42,
+        location: CloseTag,
+        code: 0,
+        quote: NoValue,
+    },
+    TokenizerToken {
+        start: 43,
+        end: 43,
+        location: End,
+        code: 0,
+        quote: NoValue,
+    },
+]

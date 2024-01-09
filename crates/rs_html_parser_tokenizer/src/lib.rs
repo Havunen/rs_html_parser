@@ -47,6 +47,7 @@ impl Sequences {
     const SCRIPT_END: [u8; 8] = [0x3c, 0x2f, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74]; // `</script`
     const STYLE_END: [u8; 7] = [0x3c, 0x2f, 0x73, 0x74, 0x79, 0x6c, 0x65]; // `</style`
     const TITLE_END: [u8; 7] = [0x3c, 0x2f, 0x74, 0x69, 0x74, 0x6c, 0x65]; // `</title`
+    const TEXTAREA_END: [u8; 10] = [0x3c, 0x2f, 0x74, 0x65, 0x78, 0x74, 0x61, 0x72, 0x65, 0x61]; // `</textarea`
 }
 
 /** All the states the tokenizer can be in. */
@@ -87,6 +88,7 @@ enum State {
 
     // Special tags
     BeforeSpecialS, // Decide if we deal with `<script` or `<style`
+    BeforeSpecialT, // Decide if we deal with `<title` or `<textarea`
     SpecialStartSequence,
     InSpecialTag,
 
@@ -296,7 +298,7 @@ impl Tokenizer<'_> {
             _ if self.is_tag_start_char(c) => {
                 self.section_start = self.index as usize;
                 if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::TITLE_END[2]) {
-                    self.start_special(&Sequences::TITLE_END, 3);
+                    self.state = State::BeforeSpecialT;
                 } else {
                     self.state =
                         if !self.xml_mode && c.eq_ignore_ascii_case(&Sequences::SCRIPT_END[2]) {
@@ -626,6 +628,24 @@ impl Tokenizer<'_> {
         self.state_in_tag_name(c)
     }
 
+    fn state_before_special_t(&mut self, c: u8) -> Option<TokenizerToken> {
+        if c.eq_ignore_ascii_case(&Sequences::TITLE_END[3]) {
+            self.start_special(&Sequences::TITLE_END, 4);
+
+            return None;
+        }
+        if c.eq_ignore_ascii_case(&Sequences::TEXTAREA_END[3]) {
+            self.start_special(&Sequences::TEXTAREA_END, 4);
+
+            return None;
+        }
+
+        self.state = State::InTagName;
+
+        self.state_in_tag_name(c)
+    }
+
+
     fn start_entity(&mut self) {
         self.base_state = self.state;
         self.state = State::InEntity;
@@ -771,6 +791,7 @@ impl Tokenizer<'_> {
                 State::BeforeClosingTagName => self.state_before_closing_tag_name(c),
                 State::AfterClosingTagName => self.state_after_closing_tag_name(c),
                 State::BeforeSpecialS => self.state_before_special_s(c),
+                State::BeforeSpecialT => self.state_before_special_t(c),
                 State::InAttributeValueNq => self.state_in_attribute_value_no_quotes(c),
                 State::AfterAttributeData => self.state_after_attribute_data(),
                 State::InSelfClosingTag => self.state_in_self_closing_tag(c),
