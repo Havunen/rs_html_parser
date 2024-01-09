@@ -30,4 +30,9 @@ mod tests {
     fn textarea_tags_should_be_text() {
         assert_debug_snapshot!(tokenize("<textarea><div>asd</div><p>1</p></textarea>"))
     }
+
+    #[test]
+    fn ensure_textarea_does_not_invalidate_template() {
+        assert_debug_snapshot!(tokenize(r#"<template><h2>Flower</h2><img src="img_white_flower.jpg" width="214" height="204"></template>"#))
+    }
 }
